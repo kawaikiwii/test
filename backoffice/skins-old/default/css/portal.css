@@ -1,0 +1,209 @@
+/**
+ * Project:     NCM
+ * File:        portal.css
+ *
+ * @copyright   (c)2007 Nstein Technologies
+ * @version     4.x
+ *
+ */
+#mainForm fieldset.designToolbar {
+    padding: 10px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    width: 690px;
+}
+
+#mainForm fieldset.designToolbar legend {
+    font-weight: normal;
+}
+
+#mainForm fieldset.designToolbar ul {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+#mainForm fieldset.designToolbar ul li {
+    list-style-type: none;
+    clear: none;
+    float: left;
+    padding: 0;
+    margin: 0;
+    margin-right: 10px;
+}
+#mainForm fieldset.designToolbar ul li.spaced {
+    margin-left: 40px;
+}
+
+#mainForm fieldset.designToolbar ul li select {
+    float: left;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    font-size: 11px;
+}
+
+#mainForm fieldset.designToolbar ul li label {
+    float: left;
+    padding: 0;
+    padding-top: 2px;
+    margin: 0;
+    margin-right: 6px;
+    width: auto;
+    font-size: 11px;
+}
+
+#pageContent {
+    display: block;
+    clear: both;
+}
+
+#pageList {
+    float: right;
+    clear: right;
+}
+
+#portal {
+}
+
+#portal .portal-column {
+  float: left;
+  width: 330px;
+  margin: 5px;
+  padding: 2px;
+  height: 320px;
+  background-color: #E0E0E0;
+  border: 1px solid #CCC;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  overflow: auto;
+}
+
+#portal .portal-column.small {
+  width: 170px;
+}
+
+#portal .portal-column.large {
+  width: 480px;
+}
+
+#portal .portal-column.wide {
+  width: 680px;
+}
+
+#portal .block {
+  margin: 4px;
+  border: 1px solid #d0d0d0;
+  background-color: white;
+}
+
+#portal .block .content {
+}
+
+#portal .block .block-remove, #portal .block .block-editsettings, #portal .block .block-savedata {
+    position: relative;
+    border:1px solid #CCCCCC;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    display: block;
+    float: right;
+    width: 16px;
+    height: 16px;
+    z-index: 10px;
+    cursor: pointer;
+}
+
+#portal .block .block-remove {
+    background: #FFF url("../images/gui/cross.png") top left no-repeat;
+}
+
+#portal .block .block-editsettings {
+    background-image: url("../images/gui/arrow-down.gif");
+}
+
+#portal .block .block-savedata {
+    background-image: url("../images/gui/database-save.gif');
+}
+
+#portal .block .block-remove span, #portal .block .block-editsettings span, #portal .block .block-savedata span {
+  display: none;
+}
+
+#portal .block-hover {
+  border: 1px dashed #888;
+}
+
+#portal .handle {
+  margin: 0;
+  padding: 2px 2px 2px 5px;
+  font-size: 13px;
+  color: #484848;
+  background-color: #ebebeb;
+  cursor: move;
+  z-index: 500;
+  font-family: Tahoma,Verdana,Arial,sans-serif;
+  font-weight: boldi;
+}
+
+#portal .settings {
+    margin: 0;
+    padding: 10px;
+    color: #484848;
+    border-top: 1px solid #d0d0d0;
+    background-color: #F4F4F4;
+    display: none;
+    text-align: right;
+}
+#portal .settings ul {
+    margin: 0;
+    padding: 0;
+}
+
+#portal .settings ul li {
+    list-style-type: none;
+    padding: 0;
+    margin: 4px 0;
+}
+
+#portal .settings ul li label {
+    margin-right: 4px;
+}
+
+#portal .settingsToolbar {
+    display: block;
+    clear: both;
+    padding: 0;
+    padding-top: 8px;
+}
+
+#portal .settings form {
+    margin: 0;
+    text-align:left;
+}
+
+#portal .settings input {
+    border: 1px solid #d0d0d0;
+    margin: 1px;
+}
+
+#portal .settings a {
+    border: 1px solid #D0D0D0;
+    padding: 2px 4px;
+    margin-left: 10px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+
+#portal .settings a:hover {
+    background-color: #E0E0E0;
+    color: black;
+    text-decoration: none;
+}
+
+#portal .handle-header {
+  float: left;
+}
+
+
+#portal .content input { border: 1px solid gray; }

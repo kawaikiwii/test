@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+	<name>Photos</name>
+	<description>_BIZ_IMPORT_JPEG</description>
+	<category>files</category>
+	<className>wcmImportPhotos</className>
+	<module>business/import/photos</module>
+</plugin>

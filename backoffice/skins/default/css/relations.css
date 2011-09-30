@@ -1,0 +1,354 @@
+div.relation-builder {
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+}
+
+div.relation-builder div.relations {
+    float: left;
+    border: 1px solid #CCC;
+    width: 45%;
+    height: 708px;
+    background-color: #E0E0E0;
+    padding: 2px;
+    overflow: auto;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    position: relative;
+}
+
+div.relation-builder ul {
+    clear: none;
+    float: none;
+    padding: 0;
+    margin: 0;
+    width: auto;
+}
+
+div.relation-builder ul li.bizrelation {
+    clear: none;
+    float: none;
+    border: 1px solid #d0d0d0;
+    padding: 0;
+    margin: 4px 2px;
+    width: auto;
+}
+
+div.relation-builder li.bizrelation div.toolbar {
+    margin: 0;
+    padding: 2px 2px 2px 5px;
+    color: #484848;
+    background-color: #ebebeb;
+    border-bottom: 1px solid #d0d0d0;
+    height: 18px;
+    cursor: move;
+}
+div.relation-builder li.bizrelation div.toolbar div.remove {
+    float: right;
+    width: 16px;
+    height: 16px;
+    background: #FFF url("../images/gui/cross.png") top left no-repeat;
+    display: block;
+    cursor: pointer;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border: 1px solid #CCC;
+}
+
+div.relation-builder li.bizrelation div.toolbar div.remove span {
+    display: none;
+}
+
+div.relation-builder li.bizrelation div.relproperties {
+    margin-top: 1px solid #fffefe;
+    padding: 5px;
+    background-color: white;
+}
+div.relation-builder li.bizrelation div.relproperties input[type="text"] {
+    margin-left: 8px;
+    padding: 2px;
+    font-size: 11px;
+    width: 80%;
+}
+
+/*
+ *
+ * Search results in relation module
+ */
+
+div.relation-builder div.search {
+    float: left;
+    width: 45%;
+    height: 710px;
+    background-color: #E0E0E0;
+    border: 1px solid #CCC;
+    padding: 0;
+    margin-left: 20px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+div.relation-builder div.search div.query ul {
+	display: inline;
+}
+
+div.relation-builder div.search div.query {
+    background-color: #D9D9D9;
+    border-top: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+    padding: 4px 8px;
+    display: block;
+    clear: both;
+    height: 24px;
+}
+
+div.relation-builder div.search div.query input[type="text"] {
+    float: left;
+    border: 1px solid silver;
+    font-size: 11px;
+    padding-left: 4px;
+    height: 18px;
+    width: 140px !important;
+}
+
+div.relation-builder div.search div.query a {
+    display: block;
+    float: left;
+    text-align: left;
+    margin: 0;
+    margin-left: 4px;
+    padding: 1px 10px;
+    text-decoration: none;
+    border: 1px solid silver;
+    background-color: #f4f4f4;
+    color: black;
+	border: 2px solid #CCC;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-top-colors:    #CCC #F0F0F0;
+	-moz-border-left-colors:   #CCC #F0F0F0;
+	-moz-border-right-colors:  #696969 #CCC;
+	-moz-border-bottom-colors: #696969 #CCC;
+	background: #CCC url("../images/gui/button-bg.png") top left repeat-x;
+	cursor: pointer;
+	color: #FFF;
+} 
+html*div.relation-builder div.search div.query a 
+{
+	border: 1px solid #999;
+	padding: 3px 10px; 
+}
+
+#content div.zone div.relation-builder div.search div.query fieldset.relatedContent
+{
+width: 95%;
+border: none;
+margin: 0;
+padding: 0 0 5px;
+float: none;
+clear: none;
+
+}
+div.relation-builder div.search div.query li
+{
+	display: inline;
+}
+div.relation-builder div.search div.query button,
+div.relation-builder div.search div.query button.nstein
+{
+	font-size: 11px;
+    display: block;
+    float: left;
+    text-align: left;
+    margin: 0;
+    margin-left: 4px;
+    padding: 1px 10px;
+    text-decoration: none;
+    border: 1px solid silver;
+    background-color: #f4f4f4;
+    color: black;
+    border: 2px solid #CCC;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-top-colors:    #CCC #F0F0F0;
+    -moz-border-left-colors:   #CCC #F0F0F0;
+    -moz-border-right-colors:  #696969 #CCC;
+    -moz-border-bottom-colors: #696969 #CCC;
+    background: #CCC url(../images/gui/button-bg.png) top left repeat-x;
+    cursor: pointer;
+    color: #fff;
+}
+div.relation-builder div.search div.query button.nstein
+{
+	float: right;
+    padding-left: 15px;
+    background: #ccc url('../images/gui/semantic-button-background.png') 0 2px no-repeat;
+}
+
+
+
+div.relation-builder div.search div.query a span {
+    padding-top: 2px 5px;
+}
+
+div.relation-builder div.search div.query a:hover {
+}
+
+div.relation-builder div.search div.resultset {
+    background-color: #fff;
+    padding: 4px;
+    display: block;
+    clear: both;
+	/* JFG */
+	height: 420px;
+    position: relative;
+	overflow:auto;
+}
+
+div.relation-builder div.search div.options {
+    background-color: #e0e0e0;
+    border-top: 1px solid #CCC;
+    padding: 4px 8px;
+    display: block;
+    clear: both;
+    height: 20px;
+}
+
+div.relation-builder div.search div.options ul.pagination {
+    float: left;
+    padding: 0;
+    margin: 0;
+    width: auto;
+}
+
+div.relation-builder div.search div.options div.pagination,
+#quickSearch div.options div.pagination {
+    padding-top: 4px;
+    color: #666;
+}
+
+div.relation-builder div.search div.options div.pagination a,
+div.relation-builder div.search div.options div.pagination span,
+#quickSearch div.options div.pagination a,
+#quickSearch div.options div.pagination span {
+	background: url("../images/gui/button-bg-white.png") bottom left repeat-x;
+	padding: 1px 7px;
+  border: 1px solid #666;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  color: #000;
+}
+
+#quickSearch div.options div.pagination a,
+#quickSearch div.options div.pagination span,
+#quickSearch div.options div.pagination a:hover,
+#quickSearch div.options div.pagination span:hover {
+	padding: 0 3px;
+	float: left;
+	margin: 2px;
+}
+#quickSearch div.options div.pagination span.results {
+	border: none;
+	color: #000;
+}
+
+div.relation-builder div.search div.options div.pagination span,
+div.relation-builder div.search div.options div.pagination .selected,
+#quickSearch div.options div.pagination span,
+#quickSearch div.options div.pagination .selected {
+	opacity: 0.5;
+	-moz-opacity: 0.5;
+	filter:alpha(opacity=50);
+	color: #666;
+	border: 1px solid #CCC;
+	text-decoration: none;
+}
+
+div.relation-builder div.search div.options div.pagination .selected,
+#quickSearch div.options div.pagination .selected {
+	font-weight: bold;
+}
+
+div.relation-builder div.search div.options div.pagination a.next,
+div.relation-builder div.search div.options div.pagination a.previous {
+    float:right;
+    margin-top: -3px;
+   background: url("../images/gui/button-bg-white.png") bottom left repeat-x;
+    padding: 1px 7px;
+    border: 1px solid #666;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    color: #000;
+}
+
+div.relation-builder div.search div.options div.pagination a.previous {
+    float:left;
+}
+
+
+/*
+ * Search list
+ */
+div.relation-builder div.resultset ul {
+    list-style-type: none;
+    clear: none;
+    float: none;
+    padding: 0;
+    margin: 0;
+    width: auto;
+}
+
+div.relation-builder div.resultset ul ul {
+    list-style-type: none;
+    clear: none;
+    float: none;
+    border: 1px solid #d0d0d0;
+    padding: 0;
+    margin: 0;
+    width: auto;
+}
+
+div.relation-builder div.resultset ul li {
+    list-style-type: none;
+    clear: none;
+    float: none;
+    border: 1px solid #d0d0d0;
+    padding: 0;
+    margin: 4px 2px;
+    width: auto;
+}
+
+div.relation-builder div.resultset ul li.grid {
+	float: left;
+	width: 31.0%;
+}
+
+div.relation-builder div.resultset div.content {
+    padding: 4px;
+}
+
+div.relation-builder div.resultset div.toolbar {
+    margin: 0;
+    padding: 2px 2px 2px 5px;
+    height: 18px;
+    color: #484848;
+    background-color: #ebebeb;
+    border-bottom: 1px solid #d0d0d0;
+    cursor: move;
+}
+
+div.relation-builder div.resultset div.toolbar div.button {
+    float: right;
+    width: 16px;
+    height: 16px;
+    display: block;
+    cursor: pointer;
+}
+
+div.relation-builder div.resultset div.toolbar div.button a {
+    float: left;
+}
+
+div.relation-builder div.resultset div.toolbar div.button a span {
+    display: none;
+}

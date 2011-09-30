@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<NewsML>
+  <Catalog Href="http://www.afp.com/dtd/AFPCatalog.xml"/>
+  <NewsEnvelope>
+    <DateAndTime>20090304T114617Z</DateAndTime>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>afp.com</ProviderId>
+        <DateId>20090304</DateId>
+        <NewsItemId>090304114414.wwgh6tj7</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:afp.com:20090304:090304114414.wwgh6tj7:1</PublicIdentifier>
+      </NewsIdentifier>
+      <NameLabel>Nigeria-oil-minister-fine-offbeat</NameLabel>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20090304T114414Z</FirstCreated>
+      <ThisRevisionCreated>20090304T114414Z</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+    </NewsManagement>
+    <NewsComponent>
+      <NewsLines>
+        <HeadLine>Nigeria's oil minister fined for ignoring summons: report</HeadLine>
+        
+        
+        <DateLine>LAGOS, March 4, 2009 (AFP)</DateLine>
+        <CopyrightLine>© 2009 AFP</CopyrightLine>
+        <SlugLine>Nigeria-oil-minister-fine-offbeat</SlugLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Provider>
+          <Party FormalName="AFP"/>
+        </Provider>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="en"/> 
+        <OfInterestTo FormalName="ext--english--relaxnews--lifestyle"/>
+      </DescriptiveMetadata>
+      <NewsComponent>
+        <ContentItem>
+          <MediaType FormalName="Text"/>
+          <Format FormalName="bcNITF2.5"/>
+          <DataContent>
+            <p> Nigeria's oil minister and former OPEC chief has been fined 4,000 naira (27 dollars, 21.5 euros) for ignoring a summons to appear before a special Senate panel, a local daily said on Wednesday.</p>
+            <p>Rilwanu Lukman, 70, was last month asked to address a Senate committee on the oil sector reforms, but failed to do so.</p>
+            <p>Senator Lee Maeba said had it not been for his age and status, the Senate would have raised a warrant of arrest against the minister, according to The Guardian.</p>
+            <p>The fine, imposed on Tuesday, represents the cost of conveying the summons to the minister.</p>
+            <p>"I did not neglect or refuse to attend the meeting... as I have made excuses," the former secretary general of the international oil cartel, the Organisation of the Petroleum Exporting Countries (OPEC), was quoted as saying.</p>
+            <p>It was the first time since Nigeria returned to civilian rule in 1999 that a senior government official would be so sanctioned.</p>
+          </DataContent>
+        </ContentItem>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

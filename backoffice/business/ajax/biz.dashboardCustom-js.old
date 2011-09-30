@@ -1,0 +1,91 @@
+function switchPannel(linkId, pannelName, pannelId)
+{
+
+   if (pannelId != "xxx")
+   {
+      var currentTabOpenState = $(pannelId).style.display;
+      var currentTabClassName = linkId.className;
+   }
+
+$("actions_created").style.display = "none";
+$("actions_modified").style.display = "none";
+$("import_afp").style.display = "none";
+$("import_afp_video").style.display = "none";
+$("import_fil").style.display = "none";
+$("published_news").style.display = "none";
+$("published_eventStart").style.display = "none";
+$("published_event").style.display = "none";
+$("published_slideshow").style.display = "none";
+$("published_video").style.display = "none";
+$("browse_news").style.display = "none";
+$("browse_event").style.display = "none";
+$("browse_slideshow").style.display = "none";
+$("browse_video").style.display = "none";
+
+$('browse_news_link').className = 'passiveState';
+$('browse_event_link').className = 'passiveState';
+$('browse_slideshow_link').className = 'passiveState';
+$('browse_video_link').className = 'passiveState';
+$('published_news_link').className = 'passiveState';
+$('published_event_link').className = 'passiveState';
+$('published_eventStart_link').className = 'passiveState';
+$('published_slideshow_link').className = 'passiveState';
+$('published_video_link').className = 'passiveState';
+$('import_afp_link').className = 'passiveState';
+$('import_afp_video_link').className = 'passiveState';
+$('import_fil_link').className = 'passiveState';
+$('actions_modified_link').className = 'passiveState';
+$('actions_created_link').className = 'passiveState';
+
+   if (pannelId != "xxx")
+   {
+      $(pannelId).style.display = (currentTabOpenState == "block") ? "none" : "block";
+      linkId.className = (currentTabClassName == 'passiveState') ? 'activeState' : 'passiveState';
+   }
+}
+
+
+/*ARe = {
+   pview: function(objectClass, objectId){
+      window.open("/?_wcmAction=business/" + objectClass + "&id=" + objectId);
+   },
+};*/
+
+var periodicRefreshFront = null;
+var periodicRefreshBackBrowse = null;
+
+function startPeriodicRefresh(theObject, dashboardZone, delay)
+{
+   if (theObject == 'front')
+   {
+      periodicRefreshFront = new PeriodicalExecuter(dashboardZone, delay);
+   }
+   else if (theObject == 'browse')
+   {
+      periodicRefreshBackBrowse = new PeriodicalExecuter(dashboardZone, delay);
+   }
+
+   alert('Periodic Refresh Started');
+}
+
+function stopPeriodicRefresh(theObject)
+{
+   if (theObject == 'front')
+   {
+      periodicRefreshFront.stop();
+   }
+   else if (theObject == 'browse')
+   {
+      periodicRefreshBackBrowse.stop();
+   }
+
+   alert('Periodic Refresh Stopped');
+}
+
+function refreshDashboard(itemId)
+{
+    wcmBizAjaxController.call("biz.dashboardCustom", {
+        command: 'refresh',
+	itemId: itemId
+    });
+}

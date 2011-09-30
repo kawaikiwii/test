@@ -1,0 +1,202 @@
+body {
+margin: 0;
+padding: 0;
+font-family: verdana, arial, sans-serif;
+}
+
+#wrapper {
+width: 100%;
+margin: 0;
+padding: 0;
+}
+
+#wrapper #header {
+height: 20px;
+background-color: #606060;
+border-bottom: 1px solid black;
+}
+
+#wrapper #header h1 {
+margin: 0;
+padding: 0;
+display: block;
+float: left;
+width: 59px;
+height: 20px;
+background-image: url("../images/gui/wcm-header-tiny.gif");
+background-repeat: no-repeat;
+background-position: 0 0;
+}
+
+#wrapper #header h1 span {
+display: none;
+}
+
+#wrapper #header ul {
+margin: 1px 2px 0 0;
+padding: 0 0 0 0;
+display: block;
+float: right;
+}
+
+#wrapper #header ul li {
+list-style-type: none;
+margin: 0;
+padding: 0;
+float: left;
+}
+
+#wrapper #header ul li a {
+margin: 1px 0 0 0;
+padding: 1px 8px 2px 8px;
+display: block;
+float: left;
+color: #f4f4f4;
+border-left: 1px solid #808080;
+text-decoration: none;
+}
+
+#wrapper #header ul li a:hover {
+color: white;
+background-color: #464646;
+text-decoration: none;
+}
+
+#wrapper #content-wrapper {
+margin: 0 0 0 0;
+padding: 10px 0 0 0;
+clear: left;
+}
+
+#wrapper #content-wrapper div.description {
+display: block;
+clear: both;
+height: 30px;
+}
+
+#wrapper #content-wrapper div.description h2 {
+padding: 0;
+margin: 2px 4px 2px 8px;
+float: left;
+font-size: 16px;
+}
+
+
+#wrapper #content-wrapper div.description form {
+margin: 0;
+padding: 0;
+}
+
+#wrapper #content-wrapper div.description form select {
+padding: 1px 0 0 0;
+margin: 0 0 0 4px;
+border: 1px solid silver;
+float: left;
+font-size: 14px;
+}
+
+#wrapper #content-wrapper div.status {
+clear: left;
+display: block;
+height: 26px;
+border-top: 1px solid silver;
+border-bottom: 1px solid silver;
+background-color: #f4f4f4;
+padding-top: 10px;
+padding-left: 10px;
+padding-right: 10px;
+}
+
+#wrapper #content-wrapper div.status ul {
+margin: 0;
+margin-top: -4px;
+padding: 0;
+display: inline;
+float: right;
+}
+
+#wrapper #content-wrapper div.status ul li {
+list-style-type: none;
+margin: 0 0 0 0;
+padding: 0 0 0 0;
+float: left;
+}
+
+#wrapper #content-wrapper div.log {
+clear: left;
+display: block;
+height: 300px;
+overflow: auto;
+}
+
+#wrapper #content-wrapper div.log ul {
+    padding: 0;
+    margin: 0 0 0 0;
+    list-style-type: none;
+    font-size: 11px;
+}
+
+#wrapper #content-wrapper div.log ul li {
+    background-repeat: no-repeat;
+    padding: 2px 0px 4px 20px;
+    margin-top: 4px;
+    color: #606060;
+    border-bottom: 1px dotted #CCC;
+}
+
+#wrapper #content-wrapper div.log ul li.MSG {
+    background-image: url("../images/gui/tick-circle.png");
+    list-style-type: none;
+}
+
+#wrapper #content-wrapper div.log ul li.VRB {
+    background-image: url("../images/gui/information.png");
+    list-style-type: none;
+}
+
+#wrapper #content-wrapper div.log ul li.WRN {
+    background-image: url("../images/gui/exclamation-frame.png");
+    color: #e08000;
+}
+
+#wrapper #content-wrapper div.log ul li.ERR {
+    background-image: url("../images/gui/minus-circle.png");
+    color: #c02000;
+}
+
+#wrapper #content-wrapper div.log a.top,
+#wrapper #content-wrapper div.log a.top:hover {
+    background-image: url("../images/gui/arrow-up.gif");
+    background-repeat: no-repeat;
+    padding-left: 12px;
+    margin: 4px;
+    float: right;
+    text-decoration: none;
+    color: black;
+}
+
+
+#wrapper #content-wrapper form a,
+#wrapper #content-wrapper ul li a {
+padding: 3px 6px 3px 6px;
+margin: 0 0 0 5px;
+border: 1px solid silver;
+background: #f4f4f4;
+float: left;
+font-size: 12px;
+text-decoration: none;
+color: black;
+border: 1px solid silver;
+border-top: 1px solid #F0F0F0;
+border-bottom: 1px solid #666;
+background: url("../images/gui/button-bg-white-2.png") bottom left repeat-x;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+}
+
+#wrapper #content-wrapper form a:hover,
+#wrapper #content-wrapper ul li a:hover {
+background-color: #E0E0E0;
+color: black;
+border: 1px solid black;
+}

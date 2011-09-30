@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * Project:     WCM
+ * File:        modules/channel/properties.php
+ *
+ * @copyright   (c)2008 Nstein Technologies
+ * @version     4.x
+ *
+ */
+    $bizobject = wcmMVC_Action::getContext();
+	$channels = array('0' => _BIZ_ROOT_ELEMENT );
+	
+	$bizobject->getChannelHierarchy($channels, $bizobject->id);
+
+    echo '<div class="zone">';
+
+    wcmGUI::openCollapsablePane(_META_CONTENT);
+
+    wcmGUI::openCollapsableFieldset(_GENERAL);
+    wcmGUI::renderDropdownField('parentId', $channels, $bizobject->parentId, _BIZ_CHANNEL);
+	wcmGUI::renderTextField('title', $bizobject->title, _BIZ_TITLE . ' *', array('class' => 'type-req'));
+	wcmGUI::renderTextField('rank', $bizobject->rank, _BIZ_POSITION, array('class' => 'type-int'));
+	wcmGUI::renderTextField('css', $bizobject->css, _BIZ_CSS);
+	wcmGUI::renderTextArea('description', $bizobject->description, _BIZ_DESCRIPTION);
+	
+	wcmGUI::renderTextArea('tokens', $bizobject->tokens, "Tokens");
+	
+	wcmGUI::closeFieldset();    
+    wcmGUI::closeCollapsablePane();
+
+    /*wcmGUI::openCollapsablePane(_PUBLICATION_GENERATION);
+    wcmGUI::openFieldset( _LIFETIME);
+    wcmGUI::renderDateField('publicationDate',_BIZ_PUBLICATIONDATE,_BIZ_PUBLICATIONDATE);
+    wcmGUI::renderDateField('expirationDate', _BIZ_EXPIRATIONDATE,_BIZ_EXPIRATIONDATE);
+    wcmGUI::closeFieldset();
+    wcmGUI::closeCollapsablePane();
+    */
+    echo '</div>';

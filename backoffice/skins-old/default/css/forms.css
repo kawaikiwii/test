@@ -1,0 +1,190 @@
+form.mainForm {
+margin-left: auto;
+margin-right: auto;
+}
+
+form.mainForm fieldset {
+width: 660px;
+padding: 10px;
+margin-bottom: 15px;
+}
+
+form.mainForm fieldset.modal {
+	width:  360px !important;
+}
+
+form.mainForm fieldset legend {
+font-weight: bold;
+color: #666;
+}
+
+form.mainForm fieldset ul {
+margin: 10px 0;
+padding: 0 0 0 0;
+}
+
+form.mainForm fieldset ul li {
+list-style-type: none;
+clear: left;
+margin: 10px 0 0 0;
+padding: 0 0 0 0;
+}
+
+form.mainForm fieldset ul li label {
+display: block;
+float: left;
+width: 140px;
+text-align: left;
+margin: 2px 10px 10px 15px;
+padding: 0 0 0 0;
+color: black;
+font-size: 11px;
+}
+
+form.mainForm fieldset ul li.option label {
+display: block;
+float: left;
+width: auto;
+text-align: left;
+margin: 2px 10px 20px 10px;
+padding: 0 0 0 0;
+}
+
+form.mainForm fieldset ul li input {
+width: 460px;
+}
+
+form.mainForm fieldset ul li select {
+width: 464px;
+}
+
+form.mainForm fieldset ul li input.small, form.mainForm fieldset ul li select.small, form.mainForm fieldset ul li textarea.small {
+width: 260px;
+}
+
+
+form.mainForm fieldset ul li input.type-datetime,
+form.mainForm fieldset ul li input.type-datetime-req,
+form.mainForm fieldset ul li input.type-date,
+form.mainForm fieldset ul li input.type-date-req {
+width: 100px;
+}
+
+form.mainForm fieldset ul li textarea {
+width: 460px;
+font-family: Arial, Verdana;
+font-size: 12px;
+padding: 3px 2px;
+}
+
+form.mainForm fieldset ul li label a {
+}
+
+form.mainForm #pages fieldset ul li label {
+margin: 2px 10px 5px 10px;
+padding: 0 0 0 0;
+text-align: left;
+}
+
+form.mainForm fieldset ul li ul {
+float: left;
+clear: left;
+margin: 10px 0 20px 0;
+padding: 0 0 0 0;
+display: inline;
+}
+
+form.mainForm fieldset ul li ul.tags li {
+display: inline;
+}
+
+form.mainForm fieldset ul li ul li {
+margin: 0 0 0 0;
+padding: 0 0 0 0;
+}
+
+form.mainForm fieldset ul li ul li span {
+float: left;
+margin: 0 15px 0 0;
+}
+
+form.mainForm fieldset ul li ul li a {
+float: left;
+display: block;
+margin: 7px 3px 0 0;
+width: 10px;
+height: 10px;
+background: url(icon-close.gif) no-repeat;
+}
+
+form.mainForm fieldset ul li ul li a:hover {
+background: url(icon-close.gif) no-repeat -10px 0;
+}
+
+form.mainForm fieldset ul li ul li a span {
+display: none;
+}
+
+form.mainForm fieldset ul li input[type="checkbox"] {
+float:left;
+width: auto;
+padding:0;
+border:0;
+margin-left: 165px;
+margin-bottom: 5px;
+}
+/** @todo : find reason why the important is needed **/
+form.mainForm fieldset ul li label.checkbox {
+width: 240px !important; /* this important needed for modal boxes - works fine outside */
+padding: 0 0 0 12px !important;
+}
+
+/** Specific CSS for permissions **/
+
+form.mainForm fieldset.permissions ul li span,
+form.mainForm fieldset.permissions ul li input {
+float:left;
+width: 80px;
+text-align:center;
+padding:0;
+border:0;
+margin: 0;
+margin-bottom: 5px;
+}
+
+
+/** Action toolbar **/
+
+form.mainForm ul.actions {
+display:block;
+float:right;
+margin: 0 10px 10px 0;
+padding: 0;
+}
+
+form.mainForm ul.actions li {
+display: block;
+list-style-type: none;
+height: 30px;
+margin: 0;
+padding: 0;
+}
+
+form.mainForm ul.actions a {
+display: block;
+float: left;
+text-align: left;
+margin: 0;
+padding: 3px 10px 3px 10px;
+font-family: helvetica, arial, sans-serif;
+text-decoration: none;
+border: 1px solid silver;
+background-color: #f4f4f4;
+color: black;
+}
+
+form.mainForm ul.actions a:hover {
+background-color: #E0E0E0;
+color: black;
+border: 1px solid black;
+}

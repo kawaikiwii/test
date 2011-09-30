@@ -1,0 +1,12 @@
+/*
+ * Project:     NCM
+ * File:        skins/main.css
+ *
+ * @copyright   (c)2007 Nstein Technologies
+ * @version     4.x
+ */
+ 
+/*
+ * Select skin to apply ('default')
+ */
+@import url("default/main.css");

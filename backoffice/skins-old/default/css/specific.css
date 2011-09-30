@@ -1,0 +1,246 @@
+/*
+   @Name   : specific.css
+   @Author : jmeyer
+   @Date   : 2008/18/12
+*/
+
+/* Switch Pane in "Media" tab */
+.switchPane_small { z-index:0; display:none; }
+.switchPane_large { z-index:1000; position:absolute; width:auto; }
+
+.signsCount
+{
+	width:20px;
+	border:#ccc 1px solid;
+}
+
+.formWithSignsCount
+{
+	width:770px;
+}
+.formWithSignsCount td
+{
+	color:#888;
+}
+.formWithSignsCount .myTitle
+{
+	width:646px;
+	color:#000;
+}
+
+.channels_choice td
+{
+	vertical-align:top;
+	padding-left:2em;
+	width:380px;
+}
+
+.channel_choice_block
+{
+	padding-right:2em;
+}
+
+.signsCountGreen { color:green; }
+.signsCountRed { color:red; }
+
+.channel_choice_item
+{
+	display:block;
+	padding-left:0;
+	list-style:none;
+	background:none;
+}
+
+/* Categorization styles */
+.level_b
+{
+	font-size:105%;
+	font-weight:bold;
+}
+
+.level_c
+{
+	padding-left: 1.5em;
+}
+
+.level_d
+{
+	padding-left: 2.5em;
+}
+
+.level_e
+{
+	padding-left: 3.5em;
+}
+
+
+
+/*#treeview
+{
+	position:absolute; margin-top:-4em; margin-left:86%;
+}
+#content
+{
+	margin-left:0;
+	padding-left:0;
+}
+
+.tab-page
+{
+	padding-top:8em;
+}
+.newTabsSetItem
+{
+	display:block;
+	width:2em;
+	height:1em;
+}*/
+
+/*.breadcrumb
+{
+	color: red;
+}*/
+.workflowStateColor
+{
+	display:block;
+	font-style:normal;
+	padding:3px;
+	margin:0 10px 5px 0;
+	color:#FFF;
+	font-weight:bold;
+}
+.unapproved, .rejected { background-color:red; }
+.published { background-color:green; }
+.approved { background-color:blue; }
+.draft { background-color:#CCC; }
+.submitted { background-color:#666; }
+.draft_import { background-color:#D3EFF8; }
+
+#permanentLocalisation
+{
+	background-color:yellow;
+	color:#000;
+	font-weight:bold;
+	font-size:20px;
+	position:fixed;
+	border:#000 1px solid;
+	width:100%;
+	margin-top:35.5%;
+	padding:0 0 5px 10px;
+	z-index:1000;
+	opacity:0.8;
+}
+.alert_original_object
+{
+	width:210px; height:15px; margin-bottom:10px; background:red;
+}
+
+a.date-picker {
+		-moz-border-bottom-colors:#84AECE #EBF2FA;
+		-moz-border-left-colors:#B1CEE5 #FFFFFF;
+		-moz-border-radius-bottomleft:3px;
+		-moz-border-radius-bottomright:3px;
+		-moz-border-radius-topleft:3px;
+		-moz-border-radius-topright:3px;
+		-moz-border-right-colors:#84AECE #EBF2FA;
+		-moz-border-top-colors:#B1CEE5 #FFFFFF;
+		background:#EBF2FA url(/skins/default/images/gui/date-picker.png) no-repeat scroll 2px 2px;
+		border:2px solid #CCCCCC;
+		color:#000000;
+		font-size:12px;
+		margin:0 0 0 4px;
+		padding:1px 8px 2px 22px;
+		text-decoration:none;
+		cursor:pointer;
+		list-style-type:none;
+		list-style-image:none;
+		list-style-position:outside;
+		border-style:solid;
+		font-family:verdana,sans-serif;
+	}
+	
+a.deleteImport, a.saveImport {
+	background-image:url(/skins/default/images/gui/minus-small.png);
+	background-position:50% 50%;
+	background-repeat:no-repeat;
+	display:block;
+	float:left;
+	height:10px;
+	width:22px;
+	color:#167197;
+	text-decoration:none;
+	border:#CCC 1px solid;
+	margin-right:3px;
+}
+a.saveImport {
+	background-image:url(/skins/default/images/gui/plus-small.png);
+}
+a.deleteImport:hover { background-color:red; }
+a.saveImport:hover { background-color:green; }
+
+
+div#content {  padding-left:0; float:none;  }
+div#account div#content { margin-left:0; padding-left:0; float:none;  }
+/*#content div.zone fieldset ul li label { width:60px; padding-right:0; margin-right:0;  }*/
+
+
+
+/* yul */
+/* dashboard - import from front skin */
+
+
+.menuToogleDashboard { border-bottom:1px solid blue; width:100%;  }
+.menuToogleDashboard a.passiveState, .menuToogleDashboard a.activeState { display:block; padding:5px 7px; float:left; margin-right:10px; border:1px solid blue; border-bottom:0;  }
+.menuToogleDashboard a.passiveState { background-color:#fff; font-weight:normal; color:#333; }
+.menuToogleDashboard a.activeState { background-color:blue; font-weight:bold; color:#fff; }
+
+#news-channel-wellbeing, #news-channel-entertainment, #news-channel-househome, #news-channel-tourism { width:24%; float:left; padding-right:1%; }
+#event-channel-wellbeing, #event-channel-entertainment, #event-channel-househome, #event-channel-tourism { width:24%; float:left; padding-right:1%; }
+#slideshow-channel-wellbeing, #slideshow-channel-entertainment, #slideshow-channel-househome, #slideshow-channel-tourism { width:24%; float:left; padding-right:1%; }
+#video-channel-wellbeing, #video-channel-entertainment, #video-channel-househome, #video-channel-tourism { width:24%; float:left; padding-right:1%; }
+.actions-myclass { width:24%; float:left; padding-right:1%;  }
+
+.newSkins a, .newSkins a:hover, .newSkins a:link, .newSkins a:visited { text-decoration:none;  }
+.navHorizontal a, .navHorizontal a:hover, .navHorizontal a:link, .navHorizontal a:visited { text-decoration:underline, display:block; float:left; margin-right:10px;  }
+.newContainer a, .newContainer a:hover, .newContainera a:link, .newContainer a:visited { text-decoration:none;  }
+.newContainer .columnAligned { width:24%; float:left; padding-right:1%; height:450px; overflow-x: scroll;  }
+.newContainer .noSlide { overflow:auto; height:30px;  }
+.newContainer h1 { font-size:100%; color:#D02F2F; float:right;  }
+.newContainer h2 { clear:both; color:#D02F2F; padding:10px 0px 5px 0px; margin:0; font-size:100%; text-transform:uppercase;  }
+.newContainer h3 { clear:both; color:#D02F2F; padding:10px 0px 3px 0px; margin:0; font-size:100%; font-weight:normal; }
+a.editItem { text-decoration:none; color:#444;  }
+a.editItem:hover { text-decoration:underline; color:#444; }
+
+.clearIt { clear:both; }
+.pannelRubric, .pannelRubric * { font-size:11px; font-weight:normal; }
+
+.clearIt h2.ari-title { float:left; font-weight:normal;  }
+
+.ari-desk-header-title { font-weight:bold; font-size:130%;  }
+.ari-desk-header-category { display:none; }
+.ari-category { font-weight:bold; color:#BFBFBF; }
+.ari-publishDate { clear:left; color:#BFBFBF; }
+.ari-illustration-item { float:left; margin-right:7px; }
+.ari-format { display:none; }
+
+#slideshow-channel-wellbeing .ari-publishDate, #slideshow-channel-entertainment .ari-publishDate, #slideshow-channel-househome .ari-publishDate, #slideshow-channel-tourism .ari-publishDate { clear:none; }
+
+.ari-desk-separator-date { width:75px;height:13px; overflow:hidden; margin-top:30px; font-weight:bold; font-size:110%;  }
+
+.ari-item { clear:both; border-top: 1px solid #EEE; padding:3px 0; cursor:pointer; }
+.ari-item:hover { background-color:#FFFFCC; }
+
+#event-channel-ourselection { width:48%; float:left; margin-right:10px; }
+#event-channel-mustsee { float:left; width:48%; }
+
+.tableBordered { padding:0; }
+.tableBordered td { border-bottom:1px solid #EEE; padding:1px; vertical-align:top;  }
+.tableBordered tr:hover { background-color:#FFFF00; }
+
+
+
+
+
+a.goToFo, a.goToFo:hover { border:1px solid #FFF; background:none; background-image:none; font-weight:bold;  }
+.goToFoUl, .goToFoUl *   { background:none; background-image:none;}
+

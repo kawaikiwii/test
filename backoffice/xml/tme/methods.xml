@@ -1,0 +1,44 @@
+<!--
+ * Project:     WCM
+ * File:        wcm.methods.xml
+ *
+ * @copyright   (c)2008 Nstein Technologies
+ * @version     4.x
+ *
+-->
+<Methods>
+    <NConceptExtractor Enabled="TRUE">
+        <NumberOfSimpleConcepts>20</NumberOfSimpleConcepts>
+        <NumberOfComplexConcepts>0</NumberOfComplexConcepts>
+        <RelevancyLevel>FIRST</RelevancyLevel>
+    </NConceptExtractor>
+    <NCategorizer Enabled="TRUE">
+        <KBid>IPTC</KBid>
+        <NumberOfCategories>4</NumberOfCategories>
+    </NCategorizer>
+    <NFinder Enabled="TRUE">
+        <Cartridges>
+            <Cartridge>ON</Cartridge>
+            <Cartridge>PN</Cartridge>
+            <Cartridge>GL</Cartridge>
+        </Cartridges>
+    </NFinder>
+    <NLikeThis_Index Enabled="TRUE">
+        <KBid>#PROJECT.GUID#</KBid>
+    </NLikeThis_Index>
+    <NLikeThis_Delete Enabled="TRUE">
+        <KBid>#PROJECT.GUID#</KBid>
+    </NLikeThis_Delete>
+    <NLikeThis_Compare Enabled="TRUE">
+        <KBid>#PROJECT.GUID#</KBid>
+        <NumberOfMatchedFiles>10</NumberOfMatchedFiles>
+    </NLikeThis_Compare>
+    <NSummarizer Enabled="TRUE">
+        <KBid>IPTC</KBid>
+        <Percentage>10</Percentage>
+    </NSummarizer>
+    <NSentiment Enabled="TRUE">
+        <Mode>EXTENDED</Mode>
+        <Type>ALL</Type>
+    </NSentiment>
+</Methods>

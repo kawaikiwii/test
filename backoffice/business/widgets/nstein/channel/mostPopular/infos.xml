@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget>
+    <name>Most popular articles</name>
+    <description>This widget list the N most popular articles from a given channel.</description>
+    <author>Nstein</author>
+    <version>1.0</version>
+    <mail>pierrick.charron@nstein.com</mail>
+    <context>channel</context>
+</widget>

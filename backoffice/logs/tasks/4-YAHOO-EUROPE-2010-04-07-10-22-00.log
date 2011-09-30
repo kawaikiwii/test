@@ -1,0 +1,3 @@
+MSG: [2010-04-07 10:27:10] start process task Y! - Gastronomy (4)
+MSG: [2010-04-07 10:27:10] query : (workflowstate:published AND classname:news AND channelid:76 AND publicationDate:[2010X03X01 TO _NOW_]) AND (siteId:-1)
+MSG: [2010-04-07 10:27:11] no query results !

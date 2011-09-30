@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<NewsML>
+  <Catalog Href="http://www.afp.com/dtd/AFPCatalog.xml"/>
+  <NewsEnvelope>
+    <DateAndTime>20081210T145111Z</DateAndTime>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>afp.com</ProviderId>
+        <DateId>20081210</DateId>
+        <NewsItemId>081210144916.nc5h0d86</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:afp.com:20081210:081210144916.nc5h0d86:1</PublicIdentifier>
+      </NewsIdentifier>
+      <NameLabel>Marchés-Bourse-NewYork</NameLabel>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20081210T144916Z</FirstCreated>
+      <ThisRevisionCreated>20081210T144916Z</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+    </NewsManagement>
+    <NewsComponent>
+      <NewsLines>
+        <HeadLine>Wall Street ouvre en hausse, vers une aide à l'automobile US</HeadLine>
+        
+        
+        <DateLine>NEW YORK, 10 déc 2008 (AFP)</DateLine>
+        <CopyrightLine>© 2008 AFP</CopyrightLine>
+        <SlugLine>Marchés-Bourse-NewYork LEAD</SlugLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Provider>
+          <Party FormalName="AFP"/>
+        </Provider>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="fr"/> 
+        <OfInterestTo FormalName="ext--francais--relaxnews--artdevivre"/>
+      </DescriptiveMetadata>
+      <NewsComponent>
+        <ContentItem>
+          <MediaType FormalName="Text"/>
+          <Format FormalName="bcNITF2.5"/>
+          <DataContent>
+            <p> La Bourse de New York a ouvert en nette hausse mercredi, soutenue par l'espoir d'une adoption rapide d'un plan de sauvetage de l'industrie automobile américaine: le Dow Jones gagnait 1,11% et le Nasdaq 1,00%.</p>
+            <p>Vers 14H40 GMT, le Dow Jones Industrial Average (DJIA) prenait 96,21 points à 8.787,54 points et le Nasdaq, à dominante technologique, 15,44 points à 1.562,78 points.</p>
+            <p>L'indice élargi Standard &amp; Poor's 500 progressait quant à lui de 1,25% (11,07 points) à 899,74 points.</p>
+            <p>Mercredi, Wall Street était repartie à la baisse après deux séances de forte progression, plombée par les conséquences de plus en plus visibles de la crise sur les bénéfices des entreprises: le Dow Jones avait perdu 2,72%, le Nasdaq 1,55% et le S&amp;P 500 2,31%.</p>
+            <p>"Il y a des forts espoirs d'une solution à la situation difficile des constructeurs automobiles américains, alimentés par de multiples informations sur un accord de principe sur un plan de sauvetage de 15 milliards de dollars", a commenté Joseph Hargett, de Schaeffers Investment.</p>
+            <p>Carl Levin, sénateur démocrate du Michigan (nord) a dit comprendre qu'"un accord a été trouvé" et que ce n'était qu'une question de temps avant qu'une loi soit prête.</p>
+            <p>La perspective d'une adoption rapide d'un plan pour l'automobile "a éclipsé une série d'avertissements" donnés par plusieurs sociétés, ont observé les analystes de Charles Schwab.</p>
+            <p>Derniers exemples des dégâts de la crise, l'éditeur de jeux vidéo Electronic Arts (-14,37% à 16,57 dollars) a prévenu que ses résultats annuels seraient inférieurs à ses dernières prévisions.</p>
+            <p>Le groupe d'imagerie Eastman Kodak (-5,56% à 6,80 dollars) a même renoncé à donner des prévisions pour 2008, après les avoir récemment revues en baisse.</p>
+            <p>Le marché obligataire baissait. Le rendement du bon du Trésor à 10 ans progressait à 2,741%, contre 2,669% mardi soir, et celui à 30 ans à 3,113%, contre 3,075% la veille.</p>
+          </DataContent>
+        </ContentItem>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

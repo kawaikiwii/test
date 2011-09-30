@@ -1,0 +1,113 @@
+#cropping #cropping_ratios {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+#cropping #cropping_ratios li {
+	clear: none;
+	margin-bottom: 10px;
+	display: block;
+	list-style-type: none;
+	float: left;
+}
+
+#cropping #cropping_ratios li a {
+	display: block;
+	float: left;
+	text-align: left;
+	padding: 3px 10px 3px 10px;
+	font-size: 11px;
+	text-decoration: none;
+	border: 1px solid #266AAD;
+	background-color: #CEE1EF;
+	color: #266AAD;
+	margin-right: 2px;
+	-moz-border-radius: 3px;
+}
+
+#cropping #cropping_ratios li a:hover {
+	background-color: #CEE1EF;
+	border: 1px solid black;
+	color: #000;
+}
+
+#cropping #cropping_ratios li a.active {
+	background-color: #266AAD;
+	color: #FFF;
+}
+
+#cropping #cropped_infos {
+    display: block;
+    clear: both;
+	margin-top: 10px;
+    margin-bottom: 2px;
+    padding: 2px;
+    border: 1px solid #266AAD;
+	background-color: #266AAD;
+    width: 400px;
+    height: 18px;
+    min-width: 190px;
+    _width:expression(this.currentStyle.getAttribute('minWidth'));
+}
+
+#cropping #cropped_infos #cropped_coords {
+	padding-top: 2px;
+	padding-left: 2px;
+	float: left;
+	font-size: 10px;
+	color: white;
+}
+
+#cropping #cropped_infos img {
+	float: right;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+	margin: 0;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: 1px 2px;
+}
+
+#cropping #cropped_infos img.clear {
+	background: #EAF3FA url("../images/gui/cross.png") 50% 50% no-repeat;
+	-moz-border-radius-topleft: 0px;
+	-webkit-border-top-left-radius: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	-webkit-border-bottom-left-radius: 0px;
+	border-left: 1px solid #CCC;
+}
+	
+#cropping #cropped_infos img.save {
+	background: #EAF3FA url("../images/gui/disk.png") 50% 50% no-repeat;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-left: 1px solid #CCC;
+	}
+
+#cropping #cropped_infos img.undo {
+	background: #EAF3FA url("../images/gui/undo.png") 50% 50% no-repeat; /* Missing */
+	-moz-border-radius-topright: 0px;
+	-webkit-border-top-right-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
+	-webkit-border-bottom-right-radius: 0px;
+	}
+
+#cropping #cropped_infos img:hover {
+	opacity: 0.8;
+	-moz-opacity: 0.8;
+	filter:alpha(opacity=80);
+}
+
+#cropping #cropped_image {
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 2px;
+	background-color: #333;
+    width: 400px;
+    height: 300px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}

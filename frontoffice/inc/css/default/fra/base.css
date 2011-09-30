@@ -1,0 +1,42 @@
+/** LOADING MASK **/ #loading-mask {
+    background-color: #6e2186;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 20000;
+} 
+
+
+#loading {
+   	position:absolute;
+    width: 230px;
+	height:230px;
+	left:50%;
+	top:50%;
+	padding:5px 0 0 0;
+    margin: -112px 0 0 -115px;
+	background: transparent url('/rp/images/default/relaxnews-round.png') no-repeat center center;
+	color:#FFF;
+	font-size:10px;
+	
+} 
+#loading .loading-message {
+	padding: 80px 0;
+	font-size:10px;
+	text-align:center;
+}
+
+#loading .loading-indicator {
+	padding: 6px 0;
+    background: transparent url('/rp/images/default/relaxnews-loader.gif') no-repeat top center;
+    font: bold 13px tahoma, arial, helvetica;
+    margin: 0;
+	text-align:center;
+    height: auto;
+}
+
+.ari-firstsource {
+	padding-left:6px;
+}

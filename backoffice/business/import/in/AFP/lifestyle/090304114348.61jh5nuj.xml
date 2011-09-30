@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<NewsML>
+  <Catalog Href="http://www.afp.com/dtd/AFPCatalog.xml"/>
+  <NewsEnvelope>
+    <DateAndTime>20090304T114445Z</DateAndTime>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>afp.com</ProviderId>
+        <DateId>20090304</DateId>
+        <NewsItemId>090304114348.61jh5nuj</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:afp.com:20090304:090304114348.61jh5nuj:1</PublicIdentifier>
+      </NewsIdentifier>
+      <NameLabel>Indonesia-wildlife-animal-elephant</NameLabel>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20090304T114348Z</FirstCreated>
+      <ThisRevisionCreated>20090304T114348Z</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+    </NewsManagement>
+    <NewsComponent>
+      <NewsLines>
+        <HeadLine>Man crushed to death in Indonesia elephant stampede</HeadLine>
+        
+        
+        <DateLine>JAKARTA, March 4, 2009 (AFP)</DateLine>
+        <CopyrightLine>© 2009 AFP</CopyrightLine>
+        <SlugLine>Indonesia-wildlife-animal-elephant</SlugLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Provider>
+          <Party FormalName="AFP"/>
+        </Provider>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="en"/> 
+        <OfInterestTo FormalName="ext--english--relaxnews--lifestyle"/>
+      </DescriptiveMetadata>
+      <NewsComponent>
+        <ContentItem>
+          <MediaType FormalName="Text"/>
+          <Format FormalName="bcNITF2.5"/>
+          <DataContent>
+            <p> A 83-year-old man was crushed to death by a herd of wild elephants on Indonesia's Sumatra island Wednesday, a local official said, the latest in a string of human-animal conflicts on the edge of the island's dwindling forests.</p>
+            <p>The herd of elephants trampled the man as they thundered through a village in Bengkalis district in Riau province, local conservation agency head Martono told AFP.</p>
+            <p>"Around 30 elephants roaming in the area surrounded the man and trampled him until his body was torn to pieces," Martono said.</p>
+            <p>"The man was visiting his family in the village and wasn't accustomed to these kinds of attacks," he said, adding the man's son escaped the herd and witnessed his father's being killed. </p>
+            <p>Conflicts between wild animals and humans are on the rise on Sumatra, where legal and illegal logging is rapidly reducing the tropical jungle. Nine people have been killed by tigers there in the last five weeks.</p>
+            <p>The number of Sumatran elephants is also declining, with only 2,440 to 3,350 left in the wild, according to environmental group WWF.</p>
+          </DataContent>
+        </ContentItem>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

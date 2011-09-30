@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<NewsML>
+  <Catalog Href="http://www.afp.com/dtd/AFPCatalog.xml"/>
+  <NewsEnvelope>
+    <DateAndTime>20081210T151336Z</DateAndTime>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>afp.com</ProviderId>
+        <DateId>20081210</DateId>
+        <NewsItemId>081210151218.cxaxrogq</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:afp.com:20081210:081210151218.cxaxrogq:1</PublicIdentifier>
+      </NewsIdentifier>
+      <NameLabel>Technologies-télécoms</NameLabel>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20081210T151218Z</FirstCreated>
+      <ThisRevisionCreated>20081210T151218Z</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+    </NewsManagement>
+    <NewsComponent>
+      <NewsLines>
+        <HeadLine>Le nouveau patron d'Alcatel-Lucent dévoile sa stratégie vendredi</HeadLine>
+        
+        <ByLine>Par Céline CORNU</ByLine>
+        <DateLine>PARIS, 10 déc 2008 (AFP)</DateLine>
+        <CopyrightLine>© 2008 AFP</CopyrightLine>
+        <SlugLine>Technologies-télécoms PREV</SlugLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Provider>
+          <Party FormalName="AFP"/>
+        </Provider>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="fr"/> 
+        <OfInterestTo FormalName="ext--francais--relaxnews--artdevivre"/>
+      </DescriptiveMetadata>
+      <NewsComponent>
+        <ContentItem>
+          <MediaType FormalName="Text"/>
+          <Format FormalName="bcNITF2.5"/>
+          <DataContent>
+            <p> Le nouveau directeur général d'Alcatel-Lucent, Ben Verwaayen, dévoile vendredi son "plan stratégique" pour le groupe, une annonce très attendue par les salariés qui oscillent entre inquiétude et espoir d'un nouveau départ après une série de pertes et de restructurations.</p>
+            <p>Nommé en septembre à la tête de l'équipementier, M. Verwaayen avait indiqué fin octobre que cette "revue stratégique complète des activités" avait pour objectif premier de "restaurer la profitabilité" et de "générer du cash".</p>
+            <p>"Nous devons redéfinir notre stratégie, nous devons rationaliser notre portefeuille, nous devons éliminer les doublons", avait-il alors expliqué.</p>
+            <p>Depuis son arrivée, l'ancien patron de l'opérateur BT (ex-British Telecom) a déjà commencé à imprimer sa marque sur le groupe, né de la fusion difficile en décembre 2006 du français Alcatel et de l'américain Lucent.</p>
+            <p>L'équipementier a ainsi annoncé en novembre le remaniement de l'équipe de direction à partir du 1er janvier et le départ, dès le 1er décembre, de son directeur financier.</p>
+            <p>L'organisation va également être modifiée: au lieu des deux régions mondiales actuelles, le groupe sera divisé en trois régions. Et à côté de l'activité traditionnelle d'équipements télécoms, le nouveau DG veut mettre l'accent sur les "services" et "les logiciels applicatifs".</p>
+            <p>Alcatel-Lucent est par ailleurs entré en discussion exclusive avec Dassault Aviation pour la vente de sa part de 20,8% dans Thales pour 1,56 milliard d'euros.</p>
+            <p>Un temps évoquée par des analystes, l'éventualité d'un retrait de la téléphonie mobile a été balayée jeudi dernier par Ben Verwaayen. "Ce n'est pas vrai que nous allons quitter le mobile", a-t-il affirmé, en soulignant qu'Alcatel-Lucent n'était pas une "entreprise assiégée".</p>
+            <p>De leur côté, les salariés sont "dans l'attente": "il y a beaucoup d'inquiétude" concernant de nouvelles suppressions d'emplois, explique Odile Denis, déléguée CFDT, syndicat majoritaire au sein d'Alcatel-Lucent.</p>
+            <p>Ils espèrent "une pause dans les restructurations" pour assurer la "stabilité" nécessaire à un travail efficace, ajoute-t-elle.</p>
+            <p>Interrogé il y a quelques semaines sur d'éventuelles suppressions d'emplois, M. Verwaayen n'avait pas répondu clairement: affirmant que là n'était pas la question, il avait préféré parler d'"approche positive".</p>
+            <p>La CFE-CGC ne s'attend, elle, "a priori" pas à une nouvelle coupe dans les effectifs, tout comme certains analystes.</p>
+            <p>"Ils sont à mi-chemin (...) des plans de restructurations précédents", souligne Alexandre Peterc, d'Exane BNP Paribas.</p>
+            <p>"La méthode Verwaayen est très différente de la méthode Tchuruk et Russo, ses prédécesseurs, qui commençaient par annoncer des plans sociaux pour satisfaire la Bourse", estime François Schmetz, délégué central CFE-CGC.</p>
+            <p>"Il a fait un gros travail d'analyse de notre fonctionnement et de notre portefeuille produits. Il veut simplifier le processus interne pour diminuer les coûts et améliorer l'efficacité", précise-t-il, en disant espérer qu'il "réussisse à apaiser les tensions entre Français et Américains".</p>
+            <p>"C'est seulement dans un deuxième temps, au premier trimestre 2009, qu'il annoncera éventuellement des réductions d'effectifs si on continue à perdre de l'argent", pronostique M. Schmetz, alors que le groupe a enregistré sept trimestres consécutifs de perte.</p>
+            <p>Analystes comme syndicats espèrent en tout cas que M. Verwaayen annoncera une "relance des investissements en recherche et développement, avec une ligne claire", alors que, selon Mme Denis, le "flou" régnait depuis la fusion franco-américaine.</p>
+          </DataContent>
+        </ContentItem>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

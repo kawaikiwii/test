@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <afprelax>
+        <rootChannels>
+            <news>
+                <channel>_RLX_RUBRICS</channel>
+            </news>
+            <notice>
+                <channel>_RLX_RUBRICS</channel>
+            </notice>
+            <event>
+                <channel>_RLX_RUBRICS</channel>
+            </event>
+            <location>
+                <channel>_RLX_RUBRICS</channel>
+            </location>
+            <photo>
+                <channel>_RLX_RUBRICS</channel>
+            </photo>
+            <slideshow>
+                <channel>_RLX_RUBRICS</channel>
+            </slideshow>
+            <video>
+                <channel>_RLX_RUBRICS</channel>
+            </video>
+        </rootChannels>
+        <rootFolders>
+            <news>
+                <folder>_RLX_SPECIALFOLDERS</folder>
+            </news>
+            <notice>
+                <folder>_RLX_SPECIALFOLDERS</folder>
+            </notice>
+            <event>
+                <folder>_RLX_SPECIALFOLDERS</folder>
+            </event>
+            <location>
+                <folder>_RLX_SPECIALFOLDERS</folder>
+            </location>
+            <photo>
+                <folder>_RLX_SPECIALFOLDERS</folder>
+            </photo>
+            <slideshow>
+                <folder>_RLX_SPECIALFOLDERS</folder>
+            </slideshow>
+            <video>
+                <folder>_RLX_SPECIALFOLDERS</folder>
+            </video>
+        </rootFolders>
+        <rootLists>
+            <news>
+                <list>thema</list>
+                <list>News_targets</list>
+                <list>News_geo_targets</list>
+                <list>notification</list>
+                <list>export</list>
+                <list>treatment</list>
+            </news>
+            <notice>
+                <list>thema</list>
+                <list>News_targets</list>
+                <list>News_geo_targets</list>
+                <list>notification</list>
+                <list>export</list>
+            </notice>
+            <event>
+                <list>thema</list>
+                <list>News_targets</list>
+                <list>News_geo_targets</list>
+                <list>Taxonomy_event</list>
+            </event>
+            <location>
+                <list>Taxonomy_location</list>
+            </location>
+            <photo>
+                <list>thema</list>
+            </photo>
+            <slideshow>
+                <list>thema</list>
+                <list>News_targets</list>
+                <list>News_geo_targets</list>
+                <list>notification</list>
+                <list>export</list>
+            </slideshow>
+            <video>
+                <list>thema</list>
+                <list>News_targets</list>
+                <list>News_geo_targets</list>
+                <list>notification</list>
+                <list>export</list>
+            </video>
+            <source>
+                <list>source</list>
+            </source>
+        </rootLists>
+        <bo>
+            <path>/opt/nfs/production/backoffice/</path>
+        </bo>
+        <fo>
+            <path>/opt/nfs/production/frontoffice/</path>
+        </fo>
+        <illustration>
+            <path desc="Filesystem path to photos, relative to the root of WCM, including trailing slash">illustration/photo/</path>
+            <url desc="Url to photos, relative to the root of WCM, including trailing slash">publication/illustration/photo/</url>
+        </illustration>
+        <photoCropping>
+            <path desc="Absolute path to generated photos">/opt/nfs/production/repository/illustration/photo</path>
+        </photoCropping>
+        <photoResizeFormats desc="Widths and Heigths for the auto resizes">
+            <formats>w50,w80,w100,w200,w250,w300,w400,w600,w640,h50,h100,h200,h300</formats>
+        </photoResizeFormats>
+        <storeObjectInCache>
+            <object>channel</object>
+            <object>folder</object>
+        </storeObjectInCache>
+    </afprelax>
+    <php>
+        <exe desc="Absolute filesystem path to PHP interpreter, without .exe extension">/usr/bin/php5</exe>
+        <ini desc="Absolute filesystem path to php.ini">/etc/php5/apache2/php.ini</ini>
+        <cliini desc="Absolute filesystem path to php.ini">/etc/php5/cli/php.ini</cliini>
+    </php>
+    <smarty>
+        <path desc="Absolute filesystem path to smarty includes, including trailing slash">/opt/nfs/production/backoffice/includes/Smarty/</path>
+    </smarty>
+    <wcm>
+        <project>
+            <guid desc="Generic GUI id - used only by developers">wcm4-boar</guid>
+            <title desc="Back Office Display Project Name">AFP/RELAXNEWS :: Back-Office</title>
+        </project>
+        <default>
+            <sessionName desc="">BOAR</sessionName>
+            <language desc="">en</language>
+            <siteId desc="">4</siteId>
+            <optimisticLock desc="">1</optimisticLock>
+            <timezone desc="">GMT</timezone>
+            <lockDuration desc="">60</lockDuration>
+            <sessionTimeout desc="">300000</sessionTimeout>
+            <authentication desc="Authentication mode: wcm, ldap or openid">wcm</authentication>
+        </default>
+        <systemDB>
+            <connectionString desc="">mysql://relaxweb:kzq!2007@mysql.afprelax.local:3306/RELAX_SYS</connectionString>
+            <tablePrefix desc="">wcm_</tablePrefix>
+            <databasePrefix desc="Database prefix for using joints between tables in different DB">RELAX_SYS</databasePrefix>
+        </systemDB>
+        <businessDB>
+            <connectionString desc="Database connection string - usually in the mysql://root:root@localhost:3306/mydatabase form">mysql://relaxweb:kzq!2007@mysql.afprelax.local:3306/RELAX_BIZ</connectionString>
+            <tablePrefix desc="prefix for all tables in WCM system database">biz_</tablePrefix>
+            <databasePrefix desc="Database prefix for using joints between tables in different DB">RELAX_BIZ</databasePrefix>
+        </businessDB>
+        <search>
+            <engine desc="Search engine to use - usually textml or mysql">textml</engine>
+            <indexes>
+                <index>
+                    <name>title</name>
+                    <aliases>
+                        <alias>headline</alias>
+                    </aliases>
+                </index>
+                <index>
+                    <name>siteid</name>
+                    <aliases>
+                        <alias>site</alias>
+                    </aliases>
+                </index>
+                <index>
+                    <name>workflowstate</name>
+                    <aliases>
+                        <alias>status</alias>
+                    </aliases>
+                </index>
+                <index>
+                    <name>classname</name>
+                    <aliases>
+                        <alias>type</alias>
+                    </aliases>
+                </index>
+                <index>
+                    <name>channelid</name>
+                    <aliases>
+                        <alias>sectionid</alias>
+                    </aliases>
+                </index>
+            </indexes>
+            <facets>
+                <facet>
+                    <name>classname</name>
+                    <index>classname</index>
+                    <searchIndex>classname</searchIndex>
+                </facet>
+                <facet>
+                    <name>modifiedat</name>
+                    <index>modifiedat</index>
+                    <searchIndex>modifiedat</searchIndex>
+                </facet>
+                <facet>
+                    <name>channelid</name>
+                    <index>channelid</index>
+                    <searchIndex>channelid</searchIndex>
+                </facet>
+                <facet>
+                    <name>entity_on</name>
+                    <index>list_on</index>
+                    <searchIndex>entity_on</searchIndex>
+                </facet>
+                <facet>
+                    <name>entity_pn</name>
+                    <index>list_pn</index>
+                    <searchIndex>entity_pn</searchIndex>
+                </facet>
+                <facet>
+                    <name>entity_gl</name>
+                    <index>list_gl</index>
+                    <searchIndex>entity_gl</searchIndex>
+                </facet>
+                <facet>
+                    <name>category</name>
+                    <index>list_category</index>
+                    <searchIndex>category</searchIndex>
+                </facet>
+                <facet>
+                    <name>concept</name>
+                    <index>list_concept</index>
+                    <searchIndex>concept</searchIndex>
+                </facet>
+                <facet>
+                    <name>tag</name>
+                    <index>list_tag</index>
+                    <searchIndex>tag</searchIndex>
+                </facet>
+                <facet>
+                    <name>source</name>
+                    <index>list_source</index>
+                    <searchIndex>source</searchIndex>
+                </facet>
+            </facets>
+        </search>
+        <exports>
+            <tmpPath>/tmp/wcm/exports/</tmpPath>
+            <path>/opt/nfs/production/exports/</path>
+        </exports>
+        <backOffice>
+            <url desc="Full URL path to the WCM root folder of this WCM instance, including trailing slash">http://bo.afprelax.net/</url>
+            <itemsPath desc="Filesystem path to business objects, relative to the business subfolder, including trailing slash - usually items/biz/">items/biz/</itemsPath>
+            <photosPath desc="Filesystem path to photos, relative to the root of WCM, including trailing slash - usually img/photos/biz/">img/photos/biz/</photosPath>
+            <photosPathOTV desc="Filesystem relative path to OTV photos">/img/photos/otv</photosPathOTV>
+        </backOffice>
+        <templates>
+            <path desc="Absolute filesystem path to templates, including trailing slash">/opt/nfs/production/backoffice/business/templates/</path>
+            <backupPath desc="Absolute filesystem path to templates backups, including trailing slash">/opt/nfs/production/backoffice/business/backup/templates/</backupPath>
+        </templates>
+        <widgets>
+            <path desc="Absolute filesystem path to widgets, including trailing slash">/opt/nfs/production/backoffice/business/widgets/</path>
+        </widgets>
+        <cache>
+            <mode desc="Cache mode can be either 'Lite' or 'APC'">APC</mode>
+            <path desc="Absolute filesystem path to cache folder, (for 'Lite' mode) including trailing slash">/tmp/wcm/cache/</path>
+            <lifeTime desc="Default lifetime of cached element in seconds">600</lifeTime>
+        </cache>
+        <logging>
+            <path desc="Absolute filesystem path to logs folder, including trailing slash">/opt/nfs/production/repository/logs/</path>
+            <fileName desc="Relative to logging path, system logging subfolder and filename. Supports date syntax for log rotation - usually system/{Y-m}/wcm.{Y-m-d}.log">system/{Y-m}/wcm.{Y-m-d}.log</fileName>
+            <debug desc="Enable debugging, default is enabled">1</debug>
+            <verbose desc="Enable verbose output, default is enabled">1</verbose>
+        </logging>
+        <errorHandling>
+            <enabled desc="Enable error handling, default is disabled">0</enabled>
+            <reportLevel desc="Error reporting level (match E_ALL and E_* PHP variables)">6143</reportLevel>
+        </errorHandling>
+        <versioning>
+            <enabled desc="Enable object versionning, default is 1 (1 = on, 0 = off)">1</enabled>
+            <connector desc="Object connector to apply versionning to - usually biz">biz</connector>
+            <maxVersions desc="Maximum number of versions of the same objects to keep">10</maxVersions>
+            <exceptions desc="Objects to exclude from versionning - usually wcmSysclass,wcmBizclass">wcmSysclass,wcmBizclass</exceptions>
+        </versioning>
+        <webSite>
+            <path desc="Absolute filesystem path to this WCM instances web root, including trailing slash">/opt/nfs/production/repository/</path>
+            <repository desc="Absolute filesystem path to the publication directory : The repository">/opt/nfs/production/repository/</repository>
+            <url desc="URL path to this WCM instances web root, including trailing slash">http://www.afprelaxnews.com/</url>
+            <urlRepository desc="URL path to repository">http://repository.afprelaxnews.com/</urlRepository>
+            <pathToCss desc="Absolute path to CSS files">/opt/nfs/production/backoffice/skins/</pathToCss>
+        </webSite>
+        <exportsPaniers>
+            <path desc="Absolute filesystem path, including trailing slash">/opt/nfs/production/backoffice/business/web/exports/paniers</path>
+        </exportsPaniers>
+        <channel>
+            <query>className:article</query>
+        </channel>
+    </wcm>
+    <tme>
+        <enabled desc="Enable Text Mining, default is enabled">1</enabled>
+        <server desc="IP or FQDN to Nstein Text Mining Engine">tme.afprelax.local</server>
+        <port desc="Port that answers the TME service - usually 40000">40000</port>
+        <thresholds>
+            <concepts desc="Nconcept threshold value">70</concepts>
+            <ON desc="Organization Name threshold value">30</ON>
+            <PN desc="Place Name threshold value">30</PN>
+            <GL desc="Geographical Location threshold value">30</GL>
+            <tone desc="Tone threshold">30</tone>
+        </thresholds>
+    </tme>
+    <dam>
+        <enabled desc="Enable Nstein DAM (Digital Asset Management) webservice interconnection (1 = on, 0 = off)">0</enabled>
+        <textml desc="URL path to the TEXTML DAM webservice, including trailing slash - usually in the http://textml_fqdn_or_ip/iisvirtualname/HttpXml/ form "></textml>
+        <webServices desc="URL path to DAM generic WebServices, including trailing slash - usually in the http://dam_fqdn_or_ip/WebServices/ form"></webServices>
+        <mediaRepository desc="URL path to the DAM Media Repository WebServices, including trailing slash"></mediaRepository>
+        <importRules>
+            <allowedClasses>
+                <class id="Nstein.Bll.Article">
+                    <name>
+                        Article
+                    </name>
+                    <description></description>
+                    <damObject>
+                        Article
+                    </damObject>
+                    <wcmObject>
+                        article
+                    </wcmObject>
+                </class>
+                <class id="Nstein.Bll.Photo">
+                    <name>
+                        Photo
+                    </name>
+                    <description></description>
+                    <damObject>
+                        Photo
+                    </damObject>
+                    <wcmObject>
+                        photo
+                    </wcmObject>
+                </class>
+            </allowedClasses>
+        </importRules>
+    </dam>
+    <solr>
+        <service desc="Absolute URL of Solr service"></service>
+    </solr>
+    <textml>
+        <webServices desc="Full URL path to TEXTML webservice, including trailing slash">http://textml.afprelax.local/DevXmlSearchEngine/HttpXml/</webServices>
+    </textml>
+</config>

@@ -1,0 +1,380 @@
+
+
+.ari-preview {
+    overflow: hidden;
+}
+
+/* Listes */
+/*********************************************************************
+ * DETAILS TOOLBAR
+ */
+.ari-preview .ari-details {
+    background-color: #F9F1FC;
+    border-bottom: 1px dashed #F9F1FC;
+    color: #444444;
+    overflow: hidden;
+    padding: 0.3em 1.5em;
+    font-size: 1.2em;
+}
+
+.ari-preview .ari-details .ari-pilar {
+    float: left;
+    font-weight: bold;
+}
+
+.ari-preview .ari-details .ari-category {
+    float: left;
+}
+
+.ari-preview .ari-details .ari-separator {
+    float: left;
+    padding: 0 0.2em;
+}
+
+.ari-preview .ari-details .ari-publishDate {
+    float: right;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/*--------------------------------------------- -----------------------
+ * Wellbeing
+ */
+.ari-preview .ari-details .ari-pilar.ari-wellbeing {
+    color: #43D743;
+}
+
+/*--------------------------------------------------------------------
+ * House & Home
+ */
+.ari-preview .ari-details .ari-pilar.ari-househome {
+    color: #F96913;
+}
+
+/*--------------------------------------------------------------------
+ * Entertainement
+ */
+.ari-preview .ari-details .ari-pilar.ari-entertainment {
+    color: #FFB7DB;
+}
+
+/*--------------------------------------------------------------------
+ * Tourism
+ */
+.ari-preview .ari-details .ari-pilar.ari-tourism {
+    color: #6699FF;
+}
+
+/*********************************************************************
+ * CONTENT
+ */
+.ari-preview .ari-content {
+    font-size: 1.2em;
+    padding: 0.5em;
+    margin-left: 450px;
+}
+
+.ari-preview .ari-content .ari-publishDate {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.ari-preview .ari-content .ari-title {
+    padding: 0.3em 0.5em 0.1em 0;
+    font-size: 1.2em;
+}
+
+.ari-preview .ari-content .ari-slugline {
+    padding: 0.3em 0.5em 0.1em 0;
+    color: #777;
+    font-size: 0.9em;
+    font-weight: normal;
+}
+
+.ari-preview .ari-content .ari-slugline a {
+    color: #777;
+    text-decoration: none;
+}
+
+.ari-preview .ari-content .ari-slugline a:hover {
+    text-decoration: underline;
+}
+
+.ari-preview .ari-content .ari-description p {
+    font-size: 1.05em;
+}
+
+.ari-preview .ari-content p {
+    padding: 0.4em 0.2em;
+}
+
+.ari-preview .ari-content ol {
+    list-style-position: inside;
+    list-style-type: decimal-leading-zero;
+    margin: .75em 0 .75em 32px;
+    padding: 0;
+}
+
+.ari-preview .ari-content ul {
+    list-style-position: inside;
+    list-style-type: square;
+    margin: .75em 0 .75em 32px;
+    padding: 0;
+}
+
+
+.ari-preview .ari-content table {
+    border: 2px solid #64247C;
+    border-collapse: collapse;
+    width: 90%;
+    margin: auto;
+    font-size: 1em;
+}
+
+.ari-preview .ari-content thead, .ari-preview .ari-content tfoot {
+    background-color: #D3B5DF;
+    border: 1px solid #64247C;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.ari-preview .ari-content tbody {
+    background-color: #FFFFFF;
+    border: 1px solid #64247C;
+}
+
+.ari-preview .ari-content th {
+    font-weight: bold;
+    border: 1px dotted #64247C;
+    padding: 5px;
+    background-color: #D3B5DF;
+    text-align: center;
+    vertical-align: middle;
+    color: #64247C;
+}
+
+.ari-preview .ari-content td {
+    border: 1px solid #64247C;
+    padding: 5px;
+}
+
+.ari-preview .ari-content caption {
+    font-family: sans-serif;
+}
+
+/*--------------------------------------------------------------------
+ * Source
+ */
+.ari-preview .ari-content .ari-source {
+    font-style: italic;
+}
+
+/*--------------------------------------------------------------------
+ * Content margin
+ */
+.ari-preview.ari-news.ari-illustrated .ari-content {
+    margin-left: 480px;
+}
+
+.ari-preview.ari-event.ari-illustrated .ari-content {
+    margin-left: 480px;
+}
+
+.ari-preview.ari-event.ari-illustrated .ari-informations {
+    margin-left: 480px;
+}
+
+.ari-preview.ari-video .ari-content {
+    margin-left: 480px;
+}
+
+.ari-preview.ari-slideshow .ari-content {
+    margin-left: 480px;
+}
+
+.ari-preview.ari-slideshow .ari-components {
+    margin-left: 480px;
+}
+
+/*********************************************************************
+ * INFORMATIONS
+ */
+.ari-preview .ari-informations {
+    font-size: 1.2em;
+    padding: 0.5em;
+}
+
+.ari-preview .ari-informations .ari-title {
+    padding: 0.2em;
+}
+
+/*********************************************************************
+ * SLIDESHOWS COMPONENTS
+ */
+.ari-preview.ari-slideshow .ari-components .ari-component {
+    border-bottom: 1px solid #F9F1FC;
+    overflow: hidden;
+}
+
+.ari-preview.ari-slideshow .ari-components .ari-component .ari-illustration {
+    float: left;
+}
+
+.ari-preview.ari-slideshow .ari-components .ari-component .ari-illustration.photo {
+    margin-bottom: 1em;
+}
+
+.ari-preview.ari-slideshow .ari-components .ari-component .ari-illustration.photo .ari-illustration-item img {
+    border: 1px solid #999999;
+}
+
+.ari-preview.ari-slideshow .ari-components .ari-component .ari-illustration.photo .ari-illustration-detail {
+    color: #444444;
+    font-size: 1em;
+}
+
+.ari-preview.ari-slideshow .ari-components .ari-component .ari-content {
+    margin-left: 21.5em;
+}
+
+/*********************************************************************
+ * ILLUSTRATIONS
+ */
+.ari-preview .ari-illustrations {
+    float: left;
+    margin: 0 1em 0 0;
+    padding: 1em;
+    text-align: center;
+    background: #F9F1FC;
+    height: 100%;
+}
+
+/*--------------------------------------------------------------------
+ * Photos
+ */
+.ari-preview .ari-illustration.photo {
+    margin-bottom: 1em;
+    padding: 0.5em;
+    width: 410px;
+}
+
+.ari-preview .ari-illustration.photo .ari-illustration-item img {
+    border: 1px solid #999999;
+}
+
+.ari-preview .ari-illustration.photo .ari-illustration-detail {
+    color: #444444;
+    font-size: 1em;
+}
+
+/*--------------------------------------------------------------------
+ * Videos
+ */
+.ari-preview .ari-illustration.video {
+    background-color: #FEFEFE;
+    border: 1px solid #EFEFEF;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    width: 470px;
+}
+
+.ari-preview .ari-illustration.video .ari-illustration-detail {
+    color: #444444;
+    font-size: 1em;
+}
+
+.ari-preview .ari-illustration.video .ari-illustration-detail .ari-embed {
+    padding: 1em;
+}
+
+.ari-preview .ari-illustration.video .ari-illustration-detail .ari-embed input {
+    border: 1px solid #777;
+    width: 100%;
+}
+
+/*--------------------------------------------------------------------
+ * Slideshows
+ */
+.ari-preview .ari-illustration.slideshow {
+    background-color: #FEFEFE;
+    border: 1px solid #EFEFEF;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    width: 360px;
+}
+
+.ari-preview .ari-illustration.slideshow .ari-illustration-detail {
+    color: #444444;
+    font-size: 1em;
+}
+
+.ari-preview .ari-illustration.slideshow .ari-illustration-detail {
+    text-align: left;
+}
+
+.ari-preview .ari-illustration.slideshow .ari-illustration-detail .ari-embed {
+    padding: 1em;
+}
+
+.ari-preview .ari-illustration.slideshow .ari-illustration-detail .ari-embed input {
+    border: 1px solid #777;
+    width: 100%;
+}
+
+/** SPECIAL **/
+.ari-desk-content .ari-preview {
+    border-top: 2px solid #64247C;
+}
+
+.ari-desk-content .ari-preview .ari-illustrations {
+    float: none;
+    text-align: center;
+    width: 100%;
+}
+
+.ari-desk-content .ari-preview.ari-event.ari-illustrated .ari-content {
+    margin-left: 20px;
+}
+
+.ari-desk-content .ari-preview.ari-event.ari-illustrated .ari-informations {
+    margin-left: 20px;
+}
+
+#event-channel-ourselection .ari-preview .ari-content, #event-channel-ourselection .ari-preview .ari-informations {
+    margin-left: 10px;
+}
+
+/***** RESTRICTED ACCESS ****/
+.ari-restricted {
+    padding: 1em;
+}
+
+.ari-restricted a {
+    color: #333;
+}
+
+.ari-restricted .ari-restricted-title {
+    padding-bottom: 1em;
+    font-size: 1.7em;
+}
+
+.ari-restricted-access {
+    padding: 1em 0;
+    overflow: hidden;
+    text-align: left;
+}
+
+.ari-restricted-access-service {
+    padding: 1.2em;
+    /*float: left;
+    width: 200px*/;
+}
+
+.ari-restricted-access-service .ari-restricted-access-rubric {
+    display: inline;
+}
+
+
+
+

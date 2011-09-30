@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<NewsML>
+  <Catalog Href="http://www.afp.com/dtd/AFPCatalog.xml"/>
+  <NewsEnvelope>
+    <DateAndTime>20081211T15173Z</DateAndTime>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>afp.com</ProviderId>
+        <DateId>20081211</DateId>
+        <NewsItemId>ext--francais--relaxnews--artdevivre</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:afp.com:20081211:ext--francais--relaxnews--artdevivre:1</PublicIdentifier>
+      </NewsIdentifier>
+      <NameLabel></NameLabel>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20081210T151736Z</FirstCreated>
+      <ThisRevisionCreated>20081210T151736Z</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+    </NewsManagement>
+    <NewsComponent>
+      <AdministrativeMetadata>
+        <Provider>
+          <Party FormalName="AFP"/>
+        </Provider>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="fr"/> 
+      </DescriptiveMetadata>
+      <NewsComponent>
+        <NewsLines>
+          <HeadLine>Plainte de l'Oréal contre eBay pour contrefaçon: décision de justice en mars</HeadLine>
+        </NewsLines>
+        <NewsItemRef NewsItem="081210151446.8j5c10sn.xml"/>
+      </NewsComponent>
+      <NewsComponent>
+        <NewsLines>
+          
+        </NewsLines>
+        <NewsItemRef NewsItem="081210151219.hksbe9vx.xml"/>
+      </NewsComponent>
+      <NewsComponent>
+        <NewsLines>
+          <HeadLine>Le nouveau patron d'Alcatel-Lucent dévoile sa stratégie vendredi</HeadLine>
+        </NewsLines>
+        <NewsItemRef NewsItem="081210151218.cxaxrogq.xml"/>
+      </NewsComponent>
+      <NewsComponent>
+        <NewsLines>
+          <HeadLine>Un menu "crise" à 3,5 euros à Nantes pour sortir de l'impasse</HeadLine>
+        </NewsLines>
+        <NewsItemRef NewsItem="081210150621.mv0oa058.xml"/>
+      </NewsComponent>
+      <NewsComponent>
+        <NewsLines>
+          <HeadLine>Alerte à la dioxine dans le porc irlandais: l'EFSA se veut rassurante</HeadLine>
+        </NewsLines>
+        <NewsItemRef NewsItem="081210145719.beuqa4pf.xml"/>
+      </NewsComponent>
+      <NewsComponent>
+        <NewsLines>
+          <HeadLine>Plan climat européen: Fillon s'attend à une "négociation très difficile"</HeadLine>
+        </NewsLines>
+        <NewsItemRef NewsItem="081210144926.3qog8vcm.xml"/>
+      </NewsComponent>
+      <NewsComponent>
+        <NewsLines>
+          <HeadLine>Wall Street ouvre en hausse, vers une aide à l'automobile US</HeadLine>
+        </NewsLines>
+        <NewsItemRef NewsItem="081210144916.nc5h0d86.xml"/>
+      </NewsComponent>
+      <NewsComponent>
+        <NewsLines>
+          <HeadLine>Hongrie: plus de 50 vols annulés à l'aéroport de Budapest par une grève</HeadLine>
+        </NewsLines>
+        <NewsItemRef NewsItem="081210144546.n2261hdh.xml"/>
+      </NewsComponent>
+      <NewsComponent>
+        <NewsLines>
+          <HeadLine>GB: un lapsus de Brown, sauveur du monde, déclenche l'hilarité des députés</HeadLine>
+        </NewsLines>
+        <NewsItemRef NewsItem="081210144539.robu3zbp.xml"/>
+      </NewsComponent>
+      <NewsComponent>
+        <NewsLines>
+          <HeadLine>Sony ouvre les portes de son monde virtuel pour la PlayStation 3</HeadLine>
+        </NewsLines>
+        <NewsItemRef NewsItem="081210143444.gvsloxv3.xml"/>
+      </NewsComponent>
+      <NewsComponent>
+        <NewsLines>
+          <HeadLine>Berlin renforce la protection des données personnelles</HeadLine>
+        </NewsLines>
+        <NewsItemRef NewsItem="081210142928.1a8ho4vj.xml"/>
+      </NewsComponent>
+      <NewsComponent>
+        <NewsLines>
+          <HeadLine>Iran: une militante des droits de l'Homme interdite de quitter le territoire</HeadLine>
+        </NewsLines>
+        <NewsItemRef NewsItem="081210142005.sxcrbtxd.xml"/>
+      </NewsComponent>
+      <NewsComponent>
+        <NewsLines>
+          <HeadLine>Les antinucléaires saisissent la justice pour faire fermer Fessenheim</HeadLine>
+        </NewsLines>
+        <NewsItemRef NewsItem="081210141915.ikw3grq7.xml"/>
+      </NewsComponent>
+      <NewsComponent>
+        <NewsLines>
+          <HeadLine>Un ancien sénateur UMP chargé d'une mission sur les autoroutes de la mer</HeadLine>
+        </NewsLines>
+        <NewsItemRef NewsItem="081210141753.lmma3s7i.xml"/>
+      </NewsComponent>
+      <NewsComponent>
+        <NewsLines>
+          <HeadLine>Pétition de professeurs des écoles pour demander la démission de Darcos</HeadLine>
+        </NewsLines>
+        <NewsItemRef NewsItem="081210141112.qgj5n4ho.xml"/>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

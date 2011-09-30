@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<news id="" cid="" siteId="">
+	<itemMeta>
+		<managment>
+			<sources/>
+			<initiated	date="" time="" by=""/>
+			<revised	date="" time="" by=""/>
+			<embargoed	date="" time="" by=""/>
+			<published	date="" time="" by=""/>
+			<expired	date="" time="" by=""/>
+		</managment>
+		
+		<administrative>
+			<histories/>
+			<notifications/>
+		</administrative>
+		
+		<classifications>
+			<folders/>
+			<rubrics/>
+			<themas/>
+		</classifications>
+	</itemMeta>
+
+	<related>
+		<links/>
+		<conceptRefs/>
+	</related>
+
+	<resources/>
+</news>

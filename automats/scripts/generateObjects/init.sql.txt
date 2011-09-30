@@ -1,0 +1,6 @@
+UPDATE biz_news SET MustGenerate=2;
+UPDATE biz_event SET MustGenerate=2;
+UPDATE biz_video SET MustGenerate=2;
+UPDATE biz_slideshow SET MustGenerate=2;
+
+

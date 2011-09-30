@@ -1,0 +1,90 @@
+div.genericForm {
+float: left;
+clear: left;
+padding: 25px 0 25px 0;
+margin: 0 0 0 0;
+width: 100%;
+}
+
+div.genericForm form {
+clear: left;
+padding: 0 0 0 0;
+margin: 0 0 0 0;
+}
+
+div.genericForm form fieldset {
+padding: 0 0 20px 0;
+margin: 0 0 20px 0;
+border: 1px solid #E6E6E6;
+}
+
+div.genericForm form fieldset legend {
+font-size: 14px;
+font-weight: bold;
+margin-left: 10px;
+padding-left: 0;
+}
+
+div.genericForm form fieldset ul {
+padding: 5px 0 0 0;
+margin: 0 20px 0px 20px;
+}
+
+div.genericForm form fieldset ul li {
+clear: left;
+list-style-type: none;
+padding: 8px 0 0 0;
+margin: 0 0 0 0;
+font-size: 12px;
+}
+
+div.genericForm form fieldset ul li label {
+float: left;
+clear: left;
+display: block;
+width: 220px;
+padding-top: 3px;
+padding-right: 10px;
+}
+
+div.genericForm form fieldset ul li input  {
+float: left;
+}
+
+div.genericForm form fieldset ul li label input {
+float: none;
+margin: 0 10px 0 0;
+}
+
+div.genericForm form input.action,
+a.action, 
+input.action {
+display: block;
+float: right;
+text-align: center;
+margin: 0 0 0 0;
+padding: 3px 10px 3px 10px;
+font-size: 12px;
+font-family: helvetica, arial, sans-serif;
+text-decoration: none;
+border: 1px solid silver;
+background-repeat: no-repeat;
+background-position: 96% 50%;
+background-color: #f4f4f4;
+color: black;
+cursor: pointer;
+}
+
+div.genericForm form input.action:hover,
+a.action:hover, 
+input.action:hover {
+background-color: #E0E0E0;
+color: black;
+border: 1px solid black;
+}
+
+
+div.genericForm form fieldset.source ul li label {
+width: auto;
+}
+

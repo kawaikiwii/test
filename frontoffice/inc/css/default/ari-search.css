@@ -1,0 +1,191 @@
+.ari-search {
+    margin: 0.5em;
+} .ari-search .ari-search-panel {
+    display: none;
+} .ari-search .ari-search-panel.active {
+    display: block;
+}
+
+/*********************************************************************
+ * SEARCH TABS
+ */ .ari-search ul.ari-search-tabs {
+    padding: 0.5em;
+} .ari-search ul.ari-search-tabs li {
+    background: #CCCCCC none repeat scroll 0 0;
+    border-color: #999999 #999999 -moz-use-text-color;
+    border-style: solid solid none;
+    border-width: 1px 1px 0;
+    display: inline;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    padding: 0.5em 0.5em 0.5em 0.2em;
+} .ari-search ul.ari-search-tabs li a {
+    color: #333333;
+    font-size: 1.15em;
+    text-decoration: none;
+} .ari-search ul.ari-search-tabs li a .ari-search-results-count {
+    padding: 0.2em;
+} .ari-search ul.ari-search-tabs li.active {
+    background: #999999 none repeat scroll 0 0;
+} .ari-search ul.ari-search-tabs li.active a {
+    color: #111111;
+    font-weight: bold;
+}
+
+/*********************************************************************
+ * SEARCH ENGINE
+ */ .ari-search .ari-search-criteria {
+    background: #CCCCCC none repeat scroll 0 0;
+    border: 1px solid #999999;
+    display: none;
+} .ari-search .ari-search-criteria dl {
+    overflow: hidden;
+} .ari-search .ari-search-criteria dl dt {
+    color: #333333;
+    float: left;
+    margin-top: 0.3em;
+    padding-top: 0.2em;
+    text-align: right;
+    width: 7.5em;
+} .ari-search .ari-search-criteria dl dd {
+    display: block;
+    padding: 0.5em 0 0.5em 8em;
+} .ari-search .ari-search-criteria .ari-search-channels {
+    float: left;
+}
+
+/*********************************************************************
+ * SEARCH RESULTS
+ */ .ari-search .ari-search-results {
+    background: #FFFFFF none repeat scroll 0 0;
+    border: 1px solid #999999;
+} .ari-search .ari-search-results-list {
+    padding: 1em 0.5em;
+} .x-grid3-row h3 {
+    font-size: 1.1em;
+} .x-grid3 .x-grid3-col-mainChannel h3 {
+    background: url(/rp/images/default/sprites/relaxicon.png) no-repeat 0 0;
+    padding-left: 18px;
+    height: 1%;
+}
+
+.x-grid3-row.ari-breaking-news {
+	 font-size: 1.05em;
+	color:red;
+}
+
+/*--------------------------------------------------------------------
+ * Wellbeing
+ */ .x-grid3 .x-grid3-col-mainChannel h3.ari-wellbeing {
+    background-position: 0 -386px;
+    color: #43D743;
+}
+
+/*--------------------------------------------------------------------
+ * House & Home
+ */ .x-grid3 .x-grid3-col-mainChannel h3.ari-househome {
+    background-position: 0 -186px;
+    color: #F96913;
+}
+
+/*--------------------------------------------------------------------
+ * Entertainement
+ */ .x-grid3 .x-grid3-col-mainChannel h3.ari-entertainment {
+    background-position: 0 -86px;
+    color: #FFB7DB;
+}
+
+/*--------------------------------------------------------------------
+ * Tourism
+ */ .x-grid3 .x-grid3-col-mainChannel h3.ari-tourism {
+    background-position: 0 -286px;
+    color: #6699FF;
+}
+
+
+.x-grid3-cell-inner.x-grid3-col-title img {
+	width:50px;
+	height:50px;
+	float:left;
+	margin-right: 0.5em;
+	border:1px solid #64247C;
+}
+
+.x-grid3-cell-inner.x-grid3-col-title h3 {
+	font-size:1.05em;
+	padding-bottom:0.2em;
+}
+.x-grid3-cell-inner.x-grid3-col-title p {
+	padding-bottom:0.2em;
+	white-space:pre-wrap;
+}
+
+/*--------------------------------------------------------------------
+ * Pagination
+ */.ari-search .ari-search-pagination {
+    border: 0 dashed #AAAAAA;
+    display: none;
+    text-align: center;
+} .ari-search .ari-search-pagination.ari-border-bottom {
+    border-bottom-width: 1px;
+} .ari-search .ari-search-pagination.ari-border-top {
+    border-top-width: 1px;
+} .ari-search .ari-search-pagination {
+    border-color: #AAAAAA;
+    text-align: center;
+} .ari-search .ari-search-pagination ul li {
+    display: inline;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    padding: 0.5em 0.5em 1em 0.2em;
+}
+
+/*--------------------------------------------------------------------
+ * Items
+ */ .ari-list-items {
+} .ari-list-item .ari-item {
+    border-bottom: 1px dashed #EFEFEF;
+    margin-bottom: 1em;
+    overflow: hidden;
+    padding: 0.2em;
+    cursor: pointer;
+} .ari-list-item .ari-item:hover {
+    background: #EFEFEF none repeat scroll 0 0;
+} .ari-list-item .ari-item .ari-details {
+    font-size: 1.1em;
+    margin: 0.5em 0;
+    overflow: hidden;
+} .ari-list-item .ari-item .ari-details .ari-pilar {
+    float: left;
+    font-weight: bold;
+} .ari-list-item .ari-item .ari-details .ari-category {
+    float: left;
+} .ari-list-item .ari-item .ari-details .ari-separator {
+    float: left;
+    padding: 0 0.2em;
+} .ari-list-item .ari-item .ari-details .ari-publishDate {
+    float: left;
+    font-style: italic;
+} .ari-list-item .ari-item .ari-class, .ari-list-item .ari-item .ari-channel {
+    display: none;
+}
+
+/*********************************************************************
+ * EVENT'S SEARCH
+ *
+ */ #event-search-engine {
+    line-height: 4em;
+    border: 1px solid #64247c;
+    text-align: center;
+}
+
+/*********************************************************************
+ * RESULTS HITS
+ *
+ */ .ari-search-hit {
+    color: red;
+    font-weight: bold;
+	background:yellow;
+}

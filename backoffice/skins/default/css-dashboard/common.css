@@ -1,0 +1,503 @@
+/*
+Document types icons
+*/
+
+.site {
+    background-image: url("../images/bizobjects/site.png");
+    background-repeat: no-repeat;
+}
+
+.newsletter {
+    background-image: url("../images/bizobjects/newsletter.png");
+    background-repeat: no-repeat;
+}
+
+.slideshow {
+    background-image: url("../images/bizobjects/slideshow.png");
+    background-repeat: no-repeat;
+}
+
+.poll {
+    background-image: url("../images/bizobjects/poll.png");
+    background-repeat: no-repeat;
+}
+
+.webuser {
+    background-image: url("../images/bizobjects/webuser.png");
+    background-repeat: no-repeat;
+}
+
+.item {
+    background-image: url("../images/bizobjects/item.png");
+    background-repeat: no-repeat;
+}
+
+.itemflash {
+    background-image: url("../images/bizobjects/itemflash.png");
+    background-repeat: no-repeat;
+}
+
+.itempdf {
+    background-image: url("../images/bizobjects/itempdf.png");
+    background-repeat: no-repeat;
+}
+
+.itemimage {
+    background-image: url("../images/bizobjects/itemimage.png");
+    background-repeat: no-repeat;
+}
+
+.itemaudio {
+    background-image: url("../images/bizobjects/itemaudio.png");
+    background-repeat: no-repeat;
+}
+
+.audio {
+    background-image: url("../images/bizobjects/audio.png");
+    background-repeat: no-repeat;
+}
+
+.forum {
+    background-image: url("../images/bizobjects/forum.png");
+    background-repeat: no-repeat;
+}
+
+.collection {
+    background-image: url("../images/bizobjects/collection.png");
+    background-repeat: no-repeat;
+}
+
+.video {
+    background-image: url("../images/bizobjects/video.png");
+    background-repeat: no-repeat;
+}
+
+.itemvideo {
+    background-image: url("../images/bizobjects/itemvideo.png");
+    background-repeat: no-repeat;
+}
+
+.itemhtml,
+.itemfree_html {
+    background-image: url("../images/bizobjects/itemhtml.png");
+    background-repeat: no-repeat;
+}
+
+.photo {
+    background-image: url("../images/bizobjects/photo.png");
+    background-repeat: no-repeat;
+}
+
+.article {
+    background-image: url("../images/bizobjects/article.png");
+    background-repeat: no-repeat;
+}
+
+.issue {
+    background-image: url("../images/bizobjects/issue.png");
+    background-repeat: no-repeat;
+}
+
+.publication {
+    background-image: url("../images/bizobjects/publication.png");
+    background-repeat: no-repeat;
+}
+
+.news,
+.newsitem {
+    background-image: url("../images/bizobjects/newsitem.png");
+    background-repeat: no-repeat;
+}
+
+.channel {
+    background-image: url("../images/bizobjects/channel.png");
+    background-repeat: no-repeat;
+}
+
+.contribution {
+    background-image: url("../images/bizobjects/contribution.png");
+    background-repeat: no-repeat;
+}
+
+/*
+System classes icons
+*/
+
+.wcmGroup {
+    background-image: url("../images/sysobjects/wcmGroup.png");
+    background-repeat: no-repeat;
+}
+
+.wcmUser {
+    background-image: url("../images/sysobjects/wcmUser.png");
+    background-repeat: no-repeat;
+}
+
+.wcmGenerationContent {
+    background-image: url("../images/sysobjects/wcmGenerationContent.png");
+    background-repeat: no-repeat;
+}
+
+.wcmGeneration {
+    background-image: url("../images/sysobjects/wcmGenerationSet.png");
+    background-repeat: no-repeat;
+}
+
+.wcmGenerationSet {
+    background-image: url("../images/sysobjects/wcmGenerationSet.png");
+    background-repeat: no-repeat;
+}
+
+.wcmTemplate {
+    background-image: url("../images/sysobjects/wcmTemplate.png");
+    background-repeat: no-repeat;
+}
+
+.wcmTemplateCategory {
+    background-image: url("../images/sysobjects/wcmTemplateCategory.png");
+    background-repeat: no-repeat;
+}
+
+.wcmSysclass {
+    background-image: url("../images/sysobjects/wcmSysclass.png");
+    background-repeat: no-repeat;
+}
+
+.wcmWorkflowState {
+    background-image: url("../images/sysobjects/wcmWorkflowState.png");
+    background-repeat: no-repeat;
+}
+
+.toggle {
+    background: url("../images/gui/action-add.gif") no-repeat top left;
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+
+.toggle SPAN {
+    display: none;
+}
+
+/*
+Common classes
+*/
+
+body
+{
+    margin:                     0px;
+    padding:                    0px;
+    background-color:           #ffffff;
+    color:                      #404040;
+    font-family: verdana, sans-serif;
+    font-size: 9pt;
+}
+
+.wait
+{
+    background-image: url('../images/gui/ajax-loader.gif');
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    margin: 10px;
+    color: #666;
+}
+
+h1
+{
+    font-size: 150%;
+    font-weight: bold;
+}
+
+h2
+{
+    font-size: 120%;
+    font-weight: bold;
+    color: #333;
+}
+
+h3
+{
+    font-size: 100%;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px 0px 8px 0px;
+}
+
+a, a:visited
+{
+    text-decoration: none;
+    color: #167197;
+}
+
+a:hover
+{
+    text-decoration: underline;
+    color: #f04000;
+}
+
+a.selected
+{
+    text-decoration: underline;
+    color: #f04000;
+}
+
+a:focus {
+    outline: none;
+}
+
+img
+{
+    border: 0;
+}
+
+form {  margin: 0px; }
+
+fieldset {
+    border: 1px solid #E0E0E0;
+    color: #666;
+    margin: 10px 0;
+    padding: 10px;
+} html*fieldset { padding: 10px; } 
+
+html*fieldset select {
+    margin-top: 5px;
+}
+
+fieldset ul {
+    font-size: 11px;
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+
+*+html fieldset input {
+    vertical-align: middle;
+}
+
+html*fieldset select {
+    margin-top: 0px;
+}
+
+legend {
+    color: #666;
+    padding: 0 8px;
+}
+
+fieldset ul li {
+    list-style: none; 
+    margin: 5px 0;
+}
+
+fieldset ul li label {
+    float: left;
+    width: 150px;
+} html*fieldset ul li label { clear: left; }
+
+fieldset ul li.boolean input {
+    float: left;
+    width: 20px;
+}
+
+fieldset ul li.boolean label {
+    margin-top:2px;
+    width: 300px;
+}
+
+fieldset.source ul li label {
+    width: 400px;
+}
+
+.header {
+    color:#333333;
+    font-size:120%;
+    font-weight:bold;
+}
+
+.error {
+    padding: 2px;
+    padding-left: 20px;
+    background: url("../images/gui/minus-circle.png") top left no-repeat;
+    font-size: 11px;
+}
+
+.has_details {
+	border-bottom: 1px dotted #98B8D9;
+	height: 16px !important;
+	width: auto !important;
+	float: left;
+}
+
+.permissions td, th {
+    padding: 5px 10px;
+}
+
+.permissions th {
+    background: #F0F0F0;
+}
+
+.permissions td {
+    text-align: center;
+    min-width: 50px;
+    _width:expression(this.currentStyle.getAttribute('minWidth'));
+}
+
+.list-builder {
+-moz-border-radius-bottomleft:3px;
+-moz-border-radius-bottomright:3px;
+-moz-border-radius-topleft:3px;
+-moz-border-radius-topright:3px;
+background:transparent url("../images/gui/button-bg-white-2.png") repeat-x scroll left bottom;
+border:1px solid #999999;
+padding:3px 7px;
+margin-left: 5px;
+}
+
+#searchformheader fieldset ul li { 
+    list-style:none; 
+    background: url("../images/gui/bullet.png") 0px 3px no-repeat; 
+    padding-left: 20px; 
+    margin: 5px 0;
+}
+
+#searchformheader fieldset ul li label {
+    float: left;
+    width: 100px;
+}
+
+#content-wrapper {
+    clear: left;
+    margin: 0 10px 0 10px;
+    padding: 0;
+    _width:expression(this.currentStyle.getAttribute('minWidth'));
+}
+
+/*
+Tab-pane: browse
+Tab-pane: history
+*/
+
+
+#treeview {
+    margin-top: 10px;
+    float:left;
+    width:200px;
+    min-height:420px;
+    font-size: 11px;
+}
+
+#treeview h2 {
+    padding: 10px 0 0 10px;
+    font-weight: bold;
+    color: #444;
+    margin: 0;
+}
+
+#treeview div.tab-page ul {
+    padding: 0 0 0 0;
+    margin:  10px 0 0 0;
+}
+
+#treeview div.tab-page ul li {
+	list-style-type: none;
+    padding: 2px 0 0 20px;
+    margin:  0 0 7px 0;
+	min-height: 16px;
+}
+
+#treeview div.tab-page ul li.channel.level-a {
+    background-image: url("../images/bizobjects/channels.png");
+}
+
+#treeview div.tab-page ul li.channel.level-b {
+	margin-left: 17px;
+}
+
+#treeview div.tab-page ul li.channel.level-c {
+	margin-left: 34px;
+}
+
+#treeview div.tab-page ul li.channel.level-d {
+	margin-left: 51px;
+}
+
+#treeview div.tab-page ul li.channel.level-e {
+	margin-left: 68px;
+}
+
+#searchbox {
+    width: 200px;
+}
+
+#content {
+    margin-left: 230px;
+}
+
+#wrapper {
+    height: 100%;
+    width: 100%;
+    min-width: 990px;
+    _width:expression(this.currentStyle.getAttribute('minWidth'));
+}
+
+#footer {
+    margin: 0;
+    padding: 25px 0 0 0;
+    margin: 0;
+    clear: both;
+}
+
+#footer ul {
+    clear: both;
+    margin: 25px 0 0 0;
+    padding: 10px;
+    text-align: left;
+    border-top: 1px solid silver;
+}
+
+#footer ul li { 
+    padding: 0 0 0 0;
+    margin: 10px 0 0 0;
+    list-style-type: none;
+}
+
+
+/*
+Logging
+*/
+
+#log {
+    padding: 0;
+    margin: 0 0 0 0;
+    list-style-type: none;
+    font-size: 11px;
+}
+
+#log li {
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    margin-bottom: 6px;
+    margin-right: 15px;
+    color: #606060;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #CCC;
+}
+
+#log li.MSG {
+    background-image: url("../images/gui/tick-circle.png");
+    list-style-type: none;
+}
+
+#log li.VRB {
+    background-image: url("../images/gui/information.png");
+    list-style-type: none;
+}
+
+#log li.WRN {
+    background-image: url("../images/gui/exclamation-frame.png");
+    color: #e08000;
+}
+
+#log li.ERR {
+    background-image: url("../images/gui/minus-circle.png");
+    color: #c02000;
+}

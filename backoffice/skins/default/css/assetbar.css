@@ -1,0 +1,407 @@
+#assetbar {
+float: left;
+margin: 0 0 3px 0;
+padding: 0 0 3px 0;
+width: 100%;
+border-bottom: 1px solid #D9D9D9;
+}
+
+#assetbar h3 {
+display: block;
+float: left;
+padding: 0 0 0 0;
+margin: 0 0 0 0;
+font-size: 18px;
+}
+
+#assetbar h3 em {
+float: left;
+font-weight: normal;
+font-style: normal;
+color: #7E7E7E;
+margin: 0 0 0 0;
+padding: 0 15px 0 0;
+background-image: url("../images/gui/bullet-arrow-right.png");
+background-repeat: no-repeat;
+background-position: 100% 70%;
+}
+
+#assetbar ul {
+display: block;
+float: right;
+margin: 0 0 0 0;
+padding: 0 0 0 20px;
+}
+
+#assetbar ul li {
+display: block;
+float: left;
+list-style-type: none;
+margin: 0 0 0 5px;
+padding: 0 0 0 0;
+}
+
+#assetbar ul li.single {
+background-image: none;
+}
+
+
+#assetbar ul li ul {
+display: none;
+}
+
+#assetbar a {
+text-align: left;
+margin: 0 0 0 0;
+font-size: 11px;
+font-family: Arial;
+text-decoration: none;
+color: black;
+height: 26px;
+background: #f4f4f4 url("../images/gui/button-blank.png") top left no-repeat;
+padding: 0px;
+padding-left: 5px;
+float: left;
+cursor: pointer;
+}
+#assetbar a span {
+background: url("../images/gui/button-blank.png") top right no-repeat;
+float: left;
+padding-right: 10px;
+}
+#assetbar a span span {
+float: left;
+height: 16px;
+padding: 5px 0px 5px 25px;
+}
+
+#assetbar a:hover {
+color: #FFF;
+background-position: left -30px;
+}
+#assetbar a:hover span {
+background-position: right -30px;
+}
+
+#assetbar a:active, #assetbar a:focus {
+color: #FFF;
+background: #f4f4f4 url("../images/gui/button-blank.png") top left no-repeat;
+background-position: left -61px;
+}
+
+#assetbar a:active span, #assetbar a:focus span {
+color: #FFF;
+background: #f4f4f4 url("../images/gui/button-blank.png") top right no-repeat;
+background-position: right -61px;
+}
+
+#assetbar a.inactive {
+color: #999;
+cursor: default;
+background: #f4f4f4 url("../images/gui/button-blank.png") top left no-repeat;
+background-position: left -92px;
+-moz-opacity: 0.5;
+opacity: 0.5;
+filter:alpha(opacity=50);
+}
+
+#assetbar a.inactive span {
+color: #999;
+cursor: default;
+background: #f4f4f4 url("../images/gui/button-blank.png") top right no-repeat;
+background-position: right -92px;
+}
+
+#assetbar a:hover .inactive span {
+color: #999;
+cursor: default;
+background-position: left -92px;
+}
+
+#assetbar a:hover .inactive span {
+color: #999;
+cursor: default;
+background-position: right -92px;
+}
+
+#assetbar a.inactive:active, #assetbar a.inactive:focus {
+color: #999;
+background: #f4f4f4 url("../images/gui/button-black-inactive.png") top left no-repeat; /* Missing*/
+}
+
+#assetbar a.parent {
+background-image: url("../images/gui/arrow-down.gif");
+padding: 3px 10px 3px 10px;
+background: url("../images/gui/vcard-exlamation.png") 6px 4px no-repeat;
+}
+
+#assetbar a.backup {
+background: url("../images/gui/bin.png") 2px 4px no-repeat;
+padding-left: 20px;
+width: 120px;
+height: 17px;
+padding: 7px 0 0 25px;
+}
+#assetbar a.backup:hover {
+color: #000;
+text-decoration: underline;
+}
+
+#assetbar a.checkin span span {
+background: url("../images/gui/plus-small.png") 2px 4px no-repeat;
+padding-left: 15px;
+}
+
+#assetbar a.checkout span span {
+padding-left: 15px;
+background: url("../images/gui/minus-small.png") 2px 4px no-repeat;
+}
+
+#assetbar a.publish {
+margin-right: 20px;
+font-weight: bold;
+}
+#assetbar a.publish span span {
+background: url("../images/gui/document-plus.png") 6px 4px no-repeat;
+}
+
+#assetbar a.save span span {
+font-weight: bold;
+background: url("../images/gui/disk.png") 6px 4px no-repeat;
+}
+
+#assetbar a.overview span span {
+font-weight: bold;
+background: url("../images/gui/preview.gif") 6px 4px no-repeat;
+}
+
+#assetbar a.duplication span span {
+font-weight: bold;
+background: url("../images/gui/clone.gif") 6px 4px no-repeat;
+}
+
+#assetbar a.lock {
+margin-left: 20px;
+font-weight: bold;
+}
+#assetbar a.lock span span {
+background: url("../images/gui/lock.png") 6px 4px no-repeat;
+}
+
+#assetbar a.unlock span span {
+font-weight: bold;
+background: url("../images/gui/lock-unlock.png") 6px 4px no-repeat;
+}
+
+#assetbar a.locked span span {
+background: url("../images/gui/lock.png") 6px 4px no-repeat;
+}
+
+#assetbar a.reload {
+margin-left: 20px;
+}
+#assetbar a.reload span span {
+background: url("../images/gui/arrow-rotate-clockwise.png") 6px 4px no-repeat;
+}
+
+#assetbar a.refresh {
+margin-left: 20px;
+}
+#assetbar a.refresh span span {
+background: url("../images/gui/arrow-rotate-clockwise.png") 6px 4px no-repeat;
+}
+
+#assetbar a.delete {
+margin-left: 20px; 
+}
+#assetbar a.delete span span {
+background: url("../images/gui/delete.png") 6px 4px no-repeat;
+}
+
+#assetbar a.undocheckout span span {
+background: url("../images/gui/cross.png") 6px 4px no-repeat;
+}
+
+#assetbar a.backup span span {
+font-weight: bold;
+background: url("../images/gui/backup.png") 6px 4px no-repeat; /* Missing */
+}
+
+#sysinfo {
+float: left;
+width: 100%;
+clear: both;
+padding-bottom: 20px;
+}
+
+#sysinfo #workflow {
+display: block;
+float: left;
+padding: 0 0 0 0;
+margin: 0 0 0 0;
+}
+
+#sysinfo #workflow h4 {
+display: block;
+float: left;
+margin: 4px 8px 0 1px;
+font-size: 12px;
+clear: left;
+font-weight: normal;
+background: silver;
+color: #FFF;
+padding: 2px 5px;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+}
+
+#sysinfo #workflow h4 strong {
+text-transform: uppercase;
+}
+
+#sysinfo #workflow h4.draft {
+}
+
+#sysinfo #workflow ul {
+display: block;
+float: left;
+padding: 0 0 0 0;
+margin: 0 0 0 0;
+}
+
+#sysinfo #workflow ul li {
+float: left;
+list-style-type: none;
+margin: 0 4px 0 0;
+padding: 0 0 0 0;
+font-size: 10px;
+}
+
+#sysinfo #workflow ul li a {
+	display: block;
+	float: left;
+	margin: 4px 0 0 0;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 2px 10px 2px 26px;
+	color: #000;
+	background: #F0F0F0 url("../images/gui/tick.png") 8px 1px no-repeat;
+	border-left: 1px solid #CCC;
+	border-top: 1px solid #CCC;
+	border-right: 1px solid #999;
+	border-bottom: 1px solid #999;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	margin-top: 4px;
+} html*#sysinfo #workflow ul li a { padding-bottom: 3px; }
+
+#sysinfo #workflow ul li a.submitted_to_published,
+#sysinfo #workflow ul li a.draft_to_published,
+#sysinfo #workflow ul li a.unapproved_to_published,
+#sysinfo #workflow ul li a.rejected_to_published{
+	color: Black;
+	background-color: Plum;
+}
+
+#sysinfo #workflow ul li a.approve:hover,
+#sysinfo #workflow ul li a:hover,
+#sysinfo #workflow ul li a.publish:hover,
+#sysinfo #workflow ul li a.archive:hover {
+	color: #FFF;
+	background-color: #999;
+	border: 1px solid #000;
+	text-decoration: underline;
+}
+html*#sysinfo #workflow ul li a.approve:hover,
+html*#sysinfo #workflow ul li a:hover,
+html*#sysinfo #workflow ul li a.publish:hover,
+html*#sysinfo #workflow ul li a.archive:hover {
+	border: 1px solid #000;
+}
+#sysinfo #workflow ul li a.approve {
+	background-image: url("../images/gui/tick-circle-frame.png");
+}
+#sysinfo #workflow ul li a.publish {
+	background-image: url("../images/gui/document-plus.png");
+}
+#sysinfo #workflow ul li a.archive {
+	background-image: url("../images/gui/folders-plus.png");
+}
+#sysinfo #workflow ul li a.dearchive {
+	background-image: url("../images/gui/folders-minus.png");
+}
+
+#sysinfo #workflow ul li a.dearchive:hover,
+#sysinfo #workflow ul li a.unpublish:hover,
+#sysinfo #workflow ul li a.reject:hover,
+#sysinfo #workflow ul li a.flag:hover {
+	background-color: #999;
+	border: 1px solid #000;
+	text-decoration: underline;
+}
+html*#sysinfo #workflow ul li a.dearchive:hover,
+html*#sysinfo #workflow ul li a.unpublish:hover,
+html*#sysinfo #workflow ul li a.reject:hover,
+html*#sysinfo #workflow ul li a.flag:hover {
+	border: 1px solid #000;
+}
+#sysinfo #workflow ul li a.unpublish {
+	background-image: url("../images/gui/document-minus.png");
+}
+#sysinfo #workflow ul li a.reject {
+	background-image: url("../images/gui/cross.png");
+}
+#sysinfo #workflow ul li a.flag {
+	background-image: url("../images/gui/flag-red.png");
+}
+
+#sysinfo ul.info {
+float: right;
+display: block;
+padding: 0 0 0 0;
+margin: 2px 0 0 0;
+}
+
+#sysinfo ul.info li {
+text-align: right;
+display: block;
+padding: 0 0 0 0;
+margin: 3px 0 0 0;
+font-size: 11px;
+}
+
+#sysinfo ul.info li em {
+font-weight: bold;
+font-style: normal;
+}
+
+#sysinfo ul.info li em.locked {
+font-weight: bold;
+font-style: normal;
+color: red;
+text-transform: uppercase;
+}
+
+
+#assetbar a.preview span {
+	display: none;
+}
+
+#assetbar a.preview {
+	float: left;
+	display: block;
+	width: 20px;
+	height: 20px;
+	padding: 0 0 0 0;
+	margin: 1px 5px 0 0;
+}
+
+#assetbar a.preview {
+	background: url("../images/gui/button-preview.png") no-repeat scroll 0 0;
+	width: 22px;
+	height: 22px;
+	float: left;
+}
+
+#assetbar a.preview:hover {
+	background: url("../images/gui/button-preview-hover.png") no-repeat scroll 0 0;}

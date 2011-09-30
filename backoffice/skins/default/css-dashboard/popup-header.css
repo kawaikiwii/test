@@ -1,0 +1,77 @@
+/*
+ * Project:     NCM
+ * File:        popup-header.css
+ *
+ * @copyright   (c)2007 Nstein Technologies
+ * @version     4.x
+ *
+ */
+body {
+margin: 0;
+padding: 0;
+font-family: verdana, arial, sans-serif;
+}
+
+#wrapper {
+width: 100%;
+margin: 0;
+padding: 0;
+}
+
+#wrapper #header {
+height: 20px;
+background-color: #606060;
+border-bottom: 1px solid black;
+}
+
+#wrapper #header #banner h1 {
+margin: 0;
+padding: 0;
+display: block;
+float: left;
+width: 59px;
+height: 20px;
+background-image: url("../images/gui/wcm-header-tiny.gif");
+background-repeat: no-repeat;
+background-position: 0 0;
+}
+
+#wrapper #header #banner h1 span {
+display: none;
+}
+
+#wrapper #header #banner ul {
+margin: 1px 2px 0 0;
+padding: 0 0 0 0;
+display: block;
+float: right;
+}
+
+#wrapper #header #banner ul li {
+list-style-type: none;
+margin: 0;
+padding: 0;
+float: left;
+}
+
+#wrapper #header #banner ul li a {
+margin: 1px 0 0 0;
+padding: 1px 8px 2px 8px;
+display: block;
+float: left;
+color: #f4f4f4;
+border-left: 1px solid #808080;
+text-decoration: none;
+}
+
+#wrapper #header #banner ul li a:hover {
+color: white;
+background-color: #464646;
+text-decoration: none;
+}
+
+#wrapper #content-wrapper {
+margin: 0 0 0 0;
+padding: 10px 0 0 0;
+clear: left;
+}

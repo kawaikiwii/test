@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+	<name>AfpVideos</name>
+	<description>AFP Import Videos</description>
+	<category>files</category>
+	<className>importAfpVideos</className>
+	<module>business/import/videos</module>
+</plugin>

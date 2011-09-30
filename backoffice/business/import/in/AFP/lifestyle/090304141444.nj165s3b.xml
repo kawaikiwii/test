@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<NewsML>
+  <Catalog Href="http://www.afp.com/dtd/AFPCatalog.xml"/>
+  <NewsEnvelope>
+    <DateAndTime>20090304T141650Z</DateAndTime>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>afp.com</ProviderId>
+        <DateId>20090304</DateId>
+        <NewsItemId>090304141444.nj165s3b</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:afp.com:20090304:090304141444.nj165s3b:1</PublicIdentifier>
+      </NewsIdentifier>
+      <NameLabel>Switzerland-auto-show-environment</NameLabel>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20090304T141444Z</FirstCreated>
+      <ThisRevisionCreated>20090304T141444Z</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+    </NewsManagement>
+    <NewsComponent>
+      <NewsLines>
+        <HeadLine>Car makers get serious on the environment</HeadLine>
+        
+        <ByLine>by Alexandra Troubnikoff</ByLine>
+        <DateLine>GENEVA, March 4, 2009 (AFP)</DateLine>
+        <CopyrightLine>© 2009 AFP</CopyrightLine>
+        <SlugLine>Switzerland-auto-show-environment lead</SlugLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Provider>
+          <Party FormalName="AFP"/>
+        </Provider>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="en"/> 
+        <OfInterestTo FormalName="ext--english--relaxnews--lifestyle"/>
+      </DescriptiveMetadata>
+      <NewsComponent>
+        <ContentItem>
+          <MediaType FormalName="Text"/>
+          <Format FormalName="bcNITF2.5"/>
+          <DataContent>
+            <p> The global auto industry, under pressure to curb emissions and grappling with plunging demand, insists it is getting serious about producing greener vehicles as its leading lights gather for the opening Thursday of the Geneva Motor Show.</p>
+            <p>Most of the 120 new or modified cars launched here on the preview days offered fuel-saving or lower emissions features.</p>
+            <p>Volkswagen chairman Martin Winterkorn claimed the trend was not a passing fad and that "ecological demand" could save car makers from the brunt of the economic crisis.</p>
+            <p>"The future is green," he declared as the company launched a new sub-compact Polo, claiming eight percent less weight, more economy and lower emissions.</p>
+            <p>Hybrids, combining petrol or diesel engines and electric power, are more widespread, as technology is refined, while engines are generally getting smaller and optimised for fuel economy.</p>
+            <p>"Stop-start" mechanisms, which save fuel by automatically stopping the engine during a standstill, have returned, championed by BMW, now Volkswagen and Citroen, after short-lived experiments with the idea in the early 1990s.</p>
+            <p>More plug-in electric vehicles are just starting to emerge, from Opel, Subaru, new US sports car maker Tesla, Toyota and Tata.</p>
+            <p>Luxury car maker Bentley unveiled a new sports version of its coupe, capable of accelerating to 100 kilometres per hour (62 miles per hour) in less than four seconds thanks to its 630 horsepower and 12 cylinders.</p>
+            <p>It is the manufacturer's first car engineered for "flexfuel," allowing the option of a tankful of petrol or of biofuels that can reduce carbon dioxide emissions by 70 percent, according to the maker.</p>
+            <p>Bentley is aiming for a 12 percent cut in carbon emissions across its range by 2012, albeit from very high levels.</p>
+            <p>"Everyone will have to do something," said communications director James Rosenthal, underlining that car makers will soon "no longer be able to rely on oil."</p>
+            <p>The surge in oil prices up to 120 dollars a barrel last year and the resulting impact on the motorist's pocket helped spur the trend, since fuel economy generally equates with lower carbon emissions.</p>
+            <p>But political pressure also counted.</p>
+            <p>After years of negotiations, the European Union last year adopted tougher, compulsory 130-gramme-per-kilometre average emissions cap for new car ranges from 2012, and the industry is scrambling to meet that target.</p>
+            <p>Peugeot chief executive Jean-Philippe Collin pointed to a combination of ways to achieve "environmental positioning."</p>
+            <p>"There's not just one single technology, there's electric, diesel, petrol, diesel hybrid, and micro-hybrids," he explained.</p>
+            <p>General Motors unveiled the Opel Ampera in Geneva, a saloon car powered by an electric motor that can be charged by a small petrol engine or plugged into a household socket.</p>
+            <p>Electric power permanently drives the wheels, with a range of 60 kilometres on a plug-in charge -- enough for a daily commuter run -- or 500 kilometres with the petrol generator, according to the company.</p>
+            <p>It could produce zero emissions or up to about half the usual amount.</p>
+            <p>Opel hopes to put it on sale in 2010, but GM Europe president Carl Peter Forster underlined that some everyday practical obstacles could stifle its subsequent progress.</p>
+            <p>"Its success in the market will be equally dependent on governments ... putting in place comprehensive policy frameworks that send complementary signals to electricity providers and consumers," Forster said.</p>
+            <p>Among the needs are revised building codes to allow plug-in garages, daytime charging rates for electricity, and an adequate infrastructure of sockets.</p>
+          </DataContent>
+        </ContentItem>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

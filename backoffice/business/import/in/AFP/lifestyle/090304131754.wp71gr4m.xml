@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<NewsML>
+  <Catalog Href="http://www.afp.com/dtd/AFPCatalog.xml"/>
+  <NewsEnvelope>
+    <DateAndTime>20090304T131842Z</DateAndTime>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>afp.com</ProviderId>
+        <DateId>20090304</DateId>
+        <NewsItemId>090304131754.wp71gr4m</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:afp.com:20090304:090304131754.wp71gr4m:1</PublicIdentifier>
+      </NewsIdentifier>
+      <NameLabel>France-telecom-company-earnings-FranceTelecom</NameLabel>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20090304T131754Z</FirstCreated>
+      <ThisRevisionCreated>20090304T131754Z</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+    </NewsManagement>
+    <NewsComponent>
+      <NewsLines>
+        <HeadLine>France Telecom 2008 net profit shrinks</HeadLine>
+        
+        
+        <DateLine>PARIS, March 4, 2009 (AFP)</DateLine>
+        <CopyrightLine>© 2009 AFP</CopyrightLine>
+        <SlugLine>France-telecom-company-earnings-FranceTelecom 3rdlead</SlugLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Provider>
+          <Party FormalName="AFP"/>
+        </Provider>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="en"/> 
+        <OfInterestTo FormalName="ext--english--relaxnews--lifestyle"/>
+      </DescriptiveMetadata>
+      <NewsComponent>
+        <ContentItem>
+          <MediaType FormalName="Text"/>
+          <Format FormalName="bcNITF2.5"/>
+          <DataContent>
+            <p> France Telecom on Wednesday reported a 35.4 percent fall in 2008 net earnings and said it wanted to speed up the voluntary departure of 22,400 workers over the next three years.</p>
+            <p>Company chairman Didier Lombard also said France Telecom would be re-named Orange between now and 2012, after its principal brand.</p>
+            <p>France Telecom in 2006 launched a highly publicized campaign to re-group its main worldwide operations under the Orange brand. Orange had initially been confined to mobile phone activities.</p>
+            <p>France Telecom said the slide in its 2008 profits to 4.07 billion euros (5.09 billion dollars) was mainly due to higher taxes, which rose by 1.463 billion euros.</p>
+            <p>Annual turnover was up 1.0 percent to 53.5 billion euros however and profit when adjusted to strip out exceptional items was calculated at 5.2 billion euros, up from 4.6 billion in 2007.</p>
+            <p>Lombard said in the statement that the company was "well armed to resist" the economic crisis that is hitting earnings, jobs and manufacturing of companies worldwide.</p>
+            <p>"The year 2008 was a year of very good operational performance," its financial director Gervais Pellissier told a telephone conference.</p>
+            <p>"This performance results from a sustained growth in our activities in mature markets, particularly in Britain and France, a turnaround in the business sector and pursuit of growth in emerging markets."</p>
+            <p>Company human resources director Olivier Barberot said the group hoped to step up the pace of voluntary departures this year, adding that it expected a further 13,500 workers to retire by 2015.</p>
+            <p>France Telecom currently employs around 100,000 people. Barberot would not say how many posts would be eliminated through the departures but union sources have put the figure at 12,000 over the next three years.</p>
+          </DataContent>
+        </ContentItem>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

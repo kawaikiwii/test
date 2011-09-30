@@ -1,0 +1,77 @@
+/*** ELEMENTS GENERAUX *****************************************************************************************************************************************/
+*          { margin: 0; padding: 0; }
+HTML, BODY { height:100%; min-width:1044px  }
+HTML       { min-height:100%; height:auto; }
+HTML>BODY  { min-height:100%; height:auto; }
+BODY       { font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px; color:#333; background:#5D086D url(../pics/charte/bg-body.png) top left repeat-x; }
+UL         { list-style:inside; }
+A          { text-decoration:none; cursor:pointer; color:#F07E2C; }
+A:hover    { text-decoration:underline; }
+IMG        { border:none; }
+
+/*** CONTENEURS **************************************************************************************************************************************/
+#wrapper                   { position:relative; height:100%; }
+HTML>BODY>#wrapper         { min-height:100%; height:auto; }
+#global                    { position:relative; left:50%; width:1000px; height:600px; margin:0 0 0 -500px; padding:0 0 100px 0; z-index:1; }
+HTML>BODY>#wrapper>#global { min-height:600px; height:auto; }
+
+/*** HEADER  *****************************************************************************************************************************************/
+#header { height:119px; }
+
+/* logo */
+#logo     { float:left; width:700px; height:80px; background:url(../pics/charte/bg-logo.png) top left no-repeat; }
+#logo A   { display:block; width:700px; height:80px; font-size:0; text-indent:-9000px; letter-spacing:-50px; }
+#logofr   { float:left; width:700px; height:80px; background:url(../pics/charte/bg-logo-fr.png) top left no-repeat; }
+#logofr A { display:block; width:700px; height:80px; font-size:0; text-indent:-9000px; letter-spacing:-50px; }
+
+/* drapeaux */
+#switchLanguage    { float:right; height:11px; margin:15px 0 35px 0; list-style:none; }
+#switchLanguage LI { float:left; padding:0 0 0 7px; }
+
+/*** MAIN *****************************************************************************************************************************************/
+#main   { line-height:14px; }
+#main P { margin:0 0 10px 0; }
+
+/* ticker */
+#ticker               { height:18px; margin:0 0 15px 0; color:#fff; cursor:pointer; font-weight:bold; font-size:12px; }
+#ticker #titre        { display:block; float:left; width:150px; height:18px; }
+#ticker #tickernews   { display:block; float:left; width:800px; height:18px; padding:0 0 0 0; }
+#ticker #tickernews A { display:block; width:100%; height:100%; color:#fff; text-decoration:none; }
+#ticker A SPAN        { display:block; float:left; padding:0 20px 0 0; }
+
+/* blocs */
+.bloc                { float:left; width:475px; margin:0 50px 20px 0; font-size:11px; background:url(../pics/charte/bg-block.png) top left repeat-y; }
+.bloc .top           { height:40px; background:url(../pics/charte/bg-block-top.png) top left no-repeat; }
+.bloc .top H2        { width:236px; height:20px; margin:0 0 0 15px; color:#fff; font-size:11px; text-transform:uppercase; line-height:20px; }
+.bloc .content       { height:100px; margin:-10px 0 0 0; padding:0 26px 0 20px; }
+HTML>BODY>#wrapper>#global>#main>.bloc>.content { min-height:100px; height:auto; }
+.bloc .content H3    { margin:0 0 12px 0; font-size:13px; color:#5D086D; }
+.bloc .content UL    { margin:0 19px 14px 12px; list-style:outside; list-style-image:url(../pics/charte/puce.gif); line-height:12px; }
+.bloc .content UL LI { margin:0 0 6px 12px; }
+.bloc .bottom        { height:10px; background:url(../pics/charte/bg-block-bottom.png) top left no-repeat; }
+
+.bloc#bloc1          { font-size:13px; }
+.bloc#bloc1 .content { padding:11px 26px 0 20px; }
+
+.bloc#bloc2                   { margin:0; font-size:13px; }
+.bloc#bloc2 FORM              { height:70px; padding:20px 0 10px 0; }
+.bloc#bloc2 P                 { clear:both; }
+.bloc#bloc2 LABEL             { display:block; float:left; width:100px; padding:0 10px 0 0; line-height:20px; text-align:right; }
+.bloc#bloc2 INPUT             { display:block; float:left; width:200px; height:17px; margin:0 0 10px 0; padding:1px 5px 2px 5px; border:1px solid #eee; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:13px; color:#333;  }
+.bloc#bloc2 INPUT#submitLogin { width:40px; height:20px; padding:0; border:none; cursor:pointer; background:#F2EBFD; font-weight:bold; }
+
+.bloc#bloc3         { width:1000px; clear:both; float:none; margin:0; background:url(../pics/charte/bg-block-3.png) top left repeat-y; }
+.bloc#bloc3 .top    { background:url(../pics/charte/bg-block-3-top.png) top left no-repeat; }
+.bloc#bloc3 .bottom { background:url(../pics/charte/bg-block-3-bottom.png) top left no-repeat; }
+
+/*** FOOTER *****************************************************************************************************************************************/
+#footer { position:absolute; bottom:0; width:100%; height:73px; background:url(../pics/charte/bg-footer.png) top left repeat-x; z-index:3; }
+#footer UL { position:relative; left:50%; width:1044px; height:11px; margin:24px 0 10px -522px; text-align:center; color:#fff; }
+#footer UL LI { display:inline; height:11px; padding:0 8px 0 8px; border-right:1px solid #fff; }
+#footer UL LI.last { border:none; }
+#footer UL LI A { color:#fff; }
+
+/*** CLASSES *****************************************************************************************************************************************/
+.spacer { clear:both; }
+.center { text-align:center; }
+.rouge  { color:#FF0000; }

@@ -1,0 +1,212 @@
+body {
+    background: none repeat scroll 0 0 #6E2186;
+    color: #FFFFFF;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}
+
+#window {
+    margin: auto;
+    width: 70em;
+}
+
+#window a {
+    color: #FFFFFF;
+}
+
+#window span.blue {
+    color: #73CBF1;
+}
+
+#window a:hover {
+    color: #73CBF1;
+}
+
+#language {
+    color: #CD99E6;
+    text-align: right;
+}
+
+#language a {
+    color: #CD99E6;
+    text-decoration: none;
+}
+
+#language a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+#header {
+}
+
+#header .ari-title {
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 2em 0;
+    text-align: center;
+}
+
+#header .ari-title b {
+    color: #73CBF1;
+}
+
+#maintenance {
+    background-color: #FF441F;
+    border: 2px solid red;
+    font-size: 1.2em;
+    margin: 1em 0;
+    padding: 0 0.5em;
+}
+
+#dieIE {
+    background-color: #FF2A00;
+    border: 2px solid red;
+    font-size: 1.2em;
+    margin: 1em 0;
+    padding: 0 0.5em;
+}
+
+#sidebar {
+    /*float: right;*/
+    width: 28em;
+    margin-left: 200px;
+}
+
+#log .loginerror {
+    background-color: red;
+    border: 1px solid red;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+#log legend {
+    color: #FFFFFF;
+    font-size: 1.2em;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+#log dl dt {
+    color: #FFFFFF;
+    float: left;
+    line-height: 1.3em;
+    margin-top: 1em;
+    text-align: right;
+    width: 8.5em;
+}
+
+#log dl dd {
+    display: block;
+    line-height: 1.3em;
+    margin-left: 9em;
+    padding: 0.5em 0 0.5em 0;
+}
+
+#log {
+    background-color: #88459F;
+    border: 2px solid #CDB0D6;
+    margin-bottom: 1em;
+}
+
+#informations {
+    background-color: #88459F;
+    border: 2px solid #CDB0D6;
+    margin: 1em 0 2em;
+    padding: 0.5em;
+    text-align: center;
+    width: 280px;
+}
+
+#informations a {
+    color: #73CBF1;
+    font-weight: bold;
+}
+
+#message {
+    background-color: #F0EDDF;
+    border: 2px solid #CDB0D6;
+    color: #000000;
+    display: none;
+    font-size: 1.1em;
+    margin: 10px;
+    padding: 0.5em;
+    text-align: center;
+}
+
+#center {
+    margin-right: 28.5em;
+    overflow: hidden;
+}
+
+#video {
+    padding: 3em 0;
+    text-align: center;
+}
+
+#footer {
+    clear: both;
+    font-size: 1.3em;
+}
+
+#footer fieldset {
+    float: left;
+}
+
+#pressrelease {
+    width: 40%;
+}
+
+#contacts {
+    width: 58%;
+}
+
+#footer fieldset legend {
+    color: #FFFFFF;
+    font-size: 1.2em;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+#footer ul li {
+    padding-bottom: 1em;
+}
+
+/** LOADING MASK **/ #loading-mask {
+    background-color: #6e2186;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 20000;
+    display: none;
+} 
+
+
+#loading {
+   	position:absolute;
+    width: 230px;
+	height:230px;
+	left:50%;
+	top:50%;
+	padding:0;
+    margin: -112px 0 0 -115px;
+	background: transparent url('/rp/images/default/afprelaxnews-round.png') no-repeat center center;
+		color:#FFF;
+	font-size:10px;
+} 
+#loading .loading-message {
+	padding: 80px 0;
+	font-size:10px;
+	text-align:center;
+}
+
+#loading .loading-indicator {
+	padding: 6px 0;
+    background: transparent url('/rp/images/default/relaxnews-loader.gif') no-repeat top center;
+    font: bold 13px tahoma, arial, helvetica;
+    margin: 0;
+	text-align:center;
+    height: auto;
+}

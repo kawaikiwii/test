@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<NewsML>
+  <Catalog Href="http://www.afp.com/dtd/AFPCatalog.xml"/>
+  <NewsEnvelope>
+    <DateAndTime>20090304T133840Z</DateAndTime>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>afp.com</ProviderId>
+        <DateId>20090304</DateId>
+        <NewsItemId>090304133736.5fia7dyz</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:afp.com:20090304:090304133736.5fia7dyz:1</PublicIdentifier>
+      </NewsIdentifier>
+      <NameLabel>Climate-energy-US-Europe</NameLabel>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20090304T133736Z</FirstCreated>
+      <ThisRevisionCreated>20090304T133736Z</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+    </NewsManagement>
+    <NewsComponent>
+      <NewsLines>
+        <HeadLine>Washington new center of global warming battle</HeadLine>
+        
+        <ByLine>by Jean-Louis Santini</ByLine>
+        <DateLine>WASHINGTON, March 4, 2009 (AFP)</DateLine>
+        <CopyrightLine>© 2009 AFP</CopyrightLine>
+        <SlugLine>Climate-energy-US-Europe lead</SlugLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Provider>
+          <Party FormalName="AFP"/>
+        </Provider>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="en"/> 
+        <OfInterestTo FormalName="ext--english--relaxnews--lifestyle"/>
+      </DescriptiveMetadata>
+      <NewsComponent>
+        <ContentItem>
+          <MediaType FormalName="Text"/>
+          <Format FormalName="bcNITF2.5"/>
+          <DataContent>
+            <p> European ministers are flocking to Washington drawn by the new administration's pledge to help lead the fight against climate change, an issue largely put on ice for eight years here.</p>
+            <p>Ministers from across Europe as well as Canada are taking part in a whirl of meetings here this week to gauge prospects of Congress adopting key climate-change legislation ahead of a major UN climate conference in December.</p>
+            <p>US President Barack Obama has called on Congress to draw up legislation setting out a carbon cap-and-trade system to limit greenhouse gas emissions and pump billions of dollars into renewable energy programs.</p>
+            <p>A European-style mechanism which penalizes pollutants and rewards green industry should, in concert with the development of new sources of clean energy, reduce US gas emissions by 14 percent below 1990 levels by 2020, according to the Obama administration.</p>
+            <p>British and Danish ministers of climate and energy Ed Miliband and Connie Hedegaard expressed optimism Tuesday that a deal could be concluded on reducing emissions at the UN conference in Copenhagen. They said a commitment from the US administration could inspire other countries.</p>
+            <p>"President Obama's commitment is a very significant and very welcome advance on previous US policy and will in that sense have a positive effect on others' willingness to come forward," Miliband said.</p>
+            <p>"I think it's right to say that in Europe there is a real ... sense of new American leadership on these issues of climate change shown by President Obama and a very welcome sense of movement forward," he added.</p>
+            <p>Hedegaard said it was "extremely exciting" to sit down with new US officials keen on taking on global warming with international partners.</p>
+            <p>"Tackling global challenges like ... climate, we can not do it without the US, and for too long others have been hiding behind the American position," the Danish minister said, referring to countries that have refused to institute changes until the world's largest energy consumer takes the lead.</p>
+            <p>"So we need the US to engage," he added. "As soon as the US administration and this House (of Representatives) and Senate can sort of come up with the American position, the more strong the pressure will be on all of us" at the UN conference.</p>
+            <p>The European Union sees the arrival of Obama as a boost for the chances of agreeing a global deal on a replacement to the Kyoto protocol in Copenhagen.</p>
+            <p>Obama's predecessor George W. Bush refused to ratify the Kyoto protocol which expires in 2012.</p>
+            <p>Also in Washington this week was Canada's Environment Minister Jim Prentice, following up on talks between Prime Minister Stephen Harper and Obama last month on clean energy.</p>
+            <p>Prentice and the Europeans met with members of the House energy and commerce committee, including its powerful chairman Henry Waxman, who despite swirling economic crises insisted that US climate legislation could still be passed by December.</p>
+            <p>"What we need to do here in the US is complete a bill this year, passed into law, and I would hope we will do it before Copenhagen," Waxman told reporters. "The US has to catch up and become a leader once again on these environmental issues."</p>
+            <p>Some US experts have said that while action on a bill looks likely in the House, getting it through the Senate before Copenhagen would be difficult, especially with the lukewarm reception some energy initiatives are getting from lawmakers.</p>
+            <p>French Minister for Sustainable Development Jean-Louis Borloo was to meet Wednesday with US officials in charge of climate and energy issues, while former British prime minister Tony Blair was a guest Tuesday at a Senate panel on global warming.</p>
+          </DataContent>
+        </ContentItem>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

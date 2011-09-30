@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+	<name>XML</name>
+	<description>_BIZ_IMPORT_NSTEIN</description>
+	<category>files</category>
+	<className>wcmImportXML</className>
+	<module>business/import/nativeXML</module>
+</plugin>

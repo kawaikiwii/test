@@ -1,0 +1,160 @@
+body {
+    background: #6E2186;
+    color: #fff;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+} #window {
+    width: 70em;;
+    margin: auto;
+}#window a {
+     color: #fff;
+}
+#window span.blue {
+     color: #73CBF1;
+}
+
+#window a:hover {
+     color: #73CBF1;
+}
+/** BARRE DE LANGUE **/ #language {
+    text-align: right;
+    color: #CD99E6;
+} #language a {
+    color: #CD99E6;
+    text-decoration: none;
+} #language a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/** HEADER **/ #header {
+} #header .ari-title {
+    text-align: center;
+    color: #fff;
+    padding: 2em 0em;
+    font-weight: bold;
+} #header .ari-title b {
+    color: #73CBF1;
+} #maintenance {
+    margin: 1em 0;
+    background-color: #FF441F;
+    padding: 0 0.5em;
+    font-size: 1.2em;
+    border: 2px solid red;
+} #dieIE {
+    margin: 1em 0;
+    background-color: #FF2A00;
+	font-size: 1.2em;
+    padding: 0 0.5em;
+    border: 2px solid red;
+}
+
+/** SIDEBAR **/ #sidebar {
+    float: right;
+    width: 28em;
+} #log .loginerror {
+    padding: 0.5em;
+    margin: 0.5em;
+    border: 1px solid red;
+    background-color: red;
+} #log legend {
+    color: #fff;
+    font-size: 1.2em;
+    font-variant: small-caps;
+    font-weight: bold;
+} 
+
+#log dl dt {
+	line-height:1.3em;
+    float: left;
+    text-align: right;
+    color: #fff;
+    margin-top: 1em;
+    width: 8.5em;
+} #log dl dd {
+	line-height:1.3em;
+	margin-left: 9em;
+    display: block;
+    padding: 0.5em 0 0.5em 0em;
+} 
+
+
+#log {
+    border: 2px solid #CDB0D6;
+    background-color: #88459F;
+    margin-bottom: 1em;
+}#informations {
+    text-align: center;
+    margin: 1em 0 2em 0;
+    background-color: #88459F;
+    padding: 0.5em;
+    border: 2px solid #CDB0D6;
+} #informations a {
+    color: #73CBF1;
+    font-weight: bold;
+} #message {
+	display: none;
+    color: #000000;
+	font-size: 1.1em;
+    text-align: center;
+    margin: 10px;
+    background-color: #F0EDDF;
+    padding: 0.5em;
+    border: 2px solid #CDB0D6;	
+}
+
+/** CENTER **/ #center {
+    margin-right: 28.5em;
+    overflow: hidden;
+}
+
+/** VIDEO **/ #video {
+    text-align: center;
+    padding: 3em 0;
+}
+
+/** FOOTER **/ #footer {
+    clear: both;
+	font-size: 1.3em;
+} #footer fieldset {
+    float: left;
+} #pressrelease {
+    width: 40%;
+} #contacts {
+    width: 58%;
+} #footer fieldset legend {
+    color: #fff;
+    font-size: 1.2em;
+    font-variant: small-caps;
+    font-weight: bold;
+} #footer ul li {
+    padding-bottom: 1em;
+} 
+
+/** LOADING MASK **/ #loading-mask {
+    background-color: #6e2186;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 20000;
+    display: none;
+} #loading {
+    position: absolute;
+    width: 230px;
+    height: auto;
+    margin: 0 0 0 -115px;
+    top: 50%;
+    left: 50%;
+    z-index: 20001;
+    color: #fff;
+    text-align: center;
+} #loading .loading-indicator {
+    background: transparent url(/rp/images/default/ajax-loader.gif) no-repeat top center;
+    font: bold 13px tahoma, arial, helvetica;
+    padding: 16px;
+    margin: 0;
+    height: auto;
+}
+

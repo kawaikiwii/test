@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<searches defaultId="defaultSearch">
+    <search id="defaultSearch" name="_MENU_USER_ADVANCED_SEARCH_DEFAULT" defaultPage="searchPage" menuAction="business/search">
+        <searchPage todo="view">
+            <title>
+                Advanced
+            </title>
+            <template>advanced.php</template>
+            <searchForm ajaxRequest="false">
+                <fieldset class="site">
+                    <legend>
+                        _BIZ_SITE
+                    </legend>
+                    <select name="search_siteId" onChange="updateChannel(this.value)">
+                        <dataProvider>siteOptionsProvider</dataProvider>
+                    </select>
+                </fieldset>
+                <fieldset class="status">
+                    <legend>
+                        _BIZ_WORKFLOW_STATE
+                    </legend>
+                    <select id="search_workflowState" name="search_workflowState">
+                        <dataProvider>workflowOptionsProvider</dataProvider>
+                    </select>
+                </fieldset>
+                <fieldset class="status">
+                    <legend>
+                        _BIZ_CHANNEL
+                    </legend>
+                    <select id="search_channelId" name="search_channelId">
+                        <dataProvider>channelOptionsProvider</dataProvider>
+                    </select>
+                </fieldset>
+                <fieldset class="status">
+                    <legend>
+                        _BIZ_PUBLISHED
+                    </legend>
+                    <select name="search_publicationDate">
+                        <dataProvider>dateOptionsProvider</dataProvider>
+                    </select>
+                </fieldset>
+                <fieldset class="status">
+                    <legend>
+                        _BIZ_ASSET
+                    </legend>
+                    <select name="search_className" onChange="updateWorkflowState(this.value)">
+                        <dataProvider>bizobjectOptionsProvider</dataProvider>
+                    </select>
+                </fieldset>
+                <fieldset type="">
+                    <legend>
+                        _BIZ_FIND
+                    </legend>
+                    <ul>
+                        <li>
+                            <label>
+                                _BIZ_FULLTEXT
+                            </label>
+                            <input type="text" name="search_fulltext" id="search_fulltext"/>
+                        </li>
+                        <li>
+                            <label>
+                                _BIZ_TITLE
+                            </label>
+                            <input type="text" name="search_title" id="search_title"/>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        _BIZ_FIND
+                    </legend>
+                    <input type="submit" style="width:80px" value="_BIZ_FIND"/>
+                    <input type="reset" style="width:80px" value="_BIZ_RESET"/>
+                </fieldset>
+            </searchForm>
+        </searchPage>
+        <resultPage todo="initSearch">
+            <title>
+                3 Columns
+            </title>
+            <template>3-columns.php</template>
+            <searchForm ajaxRequest="false">
+                <fieldset class="xxx">
+                    <dataProvider>bizsearchDataProvider</dataProvider>
+                    <input type="button" style="width:80px" value="_BIZ_FIND" onClick="launchSearch()"/>
+                </fieldset>
+            </searchForm>
+            <resultSet defaultView="list">
+                <view id="list" name="list" class="list" title="_BIZ_LIST_VIEW">
+                    <title>
+                        Simple list
+                    </title>
+                    <template>list/layout.tpl</template>
+                    <css>
+                        css/search.css
+                    </css>
+                    <defaultPageLinksBeforeAndAfter>
+                        4
+                    </defaultPageLinksBeforeAndAfter>
+                    <defaultResultSetSize>
+                        20
+                    </defaultResultSetSize>
+                    <bizObjects>
+                        <bizObject name="default">
+                            <template>default.tpl</template>
+                        </bizObject>
+                        <bizObject name="article">
+                            <template>article.tpl</template>
+                        </bizObject>
+                        <bizObject name="photo">
+                            <template>photo.tpl</template>
+                        </bizObject>
+                    </bizObjects>
+                </view>
+                <view id="grid" name="grid" class="grid" title="_BIZ_GRID_VIEW">
+                    <title>
+                        Complex grid
+                    </title>
+                    <template>grid/layout.tpl</template>
+                    <css>
+                    </css>
+                    <defaultPageLinksBeforeAndAfter>
+                        4
+                    </defaultPageLinksBeforeAndAfter>
+                    <defaultResultSetSize>
+                        16
+                    </defaultResultSetSize>
+                    <bizObjects>
+                        <bizObject name="default">
+                            <template>default.tpl</template>
+                        </bizObject>
+                    </bizObjects>
+                </view>
+                <view id="highlight" name="highlight" class="highlight" title="_BIZ_HIGHLIGHT_VIEW">
+                    <title>
+                        Highlight
+                    </title>
+                    <template>highlight/layout.tpl</template>
+                    <css>
+                    </css>
+                    <defaultPageLinksBeforeAndAfter>
+                        4
+                    </defaultPageLinksBeforeAndAfter>
+                    <defaultResultSetSize>
+                        16
+                    </defaultResultSetSize>
+                    <bizObjects>
+                        <bizObject name="default">
+                            <template>default.tpl</template>
+                        </bizObject>
+                    </bizObjects>
+                </view>
+				
+                <!--
+                @todo: finalize template
+                
+                <view id="detailed" name="detailed" class="detailed">
+                <title>Detailed list</title>
+                <template>detailed/layout.tpl</template>
+                <css></css>
+                <defaultPageLinksBeforeAndAfter>4</defaultPageLinksBeforeAndAfter>
+                <defaultResultSetSize>3</defaultResultSetSize>
+                <bizObjects>
+                <bizObject name="default">
+                <template>default.tpl</template>
+                </bizObject>
+                <bizObject name="article">
+                <template>article.tpl</template>
+                </bizObject>
+                <bizObject name="photo">
+                <template>photo.tpl</template>
+                </bizObject>
+                </bizObjects>
+                </view>
+                -->
+            </resultSet>
+        </resultPage>
+    </search>
+    
+    <!--
+    @todo : Photo search config + templates
+    @todo : Content search config + templates
+    -->
+    
+</searches>

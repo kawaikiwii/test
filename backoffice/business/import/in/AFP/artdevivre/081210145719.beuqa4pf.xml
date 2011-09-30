@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<NewsML>
+  <Catalog Href="http://www.afp.com/dtd/AFPCatalog.xml"/>
+  <NewsEnvelope>
+    <DateAndTime>20081210T145913Z</DateAndTime>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>afp.com</ProviderId>
+        <DateId>20081210</DateId>
+        <NewsItemId>081210145719.beuqa4pf</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:afp.com:20081210:081210145719.beuqa4pf:1</PublicIdentifier>
+      </NewsIdentifier>
+      <NameLabel>UE-Irlande-alimentation-sécurité</NameLabel>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20081210T145719Z</FirstCreated>
+      <ThisRevisionCreated>20081210T145719Z</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+    </NewsManagement>
+    <NewsComponent>
+      <NewsLines>
+        <HeadLine>Alerte à la dioxine dans le porc irlandais: l'EFSA se veut rassurante</HeadLine>
+        
+        
+        <DateLine>ROME, 10 déc 2008 (AFP)</DateLine>
+        <CopyrightLine>© 2008 AFP</CopyrightLine>
+        <SlugLine>UE-Irlande-alimentation-sécurité</SlugLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Provider>
+          <Party FormalName="AFP"/>
+        </Provider>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="fr"/> 
+        <OfInterestTo FormalName="ext--francais--relaxnews--artdevivre"/>
+      </DescriptiveMetadata>
+      <NewsComponent>
+        <ContentItem>
+          <MediaType FormalName="Text"/>
+          <Format FormalName="bcNITF2.5"/>
+          <DataContent>
+            <p> L'autorité européenne de sécurité des aliments (EFSA) s'est voulu rassurante mercredi sur le porc irlandais à la dioxine, estimant que même une importante consommation quotidienne de viande hautement contaminée n'aurait pas "nécessairement d'effets nocifs" sur la santé.</p>
+            <p>Répondant à la sollicitation "urgente" de la Commission européenne, l'EFSA basée à Parme (nord de l'Italie) a indiqué, dans un communiqué, avoir élaboré plusieurs scénarios d'exposition à du porc contaminé, faisant varier la quantité de viande ingérée ou le degré de contamination à la dioxine de cette viande.</p>
+            <p>"Dans des cas très extrêmes", plus que rares, "où un grand consommateur de porc aurait mangé quotidiennement pendant la période concernée (90 jours) uniquement de la viande la plus fortement contaminée à la dioxine", l'EFSA estime que cela "ne conduirait pas nécessairement à des effets nocifs sur la santé".</p>
+            <p>Concernant "un scénario plus probable" d'une consommation quotidienne "par un petit mangeur" de viande de porc contaminée à 10% par de la dioxine, l'accumulation de dioxine dans le corps humain "augmenterait d'environ 10%", une hausse que l'EFSA ne considère pas comme "inquiétante".</p>
+            <p>L'alerte en Irlande a été lancée samedi après la découverte, lors de contrôles de routine fin novembre, de traces de PCB - des polluants organiques persistants et probablement cancérigènes - dans de la graisse de porc provenant de neuf élevages irlandais. </p>
+            <p>Le gouvernement irlandais a annoncé mercredi que cette contamination à la dioxine s'était étendue à plusieurs élevages de bovins alimentés avec les mêmes produits.</p>
+          </DataContent>
+        </ContentItem>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

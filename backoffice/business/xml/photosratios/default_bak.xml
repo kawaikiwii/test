@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ratios>
+	<ratio name="_BIZ_RATIO_THUMB_SQUARE" rx="2" ry="2">
+		<size width="75"  height="75"  code="portrait_small" />
+	</ratio>
+	<ratio name="_BIZ_RATIO_THUMB_HORIZONTAL" rx="4" ry="1">
+		<size width="100"  height="25"  code="portrait_small" />
+	</ratio>
+	<ratio name="Ratio 02:03" rx="2" ry="3">
+		<size width="50"  height="75"  code="portrait_small" />
+		<size width="100" height="150" code="portrait_medium" />
+		<size width="200" height="300" code="portrait_large" />
+		<size width="300" height="450" code="portrait_wide" />
+	</ratio>
+	<ratio name="Ratio 03:02" rx="3" ry="2">
+		<size width="75"  height="50"  code="landscape_small" />
+		<size width="150" height="100" code="landscape_medium" />
+		<size width="300" height="200" code="landscape_large" />
+		<size width="450" height="300" code="landscape_wide" />
+	</ratio>
+	<ratio name="Ratio 05:02" rx="5" ry="2">
+		<size width="125" height="50"  code="band_small" />
+		<size width="250" height="100" code="band_medium" />
+		<size width="500" height="200" code="band_large" />
+	</ratio>
+	<ratio name="Ratio 01:01" rx="1" ry="1">
+		<size width="100" height="100" code="square_small" />
+		<size width="200" height="200" code="square_medium" />
+		<size width="300" height="300" code="square_large" />
+	</ratio>
+</ratios>

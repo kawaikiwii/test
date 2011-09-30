@@ -1,0 +1,99 @@
+
+
+#sidebar .x-panel-header-text {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+#sidebar .ari-sidebar-panel-body {
+    padding: 0.5em;
+}
+
+#sidebar .ari-sidebar-list li {
+    font-size: 1.1em;
+    padding: 0.2em 0.2em 0.2em 0.2em;
+    border: 1px solid #fff;
+    border-bottom: 1px dashed #AAA;
+}
+
+#sidebar {
+    padding-top: 26px;
+}
+
+/**
+ * AFPRELAX SELECTION
+ */
+#sidebar .ari-sidebar-header-folder {
+    background: transparent url(/rp/images/default/sprites/sidebar.png) no-repeat 0 -30px !important;
+}
+
+#sidebar .ari-node-folder-temp {
+   
+}
+
+#sidebar .ari-node-folder-perm {
+    
+}
+
+#sidebar .ari-node-folder-auto {
+   
+}
+
+#sidebar .ari-folder-temp {
+    background: url(/rp/images/default/sprites/sidebar.png) no-repeat 0 -76px !important;
+}
+
+#sidebar .ari-folder-perm {
+    background: url(/rp/images/default/sprites/sidebar.png) no-repeat 0 -76px !important;
+}
+
+#sidebar .ari-folder-auto {
+    background: url(/rp/images/default/sprites/sidebar.png) no-repeat 0 -76px !important;
+}
+
+/*#sidebar .ari-folder-name {
+ background: url(/rp/images/default/sprites/sidebar.png) no-repeat 0 -76px !important;
+ padding-left: 1.7em;
+ text-decoration: none;
+ color: #333;
+ display: block;
+ }*/
+/**
+ * BIN STYLING
+ */
+#sidebar .ari-sidebar-header-bin {
+    background: transparent url(/rp/images/default/sprites/sidebar.png) no-repeat 0 -122px !important;
+}
+
+#sidebar .ari-bin {
+    background: transparent url(/rp/images/default/sprites/sidebar.png) no-repeat scroll 0 -168px !important;
+}
+
+#sidebar .ari-bin-delete {
+    float: right;
+    color: red;
+    font-size: 0.9em;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*#sidebar .ari-bin-name {
+ background: transparent url(/rp/images/default/sprites/sidebar.png) no-repeat scroll 0 -168px !important;
+ padding-left: 1.7em;
+ text-decoration: none;
+ color: #333;
+ display: block;
+ }*/
+/**
+ * ACCOUNT STYLING
+ */
+#sidebar .ari-sidebar-account {
+    background: transparent url(/rp/images/default/sprites/sidebar.png) no-repeat scroll 0 -260px !important;
+}
+
+/**
+ * QUESTION STYLING
+ */
+#sidebar .ari-sidebar-question {
+    background: transparent url(/rp/images/default/sprites/sidebar.png) no-repeat scroll 0 -214px !important;
+}

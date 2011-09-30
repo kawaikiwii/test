@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<NewsML>
+  <Catalog Href="http://www.afp.com/dtd/AFPCatalog.xml"/>
+  <NewsEnvelope>
+    <DateAndTime>20090304T142254Z</DateAndTime>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>afp.com</ProviderId>
+        <DateId>20090304</DateId>
+        <NewsItemId>090304142046.s4j8ygpw</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:afp.com:20090304:090304142046.s4j8ygpw:1</PublicIdentifier>
+      </NewsIdentifier>
+      <NameLabel>Britain-crime-film-Potter-charge</NameLabel>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20090304T142046Z</FirstCreated>
+      <ThisRevisionCreated>20090304T142046Z</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+    </NewsManagement>
+    <NewsComponent>
+      <NewsLines>
+        <HeadLine>British court convicts killer of Harry Potter film actor</HeadLine>
+        
+        
+        <DateLine>LONDON, March 4, 2009 (AFP)</DateLine>
+        <CopyrightLine>© 2009 AFP</CopyrightLine>
+        <SlugLine>Britain-crime-film-Potter-charge</SlugLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Provider>
+          <Party FormalName="AFP"/>
+        </Provider>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="en"/> 
+        <OfInterestTo FormalName="ext--english--relaxnews--lifestyle"/>
+      </DescriptiveMetadata>
+      <NewsComponent>
+        <ContentItem>
+          <MediaType FormalName="Text"/>
+          <Format FormalName="bcNITF2.5"/>
+          <DataContent>
+            <p> A London court on Wednesday convicted a 22-year-old man of the frenzied murder of a teenage actor who had a part in the latest Harry Potter film.</p>
+            <p>Karl Bishop, who had previous convictions for knife crimes, was found guilty of the killing of 18-year-old Rob Knox outside a bar in Sidcup, southeast London, last May.</p>
+            <p>The actor was stabbed after stepping in to protect his younger brother Jamie, who he heard had been threatened by Bishop. One witness described how Bishop's face was "screwed up in rage" as he lashed out with two kitchen knives.</p>
+            <p>"Unhappily, his courage and his sense of duty were to cost him his life," said prosecutor Brian Altman, calling Bishop a "habitual knife carrier" who thought of stabbing people as an "occupational hazard."</p>
+            <p>Knox had finished filming for his part as student Marcus Belby in "Harry Potter And The Half-Blood Prince," which set for release in July.</p>
+          </DataContent>
+        </ContentItem>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

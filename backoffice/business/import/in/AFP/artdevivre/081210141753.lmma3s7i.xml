@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<NewsML>
+  <Catalog Href="http://www.afp.com/dtd/AFPCatalog.xml"/>
+  <NewsEnvelope>
+    <DateAndTime>20081210T141950Z</DateAndTime>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>afp.com</ProviderId>
+        <DateId>20081210</DateId>
+        <NewsItemId>081210141753.lmma3s7i</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:afp.com:20081210:081210141753.lmma3s7i:1</PublicIdentifier>
+      </NewsIdentifier>
+      <NameLabel>Transports-mer-environnement-gouvernement</NameLabel>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20081210T141753Z</FirstCreated>
+      <ThisRevisionCreated>20081210T141753Z</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+    </NewsManagement>
+    <NewsComponent>
+      <NewsLines>
+        <HeadLine>Un ancien sénateur UMP chargé d'une mission sur les autoroutes de la mer</HeadLine>
+        
+        
+        <DateLine>PARIS, 10 déc 2008 (AFP)</DateLine>
+        <CopyrightLine>© 2008 AFP</CopyrightLine>
+        <SlugLine>Transports-mer-environnement-gouvernement</SlugLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Provider>
+          <Party FormalName="AFP"/>
+        </Provider>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="fr"/> 
+        <OfInterestTo FormalName="ext--francais--relaxnews--artdevivre"/>
+      </DescriptiveMetadata>
+      <NewsComponent>
+        <ContentItem>
+          <MediaType FormalName="Text"/>
+          <Format FormalName="bcNITF2.5"/>
+          <DataContent>
+            <p> L'ancien sénateur (UMP) Henri de Richemont a été chargé par le gouvernement d'une mission sur les autoroutes de la mer, lignes dédiées au transport de camions par bateau, a annoncé mercredi le secrétariat d'Etat aux Transports.</p>
+            <p>L'objectif de cette mission est "d'identifier les principales difficultés techniques, réglementaires, économiques et financières auxquelles se heurtent les projets d'autoroutes de la mer et d'avancer des mesures concrètes permettant d'y remédier", selon un communiqué.</p>
+            <p>Avocat et ancien sénateur UMP de la Charente (1998-2008), M. de Richemont avait déjà été chargé d'une mission sur le "Développement du pavillon français et cabotage maritime", thème sur lequel il avait rendu un rapport en 2003.</p>
+            <p>M. de Richemont avait été battu lors des sénatoriales de septembre 2008.</p>
+          </DataContent>
+        </ContentItem>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

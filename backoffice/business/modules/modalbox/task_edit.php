@@ -1,0 +1,174 @@
+<?php
+
+/**
+ * Project:     WCM
+ * File:        task_edit.php
+ *
+ * @copyright   (c)2009 Nstein Technologies
+ * @version     4.x
+ *
+ */
+
+require_once dirname(__FILE__).'/../../../initWebApp.php';
+
+$config = wcmConfig::getInstance();
+
+$id     = getArrayParameter($_REQUEST, "id", 0);
+$action = getArrayParameter($_REQUEST, "kind", null);
+$type  		= getArrayParameter($_REQUEST, "input", "standard");
+$sortField  = getArrayParameter($_REQUEST, "targetid", "nextExecutionDate");
+$sortOrder  = getArrayParameter($_REQUEST, "type", "ASC");
+$searchdata	= getArrayParameter($_REQUEST, "order", '');
+
+$relaxTask = new relaxTask();
+$relaxTask->refresh($id);
+
+switch ($action)
+{
+	case 'insert':
+	case 'update':
+		echo '<div id="relaxTask">';
+			echo '<div id="content">';
+				echo '<div class="zone">';
+					echo "<div id=\"errorMsg\"></div>";
+					echo "<form id='relaxTask_edit' name='relaxTask_edit'>";
+					echo '<table border="0" width="98%">';
+					echo '<tr>';
+						echo '<td width="50%" valign="top">';
+							echo '<fieldset style="margin-left:5px">';
+							echo "<legend>Tache</legend>";
+							echo "<ul>";
+								wcmGUI::renderTextField('name', $relaxTask->name, 'Nom', array('style' => 'float:none;'));
+								wcmGUI::renderTextField('companyName', $relaxTask->companyName, 'Entreprise', array('style' => 'float:none;'));
+								wcmGUI::renderDropdownField('type', relaxTask::getTypes(), $relaxTask->type, 'Type', array('style' => 'float:none;'));
+								
+								echo '<li>';
+								echo '<label>Query&nbsp;<img src="'.$config['wcm.backOffice.url'].'/img/icons/information.gif" style="cursor:pointer" onClick="if ($(\'query_samples\').style.display != \'block\') { $(\'query_samples\').style.display=\'block\'; } else { $(\'query_samples\').style.display=\'none\'; } "/></label>';
+							
+								echo '<div id="query_samples" style="margin-left:5px; display:none">';
+								echo '<fieldset>';
+								echo "<legend>Query - SmartTags</legend>";
+								echo "<ul>";
+								echo "<li><em>7 derniers jours :</em>&nbsp;&nbsp;__LAST_7_DAYS__</li>";
+								echo "<li><em>Depuis 1 mois :</em>&nbsp;&nbsp;__LAST_MONTH__</li>";
+								echo "<li><em>Derniere execution (datetime):</em>&nbsp;&nbsp;__LAST__</li>";
+								echo "<li><em>Prochaine execution (datetime):</em>&nbsp;&nbsp;__NEXT__</li>";
+								echo "<li><em>Maintenant (datetime):</em>&nbsp;&nbsp;__NOW__</li>";
+								echo "<li><em>Aujourd'hui (date):</em>&nbsp;&nbsp;__CURDATE__</li>";
+								echo "</ul>";
+								echo "</fieldset>";
+								echo "</div>";
+								
+								echo '<textarea id="query" name="query" rows="2" cols="35">'.$relaxTask->query.'</textarea>';
+								echo '</li>';
+								
+								echo '<li>';
+								echo '<label>Sort</label>';
+								echo '<textarea id="sort" name="sort" rows="2" cols="35">'.$relaxTask->sort.'</textarea>';
+								echo '</li>';
+								
+								wcmGUI::renderTextField('limit', $relaxTask->limit, 'Limit', array('style' => 'float:none;'));
+								
+								echo '<li>';
+								echo '<label>Parameters</label>';
+								echo '<textarea id="parameters" name="parameters" rows="1" cols="35">'.$relaxTask->parameters.'</textarea>';
+								echo '</li>';
+								
+								
+							echo "</ul>";
+							echo "</fieldset>";
+							
+							echo '<fieldset style="margin-left:5px">';
+							echo "<legend>Export Rules</legend>";
+							echo "<ul>";
+								echo "<li>";
+								$acOptions = array('url' => $config['wcm.backOffice.url'] . 'business/ajax/autocomplete/wcm.exportRule.php',
+												   'paramName' => 'prefix',
+												   'parameters' => '',
+												   'css_clear' => 'both',
+												   'className' => 'exportRule');
+								$exportRulesLst = explode('|',$relaxTask->exportRulesIds);
+								relaxGUI::renderRelaxListField('exportRulesIds', $exportRulesLst, array('style' => 'float:none;'), $acOptions);
+							echo "</fieldset>";	
+										
+						echo "</td>";
+						echo '<td width="50%" valign="top">';
+						wcmGUI::renderBooleanField('enable', $relaxTask->enable, 'Enable');
+						echo '<fieldset style="margin-left:5px">';
+							echo "<legend>Login As</legend>";
+							echo "<ul>";
+								echo "<li>";
+								$acOptions = array('url' => $config['wcm.backOffice.url'] . 'business/ajax/autocomplete/wcm.account.php',
+												   'paramName' => 'prefix',
+												   'parameters' => '',
+												   'className' => 'account');
+								relaxGUI::renderRelaxListField('loginAs', explode('|',$relaxTask->loginAs), array('style' => 'float:none;'), $acOptions);
+								echo "</li>";
+							echo "</ul>";
+							echo "</fieldset>";
+							
+							echo '<fieldset style="margin-left:5px">';
+							echo '<legend>Planning&nbsp;<img src="'.$config['wcm.backOffice.url'].'/img/icons/information.gif" style="cursor:pointer" onClick="if ($(\'planning_samples\').style.display != \'block\') { $(\'planning_samples\').style.display=\'block\'; } else { $(\'planning_samples\').style.display=\'none\'; } "/></legend>';
+							
+							echo '<div id="planning_samples" style="margin-left:5px; display:none">';
+							echo '<fieldset>';
+							echo "<legend>Planning - Exemples</legend>";
+							echo "<ul>";
+							echo "<li><em>Tous les jours à 23h30:</em><br />30 23 * * *</li>";
+							echo "<li><em>Toutes les heures, passées de 5 minutes :</em><br />5 * * * *</li>";
+							echo "<li><em>Tous les premiers du mois à 23h30:</em><br />30 23 1 * *</li>";
+							echo "<li><em>Tous les lundis à 22h28:</em><br />28 22 * * 1</li>";
+							echo "<li><em>Du 2 au 5 de chaque mois à 10h12:</em><br />12 10 2-5 * *</li>";
+							echo "<li><em>Toutes les 5 minutes:</em><br />0,5,10,15,20,25,30,35,40,45,50,55 * * * *</li>";
+							echo "</ul>";
+							echo "</fieldset>";
+							echo "</div>";
+							
+							if ($relaxTask->planning != '')
+								$planningArray = explode('#', $relaxTask->planning);
+							else
+							{
+								$planningArray[0] = '*';
+								$planningArray[1] = '*';
+								$planningArray[2] = '*';
+								$planningArray[3] = '*';
+								$planningArray[4] = '*';
+							}
+							echo "<ul>";
+								wcmGUI::renderTextField('minutes', $planningArray[0], 'Minutes (0 à 59)', array('style' => 'float:right;width:150px', 'onChange' => 'checkField(\'minutes\')'));
+								wcmGUI::renderTextField('hour', $planningArray[1], 'Heures (0 à 23)', array('style' => 'float:right;width:150px', 'onChange' => 'checkField(\'hour\')'));
+								wcmGUI::renderTextField('day', $planningArray[2], 'Jour (1 à 31)', array('style' => 'float:right;width:150px', 'onChange' => 'checkField(\'day\')'));
+								wcmGUI::renderTextField('month', $planningArray[3], 'Mois (1 à 12)', array('style' => 'float:right;width:150px', 'onChange' => 'checkField(\'month\')'));
+								wcmGUI::renderTextField('dayOfWeek', $planningArray[4], 'Jour de la semaine (0[Lundi] à 6)', array('style' => 'float:right;width:150px', 'onChange' => 'checkDayOfWeek(\'dayOfWeek\')'));
+								wcmGUI::renderHiddenField('planning',null);
+							echo "</ul>";
+							echo "</fieldset>";
+							
+							echo '<fieldset style="margin-left:5px">';
+							echo "<legend>Report</legend>";
+							echo "<ul>";
+								
+								wcmGUI::renderBooleanField('sendReport', $relaxTask->sendReport, 'Send report');
+								echo '(séparez les adresses mail par des virgules)';
+								echo '<textarea id="sendReportTo" name="sendReportTo" rows="2" cols="35">'.$relaxTask->sendReportTo.'</textarea>';
+								
+							echo "</ul>";
+							echo "</fieldset>";	
+						echo "</td>";
+					echo "</tr>";
+					echo "</table>";
+						echo "<br />";
+						echo "<ul class='toolbar'>";
+							echo "<li><a href='#' onclick=\"closemodal(); return false;\" class='cancel'>"._BIZ_CANCEL."</a></li>";
+							//echo "<li><a href='#' onclick=\"computePlanning(); document.getElementById('errorMsg').innerHTML = ''; parent.ajaxRelaxTask('".$action."', 'results', ".$id.", $('relaxTask_edit').serialize()); if (document.getElementById('errorMsg').innerHTML == '') closemodal(); return false;\" class='save'>"._BIZ_SAVE."</a></li>";
+							echo "<li><a href='#' onclick=\"computePlanning(); document.getElementById('errorMsg').innerHTML = ''; parent.ajaxRelaxTask('".$action."', 'results', ".$id.", $('relaxTask_edit').serialize(), '".$type."', '".$sortField."', '".$sortOrder."', '".$searchdata."'); if (document.getElementById('errorMsg').innerHTML == '') closemodal(); return false;\" class='save'>"._BIZ_SAVE."</a></li>";
+							echo "</ul>";
+					echo "</form>";
+				echo "</div>";
+			echo "</div>";
+		echo "</div>";
+		break;
+}
+
+
+?>

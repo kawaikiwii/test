@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dashboard>
+<literal>
+<![CDATA[
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top" width="100%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td>
+]]>
+</literal>
+    <zone>
+        <title>MAIN</title>
+        <module class="editorial tall" ttl="0">
+            <title>100 Newstext ORDER BY publication date DESC</title>
+            <template>dashboard/search.editorial.tpl</template>
+            <parameters>
+                <param name="query">className:news AND siteId:@SiteID AND workflowState:published</param>
+                <param name="orderBy">publicationdate DESC, publicationtime DESC</param>
+                <param name="from">0</param>
+                <param name="limit">100</param>
+                <param name="fields">
+                    <param name="title">_DASHBOARD_MODULE_HEADER_TITLE</param>
+                    <param name="publicationDate">Publication Date</param>
+                </param>
+            </parameters>
+        </module>
+        <module class="editorial semitall" ttl="0">
+            <title>50 Recent actions ORDER BY modification date DESC</title>
+            <template>dashboard/tasks.history.tpl</template>
+            <parameters>
+            	<param name="from">0</param>
+                <param name="limit">50</param>
+				<param name="orderBy">modifiedat DESC, modifiedat_time DESC</param>
+				<param name="fields">
+                    <param name="title">_DASHBOARD_MODULE_HEADER_TITLE</param>
+                    <param name="type">Type</param>
+                </param>
+            </parameters>
+        </module>
+        <module class="editorial tinytall" ttl="0">
+            <title>30 Events ORDER BY modification date DESC</title>
+            <template>dashboard/search.editorial.tpl</template>
+            <parameters>
+            	<param name="query">className:event AND siteId:@SiteID AND workflowState:published</param>
+				<param name="from">0</param>
+                <param name="limit">30</param>
+				<param name="orderBy">modifiedAt DESC</param>
+				<param name="fields">
+                    <param name="title">_DASHBOARD_MODULE_HEADER_TITLE</param>
+                    <param name="modifiedAt">Modification Date</param>
+                </param>
+            </parameters>
+        </module>
+    </zone>
+<literal>
+<![CDATA[
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+]]>
+</literal>
+	<zone>
+        <title>IMPORT</title>
+		<module class="editorial xtratall" ttl="0">
+            <title>from:AFP ORDER BY creation date</title>
+            <template>dashboard/db.import.tpl</template>
+            <parameters>
+				<param name="source">news</param>
+				<param name="orderBy">id DESC</param>
+				<param name="where">siteId = '@SiteID' AND workflowState='draft_import' AND import_feed='afp'</param>
+                <param name="from">0</param>
+                <param name="limit">300</param>
+                <param name="fields">
+                    <param name="title">_DASHBOARD_MODULE_HEADER_TITLE</param>
+                    <param name="createdAt">Creation Date</param>
+                </param>
+            </parameters>
+        </module>
+		<module class="editorial xtratall" ttl="0">
+            <title>from:RELAXFIL ORDER BY creation date</title>
+            <template>dashboard/db.import.tpl</template>
+            <parameters>
+				<param name="source">news</param>
+				<param name="orderBy">id DESC</param>
+				<param name="where">siteId = '@SiteID' AND workflowState='draft_import' AND import_feed='relaxfil'</param>
+                <param name="from">0</param>
+                <param name="limit">300</param>
+                <param name="fields">
+                    <param name="title">_DASHBOARD_MODULE_HEADER_TITLE</param>
+                    <param name="createdAt">Creation Date</param>
+                </param>
+            </parameters>
+        </module>
+	</zone>
+<literal>
+<![CDATA[
+</td>
+</tr>
+</table>
+</td>
+<td valign="top" id="task-panel">
+]]>
+</literal>
+	<zone>
+		<title>Custom</title>
+        <module class="tasks devnews">
+        	<title>Development News   -   DevTeam@relaxnews.com</title>
+            <template>dashboard/development_news.tpl</template>
+			<parameters>
+            </parameters>
+        </module>
+		<module class="tasks tinytall">
+            <title>30 Slideshows ORDER BY publication date DESC</title>
+            <template>dashboard/search.editorial.tpl</template>
+            <parameters>
+            	<param name="query">className:slideshow AND siteId:@SiteID AND workflowState:published</param>
+            	<param name="from">0</param>
+                <param name="limit">30</param>
+				<param name="orderBy">publicationdate DESC, publicationtime DESC</param>
+				<param name="fields">
+                    <param name="title">_DASHBOARD_MODULE_HEADER_TITLE</param>
+                    <param name="publicationDate">Publication Date</param>
+                </param>
+            </parameters>
+        </module>
+		<module class="tasks">
+            <title>30 Videos ORDER BY publication date DESC</title>
+            <template>dashboard/search.editorial.tpl</template>
+            <parameters>
+            	<param name="query">className:video AND siteId:@SiteID AND workflowState:published</param>
+            	<param name="from">0</param>
+                <param name="limit">30</param>
+				<param name="orderBy">publicationdate DESC, publicationtime DESC</param>
+				<param name="fields">
+                    <param name="title">_DASHBOARD_MODULE_HEADER_TITLE</param>
+                    <param name="publicationDate">Publication Date</param>
+                </param>
+            </parameters>
+        </module>
+	</zone>
+<literal>
+<![CDATA[
+</td>
+</tr>
+</table>
+]]>
+</literal>
+</dashboard>

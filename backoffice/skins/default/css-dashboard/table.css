@@ -1,0 +1,38 @@
+/**
+ * Project:     NCM
+ * File:        table.css
+ *
+ * @copyright   (c)2007 Nstein Technologies
+ * @version     4.x
+ *
+ */
+
+/* odd div rows 1,3,5,7,... */
+div.odd th,
+div.odd {
+    background-color:   #E5E5E5;
+    text-align:         left;
+}
+
+/* even div rows 2,4,6,8,... */
+div.even th,
+div.even {
+    background-color:   #D5D5D5;
+    text-align:         left;
+}
+
+/* marked div rows */
+div.marked th,
+div.marked {
+    background-color:   #FFCC99;
+}
+
+/* hovered div rows */
+div.odd:hover,
+div.even:hover,
+div.odd:hover th,
+div.even:hover th,
+div.hover th,
+div.hover {
+    background-color:   #CCFFCC;
+}

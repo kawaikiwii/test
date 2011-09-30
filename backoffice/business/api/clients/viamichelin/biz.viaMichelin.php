@@ -1,0 +1,318 @@
+<?php
+
+/**
+ * Project:     WCM
+ * File:        biz.viaMichelin.php
+ *
+ * @copyright   (c)2011 Relaxnews
+ * @version     4.x
+ *
+ */
+
+/**
+ * Definition of an object viaMichelin
+ */
+class viaMichelin extends bizobject
+{
+   	/**
+    * (int) site id
+    */
+    public $siteId;
+
+    /**
+    * (string) label
+    */
+    public $title;
+    
+    /**
+    * (date) publication date
+    */
+    public $publication_date;
+    
+    /**
+    * homepage var bloc 1
+    */
+   	public $homepage_be_fra_title;
+   	public $homepage_be_fra_header;
+   	public $homepage_be_fra_text;
+   	public $homepage_be_fra_photoLegend;
+   	public $homepage_be_fra_articleLink;
+    public $homepage_be_fra_photoCredits;
+    public $homepage_be_fra_photoLink; 	
+   	public $homepage_be_nld_title;
+   	public $homepage_be_nld_header;
+   	public $homepage_be_nld_text;
+   	public $homepage_be_nld_photoLegend;
+   	public $homepage_ch_deu_title;
+   	public $homepage_ch_deu_header;
+   	public $homepage_ch_deu_text;
+   	public $homepage_ch_deu_photoLegend;
+   	public $homepage_ch_ita_title;
+   	public $homepage_ch_ita_header;
+   	public $homepage_ch_ita_text;
+   	public $homepage_ch_ita_photoLegend;
+   	
+    /**
+    * homepage var bloc 2
+    */
+    public $homepage_ch_fra_title;
+   	public $homepage_ch_fra_header;
+   	public $homepage_ch_fra_text;
+   	public $homepage_ch_fra_photoLegend;
+    public $homepage_ch_fra_articleLink;
+    public $homepage_ch_fra_photoCredits;
+    public $homepage_ch_fra_photoLink; 	
+    public $homepage_nl_nld_title;
+   	public $homepage_nl_nld_header;
+   	public $homepage_nl_nld_text;
+   	public $homepage_nl_nld_photoLegend; 
+    public $homepage_at_deu_title;
+   	public $homepage_at_deu_header;
+   	public $homepage_at_deu_text;
+   	public $homepage_at_deu_photoLegend;
+   	
+    /**
+    * homepage var bloc 3
+    */
+    public $homepage_uk_int_title;
+   	public $homepage_uk_int_header;
+   	public $homepage_uk_int_text;
+   	public $homepage_uk_int_photoLegend;
+   	public $homepage_uk_int_articleLink;
+    public $homepage_uk_int_photoCredits;
+    public $homepage_uk_int_photoLink; 	
+    
+   	
+   	/**
+    * hotels var bloc 1
+    */
+   	public $hotels_be_fra_title;
+   	public $hotels_be_fra_header;
+   	public $hotels_be_fra_text;
+   	public $hotels_be_fra_photoLegend;
+   	public $hotels_be_fra_articleLink;
+    public $hotels_be_fra_photoCredits;
+    public $hotels_be_fra_photoLink; 	
+   	public $hotels_be_nld_title;
+   	public $hotels_be_nld_header;
+   	public $hotels_be_nld_text;
+   	public $hotels_be_nld_photoLegend;
+   	public $hotels_ch_deu_title;
+   	public $hotels_ch_deu_header;
+   	public $hotels_ch_deu_text;
+   	public $hotels_ch_deu_photoLegend;
+   	public $hotels_ch_ita_title;
+   	public $hotels_ch_ita_header;
+   	public $hotels_ch_ita_text;
+   	public $hotels_ch_ita_photoLegend;
+   	
+    /**
+    * hotels var bloc 2
+    */
+    public $hotels_ch_fra_title;
+   	public $hotels_ch_fra_header;
+   	public $hotels_ch_fra_text;
+   	public $hotels_ch_fra_photoLegend;
+    public $hotels_ch_fra_articleLink;
+    public $hotels_ch_fra_photoCredits;
+    public $hotels_ch_fra_photoLink; 	
+    public $hotels_nl_nld_title;
+   	public $hotels_nl_nld_header;
+   	public $hotels_nl_nld_text;
+   	public $hotels_nl_nld_photoLegend; 
+    public $hotels_at_deu_title;
+   	public $hotels_at_deu_header;
+   	public $hotels_at_deu_text;
+   	public $hotels_at_deu_photoLegend;
+   	
+    /**
+    * hotels var bloc 3
+    */
+    public $hotels_uk_int_title;
+   	public $hotels_uk_int_header;
+   	public $hotels_uk_int_text;
+   	public $hotels_uk_int_photoLegend;
+   	public $hotels_uk_int_articleLink;
+    public $hotels_uk_int_photoCredits;
+    public $hotels_uk_int_photoLink; 	
+    
+   	/**
+    * restaurants var bloc 1
+    */
+   	public $restaurants_be_fra_title;
+   	public $restaurants_be_fra_header;
+   	public $restaurants_be_fra_text;
+   	public $restaurants_be_fra_photoLegend;
+   	public $restaurants_be_fra_articleLink;
+    public $restaurants_be_fra_photoCredits;
+    public $restaurants_be_fra_photoLink; 	
+   	public $restaurants_be_nld_title;
+   	public $restaurants_be_nld_header;
+   	public $restaurants_be_nld_text;
+   	public $restaurants_be_nld_photoLegend;
+   	public $restaurants_ch_deu_title;
+   	public $restaurants_ch_deu_header;
+   	public $restaurants_ch_deu_text;
+   	public $restaurants_ch_deu_photoLegend;
+   	public $restaurants_ch_ita_title;
+   	public $restaurants_ch_ita_header;
+   	public $restaurants_ch_ita_text;
+   	public $restaurants_ch_ita_photoLegend;
+   	
+    /**
+    * restaurants var bloc 2
+    */
+    public $restaurants_ch_fra_title;
+   	public $restaurants_ch_fra_header;
+   	public $restaurants_ch_fra_text;
+   	public $restaurants_ch_fra_photoLegend;
+    public $restaurants_ch_fra_articleLink;
+    public $restaurants_ch_fra_photoCredits;
+    public $restaurants_ch_fra_photoLink; 	
+    public $restaurants_nl_nld_title;
+   	public $restaurants_nl_nld_header;
+   	public $restaurants_nl_nld_text;
+   	public $restaurants_nl_nld_photoLegend; 
+    public $restaurants_at_deu_title;
+   	public $restaurants_at_deu_header;
+   	public $restaurants_at_deu_text;
+   	public $restaurants_at_deu_photoLegend;
+   	
+    /**
+    * restaurants var bloc 3
+    */
+    public $restaurants_uk_int_title;
+   	public $restaurants_uk_int_header;
+   	public $restaurants_uk_int_text;
+   	public $restaurants_uk_int_photoLegend;
+   	public $restaurants_uk_int_articleLink;
+    public $restaurants_uk_int_photoCredits;
+    public $restaurants_uk_int_photoLink; 	
+    	
+   	
+    /**
+     * Set all initial values of an object
+     * This method is invoked by the constructor
+     */
+    protected function setDefaultValues()
+    {
+        parent::setDefaultValues();
+	}
+	
+    
+    /**
+     * Check validity of object
+     *
+     * A generic method which can (should ?) be overloaded by the child class
+     *
+     * @return boolean true when object is valid
+     *
+     */
+    public function checkValidity()
+    {  	
+    	return true;
+    }
+
+	public function save($source = null)
+	{
+		if (!parent::save($source))
+    	{
+    		wcmTrace("Error save ".$this->getClass());
+    		return false;
+    	}
+    	else
+    		return true;
+    }
+    
+    /*
+	 * supprimer les caractère spéciaux dans le XML
+	 */
+	public function putSafeText($text)
+    {
+    	$text = str_replace("&", "&amp;", $text); 
+    	
+    	return $text;
+    }
+    
+    /*
+	 * préparation de la structure XML pour l'export
+	 */
+    public function exportXmlStructure()
+	{
+		// tableau contenant les différents dossiers
+		$tabFolders = array("homepage","hotels","restaurants");
+		// tableau contenant les différentes combinaisons sites/langues des bloc 1,2 et 3 de l'interface
+		$tabSitesLanguesBloc1 = array("be_fra","be_nld","ch_deu","ch_ita", "ch_fra","nl_nld","at_deu", "uk_int");
+		
+		$exportDate = date("D, d M Y H:i:s O");
+		
+		$xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
+		$xml .= "<rss version=\"2.0\">\n";  		
+		$xml .= "<channel>\n";
+		$xml .= "	<title>Relaxnews</title>\n";
+		$xml .= "	<link>http://www.afprelaxnews.com</link>\n";
+		$xml .= "	<description>Relaxnews is the world's first leisure newswire service</description>\n";
+		$xml .= "	<pubDate>".$exportDate."</pubDate>\n";
+		$xml .= "	<generator>Relaxnews</generator>\n";
+		$xml .= "	<xhtml:meta xmlns:xhtml=\"http://www.w3.org/1999/xhtml\" name=\"robots\" content=\"noindex\"/>\n";
+	
+		// on parcourt les différents dossiers
+		foreach ($tabFolders as $folder)
+		{
+			// on parcourt les différents couples site/langue des bloc 1,2 et 3 de l'interface
+			foreach ($tabSitesLanguesBloc1 as $bloc)
+			{
+				$bloc2 = "";
+				$link2 = "";
+				// conversion du format de la date pour être conforme avec celui attendu dans le XML
+				$tempDate = strtotime($this->publication_date);
+				// explode du couple site_langue pour récupérer les 2 valeurs de manière indépendante		
+				$siteLangue = explode("_", $bloc);
+				// formatage de la date dans le xml
+				if ($siteLangue[1] == "fra")
+					$pubDate = date("d/m/Y", $tempDate);		
+				else
+					$pubDate = date("m/d/Y", $tempDate);	
+				
+				$xml .= "<item>";
+				// utilisation d'une structure de variable dynamique pour récpérer les différentes données des sites/langues
+				$xml .= "<title>".$this->putSafeText($this->{$folder.'_'.$bloc.'_title'})."</title>\n";
+				$xml .= "<header>".$this->putSafeText($this->{$folder.'_'.$bloc.'_header'})."</header>\n";
+				$xml .= "<pubDate>".$pubDate."</pubDate>\n";
+				$xml .= "<langue>".$siteLangue[1]."</langue>\n";
+				$xml .= "<site>".$siteLangue[0]."</site>\n";
+				$xml .= "<dossier>".$folder."</dossier>\n";
+				//$xml .= "<header><![CDATA[".$this->{$folder.'_'.$bloc.'_header'}."]]></header>\n";
+				$xml .= "<description><![CDATA[".$this->{$folder.'_'.$bloc.'_text'}."]]></description>\n";
+				
+				// cas particulier des champs communs suivant les sites/langues
+				// certains contenus sont récupérés des sites/langues de référence				
+				if ($bloc == "be_nld" || $bloc == "ch_deu" || $bloc == "ch_ita")
+					$bloc2 = "be_fra";
+				else if ($bloc == "nl_nld" || $bloc == "at_deu")
+					$bloc2 = "ch_fra";
+				else
+					$bloc2 = $bloc;		
+					
+				$xml .= "<enclosure url=\"".$this->putSafeText($this->{$folder.'_'.$bloc2.'_photoLink'})."\" ";
+				// création automatique du lien secondaire
+				$link2 = str_replace(".w400.jpg", ".w100.jpg", $this->{$folder.'_'.$bloc2.'_photoLink'});
+				if (!empty($link2))
+					$xml .= " url_thumbnail=\"".$this->putSafeText($link2)."\" ";		
+				
+				$xml .= "type=\"image/jpeg\">\n";
+				
+				$xml .= "	<credits><![CDATA[".$this->{$folder.'_'.$bloc2.'_photoCredits'}."]]></credits>\n";
+				$xml .= "	<caption><![CDATA[".$this->{$folder.'_'.$bloc.'_photoLegend'}."]]></caption>\n";
+				$xml .= "</enclosure>\n";
+				
+				
+				$xml .= "</item>";			
+			}
+		}
+		
+		$xml .= "</channel>\n";
+		$xml .= "</rss>\n";
+		return $xml;
+	}
+}

@@ -1,0 +1,276 @@
+#license {
+margin: 15px;
+height: 420px;
+}
+
+#license pre {
+}
+
+#license h1 {
+font-size: 22px;
+}
+
+#license h2 {
+padding: 0 0 0 0;
+margin: 25px 0 20px 0;
+font-size: 18px;
+border-bottom: 1px solid silver;
+}
+
+#license h3 {
+font-size: 16px;
+}
+
+#license p {
+padding: 0 0 0 0;
+margin: 0 0 15px 0;
+}
+
+#license ul,
+#license ol {
+padding: 0;
+margin: 0;
+}
+
+#license ol li {
+padding: 0 15px 0 0;
+margin: 0 0 10px 25px;
+list-style-type: decimal;
+}
+
+#license ul li {
+padding: 0 15px 0 0;
+margin: 0 0 10px 25px;
+list-style-type: square;
+}
+
+#wizard table {
+padding: 0;
+margin: 0 0 25px 0;
+}
+
+#wizard td {
+padding: 5px 10px 5px 10px;
+margin: 1px 1px 0 0;
+font-size: 14px;
+background-color: #E8E8E8;
+
+}
+
+#wizard p.description {
+padding: 0 0 10px 0;
+margin: 5px 0 0 0;
+}
+
+#wizard ul.message {
+margin: 15px 0 25px 0;
+padding: 0 0 0 0;
+}
+
+#wizard li.error {
+background-image: url("../images/gui/icon-missing.gif");
+background-repeat: no-repeat;
+background-position: 0 4px;
+padding: 3px 3px 3px 20px;
+margin: 0 0 10px 0;
+list-style-type: none;
+color: #C14646;
+font-size: 15px;
+}
+
+#wizard p.ok {
+padding: 0 0 0 20px;
+background-image: url("../images/gui/icon-found.gif");
+background-repeat: no-repeat;
+background-position: 0 50%;
+}
+
+#wizard p.alert {
+padding: 20px;
+line-height: 1.4em;
+border: 1px red dashed;
+font-size: 16px;
+font-weight: bold;
+background-color: #FFE6E6;
+color: black;
+}
+
+#wizard ul {
+padding: 0 0 0 15px;
+margin: 10px 10px 20px 0px;
+}
+
+#wizard ul li {
+padding: 0 0 0 0;
+margin: 0 0 10px 0;
+list-style-type: square;
+}
+
+#wizard ol  {
+padding: 0 0 0 0;
+margin: 10px 10px 20px 0px;
+}
+
+#wizard ol li {
+padding: 0 0 0 0;
+margin: 0 0 10px 0;
+list-style-type: none;
+}
+
+#wizard ol li.error {
+padding: 0 0 0 20px;
+background-image: url("../images/gui/icon-error.gif");
+background-repeat: no-repeat;
+background-position: 0 50%;
+}
+
+#wizard ol li.waiting {
+    padding: 0 0 0 20px;
+    background-image: url("../images/gui/icon-waiting.gif");
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+}
+
+#wizard ol li.alert {
+padding: 0 0 0 20px;
+background-image: url("../images/gui/icon-missing.gif");
+background-repeat: no-repeat;
+background-position: 0 50%;
+}
+
+#wizard ol li.security {
+padding: 0 0 0 20px;
+background-image: url("../images/gui/icon-security.gif");
+background-repeat: no-repeat;
+background-position: 0 50%;
+}
+
+#wizard ol li.tweak {
+padding: 0 0 0 20px;
+background-image: url("../images/gui/icon-tweak.gif");
+background-repeat: no-repeat;
+background-position: 0 50%;
+}
+
+#wizard ol li.ok {
+padding: 0 0 0 20px;
+background-image: url("../images/gui/icon-ok.gif");
+background-repeat: no-repeat;
+background-position: 0 50%;
+}
+
+#wizard form fieldset {
+margin: 0 0 25px 0;
+padding: 5px 0 10px 10px;
+border: 1px black solid;
+}
+
+#wizard form fieldset legend {
+font-weight: bold;
+font-size: 16px;
+margin: 0 0 5px 0;
+padding: 0 5px 0 5px;
+}
+
+#wizard form fieldset ul  {
+padding: 0 0 0 0;
+margin: 10px 10px 0 10px;
+}
+
+#wizard form fieldset ul li {
+padding: 0 0 0 0;
+margin: 0 0 10px 0;
+list-style-type: none;
+clear: both;
+}
+
+#wizard form fieldset ul li span {
+float: left;
+font-style: normal;
+color: #9A9A9A;
+padding: 0 0 0 0;
+margin: 3px 0 10px 0;
+font-size: 11px;
+}
+
+#wizard form fieldset ul li.found {
+padding: 0 0 0 20px;
+background-image: url("../images/gui/icon-found.gif");
+background-repeat: no-repeat;
+background-position: 2px 0;
+}
+
+#wizard form fieldset ul li.missing {
+padding: 0 0 0 20px;
+background-image: url("../images/gui/icon-missing.gif");
+background-repeat: no-repeat;
+background-position: 0 50%;
+}
+
+#wizard form fieldset ul li label {
+float: left;
+display: block;
+width: 35%;
+padding: 2px 0 0 0;
+margin: 0 15px 10px 0;
+font-size: 14px;
+}
+
+#wizard form fieldset ul li input,
+#wizard form fieldset ul li select {
+font-size: 14px;
+float: left;
+display: block;
+font-weight: bold;
+color: #3C5858;
+padding: 2px 2px 2px 2px;
+margin: 0 0 10px 0;
+font-family: verdana, sans-serif;
+}
+
+#wizard form fieldset ul.radio li label input {
+float: left;
+display: block;
+padding: 0 0 0 0;
+margin: 2px 10px 0 0;
+}
+
+#wizard form fieldset ul.radio li label {
+float: none;
+display: normal;
+padding: 0 0 0 0;
+margin: 0 0 3px 0;
+width: 100%;
+}
+
+#wizard fieldset input.error {
+border: 1px red solid;
+background-color: #FFE6E6;
+color: red;
+}
+
+#wizard fieldset input.corrected {
+border: 1px green solid;
+background-color: #E5EFD7;
+color: green;
+}
+
+#wizard input.previous {
+border: 1px solid black;
+padding: 3px 10px 3px 10px;
+maring: 0 0 0 0;
+background-color: silver;
+font-size: 14px;
+font-weight: normal;
+float: left;
+}
+
+#wizard input.next {
+border: 1px solid black;
+padding: 3px 10px 3px 10px;
+maring: 0 0 0 0;
+background-color: silver;
+font-size: 14px;
+font-weight: bold;
+float: right;
+}

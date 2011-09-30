@@ -1,0 +1,120 @@
+<?php
+
+/**
+ * Project:     NCM
+ * File:        wcmUserAuthenticationWebServiceTestCase.php
+ *
+ * @copyright   (c)2007 Nstein Technologies
+ * @version     3.0
+ */
+
+require_once dirname(__FILE__) . '/../wcmWebServiceTestCase.php';
+
+/**
+ * WCM User Authentication Web Service Test Case
+ */
+class wcmUserAuthenticationWebServiceTestCase extends wcmWebServiceTestCase
+{
+    public function testValidUserIdAndPassword()
+    {
+        try
+        {
+            $sessionId = $this->soapClient->login('admin', 'admin', 'en');    
+            $this->soapClient->logout($sessionId);
+        }
+        catch (SoapFault $e)
+        {
+            $this->fail($e->getMessage());
+        }        
+    }
+
+    public function testInvalidUserId()
+    {
+        try
+        {
+            $sessionId = $this->soapClient->login('foo', 'bar', 'en');    
+            $this->fail('expected exception');
+
+            $this->soapClient->logout($sessionId);
+        }
+        catch (SoapFault $e)
+        {
+            $this->assertEqual("Invalid user identifier or password for user 'foo'.", $e->getMessage());
+        }        
+    }
+
+    public function testInvalidPassword()
+    {
+        try
+        {
+            $sessionId = $this->soapClient->login('admin', 'bar', 'en');    
+            $this->fail('expected exception');
+
+            $this->soapClient->logout($sessionId);
+        }
+        catch (SoapFault $e)
+        {
+            $this->assertEqual("Invalid user identifier or password for user 'admin'.", $e->getMessage());
+        }        
+    }
+
+    public function testInvalidPasswordUnsupportedLanguage()
+    {
+        try
+        {
+            $sessionId = $this->soapClient->login('admin', 'bar', 'zz');    
+            $this->fail('expected exception');
+
+            $this->soapClient->logout($sessionId);
+        }
+        catch (SoapFault $e)
+        {
+            $this->assertEqual("Invalid user identifier or password for user 'admin'.", $e->getMessage());
+        }        
+    }
+
+    public function testDoubleLogin()
+    {
+        try
+        {
+            $sessionId = $this->soapClient->login('admin', 'admin', 'en');    
+            $sessionId = $this->soapClient->login('admin', 'admin', 'en');    
+            $this->soapClient->logout($sessionId);
+        }
+        catch (SoapFault $e)
+        {
+            $this->fail($e->getMessage());
+        }  
+    }
+
+    public function testDoubleLoginDifferentUsers()
+    {
+        try
+        {
+            $sessionId = $this->soapClient->login('admin', 'admin', 'en');
+            $sessionId = $this->soapClient->login('foo', 'admin', 'en');
+            $this->fail('expected exception');
+            
+            $this->soapClient->logout($sessionId);
+        }
+        catch (SoapFault $e)
+        {
+            $this->assertEqual("Invalid user identifier 'foo' (session already exists with different credentials).", $e->getMessage());
+        }  
+    }
+
+    public function testLogoutWithoutLogin()
+    {
+        try
+        {
+            $this->soapClient->logout('kvlckcvlkvlkvl');
+            $this->fail('expected exception');
+        }
+        catch (SoapFault $e)
+        {
+            $this->assertEqual("Invalid session identifier 'kvlckcvlkvlkvl'.", $e->getMessage());
+        }
+    }
+}
+
+?>

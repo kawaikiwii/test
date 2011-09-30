@@ -1,0 +1,288 @@
+#dashboard {
+    font-size: 11px;
+}
+
+#dashboard div.zone {
+    clear: left;
+}
+
+#dashboard div.zone h3 {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 20px;
+  clear: left;
+  margin: 10px 0 10px 0;
+    color: #000;
+    border: 2px solid #CCC;
+    background: #F0F0F0 url("../images/gui/bullet-arrow-open.png") 2px 2px no-repeat;
+    padding: 0px 5px;
+    padding-left: 22px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-top-colors:    #CCC #FFF;
+    -moz-border-left-colors:   #CCC #FFF;
+    -moz-border-right-colors:  #CCC #EAEAEA;
+    -moz-border-bottom-colors: #CCC #EAEAEA;
+    cursor: pointer;
+}
+    #dashboard div.zone h3:hover {
+    background: #F7F7F7 url("../images/gui/bullet-arrow-over.png") 2px 2px no-repeat;
+    }
+    html*#dashboard div.zone h3 { border: 1px solid #d9d9d9; }
+    #dashboard div.zone h3.collapsed {
+    background-image: url("../images/gui/bullet-arrow-closed.png");
+    }
+
+#dashboard div.zone div.module {
+    float: left;
+    border: 1px solid #C0C0C0;
+    border-right: 1px solid #D9D9D9;
+    border-left: 1px solid #D9D9D9;
+    margin: 0px 10px 10px 0px;
+    padding: 0;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+}
+
+#dashboard div.zone div.module h4 {
+    text-align: left;
+    font-size: 11px;
+    font-weight: normal;
+    padding: 2px 10px 3px 10px;
+    margin: 0 0 0 0;
+    color: #333;
+    background-color: #606060;
+    background: url("../images/gui/bg-light-gray.png") bottom left repeat-x;
+    -moz-border-radius-topleft: 2px;
+        -webkit-border-top-left-radius: 2px;
+        -moz-border-radius-topright: 2px;
+        -webkit-border-top-right-radius: 2px;
+}
+
+#dashboard div.zone div.module h4 span {
+    font-weight: normal;
+    margin: 10px 0 0 10px;
+    color: silver;
+    font-size: 12px;
+}
+
+#dashboard div.zone div.module h4 a {
+    color: silver;
+}
+
+#dashboard div.zone div.module h4 a:hover {
+    color: white;
+}
+
+#dashboard div.zone div.module div.scroll {
+    clear: left;
+    overflow: auto;
+    height: 160px;
+    overflow-x: hidden;
+}
+
+#dashboard div.zone div.module div.scroll ul.filters {
+    display: block;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    width: 100%;
+}
+
+#dashboard div.zone div.module div.scroll ul.filters li {
+    display: inline;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+#dashboard div.zone div.module div.scroll ul.filters li a { 
+    display: block;
+    float: left;
+    margin: 0 0 0 0;
+    padding: 2px 5px 2px 5px;
+    text-decoration: none;
+    color: black;
+    border-right: 1px solid silver;
+}
+
+#dashboard div.zone div.module div.scroll ul.filters li a:hover,
+#dashboard div.zone div.module div.scroll ul.filters li a.selected { 
+    color: white;
+    background-color: gray;
+}
+
+#dashboard div.zone div.module div.scroll table {
+    clear: left;
+    border-spacing: 0;
+    width: 100%;
+}
+
+#dashboard div.zone div.module div.scroll th {
+    padding: 2px 6px;
+    margin: 0;
+    font-weight: normal;
+    font-size: 10px;
+    color: #000;
+    text-align: left;
+    background-color: #D9D9D9;
+    background: url("../images/gui/button-bg-white.png") top left repeat-x;
+    border-bottom: 1px solid #D9D9D9;
+    border-left: 1px solid #EAEAEA;
+    white-space: nowrap;
+}
+
+#dashboard div.zone div.module div.scroll td {
+    padding: 4px 6px 4px 6px;
+    margin: 0;
+    vertical-align: top;
+    border-left: 1px solid #EAEAEA;
+}
+
+#dashboard div.zone div.module div.scroll td.nowrap {
+    white-space:    nowrap;
+}
+
+#dashboard div.zone div.module div.scroll ul.toolbar {
+    float: left;
+    display: block;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+#dashboard div.zone div.module div.scroll ul.toolbar li {
+    display: block;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+#dashboard div.zone div.module div.scroll ul.toolbar li a {
+    display: block;
+    width: 55px;
+    height: 13px;
+    border: 1px solid gray;
+    text-align: center;
+    text-decoration: none;
+    padding: 0 0 0 0;
+    margin: 2px 0 0 0;
+    color: gray;
+    font-size: 10px;
+    background-color: silver;
+}
+
+#dashboard div.zone div.module div.scroll ul.toolbar li a:hover {
+    color: white;
+    border: 1px solid black;
+    background-color: gray;
+}
+
+#dashboard div.zone div.module div.scroll tr.alternate
+{
+    background-color: #f4f4f4;
+}
+
+#dashboard div.zone div.module.tabular {
+    width: 46%;
+}
+
+#dashboard div.zone div.module.large {
+    width: 94%;
+}
+
+#dashboard ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+#dashboard ul li {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    clear: both;
+}
+
+#dashboard ul li a {
+    float: left;
+    clear: both;
+    text-align: center;
+    margin-bottom: 2px;
+    background: url("../images/gui/button-bg-blue.png") repeat-x scroll left top;
+    border: 1px solid #4D7B9F;
+    color: #FFF;
+    font-size: 10px;
+    padding: 0px 5px 1px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    width: 75px;
+}
+
+#dashboard ul li a:hover {
+    background:transparent url("../images/gui/button-bg-white.png") repeat-x scroll left top;
+    border:1px solid #CCCCCC;
+    color:#000000;
+    text-decoration: none;
+}
+
+
+/*
+Statistics
+*/
+#dashboard div.zone div.module.statistics {
+min-width: 200px;
+width: 23.5%;
+_width:expression(this.currentStyle.getAttribute('minWidth'));
+}
+
+/*
+Editorial
+*/
+
+#dashboard div.zone div.module.editorial {
+min-width: 300px;
+width: 48.1%;
+_width:expression(this.currentStyle.getAttribute('minWidth'));
+}
+
+/*
+Jobs
+*/
+
+#dashboard div.zone div.module.jobs {
+width: 98.2%;
+}
+
+/*
+Squared
+*/
+
+#dashboard div.zone div.module.autofit {
+width: 400px;
+overflow: visible;
+height: auto;
+}
+
+#dashboard div.zone div.module.autofit div.scroll {
+height: auto;
+overflow: visible;
+}
+
+
+/*
+tasks
+*/
+
+#task-panel {
+padding-left: 10px;
+}
+
+#task-panel h3 {
+width: 295px;
+}
+
+#dashboard div.zone div.module.tasks {
+margin: 0px 0 10px 0px;
+width: 320px;
+}
+
+#dashboard div.zone div.module div.scroll td.type {
+    padding-left: 23px;
+    background-position: 3px 2px;
+}

@@ -1,0 +1,409 @@
+<?php
+/**
+ * Project:     WCM
+ * File:        wcm.importAfpVideos.php
+ *
+ * @copyright   (c)2010 Relaxnews
+ * @version     4.x
+ *
+ * 
+ * 
+ * This class imports files (NewsML) and video. The imported data structure
+ * should follow the same logic as AFP (Agence France Presse) provides to its customers.
+ */
+
+class wcmImportAfpVideos extends wcmGenericImport 
+{
+
+	protected $VIDEO_FOLDER_EN;
+    protected $VIDEO_FOLDER_FR;
+    protected $VIDEO_FOLDER_PHOTOS;
+   	protected $DEDIBOX_URL;  
+    protected $siteId = 0;
+    
+    /**
+     * constructor
+     */
+    public function __construct(array $parameters) 
+    {
+    	parent::__construct($parameters);
+    }
+    
+    /**
+     * Launch importation process
+     */
+    public function process() 
+    {
+    	// init video and dedibox absolute path
+    	$this->VIDEO_FOLDER_EN	 	= WCM_DIR.'/business/import/in/AFP-VIDEO/en';
+    	$this->VIDEO_FOLDER_FR 		= WCM_DIR.'/business/import/in/AFP-VIDEO/fr';
+    	$this->VIDEO_FOLDER_PHOTOS 	= WCM_DIR.'/business/import/in/AFP-VIDEO/photos';
+    	$this->DEDIBOX_URL 			= 'http://video.afprelaxnews.com/incomings/afp/videos';
+    	
+    	// init iptc array in cache
+    	channel::getArrayAllChannelIPTC();  	
+    	echo "-=- Import des videos EN-=-\r\n";
+        $this->importAllVideos($this->VIDEO_FOLDER_EN, 4);            
+        echo "-=- Import des videos FR-=-\r\n";
+        $this->importAllVideos($this->VIDEO_FOLDER_FR, 5);      
+    }
+      
+     /**
+     * browse all video from a define path including  universe
+     */
+    public function importAllVideos($path, $univers) 
+    {
+    	$nbImported = 0;
+    	foreach (glob($path."/*.xml") as $filename) 
+    	{
+        	$xml = simplexml_load_file($filename);
+        	$process = $this->importVideo($xml, $univers);
+            if ($process == 1)
+            {
+            	//echo "  unlink($filename)\n";
+           		//unlink($filename);
+           		echo "Video ($filename) imported !\n";
+           		$nbImported++;                       	
+            }
+    		else if ($process == 2)
+            {
+            	echo "Existing video ($filename)\n";
+           		//echo "Existing video / unlink($filename)\n";
+           		//unlink($filename);
+           	}
+            else
+            	echo "  error $filename \n";          	
+    	}
+            
+        echo "\n\n\tNombre d'import : $nbImported\n";
+        return true;
+    }
+    
+     /**
+     * transform object to array use for simplexml special case
+     */
+	function objectToArray($object)
+    {
+        if( !is_object($object) && !is_array($object) )
+            return $object;
+
+        if( is_object($object) )
+            $object = get_object_vars( $object );
+
+        return array_map(array('wcmImportAfpVideos', 'objectToArray'), $object );
+    }
+    
+    /**
+     * Xml (Newsml) parsing using a define universe and create new video object
+     */
+	public function importVideo($xml, $univers) 
+    {
+    	$video = new video();
+    	$transmissionId = (string) $xml->NewsItem->Identification->NewsIdentifier->NewsItemId;
+    	
+    	// test if video still exist in db
+    	if ($video->checkImportFeed("AFP", $transmissionId))
+    		return 2; 
+    	else 
+    	{
+    		// init video object properties
+    		$video->siteId = $univers;
+	        $video->channelId = 0;
+	        $video->import_feed = "afp";    
+	        $video->import_feed_id = $transmissionId;	        
+	        $utcDate = (string) $xml->NewsEnvelope->DateAndTime;
+			$video->createdAt = substr($utcDate, 0, 4).'-'.substr($utcDate, 4, 2).'-'.substr($utcDate, 6, 2).' '.substr($utcDate, 9, 2).':'.substr($utcDate, 11, 2).':'.substr($utcDate, 13, 2);		
+			$video->publicationDate = $video->createdAt;
+			$video->workflowState = "draft_import";
+	        $video->title = (string) $xml->NewsItem->NewsComponent->NewsLines->HeadLine;
+	        // use current date to define video absolute path
+	        $absoluteUrl = $this->DEDIBOX_URL."/".substr($utcDate, 0, 4)."/".substr($utcDate, 4, 2)."/".substr($utcDate, 6, 2)."/";	        
+	        $videoFormats = array();
+	        $listFormat = array();        
+	        $text = "";
+	        $header = "";
+	        $photo = "";
+	        
+	        // Parse Xml to get all video format and text
+	        if  (isset($xml->NewsItem->NewsComponent->NewsComponent) && !empty($xml->NewsItem->NewsComponent->NewsComponent))
+	        {
+	        	$i = 0;
+	        	foreach ($xml->NewsItem->NewsComponent->NewsComponent as $key=>$val)
+	        	{
+	        		if ($val->ContentItem->MediaType["FormalName"] == "Video")
+	        		{
+	        			// get video formats
+	        			$extension=pathinfo($val->ContentItem["Href"],PATHINFO_EXTENSION);
+	        			$listFormat[] = $extension;
+	        			$videoFormats[$i]["type"] = $extension;
+	        			$videoFormats[$i]["mime"] = (string) $val->ContentItem->Format["FormalName"];
+	        			$url = (string) $val->ContentItem["Href"];
+	        			$url = str_replace("./", "", $url);        			
+	        			$videoFormats[$i]["url"] = $absoluteUrl.$url;
+	        			$videoFormats[$i]["size"] = (string) $val->ContentItem->Characteristics->SizeInBytes;
+	        			$videoFormats[$i]["width"] = (string) $val->ContentItem->Characteristics->Property[0]["Value"];
+	        			$videoFormats[$i]["height"] = (string) $val->ContentItem->Characteristics->Property[1]["Value"];
+	        			$videoFormats[$i]["duration"] = (string) $val->ContentItem->Characteristics->Property[2]["Value"];
+	        			$i++;
+	        		}
+					else if ($val->ContentItem->MediaType["FormalName"] == "Photo")
+	        		{
+	        			// get photo preview
+	        			$url = (string) $val->ContentItem["Href"];
+	        			$url = str_replace("./", "", $url);
+	        			$video->preview = $absoluteUrl.$url;
+	        			$photo = $url;
+	        		}
+	        		else if ($val->Role["FormalName"] == "Caption" && isset($val->ContentItem->DataContent->nitf->body))
+	        		{
+	        			// get video  header/description
+	        			$temp = $this->objectToArray($val->ContentItem->DataContent->nitf->body);			        			
+	        			$header = $temp["body.content"]["p"];
+	        		}
+	        		else if ($val->Role["FormalName"] == "Script" && isset($val->ContentItem->DataContent->nitf->body))
+	        		{
+	        			// get video text
+	        			$temp2 = $this->objectToArray($val->ContentItem->DataContent->nitf->body);			        			
+	        			$text = $temp2["body.content"]["p"];
+	        		}	
+	        	}
+	        }
+	      
+	        // special case several <p> in video header
+	        $header2 = "";
+	        if (is_array($header))
+	        {
+	        	foreach ($header as $val)
+	        		$header2 .= $val."<br>";
+	        }
+	        
+	        // parse Xml to find IPTC category
+	        $iptc = array();
+	        $iptcCateg = channel::getArrayAllChannelIPTC();
+	        $language = "";
+	        	
+	        if  (isset($xml->NewsItem->NewsComponent->DescriptiveMetadata->SubjectCode) && !empty($xml->NewsItem->NewsComponent->DescriptiveMetadata->SubjectCode))
+	        {
+	        	$codeIptc = "";
+	        	$language = (string) $xml->NewsItem->NewsComponent->DescriptiveMetadata->Language["FormalName"]; 
+	        	$i = 0;	        	
+	        	foreach ($xml->NewsItem->NewsComponent->DescriptiveMetadata->SubjectCode as $key=>$val)
+	        	{
+	        		// get categories and test if exist in thesaurus
+	        		$codeIptc = "";
+	        		if (isset($val->SubjectMatter))
+	        			$codeIptc = (string) $val->SubjectMatter["FormalName"]; 
+        			else if (isset($val->SubjectDetail))
+	        			$codeIptc = (string) $val->SubjectDetail["FormalName"]; 
+
+	        		if (isset($iptcCateg[$codeIptc]) && !empty($codeIptc))
+        				$iptc[$codeIptc] = $iptcCateg[$codeIptc][$language];
+        			else 	
+        				echo "Missing IPTC ID :".$codeIptc."\n\r";	
+        					
+        			$i++; 		     		
+	        	}
+	        }
+	        
+	        if (!empty($iptc))
+	        	$video->iptc = serialize($iptc);
+	        
+	        // populate video $typeFormats properties based on formats values
+	    	$finalListFormat = "";
+	    	$listFormat = array_unique($listFormat);
+	    	$j = 0;
+	    	foreach ($listFormat as $val)
+	    	{
+	    		if ($j == 0) $finalListFormat .= $val;
+	        	else $finalListFormat .= "-".$val;
+	        	$j++;
+	    	}
+
+	    	// init video format property
+	        if (!empty($finalListFormat))
+	        	$video->typeFormats = $finalListFormat;
+	        	
+	        // find and store video preview (format 3gp)
+	        foreach ($videoFormats as $tab)
+        	{
+				if( $tab['type'] == "3g2" && $tab['width'] == "320")
+				{
+        			//$video->embed = '<embed src="http://video.relaxnews.com/flvplayer.swf" wmode="transparent" width="'.$tab['width'].'" height="'.$tab['height'].'" bgcolor="#ffffff" allowscriptaccess="always" allowfullscreen="true" flashvars="file='.$tab['url'].'&image='.$video->preview.'&f&autostart=true&fullscreen=true&stretching=fill"></embed>';
+        			$video->embed = '<embed src="http://video.relaxnews.com/flvplayer.swf" wmode="transparent" width="440" height="330" bgcolor="#ffffff" allowscriptaccess="always" allowfullscreen="true" flashvars="file='.$tab['url'].'&backcolor=64247C&frontcolor=FFFFFF&lightcolor=64247C&screencolor=64247C&&image='.$video->preview.'&f&autostart=true&fullscreen=true&stretching=fill"></embed>';
+        			$video->url = $tab['url'];
+				}
+			}
+        	
+			// init other video properties
+	        $video->formats = serialize($videoFormats);
+	        $video->mustGenerate = true;
+	        
+	        $dateId = (string)  $xml->NewsItem->Identification->NewsIdentifier->DateId;
+	        
+	        if ($dateId == "PMODE")
+	        {
+	        	// Paris Modes source
+	        	$video->source = 2288;        
+	        	$video->credits = "Relaxnews/Parismodes.TV";
+	        }
+	       	else
+	       	{
+	        	// AFP source
+	        	$video->source = 10;        
+	        	$video->credits = "AFP";
+	       	}
+	        	
+	        $video->movieTitle = $video->title;
+	        $countryCode = "";
+	        $city = "";
+	        
+	        // find country code and cityId in video newsml
+	        foreach ($xml->NewsItem->NewsComponent->DescriptiveMetadata->Location->Property as $key=>$val)
+        	{
+        		if ((string) $val["FormalName"] == "Country")
+        			$countryCode = (string) $val["Value"];
+				else if ((string) $val["FormalName"] == "City")
+					$city = (string) $val["Value"];	
+        	}
+	        
+        	// get country name and set video sourceLocation
+        	$country = $this->getCountryNameFromCode($countryCode, $language);
+        	if (!empty($country) && !empty($city))
+	        	$video->sourceLocation = $country.", ".$city;
+	        
+	        //add <br> for text lisibility
+	        $text = str_replace("\n", "<br>\n", $text);	
+	        	
+	        //print_r($video);
+	        if ($video->save()) 
+	        {
+	        	//init video content
+	        	$content = new content();
+		        $content->referentId = $video->id;
+		        $content->referentClass = $video->getClass();
+		        $content->provider = "AFP";
+		        $content->title = $video->title;
+		        if (!empty($header2)) $content->description = $header2;
+		        else $content->description = $header;
+		        
+		        if (!empty($text)) $content->text = $text;
+		        // save video content
+		        $content->save();
+	        	
+		        // remove jpg info in path
+    			$photoName = str_replace("jpg/", "", $photo);
+		        // photo processing
+		        if (!empty($photo) && is_file($this->VIDEO_FOLDER_PHOTOS."/".$photoName))
+		        {
+		        	if (!$this->processPhoto($photoName, $this->VIDEO_FOLDER_PHOTOS, $video->id, $univers, $video->title, $video->publicationDate))
+		        		echo "photo ".$this->VIDEO_FOLDER_PHOTOS."/".$photoName." error !\n\r";
+		        }
+		        
+		        // save again for permalinks (use for preview)
+	        	$video->save();
+	        	return 1;
+	        }
+	        else
+	        	return 0;
+    	} 	
+    }
+    
+    
+    /**
+     * return Country based on countryCode
+     * string $countryCode : code of the country
+     */
+	public function getCountryNameFromCode($countryCode, $isolanguage) 
+    {
+    	$project = wcmProject::getInstance();
+    	$connect = $project->datalayer->getConnectorByReference("geoloc");
+        $db2 = $connect->getBusinessDatabase();
+    	$query = 'SELECT geonameId FROM #__country WHERE ISO3=?';
+        $params = array($countryCode);
+        $geonameId = $db2->executeScalar($query, $params);
+        if (!empty($geonameId))
+        {
+        	$alternate_names = new alternate_names();
+        	$country = $alternate_names->getNameByGeonameId($geonameId, $isolanguage);
+        	return $country;
+        }
+        return false;
+    }
+    
+    /**
+     * photo processing, create a new objet photo and create biz_relation between video and its photo 
+     * 
+     * string $photo : photo name
+     * string $importPath : photo import path
+     * int $videoId : video id used for biz_relation
+     * 
+     */
+	public function processPhoto($photoName, $importPath, $videoId, $siteId, $title, $date) 
+    {
+    	require_once(WCM_DIR.'/business/api/toolbox/biz.relax.toolbox.php');
+    	$config = wcmConfig::getInstance();
+    	
+    	$photo = new photo();  	
+    	$photo->siteId = $siteId;
+    	$photo->createdAt = $date;
+    	$photo->publicationDate = $date;   
+    	$photo->title = $title;
+    	$photo->credits = "AFP";
+    	$photo->source = "AFP-VIDEO";
+    	$photo->sourceId = basename($photoName, ".jpg");
+    	
+    	// init photo final path
+    	$creationDate = dateOptionsProvider::fieldDateToArray($date);
+		$dir = $config['wcm.webSite.repository'].'illustration/photo/'.$creationDate['year'].'/'.$creationDate['month'].'/'.$creationDate['day'].'/';
+        // get "wcm form" name
+		$newFileName = photo::getFinalPicName($photoName, $importPath);
+        // create dir if not exist and copy photo in wcm repository
+		if (checkDirsAndCreateThem($dir))
+		{
+			if (!copy($importPath."/".$photoName, $dir . $newFileName))
+				echo "photo ".$dir.$newFileName." copy error!\n\r";
+		}
+			
+    	$photo->original = $newFileName;
+    	if ($photo->save())
+    	{
+	    	// create biz_relation between photo and video
+	    	$bizRelation = new bizrelation(wcmProject::getInstance());
+	        $bizRelation->sourceClass = "video";
+	        $bizRelation->sourceId = $videoId;
+	        $bizRelation->kind = bizrelation::IS_COMPOSED_OF;
+	       	$bizRelation->destinationClass = $photo->getClass();
+	        $bizRelation->destinationId = $photo->id;
+	        $bizRelation->title = $photo->title;
+	        $bizRelation->header = ucfirst($photo->getClass());
+	        $bizRelation->validityDate = $photo->publicationDate;
+	                
+	        $bizRelation->rank = $bizRelation->getLastPosition() + 1;
+	        $bizRelation->addBizrelation();
+	        return true;
+    	}
+    	else 
+    		return false;
+    }
+    
+    /**
+     * function use for cleaning special chars if needed ;-)
+     */
+    public function remove_accents($str, $charset = 'utf-8') {
+        $str = htmlentities($str, ENT_NOQUOTES, $charset);
+        
+        $str = preg_replace('#\&([A-za-z])(?:acute|cedil|circ|grave|ring|tilde|uml)\;#', '\1', $str);
+        $str = preg_replace('#\&([A-za-z]{2})(?:lig)\;#', '\1', $str); // pour les ligatures e.g. '&oelig;'
+        $str = preg_replace('#\&[^;]+\;#', '', $str); // supprime les autres caractères
+        
+        return $str;
+    }
+    
+    /**
+     * init function getTotal from parent class wcmGenericImport
+     */
+    public function getTotal() 
+    {
+        return 0;
+    }
+}

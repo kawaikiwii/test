@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<NewsML>
+  <Catalog Href="http://www.afp.com/dtd/AFPCatalog.xml"/>
+  <NewsEnvelope>
+    <DateAndTime>20090304T144842Z</DateAndTime>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>afp.com</ProviderId>
+        <DateId>20090304</DateId>
+        <NewsItemId>090304144625.ysoug0a9</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:afp.com:20090304:090304144625.ysoug0a9:1</PublicIdentifier>
+      </NewsIdentifier>
+      <NameLabel>Finland-politics-Internet-business</NameLabel>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20090304T144625Z</FirstCreated>
+      <ThisRevisionCreated>20090304T144625Z</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+    </NewsManagement>
+    <NewsComponent>
+      <NewsLines>
+        <HeadLine>Finnish parliament allows employers to monitor emails</HeadLine>
+        
+        
+        <DateLine>HELSINKI, March 4, 2009 (AFP)</DateLine>
+        <CopyrightLine>© 2009 AFP</CopyrightLine>
+        <SlugLine>Finland-politics-Internet-business</SlugLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Provider>
+          <Party FormalName="AFP"/>
+        </Provider>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="en"/> 
+        <OfInterestTo FormalName="ext--english--relaxnews--lifestyle"/>
+      </DescriptiveMetadata>
+      <NewsComponent>
+        <ContentItem>
+          <MediaType FormalName="Text"/>
+          <Format FormalName="bcNITF2.5"/>
+          <DataContent>
+            <p> Finland's parliament on Wednesday adopted a controversial new law that will give employers the right to monitor employees' emails when wrongdoing is suspected.</p>
+            <p>The bill was approved by 96 of 200 lawmakers, while 56 voted against.</p>
+            <p>The data retention law, also known as Lex Nokia, has been hotly debated in the Nordic country in recent weeks, especially after a report that mobile phone giant Nokia threatened to leave Finland unless the bill was introduced.</p>
+            <p>Nokia has denied making such claims.</p>
+            <p>The new law would also allow schools, libraries and telecommunication operators that provide information networks to monitor what people do on their computers.</p>
+          </DataContent>
+        </ContentItem>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

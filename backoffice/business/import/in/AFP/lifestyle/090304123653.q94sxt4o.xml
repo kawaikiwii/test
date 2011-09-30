@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<NewsML>
+  <Catalog Href="http://www.afp.com/dtd/AFPCatalog.xml"/>
+  <NewsEnvelope>
+    <DateAndTime>20090304T123824Z</DateAndTime>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>afp.com</ProviderId>
+        <DateId>20090304</DateId>
+        <NewsItemId>090304123653.q94sxt4o</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:afp.com:20090304:090304123653.q94sxt4o:1</PublicIdentifier>
+      </NewsIdentifier>
+      <NameLabel>Switzerland-telecom-company-earnings-Swisscom</NameLabel>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20090304T123653Z</FirstCreated>
+      <ThisRevisionCreated>20090304T123653Z</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+    </NewsManagement>
+    <NewsComponent>
+      <NewsLines>
+        <HeadLine>Swisscom posts 15-percent slide in profits</HeadLine>
+        
+        
+        <DateLine>GENEVA, March 4, 2009 (AFP)</DateLine>
+        <CopyrightLine>© 2009 AFP</CopyrightLine>
+        <SlugLine>Switzerland-telecom-company-earnings-Swisscom</SlugLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Provider>
+          <Party FormalName="AFP"/>
+        </Provider>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="en"/> 
+        <OfInterestTo FormalName="ext--english--relaxnews--lifestyle"/>
+      </DescriptiveMetadata>
+      <NewsComponent>
+        <ContentItem>
+          <MediaType FormalName="Text"/>
+          <Format FormalName="bcNITF2.5"/>
+          <DataContent>
+            <p> Swiss telecommunications group Swisscom on Wednesday said its 2008 profit fell 15.1 percent to 1.756 billion Swiss francs due to one-off charges, including the early termination of a leasing agreement.</p>
+            <p>If impact of the one-off charges were stripped out of the net profits equivalent to 1.118 billion euros or 1.488 billion dollars, then the group's net profit was "largely unchanged year-on-year," said the group.</p>
+            <p>Sales were up 10.0 percent to 12.198 billion francs, lifted by contributions from its Italian subsidiary Fastweb.</p>
+            <p>The group warned however that its Swiss business would slowdown in 2009 due to competition, with net sales excluding Fastweb to slide by up to 300 million francs during the year, it said.</p>
+            <p>At the same time, it believed that the "worsened economic climate will only have a limited impact on customer demand for telecoms services."</p>
+          </DataContent>
+        </ContentItem>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

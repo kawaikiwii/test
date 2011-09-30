@@ -1,0 +1,175 @@
+<?php
+
+/**
+ * Project:     WCM
+ * File:        account_edit.php
+ *
+ * @copyright   (c)2009 Nstein Technologies
+ * @version     4.x
+ *
+ */
+
+require_once dirname(__FILE__).'/../../../initWebApp.php';
+
+$id     = getArrayParameter($_REQUEST, "id", 0);
+$action = getArrayParameter($_REQUEST, "kind", null);
+
+$userId = wcmSession::getInstance()->userId;
+
+$currentUser = new wcmUser();
+$currentUser->refresh($userId);
+$currentUserAccount = new account();
+$currentUserAccount->refreshByWcmUser($userId);
+
+$bizobject = new account();
+if ($id)
+	$bizobject->refresh($id);
+else
+{
+	$bizobject->expirationDate = date('Y-m-d');
+}
+$sysobject = new wcmUser();
+if ($bizobject->wcmUserId)
+	$sysobject->refresh($bizobject->wcmUserId);
+
+$managerId = ($bizobject->managerId) ? $bizobject->managerId : $userId;
+$wcmUserId = ($bizobject->wcmUserId) ? $bizobject->wcmUserId : 0;
+
+echo "<div id=\"errorMsg\"></div>";
+echo '<div id="account">';
+echo "<form id='account_edit' name='account_edit'>";
+echo "<table border='0' width='98%'>";
+echo "<tr>";
+echo "<td valign='top'>";
+    wcmGUI::renderHiddenField('managerId', $managerId);
+    wcmGUI::renderHiddenField('wcmUserId', $wcmUserId);
+    wcmGUI::openFieldset(_USER);
+	    echo '&nbsp;</br>';
+	    $arrGmt= array();
+	    for($i=-12;$i<=14;$i++)
+	    {
+	      if(substr($i,0,1)=='-')
+		$arrGmt[$i] = "UTC/GMT ".$i;
+	      else
+		$arrGmt[$i] = "UTC/GMT +".$i;
+	    }
+// Modif LSJ 21/04/2009
+// Scission NOM Prénom pour les users
+		$arrayName = explode("|", $sysobject->name);
+		if(count($arrayName) > 1) {
+			$firstname = $arrayName[0];
+			$lastname = $arrayName[1];
+		} else {
+			$firstname = "";
+			$lastname = $arrayName[0];
+		}
+		wcmGUI::renderHiddenField('name', $sysobject->name);
+	    //wcmGUI::renderTextField('name', $sysobject->name, _NAME . ' *', array('class' => 'type-req'));
+	    wcmGUI::renderTextField('firstname', $firstname, 'first name' . ' *', array('class' => 'type-req', 'style' => 'text-transform:capitalize'));
+	    wcmGUI::renderTextField('lastname', $lastname, 'last name' . ' *', array('class' => 'type-req', 'style' => 'text-transform:uppercase'));
+// Fin modif
+	    wcmGUI::renderTextField('login', $sysobject->login, _LOGIN . ' *', array('class' => 'type-req'));
+	    wcmGUI::renderPasswordField('password', $sysobject->password, _PASSWORD . ' *', array('class' => 'type-req'));
+	    wcmGUI::renderTextField('email', $sysobject->email, _EMAIL, array('class' => 'type-email'));
+	    wcmGUI::renderDropdownField('timezone', $arrGmt, $sysobject->timezone, _TIMEZONE);
+	    echo '&nbsp;</br>';
+    wcmGUI::closeFieldset();
+echo "</td>";
+echo "<td valign='top' rowspan='2'>";
+    wcmGUI::openFieldset(_GROUPS);
+		echo '&nbsp;</br>';
+	    echo "<div style='width:250px; height:200px; overflow:auto; border:1px solid grey; padding:5px;'>";
+		echo "...Not used yet...";
+
+/*
+		if ($currentUser->isAdministrator)
+		{
+			$project = wcmProject::getInstance();
+			$groups = $project->membership->getGroups();
+			$groupList = array();
+			foreach($groups as $group)
+			{
+				if ($group->id != wcmMembership::EVERYONE_GROUP_ID)
+					$groupList[$group->id] = $group->id;
+			}
+		}
+		else
+			$groupList = $currentUser->getGroups();
+			
+		foreach($groupList as $groupId)
+		{
+			$group = new wcmGroup();
+			$group->refresh($groupId);
+			// Ignore everyone group
+			if ($group->id != wcmMembership::EVERYONE_GROUP_ID)
+			{
+				$selected = '';
+				if ($sysobject->id)
+					$selected = ($sysobject->isMemberOf($group->id) || (isset($params['groupId']) && ($params['groupId'] == $group->id)) );
+				wcmGUI::renderBooleanField('_groups['.$group->id . ']', $selected);
+				echo "<label>".textH8(getConst($group->name))."</label>";
+			}
+		}
+*/		
+    echo "</div>";
+    wcmGUI::closeFieldset();
+        echo "<br />";
+	echo "<ul class='toolbar'>";
+		echo "<li><a href='#' onclick=\"closemodal(); return false;\" class='cancel'>"._BIZ_CANCEL."</a></li>";
+		//echo "<li><a href='#' onclick=\"document.getElementById('errorMsg').innerHTML = '';parent.ajaxAccount('".$action."', 'family', ".$id.", ".$wcmUserId.", 0, 0, 'results', $('account_edit').serialize(),'',''); if (document.getElementById('errorMsg').innerHTML == '') closemodal(); return false;\" class='save'>"._BIZ_SAVE."</a></li>";
+// Modif LSJ 21/04/2009
+// Scission NOM Prénom pour les users : ajout fonction js "build_name" dans account_edit.js
+		echo "<li><a href='#' onclick=\"document.getElementById('errorMsg').innerHTML = ''; build_name(); parent.ajaxAccount('".$action."', 'family', ".$userId.", ".$id.", 0, 0, 'results', $('account_edit').serialize(),'',''); if (document.getElementById('errorMsg').innerHTML == '') closemodal(); return false;\" class='save'>"._BIZ_SAVE."</a></li>";
+// Fin modif
+	echo "</ul>";
+echo "</td>";
+echo "</tr>";
+echo "<tr>";
+echo "<td valign='top'>";
+    wcmGUI::openFieldset(_ACCOUNT);
+	    echo '&nbsp;</br>';
+	    if ($currentUser->isAdministrator || $currentUser->login == 'lsabot')
+		{
+			$profiles = array('_ACCOUNT_PROFILE_SUPERVISOR' => getConst(_ACCOUNT_PROFILE_SUPERVISOR),  '_ACCOUNT_PROFILE_MANAGER' => getConst(_ACCOUNT_PROFILE_MANAGER), '_ACCOUNT_PROFILE_CLIENT' => getConst(_ACCOUNT_PROFILE_CLIENT),  '_ACCOUNT_PROFILE_DEMO' => getConst(_ACCOUNT_PROFILE_DEMO));
+			wcmGUI::renderDropdownField('profile',$profiles,$bizobject->profile,getConst(_DASHBOARD_MODULE_ACCOUNT_PROFILE));
+		}
+		elseif ($currentUserAccount->isChiefManager())
+		{
+			$profiles = array('_ACCOUNT_PROFILE_MANAGER' => getConst(_ACCOUNT_PROFILE_MANAGER), '_ACCOUNT_PROFILE_CLIENT' => getConst(_ACCOUNT_PROFILE_CLIENT),  '_ACCOUNT_PROFILE_DEMO' => getConst(_ACCOUNT_PROFILE_DEMO));
+			wcmGUI::renderDropdownField('profile',$profiles,$bizobject->profile,getConst(_DASHBOARD_MODULE_ACCOUNT_PROFILE));
+		}
+	    else
+	    {
+	    	wcmGUI::renderHiddenField('profile', $bizobject->profile);
+	    }
+	    $year = array();
+	    $month = array();
+	    $day = array();
+	    
+	    for ($i=2008; $i<2018; $i++)
+	    	$year[$i] = $i;
+	    for ($i=1; $i<=12; $i++)
+		$month[$i] = $i;
+	    for ($i=1; $i<=31; $i++)
+		$day[$i] = $i;
+		
+
+	    echo '&nbsp;</br>';
+		wcmGUI::renderDateField('expirationDate', $bizobject->expirationDate, _BIZ_EXPIRATIONDATE, 'date');
+	    
+	    if ($currentUserAccount->isChiefManager()||$currentUser->isAdministrator)
+	    	wcmGUI::renderTextField('companyName', $bizobject->companyName, _BIZ_COMPANYNAME);
+	    else
+	    	wcmGUI::renderHiddenField('companyName', $currentUserAccount->companyName);
+	    	
+	    //wcmGUI::renderAutoCompletedField($url, 'companyName', $bizobject->companyName, _BIZ_COMPANYNAME, null, $acOptions);
+    wcmGUI::closeFieldset();
+echo "</td>";
+echo "</tr>";
+echo "</table>";
+echo "</form>";
+echo "</div>";
+
+
+
+?>

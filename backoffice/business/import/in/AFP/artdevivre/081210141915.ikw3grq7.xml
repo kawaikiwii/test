@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<NewsML>
+  <Catalog Href="http://www.afp.com/dtd/AFPCatalog.xml"/>
+  <NewsEnvelope>
+    <DateAndTime>20081210T142129Z</DateAndTime>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>afp.com</ProviderId>
+        <DateId>20081210</DateId>
+        <NewsItemId>081210141915.ikw3grq7</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:afp.com:20081210:081210141915.ikw3grq7:1</PublicIdentifier>
+      </NewsIdentifier>
+      <NameLabel>Suisse-Allemagne-France-énergie-environnement-nucléaire</NameLabel>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20081210T141915Z</FirstCreated>
+      <ThisRevisionCreated>20081210T141915Z</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+    </NewsManagement>
+    <NewsComponent>
+      <NewsLines>
+        <HeadLine>Les antinucléaires saisissent la justice pour faire fermer Fessenheim</HeadLine>
+        
+        
+        <DateLine>STRASBOURG, 10 déc 2008 (AFP)</DateLine>
+        <CopyrightLine>© 2008 AFP</CopyrightLine>
+        <SlugLine>Suisse-Allemagne-France-énergie-environnement-nucléaire</SlugLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Provider>
+          <Party FormalName="AFP"/>
+        </Provider>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="fr"/> 
+        <OfInterestTo FormalName="ext--francais--relaxnews--artdevivre"/>
+      </DescriptiveMetadata>
+      <NewsComponent>
+        <ContentItem>
+          <MediaType FormalName="Text"/>
+          <Format FormalName="bcNITF2.5"/>
+          <DataContent>
+            <p> Des antinucléaires suisses, allemands et français ont annoncé mercredi le dépôt d'un recours devant le tribunal administratif de Strasbourg pour demander la mise à l'arrêt de la centrale de Fessenheim (Haut-Rhin), la plus ancienne du parc français.</p>
+            <p>L'Association trinationale de protection nucléaire (TRSA-ATPN) a expliqué dans un communiqué qu'elle avait déposé en juillet dernier un recours gracieux auprès du Premier ministre et du ministre de l'Ecologie, pour exiger la fermeture de la centrale. Ce recours a été rejeté "sans réelle explication ni proposition de concertation", selon l'association.</p>
+            <p>"TRAS-ATPN a donc décidé de déposer un recours devant le tribunal administratif de Strasbourg, tendant à la fermeture de cette centrale nucléaire", souligne le communiqué.</p>
+            <p>Pour Jürg Stöcklin, président de TRAS-ATPN, "nos recours gracieux ont été rejetés: la preuve est faite que l'administration française ne souhaite pas engager le dialogue et se positionner sur les arguments qui militent en faveur de la fermeture de Fessenheim".</p>
+            <p>"Les associations réunies au sein de TRAS-ATPN n'ont plus d'autre choix que de saisir la justice", ajoute encore le communiqué.</p>
+            <p>Le communiqué ne dit rien de l'annonce le 30 octobre du dépôt par la même association d'un recours devant le Conseil d'Etat.</p>
+            <p>Arnaud Gossement, avocat et membre de TRAS-ATPN, a expliqué au téléphone que l'association avait suspendu le recours devant le Conseil d'Etat, estimant qu'il était préférable dans un premier temps de saisir le tribunal administratif. M. Jürg Stöcklin a confirmé ces propos.</p>
+            <p>L'ATPN regroupe des villes comme Fribourg (Allemagne), Bâle (Suisse), des communes allemandes, suisses et françaises, des associations et des particuliers.</p>
+            <p>Entrée en service en 1977, la centrale de Fessenheim est la plus ancienne du parc français. Les antinucléaires réclament régulièrement sa fermeture, mettant en exergue les risques sismiques et d'inondation ainsi que de multiples incidents.</p>
+          </DataContent>
+        </ContentItem>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

@@ -1,0 +1,92 @@
+<?php
+    $bizobject = wcmMVC_Action::getContext();
+    $config  = wcmConfig::getInstance();
+?>
+<?php
+    echo '<div class="zone">';
+	$contents = ($bizobject->id) ? $bizobject->getContents() : array(new content());
+	foreach ($contents as $content)
+	{
+ 		wcmModule('business/shared/content', array('bizObjectClass' => $bizobject->getClass(), 'content' => $content));
+	}
+       
+    $actions = '<ul class="actions">'
+             . '<li><a href="#" onclick="openmodal(\'' . _BIZ_UPLOAD_PHOTO . '\'); modalPopup(\'changephoto\',\'new\', \'\'); return false;">' . _BIZ_UPLOAD_PHOTO . '</a></li>'
+             . '</ul>';
+    wcmGUI::openCollapsablePane(_BIZ_IMAGE, true, $actions);
+
+
+	//if (!$bizobject->original) $bizobject->original = "img/none.gif";
+
+    wcmGUI::openFieldset(_BIZ_ORIGINAL);
+    echo '<li><label>' . _BIZ_FILE . '</label><span>' . $bizobject->original . '</span></li>';
+    echo '<li><label>' . _BIZ_DIMENSIONS . '</label>';
+	
+	if($bizobject->formats)
+	{
+		$sizes = unserialize($bizobject->formats);
+		$width = $sizes['original']['width'];
+		$height = $sizes['original']['height'];
+	}
+	else
+	{
+		$width = '~';
+		$height = '~';
+	}
+	
+    echo '<span id="originalWidth"> ' . $width . '</span> x ';
+    echo '<span id="originalHeight">' . $height , '</span> pixels</li>';
+    wcmGUI::renderHiddenField('original', $bizobject->original, array('id' => 'original'));
+	//wcmGUI::renderHiddenField('width', $height, array('id' => 'width'));
+    //wcmGUI::renderHiddenField('height', $width, array('id' => 'height'));
+	echo '<li><label>' . _BIZ_THUMBNAIL . '</label>';
+	if ($bizobject->original)
+	{
+		$creationDate = dateOptionsProvider::fieldDateToArray($bizobject->createdAt);
+		echo '<span>
+		<a href="'. $bizobject->getPhotoUrlByFormat("w50").'" target="_blank">
+		<img src="'. $bizobject->getPhotoUrlByFormat("w50").'" alt="" border="0" />
+		</a>
+		</span>';
+	}
+	else
+	{
+		echo '<span><i>'._HELP_HOWTOSEEAPICTURE.'</i></span>';
+	}
+	
+	wcmGUI::closeFieldset();
+    wcmGUI::closeCollapsablePane();
+    
+	
+	echo '<div style="display:none;">';
+	wcmGUI::openCollapsablePane(_BIZ_MANAGE_CROPPING);
+
+    // Make sure we use a default image
+    
+    $cmanager = new croppingManager($bizobject, WCM_DIR . '/business/xml/photosratios/default.xml');
+    ?>
+    <div id="cropping">
+        <ul id="cropping_ratios">
+        <?php
+            foreach($cmanager->ratios as $key => $value)
+            {
+                echo '<li>';
+                echo '<a class="ratio" href="#" alt="' . $key . '"';
+                echo ' onclick="CropImageManager.select(this, \'ratio' . $value['rx'] . 'x' . $value['ry']. '\'); return false;"/>';
+                echo getConst($key) . '</a>';
+                echo '</li>';
+            }
+        ?>
+        </ul>
+        <div id="cropped_infos">
+            <span id="cropped_coords"></span>
+            <img class="clear" onclick="CropImageManager.clear();"/>
+            <img class="save" onclick="CropImageManager.set();"/>
+            <img class="undo" onclick="CropImageManager.undo();"/>
+        </div>
+        <div id="cropped_image"></div>
+        <div id="cropping_ratios"><?php $cmanager->generateHiddenFields(); ?></div>
+    </div>
+<?php
+    wcmGUI::closeCollapsablePane();
+	echo '</div>';

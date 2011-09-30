@@ -1,0 +1,16 @@
+#cropping #cropped_image {
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    border: 1px dashed silver;
+    width: 600px;
+    height: 300px;
+}
+
+#cropping #cropping_ratios {
+    display: block;
+    margin: 0;
+    margin-left: 620px;
+    padding: 10px;
+}

@@ -1,0 +1,216 @@
+<?php
+class video extends bizobject {
+    public $siteId;
+    public $channelId;
+    public $channelIds;
+    public $listIds;
+    public $folderIds;
+
+    public $title;
+    public $publicationDate;
+    public $expirationDate;
+    public $embargoDate;
+    public $author;
+
+    public $url;
+    public $embed;
+
+    public $credits;
+    public $sourceLocation;
+
+    public $cId;
+    public $iptc;
+    public $formats;
+    public $import_feed;
+    public $import_feed_id;
+	public $typeFormats;
+	public $preview;
+    
+    /**
+     * Set all initial values of an object
+     * This method is invoked by the constructor
+     */
+
+    protected function setDefaultValues() {
+        $timestamp = time();
+        $date_time_array = getdate($timestamp);
+
+        $hours = $date_time_array['hours'];
+        $minutes = $date_time_array['minutes'];
+        $seconds = $date_time_array['seconds'];
+        $month = $date_time_array['mon'];
+        $day = $date_time_array['mday'];
+        $year = $date_time_array['year'];
+
+        $timestamp = mktime($hours, $minutes, $seconds, $month + 6, $day, $year);
+
+        parent::setDefaultValues();
+        //$this->publicationDate = $this->embargoDate = date('Y-m-d');
+        //$this->expirationDate = date('Y-m-d', $timestamp);
+        $this->siteId = $this->channelId = 0;
+    }
+
+	public function checkValidity()
+    {
+        // if (!parent::checkValidity()) return false;
+
+        return true;
+    }
+
+	/**
+     * Returns an XML representation of a property
+     *
+     * @param string $propKey    Property key
+     * @param mixed  $propValue  Property value
+     */
+
+    protected function propertyToXML($propKey, $propValue) 
+    {
+        // Treat special properties
+        if (($propKey == 'formats') && !is_array($propValue)) 
+        {
+            $propValue = unserialize($propValue);
+        }
+        
+        return parent::propertyToXML($propKey, $propValue);
+    }
+    
+    /**
+     * Returns an array of video available
+     *
+     * @param string $format    format expected
+     */
+    
+    function getAfpVideoByFormat($format)
+    {
+    	$tab = $this->formats;
+    	$result = array();
+    	if (!empty($tab))
+    	{
+    		if (!is_array($tab)) $tab = unserialize($tab);
+    		
+    		foreach ($tab as $val)
+    		{
+    			if (isset($val["type"]) && $val["type"] == $format)
+    				$result[] = $val;
+    		}
+    	}
+    	
+    	if (!empty($result)) return $result;
+    	else return false;
+    }
+    
+	/**
+     * Returns an array of format video available
+     *
+     */
+    
+    function getFormatAfpVideo()
+    {
+    	$typeFormats = $this->typeFormats;
+    	$result = array();
+    	if (!empty($typeFormats))
+    		$result = explode("-",$typeFormats);
+    	
+    	if (!empty($result)) {
+    		sort($result);
+    		return $result;
+    	}
+    	else
+    		return false;
+    }
+    
+	function checkImportFeed($importFeed, $importFeedId) 
+	{
+        $sql = 'SELECT * FROM '.$this->tableName.' WHERE import_feed=? AND import_feed_id=?';
+        $check = $this->database->getFirstRow($sql, array($importFeed, $importFeedId));
+        if ($check) 
+        	return true;
+		else
+        	return false;
+    }
+    
+    public function save($source = null)
+    {	
+        if (isset($source['chooseLanguage']))
+        {
+            $this->duplicateCurrentObjetInOtherLanguages(array('chooseLanguage'=>$source['chooseLanguage'], 'userAssign'=>$source['userAssign']));
+        }
+        else
+        {
+        	$config = wcmConfig::getInstance();
+
+            $this->checkBeforeGenerate($this->id, $this->siteId, 'video', $this->workflowState, $config);
+
+            if (parent::save($source))
+            {
+                // si le status est à published on duplique l'objet dans un autre univers
+                if ($this->generate(false))
+                {
+                	$this->createNoticeForMedia();
+
+                	if ($this->workflowState == "published")
+                    {
+                    	$this->cloneInOtherUniverse($source);
+                    }
+                    return true;
+                }
+                else
+                    return false;
+
+            } else
+                return false;
+
+           
+        }
+    }
+
+    /**
+     * Gets the 'semantic' text that will be passed to the Text-Mining Engine
+     *
+     * @return string The semantic text to mine
+     */
+
+    public function getSemanticText() {
+        $content = '';
+
+        if ($this->title)
+            $content .= trim($this->title, " \t\n\r\0\x0B.").".\n";
+
+        if ($this->xmlTags != NULL) {
+            foreach ($this->xmlTags['tags'] as $tag) {
+                $content .= ','.$tag;
+            }
+        }
+
+        $contents = $this->getContents();
+		if (!empty($contents))
+		{
+	        foreach ($contents as $contentItem) {
+	            if ($contentItem->description != NULL)
+	                $content .= trim($contentItem->description, " \t\n\r\0\x0B.").".\n";
+	            if ($contentItem->text != NULL)
+	                $content .= trim($contentItem->text, " \t\n\r\0\x0B.").".\n";
+	        }
+		}
+
+        return $content;
+    }
+
+	/**
+     * Refresh object from unique importFeedId
+     *
+     * @param string $importFeedId used to refresh 
+     *
+     * @return the video object
+     */
+    public function refreshByImportFeedId($importFeedId)
+    {
+        $sql = 'SELECT id FROM ' . $this->tableName . ' WHERE import_feed_id=?';
+        $id = $this->database->executeScalar($sql, array($importFeedId));
+        if (!empty($id)) 
+        	return $this->refresh($id);
+        else 
+        	return false;
+    }
+}

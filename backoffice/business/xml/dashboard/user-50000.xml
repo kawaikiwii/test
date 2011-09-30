@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dashboard>
+    <title>_THE_MAGIG_DASHBOARD</title>
+    <authorizations>
+        <group>Webmasters</group>
+        <user>ericw</user>
+    </authorizations>
+<literal>
+<![CDATA[
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top" width="100%">
+]]>
+</literal>
+        <zone>
+            <title>Hot topics</title>
+            <module class="editorial" ttl="30">
+                <title> Most popular organizations </title>
+                <template>dashboard/chart.topfacets-pie.tpl</template>
+                <parameters>
+                    <param name="index">entity_ON</param>
+                </parameters>
+            </module>
+            <module class="editorial" ttl="30">
+                <title> Most popular peoples </title>
+                <template>dashboard/chart.topfacets-pie.tpl</template>
+                <parameters>
+                    <param name="index">entity_PN</param>
+                </parameters>
+            </module>
+            <module class="editorial" ttl="30">
+                <title> Most popular places </title>
+                <template>dashboard/chart.topfacets-pie.tpl</template>
+                <parameters>
+                    <param name="index">entity_GL</param>
+                </parameters>
+            </module>
+            <module class="editorial" ttl="30">
+                <title> Most popular subjects </title>
+                <template>dashboard/chart.topfacets-pie.tpl</template>
+                <parameters>
+                    <param name="index">concept</param>
+                </parameters>
+            </module>
+        </zone>
+<literal>
+<![CDATA[
+</td><td valign="top" id="task-panel">
+]]>
+</literal>
+        <zone>
+            <title>Content profile</title>
+            <module class="tasks" ttl="30">
+                <title> Top categories </title>
+                <template>dashboard/chart.topfacets-bar.tpl</template>
+                <parameters>
+                    <param name="index">category</param>
+                </parameters>
+            </module>
+            <module class="tasks" ttl="30">
+                <title> Distribution of tone </title>
+                <template>dashboard/chart.tonality.tpl</template>
+            </module>
+        </zone>
+<literal>
+<![CDATA[
+</td>
+</tr>
+</table>
+]]>
+</literal>
+</dashboard>

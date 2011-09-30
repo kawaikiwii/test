@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+	<name>NewsML</name>
+	<description>_BIZ_IMPORT_NEWSML</description>
+	<category>files</category>
+	<className>wcmImportAFP</className>
+	<module>business/import/NewsML</module>
+</plugin>

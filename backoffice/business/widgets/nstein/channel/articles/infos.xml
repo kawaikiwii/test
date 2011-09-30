@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget>
+	<name>Last Articles</name>
+	<description>Liste the last articles from a channel</description>
+	<author>Nstein</author>
+	<version>0.1</version>
+	<mail>pierrick.charron@nstein.com</mail>
+	<context>channel</context>
+</widget>

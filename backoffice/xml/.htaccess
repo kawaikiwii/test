@@ -1,0 +1,7 @@
+AuthUserFile ./.userlst
+AuthName "Accès protégé"
+AuthType Basic
+<LIMIT GET POST>
+
+Require valid-user
+</LIMIT>

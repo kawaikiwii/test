@@ -1,0 +1,5 @@
+UPDATE `RELAX_BIZ`.`biz_news` SET MustGenerate =1;
+UPDATE `RELAX_BIZ`.`biz_event` SET MustGenerate =1;
+UPDATE `RELAX_BIZ`.`biz_video` SET MustGenerate =1;
+UPDATE `RELAX_BIZ`.`biz_slideshow` SET MustGenerate =1;
+UPDATE `RELAX_BIZ`.`biz_photo` SET MustGenerate =1;

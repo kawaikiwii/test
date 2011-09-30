@@ -1,0 +1,80 @@
+<?php
+/**
+ * Project:     WCM
+ * File:        publicationWorkflow.php
+ *
+ * @copyright   (c)2008 Nstein Technologies
+ * @version     4.x
+ *
+ */
+require_once(dirname(__FILE__) . '/base/wcmBaseWorkflowScript.php');
+
+/**
+ * This class is a basic publication workflow script that
+ * works in conjunction with the standard 'publicationWorkflow'
+ * provided in WCM 4 demo web site.
+ */
+class publicationWorkflow extends wcmBaseWorkflowScript
+{
+    /**
+     * Mine object before creation
+     *
+     * @return bool FALSE to cancel creation
+     */
+    public function beforeCreate()
+    {
+        $tmeData = wcmSemanticServer::getInstance()->mineObject($this->wcmObject);
+        
+        if($tmeData)
+        	$this->wcmObject->semanticData->merge($tmeData);
+
+        wcmTrace('WF: SDT: ' . print_r($this->wcmObject->semanticData, true));
+
+        return true;
+    }
+
+    /**
+     * This callback is invoked AFTER the object has been created
+     */
+    public function onCreate()
+    {
+        wcmSemanticServer::getInstance()->indexObject($this->wcmObject);
+    }
+    
+    /**
+     * This callback is invoked AFTER the object has been updated
+     */
+    public function onUpdate()
+    {
+        wcmSemanticServer::getInstance()->indexObject($this->wcmObject);
+    }
+
+    /**
+     * This callback is invoked AFTER the object has been deleted
+     */
+    public function onDelete()
+    {
+        wcmSemanticServer::getInstance()->deindexObject($this->wcmObject);
+    }
+
+    /**
+     * This callback is invoked BEFORE the object is published
+     *
+     * In this example, we automatically create a version before publishing
+     * so the user will be able to 'rollback' to this state.
+     *
+     * @return bool FALSE to cancel transition
+     */
+    public function beforePublish()
+    {
+        return $this->wcmObject->archive(_BIZ_VERSION_CREATED_BEFORE_PUBLICATION);
+    }
+    
+    /**
+     * This callback is invoked AFTER the object has been published
+     */
+    public function onPublish()
+    {
+        wcmTrace('WF: ' . $this->wcmObject->getClass() . ' #' . $this->wcmObject->id . ' published');
+    }
+}

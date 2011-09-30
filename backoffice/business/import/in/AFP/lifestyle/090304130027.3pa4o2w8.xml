@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<NewsML>
+  <Catalog Href="http://www.afp.com/dtd/AFPCatalog.xml"/>
+  <NewsEnvelope>
+    <DateAndTime>20090304T130230Z</DateAndTime>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>afp.com</ProviderId>
+        <DateId>20090304</DateId>
+        <NewsItemId>090304130027.3pa4o2w8</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:afp.com:20090304:090304130027.3pa4o2w8:1</PublicIdentifier>
+      </NewsIdentifier>
+      <NameLabel>Lifestyle-Germany-IT-telecom-Internet-show-gadgets-offbeat</NameLabel>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20090304T130027Z</FirstCreated>
+      <ThisRevisionCreated>20090304T130027Z</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+    </NewsManagement>
+    <NewsComponent>
+      <NewsLines>
+        <HeadLine>Smart bubbly, corny USB sticks lead fair's gadget parade</HeadLine>
+        
+        <ByLine>by Deborah Cole</ByLine>
+        <DateLine>HANOVER, Germany, March 4, 2009 (AFP)</DateLine>
+        <CopyrightLine>© 2009 AFP</CopyrightLine>
+        <SlugLine>Lifestyle-Germany-IT-telecom-Internet-show-gadgets-offbeat</SlugLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Provider>
+          <Party FormalName="AFP"/>
+        </Provider>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="en"/> 
+        <OfInterestTo FormalName="ext--english--relaxnews--lifestyle"/>
+      </DescriptiveMetadata>
+      <NewsComponent>
+        <ContentItem>
+          <MediaType FormalName="Text"/>
+          <Format FormalName="bcNITF2.5"/>
+          <DataContent>
+            <p> Intelligent champagne bottles, "green" USB sticks made of corn and an understanding alarm clock led the parade of fun, futuristic gadgets at the world's biggest high-tech fair.</p>
+            <p>As the high-tech sector tries to buck the global economic slump, inventors from Asia, the United States and Europe vied to capture imaginations at the CeBIT with ideas that could ignite the market in the coming months and years.</p>
+            <p>Researchers at the German Research Centre for Artificial Intelligence, which works closely with industry, was showing off a range of everyday objects rendered "smart".</p>
+            <p>Its cutting-edge champagne bottles sound a bell when the bubbly has hit the perfect quaffing temperature, while an intelligent medicine cabinet lets you know when you last took your medication or need to get a prescription filled.</p>
+            <p>In keeping with a "green" theme at this year's event, USB sticks and photo cards by California-based ITP now come in biodegradable plastics made of corn. And some of the proceeds will go to tree-planting projects.</p>
+            <p>Meanwhile, people plagued by the question "Did I leave the iron on?" can relax.</p>
+            <p>Swiss firm digitalSTROM.org has developed a chip that can be installed in ordinary light switches. An "everything off" button switches every device hooked up to the system to "standby", averting fires and cutting energy bills.</p>
+            <p>The fair is showcasing a range of new ultra-thin, ultra-efficient netbooks that are easier on the wallet, including the first "zero-watt" laptop from Fujitsu-Siemens that uses no electricity when idle.</p>
+            <p>Japanese giant Toshiba was showing off televisions that use half the power of normal sets.</p>
+            <p>A navigator developed by Germany's Garmin can calculate not only the most direct route or the one with the least traffic but also the one that would use the least fuel, and even adds up the money you will save on your journey.</p>
+            <p>"If he feels in the mood, the driver can activate the EcoChallenge feature," the company said.</p>
+            <p>"Based on an analysis of the driver's heavy or light-food pedal technique and braking as well as the car speed, the display shows how well the driver is doing in the fuel-saving stakes."</p>
+            <p>A so-called gentle alarm clock from Germany's Simple Feature monitors sleep rhythms via a soft wristband fitted with sensors.</p>
+            <p>It then chooses a shallow sleep phase within 30 minutes of the desired wake-up time and goes off with a range of alarm tones including bird songs -- encouraging what the firm says is a smoother start to a more productive day.</p>
+            <p>The CeBIT is spotlighting eHealth this year, featuring products that allow patients to receive better care from home thanks to the Internet.</p>
+            <p>Bodytel of Germany has developed a blood sugar monitor for diabetics whose results can be beamed straight to the patient's file at his doctor's office via his mobile phone. Similar devices keep watch on blood pressure and heart rates.</p>
+            <p>Innovations in the world of entertainment also drew the crowds.</p>
+            <p>Taiwan's Aiptek is offering movies-to-go to with its Pocketcinema beamer, complete with two gigabytes of memory to store films, while Dutch firm Adapt Mobile has a pocket projector to allow you to share life-size holiday photos with friends.</p>
+            <p>Billed as the first Skype video telephone, the Eee by Germany's Asus is a home phone that allows cheap international video calls in better quality than on a standard computer.</p>
+            <p>German premium sound specialists Blaupunkt unveiled prototypes of what they called the world's first Internet car radio, promising access to "tens of thousands of stations" via cellular phone networks.</p>
+            <p>And fashionistas needing a little more bling must look no further than the Asus notebook wrapped in supple dark leather and studded with Swarovski crystals.</p>
+            <p>The CeBIT runs until Sunday.</p>
+          </DataContent>
+        </ContentItem>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

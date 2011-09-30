@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<NewsML>
+  <Catalog Href="http://www.afp.com/dtd/AFPCatalog.xml"/>
+  <NewsEnvelope>
+    <DateAndTime>20081210T144745Z</DateAndTime>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>afp.com</ProviderId>
+        <DateId>20081210</DateId>
+        <NewsItemId>081210144539.robu3zbp</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:afp.com:20081210:081210144539.robu3zbp:1</PublicIdentifier>
+      </NewsIdentifier>
+      <NameLabel>Finance-économie-banque-GB-insolite</NameLabel>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20081210T144539Z</FirstCreated>
+      <ThisRevisionCreated>20081210T144539Z</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+    </NewsManagement>
+    <NewsComponent>
+      <NewsLines>
+        <HeadLine>GB: un lapsus de Brown, sauveur du monde, déclenche l'hilarité des députés</HeadLine>
+        
+        
+        <DateLine>LONDRES, 10 déc 2008 (AFP)</DateLine>
+        <CopyrightLine>© 2008 AFP</CopyrightLine>
+        <SlugLine>Finance-économie-banque-GB-insolite</SlugLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Provider>
+          <Party FormalName="AFP"/>
+        </Provider>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="fr"/> 
+        <OfInterestTo FormalName="ext--francais--relaxnews--artdevivre"/>
+      </DescriptiveMetadata>
+      <NewsComponent>
+        <ContentItem>
+          <MediaType FormalName="Text"/>
+          <Format FormalName="bcNITF2.5"/>
+          <DataContent>
+            <p> Le Premier ministre britannique Gordon Brown a déclenché mercredi l'hilarité à la chambre des Communes en déclarant que son gouvernement avait "sauvé le monde" avec son plan de sauvetage des banques, un lapsus bruyamment salué par les députés de l'opposition.</p>
+            <p>Interrogé sur le plan de recapitalisation des banques mis en place au Royaume-Uni, le Premier ministre a répondu qu'il s'agissait "de sauver les banques qui, autrement, se seraient effondrées et non seulement nous avons sauvé le monde..." Il a tenté de se rattraper en ajoutant, quelques instants plus tard, avoir "sauvé les banques".</p>
+            <p>Mais le mal était déjà fait: les éclats de rire et invectives avaient envahi les bancs de l'opposition.</p>
+            <p>Le "Speaker" des Communes, qui préside les débats à la chambre basse du Parlement, a mis de longues secondes pour parvenir à rétablir un calme qui est resté fragile tout au long de la séance hebdomadaire de questions au Premier ministre.</p>
+            <p>"Nous avons non seulement travaillé avec les autres pays pour sauver le système bancaire mondial, mais aucun déposant n'a perdu d'argent au Royaume-Uni", a repris M. Brown. "L'opposition peut ne pas aimer que nous ayons mené le monde pour sauver le système bancaire, mais c'est le cas", a-t-il ajouté.</p>
+            <p>En prenant la parole, le chef des conservateurs David Cameron a relevé: "Eh bien, c'est officiel désormais, il est tellement occupé à parler de sauver le monde, qu'il a oublié les entreprises du pays qu'il gouverne".</p>
+            <p>Gordon Brown, salué dans le monde entier pour son audacieux plan de sauvetage des banques britanniques, avait affirmé mi-octobre être "seulement Gordon", et pas "Flash Gordon", le héros de bande dessinée qui sauve le monde.</p>
+            <p>"Pas Flash, seulement Gordon" était l'un des slogans de campagne de M. Brown avant de prendre la succession de Tony Blair à la tête du gouvernement en juin 2007. Ce slogan visait à lui donner une image modeste et sérieuse le différenciant du style plus haut en couleur de son prédécesseur.</p>
+          </DataContent>
+        </ContentItem>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

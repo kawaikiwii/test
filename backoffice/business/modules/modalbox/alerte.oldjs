@@ -1,0 +1,138 @@
+<script type="text/javascript">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+manageAlerte = function(command,loginAs,alerteId,formDatas)
+{
+    wcmBizAjaxController.call("biz.alerte", {
+	command: command,
+	loginAs: loginAs,
+	alerteId: alerteId,
+	formDatas: formDatas
+    },null,{onComplete: function() { populeServices(); }});
+}
+
+populeServices = function()
+{
+    wcmBizAjaxController.call("biz.permissions", {
+	command: 'populeServices',
+	divId: 'selectService',
+	univers: $('univers').options[$('univers').selectedIndex].value,
+	service: $('services').options[$('services').selectedIndex].value
+	},
+	null,{onComplete: setRubriqueController}
+	);
+}
+setRubriqueController = function()
+{
+    wcmBizAjaxController.call("biz.permissions", {
+	command: 'setRubriqueController',
+	divId: 'selectRubrique',
+	univers: $('univers').options[$('univers').selectedIndex].value,
+	service: $('services').options[$('services').selectedIndex].value
+    });
+}
+
+addQuery_sr = function()
+{
+	var service = $('services').options[$('services').selectedIndex].value;
+	var service_label = $('services').options[$('services').selectedIndex].text;
+	var rubrique = $('rubrique').value;
+	var rubriqueId = '';
+	var rubrique_label = '';
+	var parameters = {
+	    	prefix: rubrique,
+    	};
+    	if (rubrique != '*')
+    	{
+		wcmBizAjaxController.callWithoutUpdate('autocomplete/wcm.channels', parameters, null,
+		    {onComplete: function(myAjaxResponse) 
+			{
+				if (myAjaxResponse.responseText == 'invalid')
+				{
+					alert('Rubrique invalide');
+					return;
+				}
+				else
+				{
+					var separator = myAjaxResponse.responseText.indexOf('#');
+					var bizobjectId    = myAjaxResponse.responseText.substring(0,separator);
+					var bizobjectLabel = myAjaxResponse.responseText.substring(separator+1);
+					rubriqueId = bizobjectId;
+					rubrique_label = bizobjectLabel;
+				}
+			}	    
+		    });	
+	}
+	else
+	{
+		rubriqueId = '*';
+		rubrique_label = '*';
+	}
+	var value = service+'||'+rubriqueId;
+	var label = service_label+' \\ '+rubrique_label;
+	var srValues = $('query_sr').value;
+    	if (srValues != '') srValues += '##';
+	srValues += value;
+	$('query_sr').setValue(srValues);
+	$('query_sr_list').insert('<li style="clear:both" id='+value+'><a href="#" onclick="delQuery_sr($(this).up()); return false;"><span>' + $I18N.DELETE + '</span></a> <em>'+label+'</em></li>');
+}
+
+delQuery_sr = function(obj)
+{
+    // rebuild value
+    var value = '';
+    var siblings = obj.siblings();
+    if (siblings) siblings.each(function(li) { if (value != '') value += '##'; value += li.id; });
+    $('query_sr').setValue(value);
+    
+    // remove tab
+    obj.remove();
+}
+
+
+delAllQuery_sr = function()
+{
+	$('query_sr').setValue('');
+	var elems = $('query_sr_list').childElements();
+	for(var i=0; i<elems.length; i++)
+		elems[i].remove();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+manageAlerte('refresh',$('initAccountId').value,'','');
+
+</script>

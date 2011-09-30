@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+    <name>DAM TextML</name>
+    <description>Search through DAM's TextML</description>
+    <className>wcmBizsearchPluginDAM</className>
+    <id>dam</id>
+</plugin>

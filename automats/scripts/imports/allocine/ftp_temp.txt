@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<top>
+	<totaldiffusions>13198481</totaldiffusions>
+	<totaldiffusionsprecedent>13482810</totaldiffusionsprecedent>
+	<film>
+		<position>1</position>
+		<titre>Identit&#233; Secr&#232;te</titre>
+		<datesortie>2011-09-28</datesortie>
+		<nbdiffusions>211768</nbdiffusions>
+		<nbdiffusionsprecedent>189327</nbdiffusionsprecedent>
+		<partdemarche>37.3</partdemarche>
+	</film>
+	<film>
+		<position>2</position>
+		<titre>Un Heureux &#233;v&#233;nement</titre>
+		<datesortie>2011-09-28</datesortie>
+		<nbdiffusions>208521</nbdiffusions>
+		<nbdiffusionsprecedent>166199</nbdiffusionsprecedent>
+		<partdemarche>36.7</partdemarche>
+	</film>
+	<film>
+		<position>3</position>
+		<titre>True Legend</titre>
+		<datesortie>2011-09-28</datesortie>
+		<nbdiffusions>61718</nbdiffusions>
+		<nbdiffusionsprecedent>74782</nbdiffusionsprecedent>
+		<partdemarche>10.9</partdemarche>
+	</film>
+	<film>
+		<position>4</position>
+		<titre>Un &#233;t&#233; br&#251;lant</titre>
+		<datesortie>2011-09-28</datesortie>
+		<nbdiffusions>56949</nbdiffusions>
+		<nbdiffusionsprecedent>36437</nbdiffusionsprecedent>
+		<partdemarche>10.0</partdemarche>
+	</film>
+	<film>
+		<position>5</position>
+		<titre>Glee ! On Tour : Le Film 3D</titre>
+		<datesortie>2011-09-28</datesortie>
+		<nbdiffusions>28560</nbdiffusions>
+		<nbdiffusionsprecedent>22665</nbdiffusionsprecedent>
+		<partdemarche>5.0</partdemarche>
+	</film>
+</top>

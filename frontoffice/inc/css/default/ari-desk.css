@@ -1,0 +1,575 @@
+
+
+.ari-desk {
+    border-right: 1px solid #CCC;
+    color: #333333;
+}
+
+.ari-access-denied div {
+    background-color: #64247C;
+    color: #fff;
+    font-size: 1.2em;
+    text-align: center;
+	padding:1em;
+}
+
+.ari-access-denied .ari-restricted-title {
+    font-size: 1.4em;
+	padding-bottom:1em;
+}
+
+.ari-access-denied a {
+    color: #fff;
+}
+
+/*********************************************************************
+ * DESK'S HEADER
+ */
+.ari-desk-header {
+    border-bottom: 1px solid #EFEFEF;
+}
+
+.ari-desk-header .ari-desk-header-title {
+    background: transparent none no-repeat scroll left center !important;
+    font-size: 1.4em;
+    line-height: 2.4em;
+    padding-left: 2.4em;
+}
+
+.ari-desk-header .ari-desk-header-category {
+    font-size: 1em;
+    height: 4.5em;
+}
+
+.ari-desk-header .ari-desk-header-category span {
+    padding-right: 0.4em;
+}
+
+.ari-desk-header .ari-desk-header-category a {
+    text-decoration: none;
+}
+
+.ari-desk-header .ari-desk-header-category a:hover {
+    text-decoration: underline;
+}
+
+.ari-desk-header .ari-desk-header-title {
+    background: url(/rp/images/default/sprites/relaxicon.png) no-repeat 0 0 !important;
+    height: 1%;
+}
+
+/*--------------------------------------------------------------------
+ * Wellbeing
+ */
+.ari-desk-header.ari-desk-wellbeing .ari-desk-header-title {
+    background-position: 0.4em -325px !important;
+    color: #43D743;
+}
+
+.ari-desk-header.ari-desk-wellbeing .ari-desk-header-category {
+    color: #43D743;
+}
+
+.ari-desk-header.ari-desk-wellbeing .ari-desk-header-category a, .ari-desk-header.ari-desk-wellbeing .ari-desk-header-title a {
+    color: #43D743;
+	 text-decoration: none;
+}
+
+/*--------------------------------------------------------------------
+ * House & Home
+ */
+.ari-desk-header.ari-desk-househome .ari-desk-header-title {
+    background-position: 0.4em -125px !important;
+    color: #F96913;
+}
+
+.ari-desk-header.ari-desk-househome .ari-desk-header-category {
+    color: #F96913;
+}
+
+.ari-desk-header.ari-desk-househome .ari-desk-header-category a, .ari-desk-header.ari-desk-househome .ari-desk-header-title a {
+    color: #F96913;
+	 text-decoration: none;
+}
+
+/*--------------------------------------------------------------------
+ * Entertainement
+ */
+.ari-desk-header.ari-desk-entertainment .ari-desk-header-title {
+    background-position: 0.4em -25px !important;
+    color: #FFB7DB;
+}
+
+.ari-desk-header.ari-desk-entertainment .ari-desk-header-category {
+    color: #FFB7DB;
+}
+
+.ari-desk-header.ari-desk-entertainment .ari-desk-header-category a, .ari-desk-header.ari-desk-entertainment .ari-desk-header-title a {
+    color: #FFB7DB;
+	 text-decoration: none;
+}
+
+/*--------------------------------------------------------------------
+ * Tourism
+ */
+.ari-desk-header.ari-desk-tourism .ari-desk-header-title {
+    background-position: 0.4em -225px !important;
+    color: #6699FF;
+}
+
+.ari-desk-header.ari-desk-tourism .ari-desk-header-category {
+    color: #6699FF;
+}
+
+.ari-desk-header.ari-desk-tourism .ari-desk-header-category a, .ari-desk-header.ari-desk-tourism .ari-desk-header-title a {
+    color: #6699FF;
+    text-decoration: none;
+}
+
+/*********************************************************************
+ * DATE SEPARATOR
+ */
+.ari-desk .ari-desk-separator-date {
+    font-size: 1.2em;
+    color: #111;
+    padding: 0.3em 0.3em 0.1em 0.3em;
+    border-bottom: 1px solid #CCC;
+    margin: 0.3em 0 0.2em 0;
+}
+
+/*********************************************************************
+ * ITEMS
+ */
+.ari-desk .ari-item {
+    border-bottom: 1px solid #EFEFEF;
+    cursor: pointer;
+    padding: 0.3em 0.2em 0.3em 5.5em;
+}
+
+.ari-desk .ari-item.ari-prevision {
+    border-bottom: 1px solid #EFEFEF;
+    cursor: pointer;
+    padding: 0.3em 0.2em 0.3em 0.5em;
+}
+
+.ari-desk .ari-item:hover {
+    background: #EFEFEF none repeat scroll 0 0;
+}
+
+.ari-desk .ari-item.ari-breaking-news {
+    font-size: 1.05em;
+    color: red;
+}
+
+.ari-desk .ari-item.ari-not-allowed {
+    /*background: url('/rp/images/default/Mask.gif');*/
+    opacity: 0.5;
+    background-color: #EFEFEF;
+    /*cursor: default;*/
+	 cursor: not-allowed;
+}
+
+/*--------------------------------------------------------------------
+ * Details
+ */
+.ari-desk .ari-item .ari-publishDate {
+    background-position: left center;
+    background-repeat: no-repeat;
+    color: #64247C;
+    font-weight: normal;
+    padding-left: 1.5em;
+    position: absolute;
+    margin-left: -5em;
+}
+
+.ari-desk .ari-item .ari-category {
+    color: #64247C;
+    font-weight: bold;
+}
+
+.ari-desk .ari-item .ari-separator {
+    color: #64247C;
+    font-weight: bold;
+}
+
+.ari-desk .ari-item .ari-format {
+    display: none;
+}
+
+/*--------------------------------------------------------------------
+ * Title
+ */
+.ari-desk .ari-item .ari-title {
+    display: inline;
+    font-weight: normal;
+}
+
+/*********************************************************************
+ * ILLUSTRATED
+ *--------------------------------------------------------------------
+ * by photo(s)
+ */
+.ari-desk .ari-item .ari-illustrated-photo {
+    background: url(/rp/images/default/sprites/illustratedx12.png) no-repeat 0 -72px !important;
+}
+
+/*--------------------------------------------------------------------
+ * by slideshow(s)
+ */
+.ari-desk .ari-item .ari-illustrated-slideshow {
+    background: url(/rp/images/default/sprites/illustratedx12.png) no-repeat 0 -30px !important;
+}
+
+/*--------------------------------------------------------------------
+ * by video(s)
+ */
+.ari-desk .ari-item .ari-illustrated-video {
+    background: url(/rp/images/default/sprites/illustratedx12.png) no-repeat 0 -114px !important;
+}
+
+/*--------------------------------------------------------------------
+ * by video(s) from news
+ */
+.ari-desk .ari-item .ari-illustrated-video-news {
+    background: url(/rp/images/default/sprites/illustratedx12embed2.png) no-repeat 0 -144px !important;
+}
+
+/*********************************************************************
+ * EVENT'S DESK
+ *
+ */
+#eventQuickSearch {
+    margin: auto;
+    /*position: relative;
+     top:5em;*/
+}
+
+/*--------------------------------------------------------------------
+ * Must See list
+ */
+#event-channel-mustsee .ari-item .ari-category {
+    float: right;
+}
+
+#event-channel-mustsee .ari-item .ari-title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#event-channel-mustsee .ari-item .ari-schedule {
+    font-size: 1.1em;
+    font-weight: normal;
+}
+
+#event-channel-mustsee .ari-item .ari-illustrations {
+    float: left;
+    text-align: center;
+    width: 6em;
+}
+
+#event-channel-mustsee .ari-item .ari-illustrations .ari-illustration.photo .ari-illustration-item img {
+    margin: 0.5em;
+    width: 5em;
+    border: 1px solid #999;
+}
+
+/*********************************************************************
+ * VIDEO'S DESK
+ *
+ */
+#desk-video .ari-item .ari-category {
+	font-weight: normal;
+    float: right;
+}
+
+#desk-video .ari-item .ari-title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#desk-video .ari-item .ari-publishDate {
+    font-size: 1.1em;
+    font-weight: bold;
+    float: none;
+    display: block;
+    position: static;
+    margin: 0;
+}
+
+#desk-video .ari-item .ari-illustration {
+    float: left;
+    margin-left: -5em;
+}
+
+#desk-video .ari-item .ari-illustrations .ari-illustration-item img {
+    width: 5em;
+    border: 1px solid #999;
+}
+
+/*********************************************************************
+ * SLIDESHOW'S DESK
+ *
+ */
+#desk-slideshow .ari-item {
+    border: 0;
+}
+
+#desk-slideshow .ari-item .ari-title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#desk-slideshow .ari-item .ari-publishDate {
+    font-size: 1.1em;
+    font-weight: bold;
+    float: none;
+    display: block;
+    position: static;
+    margin: 0;
+}
+
+#desk-slideshow .ari-item .ari-illustration-count {
+    font-weight: normal;
+}
+
+#desk-slideshow .ari-item .ari-category {
+    font-weight: normal;
+    float: right;
+}
+
+#desk-slideshow .ari-item .ari-illustration {
+    float: left;
+    margin-left: -5em;
+}
+
+#desk-slideshow .ari-item .ari-illustrations .ari-illustration-item img {
+    width: 5em;
+    border: 1px solid #999;
+}
+
+#event-channel-mustsee .ari-desk-header .ari-desk-header-title {
+    background-image: none !important
+}
+
+#event-channel-ourselection .ari-desk-header .ari-desk-header-title {
+    background-image: none !important
+}
+
+/*********************************************************************
+ * PREVISION'S DESK
+ *
+ */
+#desk-prevision .ari-desk {
+    border: 0px;
+}
+
+#desk-prevision .ari-desk-container {
+    margin-bottom: 0.6em;
+    padding: 0.3em;
+    overflow: hidden;
+}
+
+#desk-prevision .ari-desk-center .ari-desk-container, #desk-prevision .ari-desk-right .ari-desk-container {
+    background: #D4C2DB;
+    border: 1px solid #64247C;
+}
+
+#desk-prevision .ari-desk-container .ari-desk-container-title {
+    color: #64247C;
+    text-align: center;
+    font-size: 2em;
+}
+
+#desk-prevision .ari-desk-container .ari-desk-container-list {
+    padding: 1em;
+	line-height: 20px;
+}
+
+#desk-prevision .ari-desk-container .ari-desk-container-list.right {
+    float: right;
+    width: 150px;
+    font-size: 0.9em;
+    border-left: 1px solid #64247C;
+}
+
+#desk-prevision .ari-desk-container .ari-desk-container-list.left {
+}
+
+#desk-prevision .ari-desk-container .ari-desk-container-list .ari-container-title {
+    font-variant: small-caps;
+}
+
+#desk-prevision .ari-desk-container .ari-desk-container-link {
+    text-align: right;
+    font-style: italic;
+    padding-right: 1em;
+    color: #64247C;
+}
+
+#desk-prevision .ari-item {
+    border: 0;
+    padding-left: 0.1em;
+	overflow: visible;
+	list-style-type: disc;
+}
+
+#desk-prevision .ari-item:hover {
+    background: transparent;
+    color: #64247C;
+}
+
+#desk-prevision .ari-item .ari-title {
+    font-size: 1.05em;
+    font-weight: bold;
+}
+
+#desk-prevision .ari-item .ari-prevision-date {
+    font-style: italic;
+}
+
+#desk-prevision .toolbar-avancee, #desk-prevision .icone-listtimeline, #desk-event .icone-listtimeline {
+	display: none;
+}
+
+#modalWindow {
+    font-family: verdana,arial,sans-serif;
+    font-size: 1em;
+    padding: 7px;
+    text-align: left;
+}
+
+#modalDialog {
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+
+#modalWindow fieldset {
+    border: 0 none;
+    margin: 0;
+    padding: 0 20px;
+}
+
+#modalWindow legend {
+    color: #666666;
+    padding: 0 8px;
+}
+
+#modalWindow ul.toolbar {
+    display: block;
+    height: 40px;
+    margin: 0 20px 0 0;
+    padding: 0;
+    text-align: right;
+}
+
+#modalWindow ul.newtask {
+    margin: 0 70px 0 0;
+    text-align: left;
+}
+
+#modalWindow ul.toolbar li {
+    display: block;
+    float: right;
+    list-style-type: none;
+    margin: 0 0 0 5px;
+    padding: 0;
+}
+
+#modalWindow ul.toolbar li a {
+    border: 1px solid #B1CEE5;
+    border-radius: 3px 3px 3px 3px;
+    color: #000000;
+    display: block;
+    float: left;
+    font-family: helvetica,arial,sans-serif;
+    font-size: 11px;
+    height: 11px;
+    margin: 0;
+    padding: 5px 10px 5px 22px;
+    text-align: left;
+    text-decoration: none;
+    width: auto;
+}
+
+#modalWindow ul.toolbar li a.cancel {
+    background: url("../../../wcm/skins/default/images/gui/undo.png") no-repeat scroll 4px 2px transparent;
+}
+
+#modalWindow ul.toolbar li a.save {
+    background: url("../../../wcm/skins/default/images/gui/disk.png") no-repeat scroll 2px 2px transparent;
+    font-weight: bold;
+}
+
+#modalWindow ul.toolbar li a.delete {
+    background: url("../../../wcm/skins/default/images/gui/cross.png") no-repeat scroll 2px 2px transparent;
+    font-weight: bold;
+}
+
+#modalWindow a, #modalWindow a:visited {
+    color: #167197;
+    text-decoration: none;
+}
+
+#modalWindow a:hover {
+    color: F04000 !important;
+    text-decoration: underline;
+}
+
+#modalWindow ul.toolbar li a:hover {
+    background-color: #E0E0E0;
+    border: 1px solid black;
+    color: black;
+}
+
+#modalWindow #content {
+    margin-left: 0;
+}
+
+#modalWindow #content div.zone fieldset {
+    border: 1px solid #E0E0E0;
+    clear: left;
+    float: left;
+    margin: 0 0 20px;
+    padding: 5px;
+    width: 95%;
+}
+
+#modalWindow #content div.zone fieldset > ul {
+    margin: 0;
+    padding: 0 0 0 10px;
+}
+
+#modalWindow #content div.zone fieldset ul li {
+    clear: left;
+    list-style-type: none;
+    margin: 5px 0;
+    padding: 0;
+}
+
+#modalWindow #content div.zone fieldset ul li label {
+    color: black;
+    display: block;
+    float: left;
+    margin: 2px 10px 10px 0;
+    padding: 0;
+    text-align: left;
+    width: 100px;
+}
+
+#modalWindow fieldset ul li input {
+    border: 1px solid silver;
+    float: right;
+    font-size: 14px;
+    margin: 0 0 10px;
+    padding: 2px;
+    width: 250px;
+}
+
+#modalWindow fieldset ul li input[type="checkbox"] {
+    border: medium none;
+    float: left;
+    width: 16px;
+}
+
+.temp_table {
+	vertical-align: text-top;
+}

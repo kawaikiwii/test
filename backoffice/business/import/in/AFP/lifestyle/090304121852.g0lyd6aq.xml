@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<NewsML>
+  <Catalog Href="http://www.afp.com/dtd/AFPCatalog.xml"/>
+  <NewsEnvelope>
+    <DateAndTime>20090304T122050Z</DateAndTime>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>afp.com</ProviderId>
+        <DateId>20090304</DateId>
+        <NewsItemId>090304121852.g0lyd6aq</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:afp.com:20090304:090304121852.g0lyd6aq:1</PublicIdentifier>
+      </NewsIdentifier>
+      <NameLabel>Indonesia-environment-wildlife-animal-tiger</NameLabel>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20090304T121852Z</FirstCreated>
+      <ThisRevisionCreated>20090304T121852Z</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+    </NewsManagement>
+    <NewsComponent>
+      <NewsLines>
+        <HeadLine>Tiger kills ninth man in Indonesia: official</HeadLine>
+        
+        
+        <DateLine>JAKARTA, March 4, 2009 (AFP)</DateLine>
+        <CopyrightLine>© 2009 AFP</CopyrightLine>
+        <SlugLine>Indonesia-environment-wildlife-animal-tiger</SlugLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Provider>
+          <Party FormalName="AFP"/>
+        </Provider>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="en"/> 
+        <OfInterestTo FormalName="ext--english--relaxnews--lifestyle"/>
+      </DescriptiveMetadata>
+      <NewsComponent>
+        <ContentItem>
+          <MediaType FormalName="Text"/>
+          <Format FormalName="bcNITF2.5"/>
+          <DataContent>
+            <p> A tiger mauled to death an illegal logger on the Indonesian island of Sumatra, an official said Wednesday, the ninth such death in the last five weeks.</p>
+            <p>The man, killed on Tuesday night in Jambi province, is the latest victim in a string of attacks that also claimed the lives of two illegal loggers on Sunday, provincial conservation agency head Didi Wuryanto told AFP.</p>
+            <p>"The village head told me that a group of illegal loggers wanted to secretly transport the victim's body out of the forest. They didn't want to be caught breaking the law," Wuryanto said. </p>
+            <p>Villagers have trapped and killed four of the endangered tigers in response to the string of deadly attacks, which conservationists say are largely caused by illegal logging in tiger habitats.</p>
+            <p>Human-animal conflicts are a rising problem as people encroach on wildlife habitats in Indonesia, an archipelago nation with some of the world's largest remaining tropical forests.</p>
+            <p>An 83-year-old man was also trampled to death on Wednesday by a herd of around 30 elephants that stormed into a village in neighbouring Riau province, the local conservation agency said.</p>
+            <p>Wuryanto said provincial authorities met Wednesday to discuss preventive measures aimed at defending villagers and protecting the big cats from human reprisals. </p>
+            <p>"We won't discuss how to stop tigers from wandering the forests, because that's their habitat, but we need to find immediate solution to avoid more victims," he said. </p>
+            <p>There are less than 400 Sumatran tigers left in the wild, according to WWF.</p>
+          </DataContent>
+        </ContentItem>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

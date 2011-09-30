@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<NewsML>
+  <Catalog Href="http://www.afp.com/dtd/AFPCatalog.xml"/>
+  <NewsEnvelope>
+    <DateAndTime>20090304T142622Z</DateAndTime>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>afp.com</ProviderId>
+        <DateId>20090304</DateId>
+        <NewsItemId>090304142540.gxb6oek1</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:afp.com:20090304:090304142540.gxb6oek1:1</PublicIdentifier>
+      </NewsIdentifier>
+      <NameLabel>Spain-Britain-crime-drugs-Internet</NameLabel>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20090304T142540Z</FirstCreated>
+      <ThisRevisionCreated>20090304T142540Z</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+    </NewsManagement>
+    <NewsComponent>
+      <NewsLines>
+        <HeadLine>Spanish police smash ring that stole British public works machines</HeadLine>
+        
+        
+        <DateLine>MADRID, March 4, 2009 (AFP)</DateLine>
+        <CopyrightLine>© 2009 AFP</CopyrightLine>
+        <SlugLine>Spain-Britain-crime-drugs-Internet</SlugLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Provider>
+          <Party FormalName="AFP"/>
+        </Provider>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="en"/> 
+        <OfInterestTo FormalName="ext--english--relaxnews--lifestyle"/>
+      </DescriptiveMetadata>
+      <NewsComponent>
+        <ContentItem>
+          <MediaType FormalName="Text"/>
+          <Format FormalName="bcNITF2.5"/>
+          <DataContent>
+            <p> Spanish police said Wednesday they had smashed a ring which stole heavy plant machinery used in public works projects in Britain, shipped it to Spain and offered it for sale over the Internet.</p>
+            <p>Police detained two people, an Argentinian woman and a British man, who are suspected of involvement in the scheme, and seized eight machines worth about 1.2 million euros (1.5 million dollars) along with 25 kilos (55 pounds) of hashish, they said in a statement.</p>
+            <p>Six other people are accused of involvement in the scheme and are under investigation, the statement added.</p>
+            <p>Based in the southern Mediterranean port of Marbella, the group would also smuggle drugs along with their shipments of stolen machines, police said.</p>
+            <p>"They would steal the machines in different points across Britain, hide them for a while and then, through a complex falsification system, alter the chassis numbers and documents to be able to ship them to Spain," the statement said.</p>
+            <p>The group set up fake front companies in Spain which offered the plant for sale.</p>
+            <p>The detained woman is suspected of being in charge of putting ads for the mnachines, mostly on the Internet, while the detained man was the person in charge of showing them to interested buyers.</p>
+          </DataContent>
+        </ContentItem>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<NewsML>
+  <Catalog Href="http://www.afp.com/dtd/AFPCatalog.xml"/>
+  <NewsEnvelope>
+    <DateAndTime>20081210T142143Z</DateAndTime>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>afp.com</ProviderId>
+        <DateId>20081210</DateId>
+        <NewsItemId>081210142005.sxcrbtxd</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:afp.com:20081210:081210142005.sxcrbtxd:1</PublicIdentifier>
+      </NewsIdentifier>
+      <NameLabel>Iran-droitsHomme-femmes-police</NameLabel>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20081210T142005Z</FirstCreated>
+      <ThisRevisionCreated>20081210T142005Z</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+    </NewsManagement>
+    <NewsComponent>
+      <NewsLines>
+        <HeadLine>Iran: une militante des droits de l'Homme interdite de quitter le territoire</HeadLine>
+        
+        
+        <DateLine>TEHERAN, 10 déc 2008 (AFP)</DateLine>
+        <CopyrightLine>© 2008 AFP</CopyrightLine>
+        <SlugLine>Iran-droitsHomme-femmes-police LEAD</SlugLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Provider>
+          <Party FormalName="AFP"/>
+        </Provider>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="fr"/> 
+        <OfInterestTo FormalName="ext--francais--relaxnews--artdevivre"/>
+      </DescriptiveMetadata>
+      <NewsComponent>
+        <ContentItem>
+          <MediaType FormalName="Text"/>
+          <Format FormalName="bcNITF2.5"/>
+          <DataContent>
+            <p> Une militante iranienne des droits de l'Homme, Nasrine Sotoudeh, a été empêchée mercredi par les autorités de se rendre un Italie pour y recevoir le prix d'une ONG italienne, a-t-elle dit à l'AFP.</p>
+            <p>"Après avoir reçu un tampon de sortie sur mon passeport à l'aéroport, j'ai été appelée et deux personnes travaillant pour le gouvernement m'ont confisqué mon passeport", a dit par téléphone Mme Sotoudeh.</p>
+            <p>L'activiste a précisé que son mari et ses enfants, qui l'accompagnaient, avaient été autorisés à quitter l'Iran pour recevoir à sa place le prix que lui a décerné l'ONG Human Rights International.</p>
+            <p>Mme Sotoudeh a dénoncé un acte "illégal", en expliquant ne pas avoir été prévenue par une décision de justice qu'elle était "interdite de voyage à l'étranger".</p>
+            <p>Le président de l'Association Human Rights International, Adolf Pfitscher, basée à Bolzano dans le Haut Adige, a indiqué que le prix serait remis à l'époux de l'avocate.</p>
+            <p>"Le fait qu'elle n'ait pas pu quitter Téhéran confirme l'importance de son engagement", a-t-il déclaré à l'agence italienne Ansa.</p>
+            <p>L'activiste est, en tant qu'avocate, un membre réputé du Centre des défenseurs des droits de l'Homme, présidé par l'avocate et lauréate du prix Nobel de la paix Shirin Ebadi.</p>
+            <p>Mme Sotoudeh est aussi impliquée dans la pétition "Un million de signatures", qui a pour objectif d'obtenir l'égalité des droits pour les femmes en Iran.</p>
+            <p>Elle a aussi défendu des membres de minorités ethniques poursuivis en justice, comme l'activiste et journaliste kurde Mohammad Sadigh Kaboudvand, qui a fondé l'Organisation des droits de l'Homme du Kurdistan.</p>
+            <p>Des ONG internationales et de nombreux pays occidentaux accusent régulièrement la République islamique de violations des droits de l'Homme.</p>
+            <p>La commission des droits de l'Homme de l'Assemblée générale de l'ONU a adopté en novembre une résolution dans laquelle elle a exprimé sa préoccupation devant les "violations graves" des droits de l'Homme en Iran.</p>
+          </DataContent>
+        </ContentItem>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

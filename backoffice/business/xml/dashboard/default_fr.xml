@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dashboard>
+<literal>
+<![CDATA[
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top" width="100%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%" valign="top"><tr><td>
+]]>
+</literal>
+    <zone>
+    	<title>Depeches</title>
+        <module class="size size_2_4">
+            <title>Bien etre</title>
+            <template>dashboard/search.editorial.tpl</template>
+            <parameters>
+                <param name="query">className:news AND siteId:@SiteID AND workflowState:published</param>
+                <param name="channel">_RLX_WELLBEING</param>
+				<param name="orderBy">publicationdate DESC, publicationtime DESC</param>
+                <param name="from">0</param>
+                <param name="limit">20</param>
+                <param name="fields">
+                    <param name="title">_DASHBOARD_MODULE_HEADER_TITLE</param>
+					<param name="channel">Rubric</param>
+                    <param name="publicationDate">Publication Date</param>
+                </param>
+            </parameters>
+        </module>
+		<module class="size size_2_4">
+            <title>Maison</title>
+            <template>dashboard/search.editorial.tpl</template>
+            <parameters>
+                <param name="query">className:news AND siteId:@SiteID AND workflowState:published</param>
+                <param name="channel">_RLX_HOUSEHOME</param>
+				<param name="orderBy">publicationdate DESC, publicationtime DESC</param>
+                <param name="from">0</param>
+                <param name="limit">20</param>
+                <param name="fields">
+                    <param name="title">_DASHBOARD_MODULE_HEADER_TITLE</param>
+					<param name="channel">Rubric</param>
+                    <param name="publicationDate">Publication Date</param>
+                </param>
+            </parameters>
+        </module>
+<literal>
+<![CDATA[
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+]]>
+</literal>
+		<module class="size size_2_4">
+            <title>Divertissements</title>
+            <template>dashboard/search.editorial.tpl</template>
+            <parameters>
+                <param name="query">className:news AND siteId:@SiteID AND workflowState:published</param>
+				<param name="channel">_RLX_ENTERTAINMENT</param>
+                <param name="orderBy">publicationdate DESC, publicationtime DESC</param>
+                <param name="from">0</param>
+                <param name="limit">20</param>
+                <param name="fields">
+                    <param name="title">_DASHBOARD_MODULE_HEADER_TITLE</param>
+					<param name="channel">Rubric</param>
+                    <param name="publicationDate">Publication Date</param>
+                </param>
+            </parameters>
+        </module>
+		<module class="size size_2_4">
+            <title>Tourisme</title>
+            <template>dashboard/search.editorial.tpl</template>
+            <parameters>
+                <param name="query">className:news AND siteId:@SiteID AND workflowState:published</param>
+				<param name="channel">_RLX_TOURISM</param>
+                <param name="orderBy">publicationdate DESC, publicationtime DESC</param>
+                <param name="from">0</param>
+                <param name="limit">20</param>
+                <param name="fields">
+                    <param name="title">_DASHBOARD_MODULE_HEADER_TITLE</param>
+					<param name="channel">Rubric</param>
+                    <param name="publicationDate">Publication Date</param>
+                </param>
+            </parameters>
+        </module>
+	</zone>
+<literal>
+<![CDATA[
+</td>
+</tr>
+</table>
+]]>
+</literal>
+	<zone>
+		<title>Imports</title>
+		<module class="size size_2_4">
+            <title>Import AFP</title>
+            <template>dashboard/db.import.tpl</template>
+            <parameters>
+				<param name="source">news</param>
+				<param name="orderBy">id DESC</param>
+				<param name="where">siteId = '@SiteID' AND workflowState='draft_import' AND import_feed='afp'</param>
+                <param name="from">0</param>
+                <param name="limit">300</param>
+                <param name="fields">
+                    <param name="title">_DASHBOARD_MODULE_HEADER_TITLE</param>
+                    <param name="createdAt">Creation Date</param>
+                </param>
+            </parameters>
+        </module>
+		<module class="size size_2_4">
+            <title>Import Relaxfil</title>
+            <template>dashboard/db.import.tpl</template>
+            <parameters>
+				<param name="source">news</param>
+				<param name="orderBy">id DESC</param>
+				<param name="where">siteId = '@SiteID' AND workflowState='draft_import' AND import_feed='relaxfil'</param>
+                <param name="from">0</param>
+                <param name="limit">300</param>
+                <param name="fields">
+                    <param name="title">_DASHBOARD_MODULE_HEADER_TITLE</param>
+                    <param name="createdAt">Creation Date</param>
+                </param>
+            </parameters>
+        </module>
+    </zone>
+<literal>
+<![CDATA[
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+]]>
+</literal>
+	<zone>
+        <title>Dernieres actions + Evenements + Slideshow + Video</title>
+		<module class="size size_1_4">
+            <title>Dernieres actions</title>
+            <template>dashboard/tasks.history.tpl</template>
+            <parameters>
+            	<param name="from">0</param>
+                <param name="limit">30</param>
+				<param name="orderBy">modifiedat DESC, modifiedat_time DESC</param>
+				<param name="fields">
+                    <param name="title">_DASHBOARD_MODULE_HEADER_TITLE</param>
+                    <param name="type">Type</param>
+                </param>
+            </parameters>
+        </module>
+		<module class="size size_1_4">
+            <title>Evenements</title>
+            <template>dashboard/search.editorial.tpl</template>
+            <parameters>
+            	<param name="query">className:event AND siteId:@SiteID AND workflowState:published</param>
+				<param name="from">0</param>
+                <param name="limit">30</param>
+				<param name="orderBy">modifiedAt DESC</param>
+				<param name="fields">
+                    <param name="title">_DASHBOARD_MODULE_HEADER_TITLE</param>
+					<param name="channel">Rubric</param>
+                    <param name="modifiedAt">Modification Date</param>
+                </param>
+            </parameters>
+        </module>
+		<module class="size size_1_4">
+            <title>Slideshow</title>
+            <template>dashboard/search.editorial.tpl</template>
+            <parameters>
+            	<param name="query">className:slideshow AND siteId:@SiteID AND workflowState:published</param>
+            	<param name="from">0</param>
+                <param name="limit">30</param>
+				<param name="orderBy">publicationdate DESC, publicationtime DESC</param>
+				<param name="fields">
+                    <param name="title">_DASHBOARD_MODULE_HEADER_TITLE</param>
+					<param name="channel">Rubric</param>
+                    <param name="publicationDate">Publication Date</param>
+                </param>
+            </parameters>
+        </module>
+		<module class="size size_1_4">
+            <title>Video</title>
+            <template>dashboard/search.editorial.tpl</template>
+            <parameters>
+            	<param name="query">className:video AND siteId:@SiteID AND workflowState:published</param>
+            	<param name="from">0</param>
+                <param name="limit">30</param>
+				<param name="orderBy">publicationdate DESC, publicationtime DESC</param>
+				<param name="fields">
+                    <param name="title">_DASHBOARD_MODULE_HEADER_TITLE</param>
+					<param name="channel">Rubric</param>
+                    <param name="publicationDate">Publication Date</param>
+                </param>
+            </parameters>
+        </module>
+	</zone>
+<literal>
+<![CDATA[
+</td>
+</tr>
+</table>
+]]>
+</literal>
+</dashboard>

@@ -1,0 +1,37 @@
+/* autoComplete */
+.autoComplete ul {
+background: #CEE1EF;
+-moz-border-radius-bottomright: 5px;
+-moz-border-radius-bottomleft: 5px;
+-webkit-border-bottom-right-radius: 5px;
+-webkit-border-bottom-left-radius: 5px;
+padding: 5px 5px;
+margin: 0;
+border-bottom: 1px solid #999;
+border-right: 1px solid #999;
+}
+
+.autoComplete ul li {
+background: #EBF2FA;
+-moz-border-radius: 3px;
+padding: 0 100px 0 5px;
+cursor: pointer;
+margin-top: 2px;
+}
+
+.autoComplete ul li.selected {
+background: #266AAD;
+color: #FFF;
+}
+
+.autoComplete ul li.sub {
+}
+
+#account fieldset legend {
+	font-weight: bold;
+}
+
+#account fieldset {
+	border: 1px solid #E0E0E0;
+	padding: 5px 5px;
+}

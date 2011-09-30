@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<NewsML>
+  <Catalog Href="http://www.afp.com/dtd/AFPCatalog.xml"/>
+  <NewsEnvelope>
+    <DateAndTime>20090304T152836Z</DateAndTime>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>afp.com</ProviderId>
+        <DateId>20090304</DateId>
+        <NewsItemId>090304152740.s321sts6</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:afp.com:20090304:090304152740.s321sts6:1</PublicIdentifier>
+      </NewsIdentifier>
+      <NameLabel>US-economy-jobs-cowgirl-offbeat</NameLabel>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20090304T152740Z</FirstCreated>
+      <ThisRevisionCreated>20090304T152740Z</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+    </NewsManagement>
+    <NewsComponent>
+      <NewsLines>
+        <HeadLine>Yeehaw! Out-of-work cowgirl saddles up for Texas</HeadLine>
+        
+        
+        <DateLine>TAMPA, Florida, March 4, 2009 (AFP)</DateLine>
+        <CopyrightLine>© 2009 AFP</CopyrightLine>
+        <SlugLine>US-economy-jobs-cowgirl-offbeat</SlugLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Provider>
+          <Party FormalName="AFP"/>
+        </Provider>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="en"/> 
+        <OfInterestTo FormalName="ext--english--relaxnews--lifestyle"/>
+      </DescriptiveMetadata>
+      <NewsComponent>
+        <ContentItem>
+          <MediaType FormalName="Text"/>
+          <Format FormalName="bcNITF2.5"/>
+          <DataContent>
+            <p> They say that even cowgirls get the blues, but when Donna Byrne lost her job at a cattle ranch last month, she saddled up her horses, Tonto and Jay, and lit out for Texas, chasing a dream.</p>
+            <p>The 44-year-old had wanted to ride horseback to the Lone Star state from her home in Florida since she was 15, but she began planning for real almost a year ago.</p>
+            <p>"Now that I lost my job, I have a reason to go," Byrne told AFP, in a telephone interview from the trail.</p>
+            <p>She set out in early February from the rural town of Arcadia, Florida for Amarillo, Texas -- a journey that will take her some 1,600 miles (2,560 kilometers) and through as many as seven states, including several southern states hard-hit by the US recession.</p>
+            <p>But her unorthodox odyssey is an example of the lengths some people will go to find work in a brutal economic downturn.</p>
+            <p>She has no set schedule, but she is awake and ready to ride by 9:00 am each day.</p>
+            <p>Her constant companions are two seven-year-old paint breed horses.</p>
+            <p>Tonto is the pack horse, loaded with grain and hay, canned food and water for Byrne, and her blanket and tent. Jay is Byrne's ride.</p>
+            <p>She and her horses then travel backroads by day, staying off major highways.</p>
+            <p>"I keep going until I get to my destination for the day," Byrne said.</p>
+            <p>One major difficulty is finding fresh water for the horses. When Byrne can't find a lake or creek, she leads the horses to ditches to drink rainwater.</p>
+            <p>Byrne has a cellphone, but no other modern-day digital or computer technology such as a global positioning system. She is not even using a map.</p>
+            <p>She knows the roads of the US Deep South well because she drove trucks for a living when she wasn't working as a cowgirl.</p>
+            <p>Her time as a truck driver is another reason she is making her journey by horseback. She had her driver's license revoked after getting too many tickets for motor vehicle violations.</p>
+            <p>Helping to steer Byrne to places where she and her horses can stay are Cindi Perugino, owner of Southern Nights Farm in Bushnell, Florida, and Barbara Mackenzie, of the Suncoast chapter of the organization known as Cowboys for Christ.</p>
+            <p>"We talk with her daily and help her to find places to stay overnight," explained Perugino.</p>
+            <p>Byrne was due to continue northward out of Florida and into Alabama this week, traveling 15 to 20 miles (25 to 30 kilometers) a day.</p>
+            <p>She does not have a cowgirl job waiting for her in Amarillo. But if she has no luck there, she said, "then I'll keep going westward until I do find a job."</p>
+          </DataContent>
+        </ContentItem>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

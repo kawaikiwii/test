@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<NewsML>
+  <Catalog Href="http://www.afp.com/dtd/AFPCatalog.xml"/>
+  <NewsEnvelope>
+    <DateAndTime>20081210T141307Z</DateAndTime>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>afp.com</ProviderId>
+        <DateId>20081210</DateId>
+        <NewsItemId>081210141112.qgj5n4ho</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:afp.com:20081210:081210141112.qgj5n4ho:1</PublicIdentifier>
+      </NewsIdentifier>
+      <NameLabel>Education-primaire-internet</NameLabel>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20081210T141112Z</FirstCreated>
+      <ThisRevisionCreated>20081210T141112Z</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+    </NewsManagement>
+    <NewsComponent>
+      <NewsLines>
+        <HeadLine>Pétition de professeurs des écoles pour demander la démission de Darcos</HeadLine>
+        
+        
+        <DateLine>PARIS, 10 déc 2008 (AFP)</DateLine>
+        <CopyrightLine>© 2008 AFP</CopyrightLine>
+        <SlugLine>Education-primaire-internet</SlugLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Provider>
+          <Party FormalName="AFP"/>
+        </Provider>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="fr"/> 
+        <OfInterestTo FormalName="ext--francais--relaxnews--artdevivre"/>
+      </DescriptiveMetadata>
+      <NewsComponent>
+        <ContentItem>
+          <MediaType FormalName="Text"/>
+          <Format FormalName="bcNITF2.5"/>
+          <DataContent>
+            <p> Une pétition lancée sur internet par une centaine de maîtres d'écoles primaires, pour demander l'arrêt de la politique éducative menée par le gouvernement et la démission du ministre de l'Education Xavier Darcos, avait recueilli mercredi plus de 13.600 signatures électroniques.</p>
+            <p>Deux semaines et demie après se mise en ligne, la pétition, consultable sur le site www.darcos-demission.org, intitulée "Stop à la démolition de l'école publique. Stop au mépris. M. Darcos doit démissionner", comptait 13.618 signatures.</p>
+            <p>Les initiateurs de l'appel reprochent au ministre ses mesures prises depuis mai 2007: "suppression de la carte scolaire", nouveaux programmes et diminution de deux heures du temps hebdomadaire d'enseignement en primaire, "déclarations insultantes sur les maternelles".</p>
+            <p>Ils critiquent aussi la "suppression brutale de 3.000 postes d'enseignants spécialisés des Rased" (spécialistes de la difficulté scolaire), ou encore "la disparition programmée des IUFM" (Instituts de formation des maîtres), etc.</p>
+            <p>Ils craignent d'éventuels "méfaits" de l'évaluation des élèves en CE1 et CM2, en particulier une concurrence entre les écoles.</p>
+            <p>"Nous voulons rester dignes de notre mission d'éducateur. Nous demandons que cessent la brutalité, la méfiance et le mépris. Nous demandons l'arrêt de cette politique et la démission du ministre qui l'incarne", conclut l'appel.</p>
+          </DataContent>
+        </ContentItem>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<plugins>
+  <plugin id="mssql">
+    <name>SQL Server</name>
+    <description>Search through a SQL Server database</description>
+    <className>wcmBizsearchPluginMSSQL</className>
+    <id>mssql</id>
+<path>/var/www/dev.bo.afprelax.net/api/search/plugins/mssql</path></plugin>
+  <plugin id="textml">
+    <name>TextML</name>
+    <description>Search through your TextML repository</description>
+    <className>wcmBizsearchPluginTextML</className>
+    <id>textml</id>
+<path>/var/www/dev.bo.afprelax.net/api/search/plugins/textml</path></plugin>
+  <plugin id="mysql">
+    <name>MySQL</name>
+    <description>Search through a MySQL database</description>
+    <className>wcmBizsearchPluginMySQL</className>
+    <id>mysql</id>
+<path>/var/www/dev.bo.afprelax.net/api/search/plugins/mysql</path></plugin>
+  <plugin id="solr">
+    <name>Solr</name>
+    <description>Search using a Solr search engine</description>
+    <className>wcmBizsearchPluginSolr</className>
+    <id>solr</id>
+<path>/var/www/dev.bo.afprelax.net/api/search/plugins/solr</path></plugin>
+  <plugin id="dam">
+    <name>DAM TextML</name>
+    <description>Search through DAM's TextML</description>
+    <className>wcmBizsearchPluginDAM</className>
+    <id>dam</id>
+<path>/var/www/dev.bo.afprelax.net/api/search/plugins/dam</path></plugin>
+</plugins>

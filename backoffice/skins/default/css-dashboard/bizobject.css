@@ -1,0 +1,533 @@
+#content {
+font-size: 12px;
+}
+
+#content .title, 
+#content .summary {
+    background:transparent url("../images/gui/button-bg-blue.png") repeat-x scroll left top;
+    border:1px solid #2b4966;
+    color:#FFFFFF;
+    font-size:10px;
+    margin:3px 3px 0 0;
+    padding:0px 5px 1px;
+    text-decoration:none;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+#content .title:hover,
+#content .summary:hover {
+    background: transparent url("../images/gui/button-bg-white.png") repeat-x scroll left top;
+    border: 1px solid #CCCCCC;
+    color: #000000;
+    text-decoration:none;
+}
+
+#content ul .xtitle {
+    position: relative;
+    left: 620px;
+    top: -26px;
+}
+
+#content .summary {
+    position: relative;
+    left: 548px;
+    top: -205px;
+}
+
+*+html .summary {
+    left: 543px;
+}
+
+#content #tab-menu {
+display: inline;
+margin: 0 0 0 0;
+padding: 0 0 0 0;
+}
+
+#content #tab-menu li {
+display: inline;
+margin: 0 0 0 0;
+padding: 0 0 0 0;
+}
+
+#content #tab-menu li a {
+display: block;
+float: left;
+margin: 0 1px 0 0;
+padding: 3px 8px 3px 8px;
+background-color: #f4f4f4;
+text-decoration: none;
+}
+
+
+#content div.zone {
+clear: both;
+margin: 0 0 0 0;
+padding: 0 0 0 0;
+}
+
+#content div.zone .error {
+    background: transparent url("../images/gui/bg-error.png") 0 0 repeat-y;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    margin-left: -7px;
+    padding-left: 7px;
+}
+
+#content div.zone div.action-header {
+margin: 0 10px 10px 0;
+clear: left;
+background-repeat: no-repeat;
+background-position: 0px 50%;
+background-color: #EBF2FA;
+-moz-border-radius-topleft: 5px;
+-moz-border-radius-bottomleft: 5px;
+-webkit-border-top-left-radius: 5px;
+-webkit-border-bottom-left-radius: 5px;
+border: 3px solid;
+height: 22px;
+padding-bottom: 3px;
+color: #000;
+    -moz-border-top-colors:    #d9d9d9 #FFF #FFF;
+    -moz-border-left-colors:   #d9d9d9 #FFF #FFF;
+    -moz-border-right-colors:  #999 #FFF #FFF;
+    -moz-border-bottom-colors: #999 #FFF #FFF;
+} html*#content div.zone div.action-header { border: 1px solid #d9d9d9; padding: 2px 2px 5px 2px; }
+
+#content div.zone div.action-header h3 {
+margin: 0;
+font-size: 14px;
+font-weight: bold;
+float: left;
+cursor: pointer;
+    background: url("../images/gui/bullet-tab-open.png") top left no-repeat;
+    height: 24px;
+    padding: 3px 0px 0px 22px;
+}
+
+#content div.zone div.action-header h3.collapsed {
+    background-image: url("../images/gui/bullet-tab-closed.png");
+}
+
+#content div.zone div.action-header ul {
+float: right;
+margin: 0 0 0 0;
+padding: 0 0 0 0;
+}
+
+#content div.zone div.action-header ul li {
+display: inline;
+margin: 0 0 0 0;
+padding: 0 0 0 0;
+}
+
+#content div.zone div.action-header ul li a, #content div.zone .chapter li a {
+display: block;
+float: left;
+padding: 2px 8px 2px 8px;
+margin: 3px 3px 0 0;
+font-size: 10px;
+text-decoration: none;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+color: #FFF;
+border: 1px solid #2b4966;
+background: url("../images/gui/button-bg-blue.png") top left repeat-x;
+}
+#content div.zone div.action-header ul li a:hover, #content div.zone .chapter li a:hover {
+color: #000;
+border: 1px solid #CCC;
+background: url("../images/gui/button-bg-white.png") top left repeat-x;
+}
+
+#content div.zone .chapter {
+    margin: 0;
+    padding: 0;
+}
+
+#content div.zone .chapter li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#content div.zone fieldset {
+width: 95%;
+border: 1px solid #E0E0E0;
+margin: 0 0 20px 0;
+padding: 5px;
+float: left;
+clear: left;
+}
+
+#content div.zone fieldset legend {
+font-weight: normal;
+}
+#content div.zone fieldset legend.collapsable {
+cursor: pointer;
+}
+
+#content div.zone fieldset > ul {
+margin: 0;
+padding: 0;
+padding-left: 10px;
+}
+
+#content div.zone fieldset ul li {
+list-style-type: none;
+clear: left;
+margin: 5px 0 5px 0;
+padding: 0 0 0 0;
+}
+
+#content div.zone fieldset ul li label {
+display: block;
+float: left;
+text-align: left;
+margin: 2px 10px 10px 0;
+padding: 0 0 0 0;
+color: black;
+}
+
+
+#content div.zone fieldset ul li.option label {
+display: block;
+float: left;
+width: auto;
+text-align: left;
+margin: 2px 10px 20px 0;
+padding: 0 0 0 0;
+}
+
+#content div.zone fieldset ul li input.date {
+width: 100px;
+}
+
+#content div.zone fieldset ul li input[type="checkbox"] {
+margin: 0 0 0 0;
+padding: 0 0 0 0;
+}
+
+#content div.zone fieldset ul li a.list-builder,
+#content div.zone fieldset ul li a.template-picker {
+text-decoration: none;
+padding: 1px 8px 1px 8px;
+margin: 0 0 0 5px;
+color: black;
+    border: 2px solid #CCC;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-top-colors:    #CCC #F0F0F0;
+    -moz-border-left-colors:   #CCC #F0F0F0;
+    -moz-border-right-colors:  #696969 #CCC;
+    -moz-border-bottom-colors: #696969 #CCC;
+    background: #CCC url("../images/gui/button-bg.png") top left repeat-x;
+    cursor: pointer;
+    color: #FFF;
+    font-size: 11px;
+} html*#content div.zone fieldset ul li a.list-builder,
+html*#content div.zone fieldset ul li a.template-picker { border: 1px solid #666; }
+
+#quickSearch input[type="text"] {
+    width: 100px;
+}
+
+#quickSearch input[type="submit"] {
+    text-decoration: none;
+padding: 1px 8px 1px 8px;
+color: black;
+    border: 2px solid #CCC;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-top-colors:    #CCC #F0F0F0;
+    -moz-border-left-colors:   #CCC #F0F0F0;
+    -moz-border-right-colors:  #696969 #CCC;
+    -moz-border-bottom-colors: #696969 #CCC;
+    background: #CCC url("../images/gui/button-bg.png") top left repeat-x;
+    cursor: pointer;
+    color: #FFF;
+    font-size: 11px;
+} html*#quickSearch input[type="submit"] { border: 1px solid #666; }
+
+#content fieldset ul li a.date-picker {
+text-decoration: none;
+padding: 1px 8px 2px 8px;
+margin: 0;
+margin-left: 4px;
+font-size: 12px;
+background: #F2FFE1 url("../images/gui/date-picker.png") 2px 2px no-repeat;
+padding-left: 22px;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+    color: #000;
+    background-color: #EBF2FA;
+    border: 2px solid #CCC;
+    -moz-border-top-colors:    #b1cee5 #FFF;
+    -moz-border-left-colors:   #b1cee5 #FFF;
+    -moz-border-right-colors:  #84aece #EBF2FA;
+    -moz-border-bottom-colors: #84aece #EBF2FA;
+} html*#content fieldset ul li a.date-picker { border: 1px solid #84AECE; padding: 2px 8px 4px 22px; background-position: 2px 1px; }
+
+#content div.zone fieldset ul li textarea {
+width: 460px;
+}
+
+#content div.zone fieldset ul li label a {
+}
+
+#content div.zone #pages fieldset ul li label {
+display: block;
+float: left;
+text-align: left;
+margin: 2px 10px 20px 0;
+padding: 0 0 0 0;
+}
+
+#content div.zone #pages fieldset ul li input[type="text"] {
+width: 460px;
+}
+
+#content div.zone #pages fieldset ul li textarea {
+width: 600px;
+height: 150px;
+margin: 0 10px 0 10px;
+}
+
+#content div.zone fieldset ul li ul {
+float: left;
+clear: left;
+margin: 5px 0 5px 0;
+padding: 0 0 0 0;
+}
+
+#content div.zone fieldset ul li ul li {
+margin: 0 0 0 0;
+padding: 0 0 0 0;
+font-size: 1em;
+line-height: 1.8em;
+}
+
+#content div.zone fieldset ul li ul.tags li {
+clear: none;
+float: left;
+display: block;
+white-space: nowrap;
+background: #F0F0F0;
+border: 1px solid #EAEAEA;
+padding: 0px 0 0 5px;
+margin: 0 5px 5px 0;
+line-height: 16px;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+}
+
+#content div.zone fieldset ul li ul.tags li:hover {
+    background: #F7F7F7;
+    border: 1px solid #D9D9D9;
+}
+
+#content div.zone fieldset ul li ul li em {
+margin: -2px 15px 0 0;
+float: left;
+display: block;
+font-style: normal;
+}
+
+#content div.zone fieldset ul li ul li a {
+display: block;
+float: left;
+margin: 2px 3px 0 0;
+width: 10px;
+height: 10px;
+background: url("../images/gui/xit.gif") no-repeat;
+}
+
+#content div.zone fieldset ul li ul li a:hover {
+background: url("../images/gui/xit.gif") no-repeat -10px 0;
+}
+
+#content div.zone fieldset ul li ul li a span {
+display: none;
+}
+
+#content div.zone a.add-page {
+float: right;
+clear: left;
+display: block;
+text-decoration: none;
+border: 1px solid silver;
+background-color: #f4f4f4;
+padding: 2px 8px 2px 8px;
+margin: 10px 0 30px 0;
+color: black;
+}
+
+div.relation-builder div.picker div.functions ul.resultset.photos {
+display: block;
+float: left;
+clear: left;
+width: 300px;
+
+}
+
+div.relation-builder div.picker div.functions ul.resultset.photos li {
+display: block;
+float: left;
+width: 100px;
+}
+
+/* autoComplete */
+#content div.zone fieldset .autoComplete ul {
+background: #CEE1EF;
+-moz-border-radius-bottomright: 5px;
+-moz-border-radius-bottomleft: 5px;
+-webkit-border-bottom-right-radius: 5px;
+-webkit-border-bottom-left-radius: 5px;
+padding: 5px 5px;
+margin: 0;
+border-bottom: 1px solid #999;
+border-right: 1px solid #999;
+}
+
+#content div.zone fieldset .autoComplete ul li {
+background: #EBF2FA;
+-moz-border-radius: 3px;
+padding: 0 100px 0 5px;
+cursor: pointer;
+margin-top: 2px;
+}
+
+#content div.zone fieldset .autoComplete ul li.selected {
+background: #266AAD;
+color: #FFF;
+}
+
+#content div.zone fieldset .autoComplete ul li.sub {
+}
+
+#content div.zone .tags {
+    width: 100%;
+}
+
+/* Overview */
+#_mainContent {
+    float: left;
+    width: 65%;
+}
+
+#_infoContent {
+    float: left;
+    width: 32%;
+    margin-left: 10px;
+}
+
+#_mainContent h3 {
+    font-size: 18px;
+}
+
+#_mainContent h4, #_infoContent h4 {
+    font-size: 15px;
+    border-bottom: 1px solid #CCC;
+    margin: 5px 0 10px;
+}
+
+#_infoContent ul, #_infoContent li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#_infoContent .info, #_mainContent .info {
+    background: #F0F0F0;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+#_infoContent ul li {
+    font-size: 11px;
+}
+
+#_infoContent .media li {
+    width: 100px;
+    background: #F0F0F0;
+    padding: 5px;
+    border: 1px solid #D9D9D9;
+    font-size: 10px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+#_infoContent .media li a img {
+    border: 1px solid #666;
+}
+
+#_infoContent span {
+    width: 120px;
+    float: left;
+    font-size: 11px;
+    color: #999;
+}
+
+
+
+
+
+#mainForm div.zone table.fullwidth {
+    clear: left;
+    border-spacing: 0;
+    width: 99%;
+}
+
+#mainForm div.zone table.fullwidth tr.alternate
+{
+    background-color: #f4f4f4;
+}
+
+#mainForm div.zone table.fullwidth th {
+    padding: 4px 6px;
+    margin: 0;
+    font-weight: normal;
+    font-size: 11px;
+    color: #000;
+    text-align: left;
+    background-color: #D9D9D9;
+    border-top: 1px solid #FFF;
+    border-bottom: 1px solid silver;
+    white-space: nowrap;
+}
+
+#mainForm div.zone table.fullwidth td {
+    padding: 4px 6px;
+    margin: 0;
+    vertical-align: top;
+    font-weight: normal;
+    font-size: 11px;
+}
+
+#mainForm div.zone table.fullwidth td.nowrap {
+    white-space: nowrap;
+}
+
+#mainForm div.zone table.fullwidth td a {
+    float: left;
+    clear: left;
+    text-align: center;
+    margin-bottom: 2px;
+    background: url("../images/gui/button-bg-blue.png") repeat-x scroll left top;
+    border: 1px solid #4D7B9F;
+    color: #FFF;
+    font-size: 10px;
+    padding: 0px 5px 1px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    width: 75px;
+}
+
+#mainForm div.zone table.fullwidth td a:hover {
+    background:transparent url("../images/gui/button-bg-white.png") repeat-x scroll left top;
+    border:1px solid #CCCCCC;
+    color:#000000;
+    text-decoration: none;
+}

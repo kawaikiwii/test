@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<NewsML>
+  <Catalog Href="http://www.afp.com/dtd/AFPCatalog.xml"/>
+  <NewsEnvelope>
+    <DateAndTime>20081210T143144Z</DateAndTime>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>afp.com</ProviderId>
+        <DateId>20081210</DateId>
+        <NewsItemId>081210142928.1a8ho4vj</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:afp.com:20081210:081210142928.1a8ho4vj:1</PublicIdentifier>
+      </NewsIdentifier>
+      <NameLabel>Allemagne-société-consommation-banques-internet</NameLabel>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20081210T142928Z</FirstCreated>
+      <ThisRevisionCreated>20081210T142928Z</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+    </NewsManagement>
+    <NewsComponent>
+      <NewsLines>
+        <HeadLine>Berlin renforce la protection des données personnelles</HeadLine>
+        
+        
+        <DateLine>BERLIN, 10 déc 2008 (AFP)</DateLine>
+        <CopyrightLine>© 2008 AFP</CopyrightLine>
+        <SlugLine>Allemagne-société-consommation-banques-internet LEAD</SlugLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Provider>
+          <Party FormalName="AFP"/>
+        </Provider>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="fr"/> 
+        <OfInterestTo FormalName="ext--francais--relaxnews--artdevivre"/>
+      </DescriptiveMetadata>
+      <NewsComponent>
+        <ContentItem>
+          <MediaType FormalName="Text"/>
+          <Format FormalName="bcNITF2.5"/>
+          <DataContent>
+            <p> Le gouvernement allemand a adopté mercredi un projet de loi pour renforcer la protection des données personnelles, alors qu'une série de scandales de trafic d'informations confidentielles a secoué le pays.</p>
+            <p>"Avec ce projet, le gouvernement vise à améliorer le niveau de protection des données personnelles et la transparence de leur utilisation ainsi qu'à renforcer l'influence des citoyennes et des citoyens sur l'utilisation de leurs données par la publicité", a expliqué le ministre de l'Intérieur Wolfgang Schäuble au cours d'une conférence de presse.</p>
+            <p>Cette mesure fait suite à une série de révélations sur les failles du système de sécurité des données confidentielles en Allemagne.</p>
+            <p>Dernière en date: le magazine Wirtschaftswoche rapportait cette semaine que les coordonnées bancaires de 21 millions d'Allemands étaient à vendre au marché noir pour 12 millions d'euros.</p>
+            <p>En octobre, l'opérateur de télécommunications Deutsche Telekom avait dû reconnaître que les données de 17 millions de clients avaient été volées, tandis que celles de 30 millions de personnes avaient été consultables sur Internet pendant deux jours à la suite d'une erreur.</p>
+            <p>Le premier volet du projet de loi adopté mercredi en Conseil des ministres prévoit la mise en place d'une procédure d'audit facultatif.</p>
+            <p>"Des entreprises peuvent recourir à un certificat de protection des données si elles suivent une procédure régulière de contrôle" et "respectent les directives" en la matière, selon le texte.</p>
+            <p>Le deuxième volet majeur du projet de loi est de soumettre à l'autorisation explicite des citoyens l'utilisation de leurs données par la publicité et les études de marché ou d'opinion.</p>
+            <p>Sont exemptées de cette mesure notamment les publicités d'organisations caritatives et de commerçants, ainsi que les suppléments publicitaires glissés dans les journaux.</p>
+            <p>De plus, il sera interdit à toute entreprise dominante sur le marché de conditionner la clôture d'un accord à l'autorisation d'utiliser les données du client.</p>
+            <p>"Il s'agit aussi de sensibiliser les citoyens" à ce problème pour que "leur "prudence et leur attention réduise la marge de manoeuvre des criminels", a souligné M. Schäuble, invitant ses concitoyens à "vérifier régulièrement leurs relevés de comptes".</p>
+            <p>Le chargé de mission du gouvernement pour la protection des données, Peter Schaar, et le président de la Fédération de la protection du consommateur, Gerd Billen, se sont félicités que le gouvernement a "résisté aux puissants lobbies de l'économie" opposés à la loi, selon eux.</p>
+            <p>Ils ont néanmoins demandé quelques corrections et précisions notamment sur l'organe de surveillance d'application de la loi dans ce domaine, le délai accordé aux entreprises pour se mettre au diapason de la loi -3 ans-, et les exemptions.</p>
+          </DataContent>
+        </ContentItem>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

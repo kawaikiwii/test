@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+	<name>Digital Assets Management</name>
+	<description>_BIZ_IMPORT_DAM</description>
+	<category>remote</category>
+	<className>wcmImportDAM</className>
+</plugin>

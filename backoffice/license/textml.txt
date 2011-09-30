@@ -1,0 +1,143 @@
+TEXTML SERVER END-USER LICENSE AGREEMENT
+
+This End-User License Agreement ("LICENSE") is a legal agreement between you (either an 
+individual or a single entity) and IXIASOFT inc. ("IXIASOFT") for the TEXTML SERVER 
+software product, which includes computer software and may include associated media, 
+printed materials, and "online" or electronic documentation ("SOFTWARE PRODUCT"). By 
+installing or otherwise using the SOFTWARE PRODUCT, you agree to be bound by the terms 
+of this LICENSE. If you do not agree to the terms of this LICENSE, do not install or use the 
+SOFTWARE PRODUCT.
+
+SOFTWARE PRODUCT LICENSE. The SOFTWARE PRODUCT constitutes valuable trade 
+secrets of IXIASOFT and contain proprietary and confidential information. The SOFTWARE 
+PRODUCT is protected by copyright laws and international copyright treaties, as well as other 
+intellectual property laws and treaties. The SOFTWARE PRODUCT is licensed, not sold.
+
+RESTRICTED USE OF SOFTWARE PRODUCT. There are six versions of the SOFTWARE 
+PRODUCT: Evaluation, Development, Lite, Small Business, Standard and Enterprise. You 
+may only use the SOFTWARE PRODUCT in accordance with the restrictions related to the 
+version you have acquired. If you change or replace a version by another, or if another 
+version is provided to you by IXIASOFT, you may only use the SOFTWARE PRODUCT in 
+accordance with the restrictions related to the new version you are using. You may check the 
+version of the software you are currently using by consulting the Administration console of the 
+SOFTWARE PRODUCT. The following restrictions apply : the Evaluation version may only be 
+installed and used for the purpose of evaluating the SOFTWARE PRODUCT; the 
+Development version can only be installed and used for training purposes or application 
+development involving the SOFTWARE PRODUCT; neither the Evaluation and nor the 
+Development versions can be used for commercial of manufacturing purposes in any manner 
+whatsoever. 
+
+GRANT OF LICENSE.  This SOFTWARE PRODUCT contains components that are to be 
+installed on a single server computer ("SERVER"), and components that may be installed on 
+multiple client computers within your organization. The files TEXTMLSERVER.DLL and 
+TEXTMLSERVICE.EXE are the components that are installed on a server (the "SERVER 
+COMPONENTS"). This LICENSE grants you the personal, non-transferable and non-
+exclusive right to install and use the SERVER COMPONENTS on the SERVER. Any other 
+files contained in the SOFTWARE PRODUCT can be installed on multiple client computers 
+connected to the SERVER (the "CLIENT COMPONENTS"). If you want to install the SERVER 
+COMPONENTS on more than one server, you must obtain additional copies of the 
+SOFTWARE PRODUCT and related licenses. You may make copies of the SOFTWARE 
+PRODUCT for backup purposes only. Other organizations must obtain their own copies of the 
+SOFTWARE PRODUCT by registering at the IXIASOFT Web Site (WWW.IXIASOFT.COM) and 
+entering into a separate license with IXIASOFT. 
+
+COPYRIGHT. All rights, title, and copyrights in and to the SOFTWARE PRODUCT and any 
+copies of the SOFTWARE PRODUCT are owned by IXIASOFT or its suppliers. You may 
+make copies of the printed materials, "online" or electronic documentation, or associated 
+media accompanying the SOFTWARE PRODUCT for use within your organization, but you 
+may not distribute such copies outside of your organization.
+
+LIMITATIONS. You may not reverse- engineer, decompile, or disassemble the SOFTWARE 
+PRODUCT or otherwise create or attempt to create or permit, allow or assist others to create 
+the source code of the SOFTWARE PRODUCT, or its structural frame work or to use the 
+SOFTWARE PRODUCT in whole or in part for any purpose except as expressly provided 
+under this Agreement.
+
+RENTAL. You may not cause or permit the loan, rent, lease transfer of possession (whether 
+by sale, exchange, operation of law or otherwise), electronic transmission or time-sharing of 
+the SOFTWARE PRODUCT. 
+
+TRANSFER. You may not transfer the LICENSE nor the SOFTWARE PRODUCT to another 
+individual or entity.
+
+TERMINATION. Without prejudice to any other rights, IXIASOFT may terminate this 
+LICENSE if you fail to comply with the terms and conditions of this LICENSE. In such event, 
+you must destroy all copies of the SOFTWARE PRODUCT. 
+
+SOFTWARE UPDATE PLAN. By purchasing the SOFTWARE PRODUCT, you automatically 
+subscribe to IXIASOFT's SOFTWARE UPDATE PLAN for a 12-months period ("INITIAL 
+TERM"). The SOFTWARE UPDATE PLAN grants you access, at no additional fee during the 
+INITIAL TERM, to all major and minor releases of the SOFTWARE PRODUCT, as well as to 
+technical support, should you need help in installing, updating and using the SOFTWARE 
+PRODUCT. Thirty (30) days before the end of the INITIAL TERM, you will receive an offer to 
+renew the SOFTWARE UPDATE PLAN for an additional 12-month period at the then current 
+applicable fees charged by IXIASOFT for such services. If you do not renew your 
+SOFTWARE UPDATE PLAN, you will no longer have access to any of the latest versions of 
+the SOFTWARE PRODUCT or to the technical support. PLEASE NOTE THAT IT IS NOT 
+POSSIBLE TO RENEW AN EXPIRED SOFTWARE UPDATE PLAN WITHOUT RE-
+PURCHASING AN ADDITIONAL SOFTWARE PRODUCT.
+
+LIMITED WARRANTY. IXIASOFT warrants that it has the right to grant the licence granted 
+herein with respect to SOFTWARE PRODUCT. IXIASOFT shall pay resulting damages and 
+costs finally awarded and the cost of any settlement in respect of any claim based on a 
+breach of the foregoing warranty provided that upon receiving notice of such a claim you shall 
+promptly give full particulars thereof to IXIASOFT and IXIASOFT shall have sole control of the 
+defense of such claim and all related settlement negotiations. The foregoing shall not apply if: 
+(i) the claim could not have been successfully made in respect of the most recently supplied 
+release of SOFTWARE PRODUCT; or (ii) the claim is based upon the use of SOFTWARE 
+PRODUCT in a manner not authorized by IXIASOFT or on modifications to SOFTWARE 
+PRODUCT not authorized by IXIASOFT. If such a claim has occurred, IXIASOFT shall have 
+the option exercisable by notice to you to terminate this Agreement upon simple written notice 
+to you to that effect. THE AFORESAID OBLIGATION OF IXIASOFT TO PAY DAMAGES 
+AND COSTS SHALL BE IXIASOFT'S SOLE AND EXCLUSIVE LIABILITY TO YOU OR ANY 
+THIRD PARTY WITH RESPECT TO THE SAID WARRANTY WHETHER ON ACCOUNT OF 
+DAMAGES (EVEN IF IXIASOFT HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH 
+DAMAGES) OR OTHERWISE.
+
+IXIASOFT does not represent or warrant that (i) the SOFTWARE PRODUCT will meet your 
+requirements or will operate in all the combinations which may be selected for use by you ; (ii) 
+the operation of SOFTWARE PRODUCT shall be error free or that all defects will be 
+corrected; or (iii) the operation of SOFTWARE PRODUCT shall not be interrupted by reason 
+of defect therein or by reason of fault on the part of IXIASOFT. YOU EXPRESSLY WAIVES, 
+AND IXIASOFT EXPRESSLY DISCLAIMS, ALL WARRANTIES OR CONDITIONS NOT 
+SPECIFICALLY SET FORTH IN THIS AGREEMENT INCLUDING BUT NOT LIMITED TO 
+IMPLIED WARRANTIES OR CONDITIONS OF MERCHANTABLE QUALITY AND FITNESS 
+FOR A PARTICULAR PURPOSE AND THOSE ARISING BY STATUTE OR OTHERWISE IN 
+LAW OR FROM COURSE OF DEALING OR USAGE OF TRADE, TO THE FULLEST 
+EXTENT ALLOW UNDER THE LAW.
+
+LIMITATION OF LIABILITY. IXIASOFT's liability for damages to you any cause regardless of 
+the form of action, whether in contract or in tort including negligence shall be limited to direct 
+damages suffered by you and shall not exceed the amounts paid by you for the SOFTWARE 
+PRODUCT. This limitation shall apply whether or not the alleged breach by IXIASOFT is a 
+breach of condition or fundamental term or a fundamental breach. 
+
+In no event shall IXIASOFT be liable for costs of procurement of substitute goods or services.  
+
+Neither party shall be liable to the other for loss of use, lost profits or revenue, interruptions of 
+business, failure to realise expected savings, or any indirect, consequential, punitive or 
+special damages, whether based in contract or not (including negligence, strict liability or 
+otherwise) and whether or not advised of the possibility of such damages.  This limitation in 
+no way means to limit IXIASOFT's liability for material injury caused through IXIASOFT's 
+intentional or gross negligence nor for bodily injuries caused to third parties by IXIASOFT's 
+fault in only those jurisdictions where the law does not allow this limitation.  
+
+The foregoing provisions state your exclusive remedies. You acknowledge and agree that the 
+provision of this Section allocates the risks under this Agreement between IXIASOFT and you 
+and that the price payable by you under this Agreement reflect the allocation of liability 
+specified herein.
+
+MISCELLANEOUS. This LICENSE is governed by the laws of the Province of Quebec, 
+Canada and the federal laws of Canada applicable therein excluding those provisions relating 
+to conflicts of laws and excluding the United Nations Convention on Contracts for the 
+International Sale of Goods if applicable. Each of the parties hereto irrevocably attorns to the 
+jurisdiction of the courts of the Province of Quebec and further agrees to commence any 
+litigation which may arise hereunder in the courts located in the Judicial District of Montreal, 
+Province of Quebec.
+ 
+Should you have any questions concerning this LICENSE, or if you desire to contact 
+IXIASOFT for any reason, please write: IXIASOFT inc., 75 Queen suite 4600, Montreal 
+Quebec H3C 2N6 Canada (INFO@IXIASOFT.COM).
+ 
+
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+	<name>Print</name>
+	<description>Print files</description>
+	<category>files</category>
+	<className>wcmImportPrint</className>
+</plugin>

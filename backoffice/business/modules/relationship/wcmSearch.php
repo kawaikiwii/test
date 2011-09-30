@@ -1,0 +1,167 @@
+<?php
+$config = wcmConfig::getInstance();
+$session = wcmSession::getInstance();
+
+/*
+Setup our parameters
+array(
+    'prefix' => '_wcm_rel_', // a prefix to avoid ID collision when using two instances
+    'kind' => wcmBizrelation::IS_COMPOSED_OF, 
+    'destinationClass' => 'photo',
+    'classFilter' => 'photo',
+    'resultSetStyle' => 'grid',
+    'resultSetDiv' => 'relation_resultset',
+    'searchEngine' => $config['wcm.search.engine'],
+    'createTab' => true,
+    'createModule' => 'business/subForms/uploadPhoto')
+*/
+$prefix = getArrayParameter($params, 'prefix', '_wcm_rel_');
+$pk = getArrayParameter($params, 'kind', wcmBizrelation::IS_RELATED_TO);
+$style = getArrayParameter($params, 'resultSetStyle', 'grid');
+$destinationClass = getArrayParameter($params, 'destinationClass', '');
+$onlyUniverse = getArrayParameter($params, 'onlyUniverse', false);
+$allowedUniverse = getArrayParameter($params, 'allowedUniverse', '');
+
+// retrieve class filter
+$classFilter = getArrayParameter($params, 'classFilter', null);
+
+$filter = "";
+
+// limit displays to universe actually used
+if ($onlyUniverse == true)
+	$filter .= "siteId:".$session->getSiteId()." AND ";
+else if (!empty($allowedUniverse))
+{
+	// do not include univers defined in $removeUniverse array
+	$i=0;
+	$filter .= "(";
+		
+	foreach($allowedUniverse as $universe)
+	{
+		if ($i == 0)
+			$filter.= "siteId:".$universe;
+		else
+			$filter.= " OR siteId:".$universe;
+		
+		$i++;
+	}
+	$filter .= ") AND ";
+}
+
+    if (is_array($classFilter))
+    {
+        if (count($classFilter) > 0)
+        {
+            $filter .= 'className:('.join(' OR ', $classFilter).')';
+        } else {
+            $filter .= null;
+        }
+    } 
+    else if (!empty($classFilter)) 
+    {
+        $filter .= 'className:'.$classFilter;
+    } 
+
+   //echo $filter;
+    
+// retrieve search plug-in
+$pluginFilter = getArrayParameter($params, 'searchEngine', $config['wcm.search.engine']);
+$plugins = simplexml_load_file(WCM_DIR.'/xml/searchPlugins.xml');
+
+if (!$pluginFilter)
+{
+    // No plugin supplied
+    $id = $config['wcm.search.engine'];
+    $description = array_shift($plugins->xpath('//plugin[@id=\''.$id.'\']'))->description;
+    $singlePlugin = $id;
+}
+elseif (is_array($pluginFilter))
+{
+    // Plugin filter supplied as an array
+    $totalPlugins = count($pluginFilter);
+    
+    if ($totalPlugins > 1)
+    {
+        // There there are more than one option in the array
+        foreach ($plugins->plugin as $plugin)
+        {
+            if (!in_array($plugin->id, $pluginFilter)) continue;
+            $pluginList["".$plugin->id] = $plugin->name;
+        }
+    } elseif (!$totalPlugins) {
+        
+        // The array is blank, so treat it as if $pluginFilter was null to begin with
+        $id = $config['wcm.search.engine'];
+        $description = array_shift($plugins->xpath('//plugin[@id=\''.$id.'\']'))->description;
+        $singlePlugin = $id;
+    } else {
+        // There is only one option in the array
+        $id = array_shift($pluginFilter);
+        $description = array_shift($plugins->xpath('//plugin[@id=\''.$id.'\']'))->description;
+        $singlePlugin = $id;
+    }
+        
+}
+else
+{
+    // Plugin is a string
+    $id = $pluginFilter;
+    $nodes = $plugins->xpath('//plugin[@id=\''.$id.'\']');
+    $description = array_shift($nodes)->description;
+    $singlePlugin = $id;
+}    
+
+if (isset($singlePlugin))
+{
+    echo '<input type="hidden" id="'.$prefix.'engine" value="'.$singlePlugin.'"/>';
+} else {
+    echo '<div><select id="'.$prefix.'engine">';
+    foreach($pluginList as $id => $name)
+    {
+        echo '<option value="'.$id.'">'.$name.'</option>';
+    }
+    echo '</select></div>';
+}
+
+?>
+<script type="text/javascript">
+    
+relationSearch.prepareSearch({
+    filter: '<?php echo $filter; ?>',
+    idPrefix: '<?php echo $prefix; ?>',
+    resultSet: '<?php echo $prefix; ?>resultsetBox',
+    style: '<?php echo $style; ?>',
+    pk: '_br_<?php echo $pk; ?>',
+    uid: '<?php echo $params['uid']; ?>',
+    pageSize: 9
+});
+
+<?php echo $prefix;?>_performSearch = function()
+{
+    $('<?php echo $prefix; ?>sortCtrl').show();
+    $('<?php echo $prefix; ?>sablier').show();
+    
+    relationSearch.search('<?php echo $params['uid']; ?>', $('<?php echo $prefix;?>query').value, {
+        engine: $('<?php echo $prefix; ?>engine').value
+    });
+}
+
+</script>
+
+    <div class="query">
+     <ul class="queryBar">
+        <input type="text" id="<?php echo $prefix;?>query" value=""/>
+        <a href="#" onclick="<?php echo $prefix;?>_performSearch(); return false;"><?php echo _SEARCH; ?></a>
+       	<?php
+       		//wcmGUI::renderButton('suggest', _BIZ_SUGGEST, array('onclick' => 'var data = wcmgetformdata(); if(data != -1) {wcmModal.showAddReplaceCancel(\'' . _BIZ_SUGGEST . '\', {url: wcmBaseURL + \'business/modules/modalbox/tme_find.php\', parameters : {kind:\'_similars\', uid: \'' . $params['uid'] . '\', data: data}}, tmeSimilarsCallback);} return false;', 'class' => 'list-builder nstein'));
+       	?>
+     </ul>
+    </div>
+    <div id="<?php echo $prefix; ?>sortCtrl" style="display: none">
+        <strong><?php echo _BIZ_ORDER_BY; ?>:</strong> <a href="javascript:relationSearch.orderBy('<?php echo $params['uid']; ?>', 'createdAt')"><?php echo ucfirst(_BIZ_DATE); ?></a> <a href="javascript:relationSearch.orderBy('<?php echo $params['uid']; ?>','title')"><?php echo ucfirst(_TITLE); ?></a>
+		<span id="<?php echo $prefix; ?>sablier" class="wait" style="display: none;">&nbsp;</span>
+    </div>
+
+<div id="<?php echo $prefix; ?>resultsetBox">
+</div>
+

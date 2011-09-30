@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dashboard>
+    <zone>
+        <title>_LOCK_MANAGEMENT</title>
+        <module class="large" ttl="0">
+            <title>_LOCK_BY_CLASS</title>
+            <template>system/lock/lockBy.tpl</template>
+            <parameters>
+                <param name="groupBy">objectClass</param>
+                <param name="fields">
+                    <param name="object">_OBJECT</param>                
+                    <param name="user">_LOCKED_BY</param>                
+                    <param name="lockDate">_LOCKED_AT</param>
+                    <param name="expirationDate">_EXPIRES_AT</param>
+                </param>
+            </parameters>
+        </module>
+    </zone>
+</dashboard>

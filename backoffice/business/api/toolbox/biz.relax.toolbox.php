@@ -1,0 +1,233 @@
+<?php 
+/**
+ * Here Many functions written by relax team
+ * @contact jmeyer@relaxnews.com
+ *
+ */
+ 
+ /**
+ * Check if the right directories are created
+ * If not, create the directories
+ *
+ * @param string 	$pathToDir 		Full path to directory
+ *
+ * @return boolean 					True on success, false otherwise
+ *
+ */
+
+function checkDirsAndCreateThem($pathToDir, $chmod = 0775) {
+    $dirParts = explode('/', $pathToDir);
+    
+    $dirPartReConstructed = '';
+    foreach ($dirParts as $dirPart) {
+        if ($dirPart != '') {
+            $dirPartReConstructed .= '/'.$dirPart;
+            
+            if (!is_dir($dirPartReConstructed)) {
+                if (mkdir($dirPartReConstructed, $chmod, true)) {
+                	@chmod($dirPartReConstructed, 0775);    
+                    if ($dirPartReConstructed != $pathToDir) {
+                        checkDirsAndCreateThem($pathToDir);
+                    } else
+                        break;
+                }
+            }
+        }
+    }
+    return true;
+}
+
+
+function getRubricCssClass($rubric) {
+    return strtolower(substr($rubric, 5, strlen($rubric)));
+}
+
+/**
+ * Generate html content to display lists
+ * Strongly inspirated by function getArborescenceList()
+ *
+ */
+
+function getListHtml($bizobject, $width = null) 
+{
+	if (isset($width) && !empty($width)) $colwidth = $width;
+	else $width = 400;
+	
+	$session 	= wcmSession::getInstance();
+	$lang = $session->getSite()->language;
+    $html = '';
+    //$allItems = wcmList::getRootContent();
+    $allItems = wcmCache::fetch('ArrayAllItems-'.$lang);
+    if ( empty($allItems)) {
+        wcmCache::store('ArrayAllItems-'.$lang, wcmList::getRootContent(), 3600);
+        $allItems = wcmCache::fetch('ArrayAllItems-'.$lang);
+    }
+    
+    //print_r($allItems);
+    
+    if (isset($bizobject->listIds))
+        $listIds = (!is_array($bizobject->listIds)) ? unserialize($bizobject->listIds) : $bizobject->listIds;
+    else
+        $listIds = array();
+        
+    $listsIdsAllowed = getRootsItemFromXml($bizobject->getClass(), 'rootLists', 'list');
+    $listsAllowed = array();
+    for ($i = 0; $i < sizeof($allItems); $i++) {
+        if (in_array($allItems[$i]['code'], $listsIdsAllowed)) {
+            $listsAllowed[] = $i;
+        }
+    }
+    
+    $html .= '<table class="channels_choice" cellpadding="0" cellspacing="0"><tr>';
+    //$html .= '<input type="hidden" id="_semanticData[categoriesCustom]" name="_semanticData[categoriesCustom]" value="" />';
+    
+    foreach ($listsAllowed as $listIdAllowed) {
+        $listAndSublistsDatas = wcmList::getArborescenceList(array($allItems[$listIdAllowed]));
+        
+        //print_r($listAndSublistsDatas);
+        //print_r(array($allItems[$listIdAllowed]));
+        
+        foreach ($listAndSublistsDatas as $list_id=>$list_label) {
+            $parts = explode('-- ', $list_label);
+            $decalage = sizeof($parts) - 1;
+            
+            if (substr($list_label, 3, 1) != '-') {
+                $html .= '</td><td class="channel_choice_block" style="width:'.$width.'px;">';
+            }
+            
+            $pos = strrpos($list_label, '-');
+            
+            //if (!preg_match('`^-- _(.)+$`i', $list_label))
+            if (substr($list_label, 3, 1) == '-') {
+                //$html .= str_repeat('&nbsp;&nbsp;&nbsp;', $pos);
+                $html .= '<input type="checkbox" style="margin-left:'.$decalage.'0px;" name="listIds[]" id="list_'.$list_id.'" value="'.$list_id.'"';
+                
+                $currentListIdFound = false;
+                foreach ($listIds as $listId) {
+                    if ($listId == $list_id) {
+                        $html .= ' checked />';
+                        $currentListIdFound = true;
+                        break;
+                    }
+                }
+                if (!$currentListIdFound) {
+                    $html .= ' />';
+                }
+            }
+            
+            $html .= '<label for="list_'.$list_id.'">&nbsp;';
+            if (substr($list_label, 3, 1) != '-') {
+                $html .= '<b>'.ucfirst(substr($list_label, 3)).'</b>';
+            } else {
+                $html .= ucfirst(substr($list_label, $pos + 1));
+            }
+            $html .= '</label><br />';
+        }
+    }
+    
+    $html .= '</tr></table>';
+    unset($listsAllowed);
+    
+    return $html;
+}
+
+function getIptcTags() {
+    $iptcTags = array('_RLX_NUTRITION'=>array('04007003'), '_RLX_HEALTH_FITNESS'=>array('07000000'), '_RLX_BEAUTY_COSMETICS'=>array('04002003'), '_RLX_DIY_GARDENING'=>array(), '_RLX_DECORATION_DESIGN'=>array(), '_RLX_ENVIRONMENT'=>array('06000000'), '_RLX_HIGHTECH'=>array(), '_RLX_FASHION'=>array('01007000'), '_RLX_SHOPPING_DTDLIFE'=>array(), '_RLX_ART_EXHIBITION_SHOW'=>array('01009000'), '_RLX_CINEMA'=>array('01005000'), '_RLX_VIDEOGAMES'=>array('10001000'), '_RLX_BOOKS_COMICS_MANGA'=>array('01010000', '04010002'), '_RLX_MUSIC'=>array('01011000', '04010011'), '_RLX_TV_MEDIA'=>array('01016000'), '_RLX_INTERNET'=>array('01027000', '04007009'), '_RLX_CARS_2WHEELS'=>array('15039000', '15040000', '04011002'), '_RLX_GASTRONOMY'=>array('10003000'), '_RLX_HOTEL'=>array('04014002'), '_RLX_DESTINATION'=>array(), '_RLX_TRANSPORT'=>array('04015000'), '_RLX_SPORT'=>array('15000000'));
+    
+    return $iptcTags;
+}
+
+/**
+ * Retrieve items from XML conf file (/xml/configuration.xml)
+ *
+ */
+
+function getRootsItemFromXml($className, $nodeName, $nodeChildsName) {
+    $rootItemsArray = array();
+    $config = wcmConfig::getInstance();
+    
+    if ($className != false) {
+        if (isset($config['afprelax.'.$nodeName.'.'.$className.'.'.$nodeChildsName])) {
+            $rootItemsArray[] = $config['afprelax.'.$nodeName.'.'.$className.'.'.$nodeChildsName];
+        } else {
+            $i = 0;
+            while (isset($config['afprelax.'.$nodeName.'.'.$className.'.'.$nodeChildsName.'.'.$i])) {
+                $rootItemsArray[] = $config['afprelax.'.$nodeName.'.'.$className.'.'.$nodeChildsName.'.'.$i];
+                $i++;
+            }
+        }
+    } else {
+        if (isset($config['afprelax.'.$nodeName.'.'.$nodeChildsName])) {
+            $rootItemsArray[] = $config['afprelax.'.$nodeName.'.'.$nodeChildsName];
+        } else {
+            $i = 0;
+            while (isset($config['afprelax.'.$nodeName.'.'.$nodeChildsName.'.'.$i])) {
+                $rootItemsArray[] = $config['afprelax.'.$nodeName.'.'.$nodeChildsName.'.'.$i];
+                $i++;
+            }
+        }
+    }
+    
+    return $rootItemsArray;
+}
+
+function getServiceTrad($universlang, $service)
+{
+	// on surcharge les traductions des services car les langues de traductions sont dissociées de l'univers en cours
+	$trad = array();
+	$trad["fr"]["news"] 	= "Dépêches";
+	$trad["fr"]["video"] 	= "Vidéos";
+	$trad["fr"]["slideshow"] = "Diaporamas";
+	$trad["fr"]["forecast"] = "Prévisions";
+	$trad["fr"]["event"] 	= "Evénements";
+	$trad["fr"]["prevision"]= "Prévisions";
+	
+	$trad["en"]["news"] 	= "News";
+	$trad["en"]["video"] 	= "Videos";
+	$trad["en"]["slideshow"] = "slideshows";
+	$trad["en"]["forecast"] = "Forecasts";
+	$trad["en"]["event"] 	= "Events";
+	$trad["en"]["prevision"] = "Forecasts";
+	
+	if (isset($trad[$universlang][$service]))
+		return $trad[$universlang][$service];
+	else
+		return getConst($service);
+}
+
+/*
+ * extend in_array function to multidimensional array
+ */
+function in_multiarray($elem, $array)
+{
+	// if the $array is an array or is an object
+	if( is_array( $array ) || is_object( $array ) )
+	{
+		// if $elem is in $array object
+		if( is_object( $array ) )
+		{
+			$temp_array = get_object_vars( $array );
+			if( in_array( $elem, $temp_array ) )
+			return TRUE;
+		}
+	
+		// if $elem is in $array return true
+		if( is_array( $array ) && in_array( $elem, $array ) )
+		return TRUE;
+	
+		// if $elem isn't in $array, then check foreach element
+		foreach( $array as $array_element )
+		{
+			// if $array_element is an array or is an object call the in_multiarray function to this element
+			// if in_multiarray returns TRUE, than return is in array, else check next element
+			if( ( is_array( $array_element ) || is_object( $array_element ) ) && in_multiarray( $elem, $array_element ) )
+			{
+				return TRUE;
+				exit;
+			}
+		}
+	}	
+	// if isn't in array return FALSE
+	return FALSE;
+} 
+

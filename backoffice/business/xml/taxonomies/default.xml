@@ -1,0 +1,1795 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+ * Project:     WCM
+ * File:        business/xml/taxonomies/default.xml
+ *
+ * @copyright   (c)2008 Nstein Technologies
+ * @version     4.x
+ *
+ *
+ * This file contains a list of taxonomies available for taggging
+ * - The root nodes corresponds to taxonomy names
+ * - The sub nodes corresponds to tags (and can be hierarchical)
+-->
+<tags>
+
+    <general>
+        <tag>Hot topic</tag>
+        <tag>Breaking news</tag>
+        <tag>Promo</tag>
+    </general>
+
+    <ads>
+        <tag>
+            Audience
+            <tag>Kids</tag>
+            <tag>Juniors</tag>
+            <tag>Teenagers</tag>
+            <tag>Adults</tag>
+            <tag>Seniors</tag>
+        </tag>
+        <tag>
+            Events
+            <tag>Christmas</tag>
+            <tag>Easter</tag>
+            <tag>Mothers' Day</tag>
+            <tag>Fathers' Day</tag>
+            <tag>Birthdays</tag>
+            <tag>Prenatal and births</tag>
+        </tag>
+    </ads>
+
+	<iptc>
+	    <tag>
+	        Arts, Culture and Entertainment
+	        <tag>Archaeology</tag>
+	        <tag>Architecture</tag>
+	        <tag>Bullfighting</tag>
+	        <tag>Festive Event (including Carnival)</tag>
+	        <tag>
+	            Cinema
+	            <tag>Film Festival</tag>
+	        </tag>
+	        <tag>Dance</tag>
+	        <tag>
+	            Fashion
+	            <tag>Jewelry</tag>
+	        </tag>
+	        <tag>Language</tag>
+	        <tag>Library and Museum</tag>
+	        <tag>
+	            Literature
+	            <tag>Fiction</tag>
+	            <tag>Poetry</tag>
+	        </tag>
+	        <tag>
+	            Music
+	            <tag>Classical Music</tag>
+	            <tag>Folk Music</tag>
+	            <tag>Jazz Music</tag>
+	            <tag>Popular Music</tag>
+	            <tag>Country Music</tag>
+	            <tag>Rock and Roll Music</tag>
+	        </tag>
+	        <tag>Painting</tag>
+	        <tag>Photography</tag>
+	        <tag>Radio</tag>
+	        <tag>
+	            Sculpture
+	            <tag>Plastic Art</tag>
+	        </tag>
+	        <tag>
+	            Television
+	            <tag>Soap Opera</tag>
+	        </tag>
+	        <tag>
+	            Theatre
+	            <tag>Music Theatre</tag>
+	        </tag>
+	        <tag>Monument and Heritage Site</tag>
+	        <tag>Customs and Tradition</tag>
+	        <tag>Arts (general)</tag>
+	        <tag>
+	            Entertainment (general)
+	            <tag>Entertainment Award</tag>
+	        </tag>
+	        <tag>
+	            Culture (general)
+	            <tag>Cultural Development</tag>
+	        </tag>
+	        <tag>Nightclub</tag>
+	        <tag>Cartoon</tag>
+	        <tag>Animation</tag>
+	        <tag>
+	            Mass Media
+	            <tag>Periodicals</tag>
+	            <tag>News Media</tag>
+	            <tag>Newspapers</tag>
+	            <tag>Reviews</tag>
+	        </tag>
+	        <tag>Internet</tag>
+	        <tag>History</tag>
+	    </tag>
+	    <tag>
+	        Crime, Law and Justice
+	        <tag>
+	            Crime
+	            <tag>Homicide</tag>
+	            <tag>Computer Crime</tag>
+	            <tag>Theft</tag>
+	            <tag>Drug Trafficking</tag>
+	            <tag>Sexual Assault</tag>
+	            <tag>Assault (general)</tag>
+	            <tag>Kidnapping</tag>
+	            <tag>Arson</tag>
+	            <tag>Gang Activity</tag>
+	        </tag>
+	        <tag>
+	            Judiciary (system Of Justice)
+	            <tag>Lawyer</tag>
+	            <tag>Judge</tag>
+	            <tag>Court Administration</tag>
+	        </tag>
+	        <tag>
+	            Police
+	            <tag>Law Enforcement</tag>
+	            <tag>Investigation</tag>
+	            <tag>Arrest</tag>
+	        </tag>
+	        <tag>
+	            Punishment
+	            <tag>Fine</tag>
+	        </tag>
+	        <tag>Prison</tag>
+	        <tag>
+	            Laws
+	            <tag>Criminal</tag>
+	            <tag>Civil</tag>
+	        </tag>
+	        <tag>
+	            Justice and Rights
+	            <tag>Civil Rights</tag>
+	        </tag>
+	        <tag>
+	            Trials
+	            <tag>Litigation</tag>
+	            <tag>Arbitration</tag>
+	            <tag>Court Preliminary</tag>
+	        </tag>
+	        <tag>
+	            Prosecution
+	            <tag>Defendant</tag>
+	            <tag>Witness</tag>
+	        </tag>
+	        <tag>Organized Crime</tag>
+	        <tag>
+	            International Law
+	            <tag>International Court Or Tribunal</tag>
+	            <tag>Extradition</tag>
+	        </tag>
+	        <tag>
+	            Corporate Crime
+	            <tag>Fraud</tag>
+	            <tag>Embezzlement</tag>
+	            <tag>Restraint Of Trade</tag>
+	            <tag>Breach Of Contract</tag>
+	            <tag>Anti-trust Crime</tag>
+	            <tag>Corruption</tag>
+	            <tag>Bribery</tag>
+	        </tag>
+	        <tag>War Crime</tag>
+	        <tag>Inquest</tag>
+	        <tag>Inquiry</tag>
+	        <tag>Tribunal</tag>
+	    </tag>
+	    <tag>
+	        Disaster and Accident
+	        <tag>Drought</tag>
+	        <tag>Earthquake</tag>
+	        <tag>Famine</tag>
+	        <tag>Fire</tag>
+	        <tag>Flood</tag>
+	        <tag>
+	            Industrial Accident
+	            <tag>Structural Failures</tag>
+	        </tag>
+	        <tag>
+	            Meteorological Disaster
+	            <tag>Windstorms</tag>
+	        </tag>
+	        <tag>Nuclear Accident</tag>
+	        <tag>Pollution</tag>
+	        <tag>
+	            Transport Accident
+	            <tag>Road Accident</tag>
+	            <tag>Railway Accident</tag>
+	            <tag>Air and Space Accident</tag>
+	            <tag>Maritime Accident</tag>
+	        </tag>
+	        <tag>Volcanic Eruption</tag>
+	        <tag>Relief and Aid Organisation</tag>
+	        <tag>Accident (general)</tag>
+	        <tag>
+	            Emergency Incident
+	            <tag>Explosion</tag>
+	        </tag>
+	        <tag>
+	            Disaster (general)
+	            <tag>Natural Disasters</tag>
+	            <tag>Avalanche/landslide</tag>
+	        </tag>
+	        <tag>Emergency Planning</tag>
+	        <tag>Rescue</tag>
+	    </tag>
+	    <tag>
+	        Economy, Business and Finance
+	        <tag>
+	            Agriculture
+	            <tag>Arable Farming</tag>
+	            <tag>Fishing Industry</tag>
+	            <tag>Forestry and Timber</tag>
+	            <tag>Livestock Farming</tag>
+	            <tag>Viniculture</tag>
+	            <tag>Aquaculture</tag>
+	        </tag>
+	        <tag>
+	            Chemicals
+	            <tag>Biotechnology</tag>
+	            <tag>Fertiliser</tag>
+	            <tag>Health and Beauty Product</tag>
+	            <tag>Inorganic Chemical</tag>
+	            <tag>Organic Chemical</tag>
+	            <tag>Pharmaceutical</tag>
+	            <tag>Synthetic and Plastic</tag>
+	        </tag>
+	        <tag>
+	            Computing and Information Technology
+	            <tag>Hardware</tag>
+	            <tag>Networking</tag>
+	            <tag>Satellite Technology</tag>
+	            <tag>Semiconductors and Active Components</tag>
+	            <tag>Software</tag>
+	            <tag>Telecommunication Equipment</tag>
+	            <tag>Telecommunication Service</tag>
+	            <tag>Security</tag>
+	            <tag>Wireless Technology</tag>
+	        </tag>
+	        <tag>
+	            Construction and Property
+	            <tag>Heavy Construction</tag>
+	            <tag>House Building</tag>
+	            <tag>Real Estate</tag>
+	            <tag>Farms</tag>
+	            <tag>Land Price</tag>
+	            <tag>Renovation</tag>
+	            <tag>Design and Engineering</tag>
+	        </tag>
+	        <tag>
+	            Energy and Resource
+	            <tag>Alternative Energy</tag>
+	            <tag>Coal</tag>
+	            <tag>Oil and Gas - Downstream Activities</tag>
+	            <tag>Oil and Gas - Upstream Activities</tag>
+	            <tag>Nuclear Power</tag>
+	            <tag>Electricity Production and Distribution</tag>
+	            <tag>Waste Management and Pollution Control</tag>
+	            <tag>Water Supply</tag>
+	            <tag>Natural Resources (general)</tag>
+	            <tag>Energy (general)</tag>
+	            <tag>Natural Gas</tag>
+	            <tag>Petrol</tag>
+	            <tag>Diesel Fuel</tag>
+	            <tag>Kerosene/paraffin</tag>
+	        </tag>
+	        <tag>
+	            Financial and Business Service
+	            <tag>Accountancy and Auditing</tag>
+	            <tag>Banking</tag>
+	            <tag>Consultancy Service</tag>
+	            <tag>Employment Agency</tag>
+	            <tag>Healthcare Provider</tag>
+	            <tag>Insurance</tag>
+	            <tag>Legal Service</tag>
+	            <tag>Market Research</tag>
+	            <tag>Stock Broking</tag>
+	            <tag>Personal Investing</tag>
+	            <tag>Market Trend</tag>
+	            <tag>Shipping Service</tag>
+	            <tag>Personal Service</tag>
+	            <tag>Janitorial Service</tag>
+	            <tag>Funeral Parlour and Crematorium</tag>
+	            <tag>Rental Service</tag>
+	            <tag>Wedding Service</tag>
+	            <tag>Personal Finance</tag>
+	            <tag>Personal Income</tag>
+	            <tag>Auction Service</tag>
+	            <tag>Printing/promotional Service</tag>
+	            <tag>Investment Service</tag>
+	        </tag>
+	        <tag>
+	            Consumer Goods
+	            <tag>Clothing</tag>
+	            <tag>Department Store</tag>
+	            <tag>Food</tag>
+	            <tag>Mail Order</tag>
+	            <tag>Retail</tag>
+	            <tag>Speciality Store</tag>
+	            <tag>Wholesale</tag>
+	            <tag>Beverage</tag>
+	            <tag>Electronic Commerce</tag>
+	            <tag>Luxury Good</tag>
+	            <tag>Non-durable Good</tag>
+	            <tag>Toy</tag>
+	        </tag>
+	        <tag>
+	            Macro Economics
+	            <tag>Central Bank</tag>
+	            <tag>Consumer Issue</tag>
+	            <tag>Debt Market</tag>
+	            <tag>Economic Indicator</tag>
+	            <tag>Emerging Market</tag>
+	            <tag>Foreign Exchange Market</tag>
+	            <tag>Government Aid</tag>
+	            <tag>Government Debt</tag>
+	            <tag>Interest Rate</tag>
+	            <tag>International Economic Institution</tag>
+	            <tag>International (foreign) Trade</tag>
+	            <tag>Loan Market</tag>
+	            <tag>Economic Organization</tag>
+	            <tag>Consumer Confidence</tag>
+	            <tag>Trade Dispute</tag>
+	            <tag>Inflation and Deflation</tag>
+	            <tag>Prices</tag>
+	            <tag>Currency Values</tag>
+	            <tag>Budgets and Budgeting</tag>
+	            <tag>Credit and Debt</tag>
+	            <tag>Loans</tag>
+	            <tag>Mortgages</tag>
+	            <tag>Financial Markets</tag>
+	            <tag>Commodity Markets</tag>
+	            <tag>Investments</tag>
+	            <tag>Stocks</tag>
+	            <tag>Bonds</tag>
+	            <tag>Mutual Funds</tag>
+	            <tag>Derivative Securities</tag>
+	            <tag>Imports</tag>
+	            <tag>Exports</tag>
+	            <tag>Trade Agreements</tag>
+	            <tag>Trade Policy</tag>
+	            <tag>Business Enterprises</tag>
+	            <tag>Tariff</tag>
+	            <tag>Trade Balance</tag>
+	        </tag>
+	        <tag>
+	            Market and Exchange
+	            <tag>Energy</tag>
+	            <tag>Metal</tag>
+	            <tag>Securities</tag>
+	            <tag>Soft Commodity</tag>
+	        </tag>
+	        <tag>
+	            Media
+	            <tag>Advertising</tag>
+	            <tag>Book</tag>
+	            <tag>Cinema Industry</tag>
+	            <tag>News Agency</tag>
+	            <tag>Newspaper and Magazine</tag>
+	            <tag>Online</tag>
+	            <tag>Public Relation</tag>
+	            <tag>Radio Industry</tag>
+	            <tag>Satellite and Cable Service</tag>
+	            <tag>Television Industry</tag>
+	            <tag>Music Industry</tag>
+	        </tag>
+	        <tag>
+	            Manufacturing and Engineering
+	            <tag>Aerospace</tag>
+	            <tag>Automotive Equipment</tag>
+	            <tag>Defence Equipment</tag>
+	            <tag>Electrical Appliance</tag>
+	            <tag>Heavy Engineering</tag>
+	            <tag>Industrial Component</tag>
+	            <tag>Instrument Engineering</tag>
+	            <tag>Shipbuilding</tag>
+	            <tag>Machine Manufacturing</tag>
+	        </tag>
+	        <tag>
+	            Metal and Mineral
+	            <tag>Building Material</tag>
+	            <tag>Gold and Precious Material</tag>
+	            <tag>Iron and Steel</tag>
+	            <tag>Non Ferrous Metal</tag>
+	            <tag>Mining</tag>
+	        </tag>
+	        <tag>
+	            Process Industry
+	            <tag>Distiller and Brewer</tag>
+	            <tag>Food</tag>
+	            <tag>Furnishings and Furniture</tag>
+	            <tag>Paper and Packaging Product</tag>
+	            <tag>Rubber Product</tag>
+	            <tag>Soft Drinks</tag>
+	            <tag>Textile and Clothing</tag>
+	            <tag>Tobacco</tag>
+	        </tag>
+	        <tag>
+	            Tourism and Leisure
+	            <tag>Casino and Gambling</tag>
+	            <tag>Hotel and Accommodation</tag>
+	            <tag>Recreational and Sporting Goods</tag>
+	            <tag>Restaurant and Catering</tag>
+	            <tag>Tour Operator</tag>
+	        </tag>
+	        <tag>
+	            Transport
+	            <tag>Air Transport</tag>
+	            <tag>Railway</tag>
+	            <tag>Road Transport</tag>
+	            <tag>Waterway and Maritime Transport</tag>
+	        </tag>
+	        <tag>
+	            Company Information
+	            <tag>Accounting and Audit</tag>
+	            <tag>Annual and Special Corporate Meeting</tag>
+	            <tag>Annual Report</tag>
+	            <tag>Antitrust Issue</tag>
+	            <tag>Merger, Acquisition and Takeover</tag>
+	            <tag>Analysts' Comment</tag>
+	            <tag>Bankruptcy</tag>
+	            <tag>Board Of Directors (appointment and Change)</tag>
+	            <tag>Buyback</tag>
+	            <tag>C.E.O. Interview</tag>
+	            <tag>Corporate Officer</tag>
+	            <tag>Corporate Profile</tag>
+	            <tag>Contract</tag>
+	            <tag>Defence Contract</tag>
+	            <tag>Dividend Announcement</tag>
+	            <tag>Earnings Forecast</tag>
+	            <tag>Financially Distressed Company</tag>
+	            <tag>Earnings</tag>
+	            <tag>Financing and Stock Offering</tag>
+	            <tag>Government Contract</tag>
+	            <tag>Global Expansion</tag>
+	            <tag>Insider Trading</tag>
+	            <tag>Joint Venture</tag>
+	            <tag>Leveraged Buyout</tag>
+	            <tag>Layoffs and Downsizing</tag>
+	            <tag>Licensing Agreement</tag>
+	            <tag>Litigation and Regulation</tag>
+	            <tag>Management Change</tag>
+	            <tag>Marketing</tag>
+	            <tag>New Product</tag>
+	            <tag>Patent, Copyright and Trademark</tag>
+	            <tag>Plant Closing</tag>
+	            <tag>Plant Opening</tag>
+	            <tag>Privatisation</tag>
+	            <tag>Proxy Filing</tag>
+	            <tag>Rating</tag>
+	            <tag>Research and Development</tag>
+	            <tag>Quarterly Or Semiannual Financial Statement</tag>
+	            <tag>Restructuring and Recapitalisation</tag>
+	            <tag>Spin-off</tag>
+	            <tag>Stock Activity</tag>
+	            <tag>Industrial Production</tag>
+	            <tag>Productivity</tag>
+	            <tag>Inventories</tag>
+	            <tag>Sales</tag>
+	            <tag>Corporations</tag>
+	            <tag>Shareholders</tag>
+	            <tag>Corporate Performance</tag>
+	            <tag>Losses</tag>
+	            <tag>Credit Ratings</tag>
+	            <tag>Stock Splits</tag>
+	            <tag>Stock Options</tag>
+	            <tag>Recalls (products)</tag>
+	            <tag>Globalization</tag>
+	            <tag>Consumers</tag>
+	            <tag>Purchase</tag>
+	            <tag>New Service</tag>
+	        </tag>
+	        <tag>
+	            Economy (general)
+	            <tag>Economic Policy</tag>
+	        </tag>
+	        <tag>
+	            Business (general)
+	            <tag>Institution</tag>
+	        </tag>
+	        <tag>
+	            Finance (general)
+	            <tag>Money and Monetary Policy</tag>
+	        </tag>
+	    </tag>
+	    <tag>
+	        Education
+	        <tag>Adult Education</tag>
+	        <tag>Further Education</tag>
+	        <tag>Parent Organisation</tag>
+	        <tag>Preschool</tag>
+	        <tag>
+	            School
+	            <tag>Elementary Schools</tag>
+	            <tag>Middle Schools</tag>
+	            <tag>High Schools</tag>
+	        </tag>
+	        <tag>Teachers Union</tag>
+	        <tag>University</tag>
+	        <tag>Upbringing</tag>
+	        <tag>Entrance Examination</tag>
+	        <tag>
+	            Teaching and Learning
+	            <tag>Students</tag>
+	            <tag>Teachers</tag>
+	            <tag>Curriculum</tag>
+	            <tag>Test/Examination</tag>
+	        </tag>
+	        <tag>
+	            Religious Education
+	            <tag>Parochial School</tag>
+	            <tag>Seminary</tag>
+	            <tag>Yeshiva</tag>
+	            <tag>Madrasa</tag>
+	        </tag>
+	    </tag>
+	    <tag>
+	        Environmental Issue
+	        <tag>Renewable Energy</tag>
+	        <tag>
+	            Conservation
+	            <tag>Endangered Species</tag>
+	            <tag>Ecosystem</tag>
+	        </tag>
+	        <tag>Energy Saving</tag>
+	        <tag>Environmental Politics</tag>
+	        <tag>
+	            Environmental Pollution
+	            <tag>Air Pollution</tag>
+	            <tag>Water Pollution</tag>
+	        </tag>
+	        <tag>
+	            Natural Resources
+	            <tag>Land Resources</tag>
+	            <tag>Parks</tag>
+	            <tag>Forests</tag>
+	            <tag>Wetlands</tag>
+	            <tag>Mountains</tag>
+	            <tag>Rivers</tag>
+	            <tag>Oceans</tag>
+	            <tag>Wildlife</tag>
+	            <tag>Energy Resources</tag>
+	        </tag>
+	        <tag>
+	            Nature
+	            <tag>Invasive Species</tag>
+	        </tag>
+	        <tag>Population</tag>
+	        <tag>Waste</tag>
+	        <tag>Water</tag>
+	        <tag>Global Warming</tag>
+	        <tag>Hazardous Materials</tag>
+	        <tag>Environmental Cleanup</tag>
+	    </tag>
+	    <tag>
+	        Health
+	        <tag>
+	            Disease
+	            <tag>Communicable Diseases</tag>
+	            <tag>Virus Diseases</tag>
+	            <tag>AIDS</tag>
+	            <tag>Cancer</tag>
+	            <tag>Heart Disease</tag>
+	            <tag>Alzheimer's Disease</tag>
+	            <tag>Animal Diseases</tag>
+	            <tag>Plant Diseases</tag>
+	            <tag>Retroviruse</tag>
+	        </tag>
+	        <tag>Epidemic and Plague</tag>
+	        <tag>
+	            Health Treatment
+	            <tag>Prescription Drugs</tag>
+	            <tag>Dietary Supplements</tag>
+	            <tag>Diet</tag>
+	            <tag>Medical Procedure/test</tag>
+	            <tag>Therapy</tag>
+	        </tag>
+	        <tag>Health Organisations</tag>
+	        <tag>Medical Research</tag>
+	        <tag>
+	            Medical Staff
+	            <tag>Primary Care Physician</tag>
+	            <tag>Health-workers Union</tag>
+	        </tag>
+	        <tag>
+	            Medicine
+	            <tag>Herbal</tag>
+	            <tag>Holistic</tag>
+	            <tag>Western</tag>
+	            <tag>Traditional Chinese</tag>
+	        </tag>
+	        <tag>
+	            Preventative Medicine
+	            <tag>Vaccines</tag>
+	        </tag>
+	        <tag>Injury</tag>
+	        <tag>Hospital and Clinic</tag>
+	        <tag>
+	            Government Health Care
+	            <tag>Medicare</tag>
+	            <tag>Medicaid</tag>
+	        </tag>
+	        <tag>Private Health Care</tag>
+	        <tag>
+	            Healthcare Policy
+	            <tag>Food Safety</tag>
+	        </tag>
+	        <tag>
+	            Medical Specialisation
+	            <tag>Geriatric</tag>
+	            <tag>Pediatrics</tag>
+	            <tag>Reproduction</tag>
+	            <tag>Genetics</tag>
+	            <tag>Obstetrics/gynecology</tag>
+	        </tag>
+	        <tag>Medical Service</tag>
+	        <tag>Physical Fitness</tag>
+	        <tag>
+	            Illness
+	            <tag>Mental Illness</tag>
+	            <tag>Eating Disorder</tag>
+	            <tag>Obesity</tag>
+	        </tag>
+	        <tag>Medical Conditions</tag>
+	        <tag>Patient</tag>
+	    </tag>
+	    <tag>
+	        Human Interest
+	        <tag>Animal</tag>
+	        <tag>Curiosity</tag>
+	        <tag>
+	            People
+	            <tag>Advice</tag>
+	            <tag>Celebrity</tag>
+	            <tag>Accomplishment</tag>
+	            <tag>Human Mishap</tag>
+	            <tag>Fortune-telling</tag>
+	        </tag>
+	        <tag>Mystery</tag>
+	        <tag>
+	            Society
+	            <tag>Ceremony</tag>
+	            <tag>Death</tag>
+	            <tag>Funeral</tag>
+	            <tag>Estate Bestowal</tag>
+	            <tag>Memorial</tag>
+	        </tag>
+	        <tag>
+	            Award and Prize
+	            <tag>Record</tag>
+	        </tag>
+	        <tag>Imperial and Royal Matters</tag>
+	        <tag>Plant</tag>
+	    </tag>
+	    <tag>
+	        Labour
+	        <tag>Apprentices</tag>
+	        <tag>
+	            Collective Contract
+	            <tag>Contract Issue-wages</tag>
+	            <tag>Contract Issue-healthcare</tag>
+	            <tag>Contract Issue-work Rules</tag>
+	        </tag>
+	        <tag>
+	            Employment
+	            <tag>Labor Market</tag>
+	            <tag>Job Layoffs</tag>
+	            <tag>Child Labor</tag>
+	            <tag>Occupations</tag>
+	        </tag>
+	        <tag>Labour Dispute</tag>
+	        <tag>Labour Legislation</tag>
+	        <tag>Retirement</tag>
+	        <tag>Retraining</tag>
+	        <tag>Strike</tag>
+	        <tag>Unemployment</tag>
+	        <tag>Unions</tag>
+	        <tag>
+	            Wage and Pension
+	            <tag>Employee Benefits</tag>
+	            <tag>Social Security</tag>
+	        </tag>
+	        <tag>Work Relations</tag>
+	        <tag>Health and Safety At Work</tag>
+	        <tag>Advanced Training</tag>
+	        <tag>Employer</tag>
+	        <tag>Employee</tag>
+	    </tag>
+	    <tag>
+	        Lifestyle and Leisure
+	        <tag>
+	            Game
+	            <tag>Go</tag>
+	            <tag>Chess</tag>
+	            <tag>Bridge</tag>
+	            <tag>Shogi</tag>
+	        </tag>
+	        <tag>Gaming and Lottery</tag>
+	        <tag>
+	            Gastronomy
+	            <tag>Organic Foods</tag>
+	        </tag>
+	        <tag>
+	            Hobby
+	            <tag>DIY</tag>
+	            <tag>Shopping</tag>
+	            <tag>Gardening</tag>
+	        </tag>
+	        <tag>Holiday Or Vacation</tag>
+	        <tag>Tourism</tag>
+	        <tag>
+	            Travel and Commuting
+	            <tag>Traffic</tag>
+	        </tag>
+	        <tag>Club and Association</tag>
+	        <tag>Lifestyle (house and Home)</tag>
+	        <tag>Leisure (general)</tag>
+	        <tag>Public Holiday</tag>
+	        <tag>Hunting</tag>
+	        <tag>Fishing</tag>
+	        <tag>Auto Trends</tag>
+	        <tag>Adventure</tag>
+	        <tag>Beauty</tag>
+	        <tag>Consumer Issue</tag>
+	        <tag>Wedding</tag>
+	    </tag>
+	    <tag>
+	        Politics
+	        <tag>
+	            Defence
+	            <tag>Veterans Affairs</tag>
+	            <tag>National Security</tag>
+	            <tag>Security Measures</tag>
+	            <tag>Armed Forces</tag>
+	            <tag>Military Equipment</tag>
+	            <tag>Firearms</tag>
+	            <tag>Biological and Chemical Weapons</tag>
+	            <tag>Missile Systems</tag>
+	            <tag>Nuclear Weapons</tag>
+	        </tag>
+	        <tag>
+	            Diplomacy
+	            <tag>Summit</tag>
+	            <tag>International Relations</tag>
+	            <tag>Peace Negotiations</tag>
+	            <tag>Alliances</tag>
+	        </tag>
+	        <tag>
+	            Election
+	            <tag>Political Candidates</tag>
+	            <tag>Political Campaigns</tag>
+	            <tag>Campaign Finance</tag>
+	            <tag>National Elections</tag>
+	            <tag>Regional Elections</tag>
+	            <tag>Local Elections</tag>
+	            <tag>Voting</tag>
+	            <tag>Poll</tag>
+	            <tag>European Elections</tag>
+	            <tag>Primary</tag>
+	        </tag>
+	        <tag>Espionage and Intelligence</tag>
+	        <tag>
+	            Foreign Aid
+	            <tag>Economic Sanction</tag>
+	        </tag>
+	        <tag>
+	            Government
+	            <tag>Civil and Public Service</tag>
+	            <tag>Safety Of Citizens</tag>
+	            <tag>Think Tank</tag>
+	            <tag>National Government</tag>
+	            <tag>Executive (government)</tag>
+	            <tag>Heads Of State</tag>
+	            <tag>Government Departments</tag>
+	            <tag>Public Officials</tag>
+	            <tag>Ministers (government)</tag>
+	            <tag>Public Employees</tag>
+	            <tag>Privatisation</tag>
+	            <tag>Nationalisation</tag>
+	            <tag>Impeachment</tag>
+	        </tag>
+	        <tag>Human Rights</tag>
+	        <tag>Local Authority</tag>
+	        <tag>
+	            Parliament
+	            <tag>Upper House</tag>
+	            <tag>Lower House</tag>
+	        </tag>
+	        <tag>
+	            Parties and Movements
+	            <tag>Non Government Organizations (NGO)</tag>
+	        </tag>
+	        <tag>Refugee</tag>
+	        <tag>Regional Authority</tag>
+	        <tag>
+	            State Budget and Tax
+	            <tag>Public Finance</tag>
+	        </tag>
+	        <tag>Constitution</tag>
+	        <tag>
+	            Interior Policy
+	            <tag>Data Protection</tag>
+	            <tag>Housing and Urban Planning</tag>
+	            <tag>Pension and Welfare</tag>
+	            <tag>Personal Weapon Control</tag>
+	            <tag>Indigenous People</tag>
+	            <tag>Personal Data Collection</tag>
+	            <tag>Planning Inquiries</tag>
+	        </tag>
+	        <tag>Migration</tag>
+	        <tag>Citizens Initiative and Recall</tag>
+	        <tag>Referenda</tag>
+	        <tag>Nuclear Policy</tag>
+	        <tag>Lobbying</tag>
+	        <tag>Regulatory Policy and Organisation</tag>
+	        <tag>Censorship</tag>
+	        <tag>
+	            Politics (general)
+	            <tag>Political Systems</tag>
+	            <tag>Democracy</tag>
+	            <tag>Political Development</tag>
+	        </tag>
+	        <tag>Freedom Of The Press</tag>
+	        <tag>Freedom Of Religion</tag>
+	        <tag>Treaty</tag>
+	        <tag>International Organisation</tag>
+	    </tag>
+	    <tag>
+	        Religion and Belief
+	        <tag>Cult and Sect</tag>
+	        <tag>
+	            Belief (faith)
+	            <tag>Unificationism</tag>
+	            <tag>Scientology</tag>
+	        </tag>
+	        <tag>Freemasonry</tag>
+	        <tag>
+	            Values
+	            <tag>Ethics</tag>
+	            <tag>Corrupt Practices</tag>
+	        </tag>
+	        <tag>Church and State Relations</tag>
+	        <tag>Philosophy</tag>
+	        <tag>
+	            Christianity
+	            <tag>Protestant</tag>
+	            <tag>Lutheran</tag>
+	            <tag>Reformed</tag>
+	            <tag>Anglican</tag>
+	            <tag>Methodist</tag>
+	            <tag>Baptist</tag>
+	            <tag>Mennonite</tag>
+	            <tag>Mormon</tag>
+	            <tag>Roman Catholic</tag>
+	            <tag>Old Catholic</tag>
+	            <tag>Orthodoxy</tag>
+	            <tag>Salvation Army</tag>
+	        </tag>
+	        <tag>Islam</tag>
+	        <tag>Judaism</tag>
+	        <tag>Buddhism</tag>
+	        <tag>Hinduism</tag>
+	        <tag>
+	            Religious Festival Or Holiday
+	            <tag>Christmas</tag>
+	            <tag>Easter</tag>
+	            <tag>Pentecost</tag>
+	            <tag>Ramadan</tag>
+	            <tag>Yom Kippur</tag>
+	        </tag>
+	        <tag>
+	            Religious Leader
+	            <tag>Pope</tag>
+	        </tag>
+	        <tag>Nature Religion</tag>
+	        <tag>Taoism</tag>
+	        <tag>Shintoism</tag>
+	        <tag>Sikhism</tag>
+	        <tag>Jainism</tag>
+	        <tag>Parsasm</tag>
+	        <tag>Confucianism</tag>
+	        <tag>
+	            Religious Text
+	            <tag>Bible</tag>
+	            <tag>Qur'an</tag>
+	            <tag>Torah</tag>
+	        </tag>
+	        <tag>Interreligious Dialogue</tag>
+	        <tag>
+	            Religious Event
+	            <tag>Catholic Convention</tag>
+	            <tag>Protestant Convention</tag>
+	            <tag>Ritual</tag>
+	        </tag>
+	        <tag>Concordat</tag>
+	        <tag>Ecumenism</tag>
+	    </tag>
+	    <tag>
+	        Science and Technology
+	        <tag>
+	            Applied Science
+	            <tag>Physics</tag>
+	            <tag>Chemistry</tag>
+	            <tag>Cosmology</tag>
+	            <tag>Particle Physics</tag>
+	        </tag>
+	        <tag>
+	            Engineering
+	            <tag>Material Science</tag>
+	        </tag>
+	        <tag>
+	            Human Science
+	            <tag>Social Sciences</tag>
+	            <tag>History</tag>
+	            <tag>Psychology</tag>
+	            <tag>Sociology</tag>
+	            <tag>Anthropology</tag>
+	        </tag>
+	        <tag>
+	            Natural Science
+	            <tag>Geology</tag>
+	            <tag>Paleontology</tag>
+	            <tag>Geography</tag>
+	            <tag>Botany</tag>
+	            <tag>Zoology</tag>
+	            <tag>Physiology</tag>
+	            <tag>Astronomy</tag>
+	            <tag>Biology</tag>
+	        </tag>
+	        <tag>Philosophical Science</tag>
+	        <tag>
+	            Research
+	            <tag>Survey</tag>
+	        </tag>
+	        <tag>Scientific Exploration</tag>
+	        <tag>Space Programme</tag>
+	        <tag>Science (general)</tag>
+	        <tag>
+	            Technology (general)
+	            <tag>Rocketry</tag>
+	            <tag>Laser</tag>
+	        </tag>
+	        <tag>Standards</tag>
+	        <tag>Animal Science</tag>
+	        <tag>Micro Science</tag>
+	        <tag>Marine Science</tag>
+	        <tag>Weather Science</tag>
+	        <tag>Electronics</tag>
+	        <tag>Identification Technology</tag>
+	        <tag>Mathematics</tag>
+	        <tag>Biotechnology</tag>
+	        <tag>Agricultural Research and Technology</tag>
+	        <tag>Nanotechnology</tag>
+	        <tag>IT/computer Sciences</tag>
+	        <tag>Scientific Institutions</tag>
+	    </tag>
+	    <tag>
+	        Social Issue
+	        <tag>Addiction</tag>
+	        <tag>Charity</tag>
+	        <tag>
+	            Demographics
+	            <tag>Population and Census</tag>
+	            <tag>Immigration</tag>
+	            <tag>Illegal Immigrants</tag>
+	            <tag>Emigrants</tag>
+	        </tag>
+	        <tag>Disabled</tag>
+	        <tag>
+	            Euthanasia (also Includes Assisted Suicide)
+	            <tag>Suicide</tag>
+	        </tag>
+	        <tag>
+	            Family
+	            <tag>Parent and Child</tag>
+	            <tag>Adoption</tag>
+	            <tag>Marriage</tag>
+	            <tag>Divorce</tag>
+	            <tag>Sex</tag>
+	            <tag>Courtship</tag>
+	        </tag>
+	        <tag>Family Planning</tag>
+	        <tag>Health Insurance</tag>
+	        <tag>Homelessness</tag>
+	        <tag>
+	            Minority Group
+	            <tag>Gays and Lesbians</tag>
+	            <tag>National Or Ethnic Minority</tag>
+	        </tag>
+	        <tag>Pornography</tag>
+	        <tag>Poverty</tag>
+	        <tag>Prostitution</tag>
+	        <tag>Racism</tag>
+	        <tag>Welfare</tag>
+	        <tag>Abortion</tag>
+	        <tag>
+	            Missing Person
+	            <tag>Missing Due To Hostilities</tag>
+	        </tag>
+	        <tag>Long Term Care</tag>
+	        <tag>Juvenile Delinquency</tag>
+	        <tag>Nuclear Radiation Victims</tag>
+	        <tag>Slavery</tag>
+	        <tag>Abusive Behaviour</tag>
+	        <tag>Death and Dying</tag>
+	        <tag>
+	            People
+	            <tag>Children</tag>
+	            <tag>Infants</tag>
+	            <tag>Teen-agers</tag>
+	            <tag>Adults</tag>
+	            <tag>Senior Citizens</tag>
+	        </tag>
+	        <tag>
+	            Social Issues (general)
+	            <tag>Social Conditions</tag>
+	            <tag>Social Problems</tag>
+	            <tag>Discrimination</tag>
+	            <tag>Social Services</tag>
+	        </tag>
+	        <tag>Ordnance Clearance</tag>
+	        <tag>Reconstruction</tag>
+	    </tag>
+	    <tag>
+	        Sport
+	        <tag>
+	            Aero and Aviation Sport
+	            <tag>Parachuting</tag>
+	            <tag>Sky Diving</tag>
+	        </tag>
+	        <tag>
+	            Alpine Skiing
+	            <tag>Downhill</tag>
+	            <tag>Giant Slalom</tag>
+	            <tag>Super G</tag>
+	            <tag>Slalom</tag>
+	            <tag>Combined</tag>
+	        </tag>
+	        <tag>
+	            American Football
+	            <tag>
+	                (US) National Football League (NFL) (North American)
+	            </tag>
+	            <tag>Entry Deleted</tag>
+	            <tag>AFL</tag>
+	        </tag>
+	        <tag>
+	            Archery
+	            <tag>FITA / Outdoor Target Archery</tag>
+	            <tag>Crossbow Shooting</tag>
+	        </tag>
+	        <tag>
+	            Athletics, Track and Field
+	            <tag>100 m</tag>
+	            <tag>200 m</tag>
+	            <tag>400 m</tag>
+	            <tag>800 m</tag>
+	            <tag>1000 m</tag>
+	            <tag>1500 m</tag>
+	            <tag>Mile</tag>
+	            <tag>2000 m</tag>
+	            <tag>3000 m</tag>
+	            <tag>5000 m</tag>
+	            <tag>10,000 m</tag>
+	            <tag>20 Km</tag>
+	            <tag>One Hour</tag>
+	            <tag>25000</tag>
+	            <tag>30000</tag>
+	            <tag>110 m Hurdles</tag>
+	            <tag>400 m Hurdles</tag>
+	            <tag>3000 m Steeplechase</tag>
+	            <tag>High Jump</tag>
+	            <tag>Pole Vault</tag>
+	            <tag>Long Jump</tag>
+	            <tag>Triple Jump</tag>
+	            <tag>Shot Put</tag>
+	            <tag>Discus Throw</tag>
+	            <tag>Hammer Throw</tag>
+	            <tag>Javelin Throw</tag>
+	            <tag>Decathlon</tag>
+	            <tag>4x100 m</tag>
+	            <tag>4x200 m</tag>
+	            <tag>4x400 m</tag>
+	            <tag>4x800 m</tag>
+	            <tag>4x1500 m</tag>
+	            <tag>Walk 1 H</tag>
+	            <tag>Walk 2 H</tag>
+	            <tag>10 Km Walk</tag>
+	            <tag>15 Km Walk</tag>
+	            <tag>20 Km Walk</tag>
+	            <tag>30 Km Walk</tag>
+	            <tag>50 Km Walk</tag>
+	            <tag>100 m Hurdles</tag>
+	            <tag>5 Km Walk</tag>
+	            <tag>Heptathlon</tag>
+	            <tag>1500 m Walk</tag>
+	            <tag>2000 m Walk</tag>
+	            <tag>3000 m Walk</tag>
+	            <tag>50 m</tag>
+	            <tag>50 m Hurdles</tag>
+	            <tag>50 Yards</tag>
+	            <tag>50 Yard Hurdles</tag>
+	            <tag>60 m</tag>
+	            <tag>60 m Hurdles</tag>
+	            <tag>60 Yards</tag>
+	            <tag>60 Yard Hurdles</tag>
+	            <tag>100 Yards</tag>
+	            <tag>100 Yard Hurdles</tag>
+	            <tag>300 m</tag>
+	            <tag>300 Yards</tag>
+	            <tag>440 Yards</tag>
+	            <tag>500 m</tag>
+	            <tag>500 Yards</tag>
+	            <tag>600 m</tag>
+	            <tag>600 Yards</tag>
+	            <tag>880 Yards</tag>
+	            <tag>1000 Yards</tag>
+	            <tag>2 Miles</tag>
+	            <tag>3 Miles</tag>
+	            <tag>6 Miles</tag>
+	            <tag>4x1 Mile</tag>
+	            <tag>Pentathlon</tag>
+	        </tag>
+	        <tag>Badminton</tag>
+	        <tag>
+	            Baseball
+	            <tag>
+	                Major League Baseball (North American Professional) - American League
+	            </tag>
+	            <tag>
+	                Major League Baseball (North American Professional) - National League
+	            </tag>
+	            <tag>
+	                Major League Baseball (North American Professional) - Special (e.g. All-Star, World Series)
+	            </tag>
+	            <tag>Rubberball Baseball</tag>
+	            <tag>Major League Baseball Playoffs</tag>
+	            <tag>World Series</tag>
+	        </tag>
+	        <tag>
+	            Basketball
+	            <tag>
+	                National Basketball Association (North American Professional)
+	            </tag>
+	            <tag>Professional - Women General</tag>
+	            <tag>Swiss Netball</tag>
+	            <tag>German Netball</tag>
+	            <tag>Dutch Netball</tag>
+	        </tag>
+	        <tag>
+	            Biathlon
+	            <tag>7.5 Km</tag>
+	            <tag>10 Km</tag>
+	            <tag>15 Km</tag>
+	            <tag>20 Km</tag>
+	            <tag>4x7.5 Km Relay</tag>
+	            <tag>12.5 Km Pursuit</tag>
+	        </tag>
+	        <tag>
+	            Billiards, Snooker and Pool
+	            <tag>8 Ball</tag>
+	            <tag>9 Ball</tag>
+	            <tag>14.1</tag>
+	            <tag>Snooker</tag>
+	        </tag>
+	        <tag>
+	            Bobsleigh
+	            <tag>Two-man Sled</tag>
+	            <tag>Four-man Sled</tag>
+	        </tag>
+	        <tag>Bowling</tag>
+	        <tag>Bowls and Petanque</tag>
+	        <tag>
+	            Boxing
+	            <tag>Super-heavyweight</tag>
+	            <tag>Heavyweight</tag>
+	            <tag>Cruiserweight</tag>
+	            <tag>Light-heavyweight</tag>
+	            <tag>Super-middleweight</tag>
+	            <tag>Middleweight</tag>
+	            <tag>Light-middleweight</tag>
+	            <tag>Welterweight</tag>
+	            <tag>Light-welterweight</tag>
+	            <tag>Lightweight</tag>
+	            <tag>Super-featherweight</tag>
+	            <tag>Featherweight</tag>
+	            <tag>Super-bantamweight</tag>
+	            <tag>Bantamweight</tag>
+	            <tag>Super-flyweight</tag>
+	            <tag>Flyweight</tag>
+	            <tag>Light Flyweight</tag>
+	            <tag>Straw</tag>
+	            <tag>IBF</tag>
+	            <tag>WBA</tag>
+	            <tag>WBC</tag>
+	            <tag>WBO</tag>
+	            <tag>French Boxing</tag>
+	            <tag>Thai Boxing</tag>
+	        </tag>
+	        <tag>
+	            Canoeing and Kayaking
+	            <tag>Slalom</tag>
+	            <tag>200 m</tag>
+	            <tag>500 m</tag>
+	            <tag>1000 m</tag>
+	            <tag>K1</tag>
+	            <tag>K2</tag>
+	            <tag>K4</tag>
+	            <tag>C1</tag>
+	            <tag>C2</tag>
+	            <tag>C4</tag>
+	            <tag>Canoe Sailing</tag>
+	        </tag>
+	        <tag>Pontoniering</tag>
+	        <tag>
+	            Climbing
+	            <tag>Mountaineering</tag>
+	            <tag>Sport Climbing</tag>
+	        </tag>
+	        <tag>Cricket</tag>
+	        <tag>
+	            Curling
+	            <tag>Icestock Sport</tag>
+	        </tag>
+	        <tag>
+	            Cycling
+	            <tag>Track</tag>
+	            <tag>Pursuit</tag>
+	            <tag>Olympic Sprint</tag>
+	            <tag>Sprint</tag>
+	            <tag>Keirin</tag>
+	            <tag>Points Race</tag>
+	            <tag>Madison Race</tag>
+	            <tag>500 m Time Trial</tag>
+	            <tag>1 Km Time Trial</tag>
+	            <tag>One Hour</tag>
+	            <tag>Road Race</tag>
+	            <tag>Road Time Trial</tag>
+	            <tag>Staging Race</tag>
+	            <tag>Cyclo-cross</tag>
+	            <tag>Vtt</tag>
+	            <tag>Vtt-cross</tag>
+	            <tag>Vtt-downhill</tag>
+	            <tag>Bi-crossing</tag>
+	            <tag>Trial</tag>
+	            <tag>Artistic Cycling</tag>
+	            <tag>Cycle Ball</tag>
+	        </tag>
+	        <tag>Dancing</tag>
+	        <tag>
+	            Diving
+	            <tag>10 m Platform</tag>
+	            <tag>10 m Platform Synchronised</tag>
+	            <tag>3 m Springboard</tag>
+	            <tag>3 m Springboard Synchronised</tag>
+	            <tag>Subaquatics</tag>
+	            <tag>Scuba Diving</tag>
+	        </tag>
+	        <tag>
+	            Equestrian
+	            <tag>Three-day Event</tag>
+	            <tag>Dressage</tag>
+	            <tag>Jumping</tag>
+	            <tag>Cross Country</tag>
+	        </tag>
+	        <tag>
+	            Fencing
+	            <tag>Epee</tag>
+	            <tag>Foil</tag>
+	            <tag>Sabre</tag>
+	        </tag>
+	        <tag>
+	            Field Hockey
+	            <tag>Roll Hockey</tag>
+	        </tag>
+	        <tag>
+	            Figure Skating
+	            <tag>Singles</tag>
+	            <tag>Pairs</tag>
+	            <tag>Ice Dance</tag>
+	        </tag>
+	        <tag>
+	            Freestyle Skiing
+	            <tag>Moguls</tag>
+	            <tag>Aerials</tag>
+	            <tag>Artistic Skiing</tag>
+	        </tag>
+	        <tag>Golf</tag>
+	        <tag>
+	            Gymnastics
+	            <tag>Floor Exercise</tag>
+	            <tag>Vault</tag>
+	            <tag>Pommel Horse</tag>
+	            <tag>Uneven Bars</tag>
+	            <tag>Parallel Bars</tag>
+	            <tag>Horizontal Bar</tag>
+	            <tag>Rings</tag>
+	            <tag>Beam</tag>
+	            <tag>Rhythmic</tag>
+	            <tag>Clubs</tag>
+	            <tag>Hoop</tag>
+	            <tag>Ribbon</tag>
+	            <tag>Rope</tag>
+	            <tag>Ball</tag>
+	            <tag>Trampoline</tag>
+	        </tag>
+	        <tag>Handball (team)</tag>
+	        <tag>
+	            Horse Racing, Harness Racing
+	            <tag>Flat Racing</tag>
+	            <tag>Steeple Chase</tag>
+	            <tag>Trotting</tag>
+	            <tag>Cross Country</tag>
+	        </tag>
+	        <tag>
+	            Ice Hockey
+	            <tag>National Hockey League (North American)</tag>
+	            <tag>Sledge Hockey</tag>
+	        </tag>
+	        <tag>
+	            Jai Alai (Pelota)
+	            <tag>Fronton</tag>
+	            <tag>Jai-alai</tag>
+	            <tag>Left Wall</tag>
+	            <tag>Trinquet</tag>
+	            <tag>Rebot</tag>
+	            <tag>Chistera Ancha</tag>
+	            <tag>Chistera Corta</tag>
+	            <tag>Bare Hand</tag>
+	            <tag>Pala-ancha</tag>
+	            <tag>Pala-corta</tag>
+	            <tag>Pasaka</tag>
+	            <tag>Xare</tag>
+	        </tag>
+	        <tag>
+	            Judo
+	            <tag>Heavyweight</tag>
+	            <tag>Half-heavyweight</tag>
+	            <tag>Middleweight</tag>
+	            <tag>Half-middleweight</tag>
+	            <tag>Half-lightweight</tag>
+	            <tag>Lightweight</tag>
+	            <tag>Extra Lightweight</tag>
+	        </tag>
+	        <tag>
+	            Karate
+	            <tag>Sparring</tag>
+	        </tag>
+	        <tag>Lacrosse</tag>
+	        <tag>
+	            Luge
+	            <tag>Singles</tag>
+	            <tag>Doubles</tag>
+	        </tag>
+	        <tag>Marathon</tag>
+	        <tag>
+	            Modern Pentathlon
+	            <tag>Running</tag>
+	            <tag>Shooting</tag>
+	            <tag>Swimming</tag>
+	            <tag>Fencing</tag>
+	            <tag>Showjumping</tag>
+	        </tag>
+	        <tag>
+	            Motor Racing
+	            <tag>Formula One</tag>
+	            <tag>F3000</tag>
+	            <tag>Endurance</tag>
+	            <tag>Indy</tag>
+	            <tag>CART</tag>
+	            <tag>NHRA</tag>
+	            <tag>NASCAR</tag>
+	            <tag>TRUCKI</tag>
+	        </tag>
+	        <tag>
+	            Motor Rallying
+	            <tag>Rallying</tag>
+	            <tag>Pursuit</tag>
+	            <tag>Rallycross</tag>
+	        </tag>
+	        <tag>
+	            Motorcycling
+	            <tag>Speed-Grand-Prix</tag>
+	            <tag>Enduro</tag>
+	            <tag>Grass-track</tag>
+	            <tag>Moto-ball</tag>
+	            <tag>Moto-cross</tag>
+	            <tag>Rallying</tag>
+	            <tag>Trial</tag>
+	            <tag>Endurance</tag>
+	            <tag>Superbike</tag>
+	            <tag>125 Cm3</tag>
+	            <tag>250 Cm3</tag>
+	            <tag>500 Cm3</tag>
+	            <tag>Side-cars</tag>
+	            <tag>MotoGP</tag>
+	        </tag>
+	        <tag>Netball</tag>
+	        <tag>
+	            Nordic Skiing
+	            <tag>Cross-country</tag>
+	            <tag>5 Km Classical Time</tag>
+	            <tag>10 Km Classical Style</tag>
+	            <tag>10 Km Pursuit Free Style</tag>
+	            <tag>15 Km Classical Style</tag>
+	            <tag>15 Km Pursuit Free Style</tag>
+	            <tag>10 Km + 15 Km Combined</tag>
+	            <tag>30 Km Classical Style</tag>
+	            <tag>30km Free Style</tag>
+	            <tag>50 Km Free Style</tag>
+	            <tag>4x5 Km Relay</tag>
+	            <tag>4x10 Km Relay</tag>
+	            <tag>Nordic Combined</tag>
+	            <tag>Raid</tag>
+	            <tag>5 Km Pursuit Free Style</tag>
+	            <tag>1.5 Km Sprint Free</tag>
+	            <tag>50 Km Classic Style</tag>
+	        </tag>
+	        <tag>
+	            Orienteering
+	            <tag>Ski Orienteering</tag>
+	        </tag>
+	        <tag>Polo</tag>
+	        <tag>
+	            Power Boating
+	            <tag>F1</tag>
+	            <tag>F2</tag>
+	        </tag>
+	        <tag>
+	            Rowing
+	            <tag>Single Sculls</tag>
+	            <tag>Double Sculls</tag>
+	            <tag>Quadruple Sculls</tag>
+	            <tag>Coxless Pair</tag>
+	            <tag>Coxless Four</tag>
+	            <tag>Eight</tag>
+	            <tag>Lightweight</tag>
+	        </tag>
+	        <tag>Rugby League</tag>
+	        <tag>
+	            Rugby Union
+	            <tag>Rugby 7</tag>
+	        </tag>
+	        <tag>
+	            Sailing
+	            <tag>Tornado</tag>
+	            <tag>Soling</tag>
+	            <tag>49er</tag>
+	            <tag>Europe</tag>
+	            <tag>Laser</tag>
+	            <tag>470</tag>
+	            <tag>Finn</tag>
+	            <tag>Star</tag>
+	            <tag>Flying Dutchmann</tag>
+	            <tag>505</tag>
+	            <tag>Staging Race</tag>
+	            <tag>Around The World</tag>
+	            <tag>Monohull</tag>
+	            <tag>Multihulls</tag>
+	            <tag>Yngling</tag>
+	            <tag>Mistral</tag>
+	        </tag>
+	        <tag>
+	            Shooting
+	            <tag>10 m Air Rifle</tag>
+	            <tag>10 m Air Pistol</tag>
+	            <tag>10 m Running Target</tag>
+	            <tag>25 m Rapid Fire Pistol</tag>
+	            <tag>25 m Sport Pistol</tag>
+	            <tag>50 m Free Pistol</tag>
+	            <tag>50 m Free Rifle Prone</tag>
+	            <tag>50 m Free Rifle 3x40</tag>
+	            <tag>50 m Sport Rifle 3x20</tag>
+	            <tag>Trap</tag>
+	            <tag>Double Trap</tag>
+	            <tag>Skeet</tag>
+	        </tag>
+	        <tag>
+	            Ski Jumping
+	            <tag>K90 Jump</tag>
+	            <tag>K120 Jump</tag>
+	            <tag>K180 (flying Jump)</tag>
+	        </tag>
+	        <tag>
+	            Snow Boarding
+	            <tag>Giant Slalom</tag>
+	            <tag>Half-pipe</tag>
+	        </tag>
+	        <tag>Soccer</tag>
+	        <tag>Softball</tag>
+	        <tag>
+	            Speed Skating
+	            <tag>500 m</tag>
+	            <tag>1000 m</tag>
+	            <tag>1500 m</tag>
+	            <tag>3000 m</tag>
+	            <tag>5000 m</tag>
+	            <tag>10000 m</tag>
+	            <tag>Short-track</tag>
+	            <tag>St 500 m</tag>
+	            <tag>St 1000m</tag>
+	            <tag>St 1500m</tag>
+	            <tag>St 3000m</tag>
+	            <tag>St 3000m Relay</tag>
+	            <tag>St 5000m</tag>
+	            <tag>St 5000m Relay</tag>
+	        </tag>
+	        <tag>Speedway</tag>
+	        <tag>
+	            Sports Organisations
+	            <tag>IOC</tag>
+	            <tag>International Federation</tag>
+	            <tag>Continental Federation</tag>
+	            <tag>National Federation</tag>
+	            <tag>GAISF</tag>
+	        </tag>
+	        <tag>Squash</tag>
+	        <tag>Sumo Wrestling</tag>
+	        <tag>Surfing</tag>
+	        <tag>
+	            Swimming
+	            <tag>50 m Freestyle</tag>
+	            <tag>100 m Freestyle</tag>
+	            <tag>200 m Freestyle</tag>
+	            <tag>400 m Freestyle</tag>
+	            <tag>800 m Freestyle</tag>
+	            <tag>1500 m Freestyle</tag>
+	            <tag>Relay 4x50 m Freestyle</tag>
+	            <tag>Relay 4x100 m Freestyle</tag>
+	            <tag>Relay 4x200 m Freestyle</tag>
+	            <tag>50 m Backstroke</tag>
+	            <tag>100 m Backstroke</tag>
+	            <tag>200 m Backstroke</tag>
+	            <tag>50 m Breaststroke</tag>
+	            <tag>100 m Breaststroke</tag>
+	            <tag>200 m Breaststroke</tag>
+	            <tag>50 m Butterfly</tag>
+	            <tag>100 m Butterfly</tag>
+	            <tag>200 m Butterfly</tag>
+	            <tag>100 m Medley</tag>
+	            <tag>200 m Medley</tag>
+	            <tag>400 m Medley</tag>
+	            <tag>Relay 4x50 m Medlay</tag>
+	            <tag>Relay4x100 m Medley</tag>
+	            <tag>Short Course</tag>
+	            <tag>Synchronised Technical Routine</tag>
+	            <tag>Synchronised Free Routine</tag>
+	        </tag>
+	        <tag>Table Tennis</tag>
+	        <tag>
+	            Taekwon-Do
+	            <tag>Under 49 Kg</tag>
+	            <tag>Under 58 Kg</tag>
+	            <tag>49-57 Kg</tag>
+	            <tag>58-68 Kg</tag>
+	            <tag>57-67 Kg</tag>
+	            <tag>68-80 Kg</tag>
+	            <tag>Over 67 Kg</tag>
+	            <tag>Over 80 Kg</tag>
+	        </tag>
+	        <tag>
+	            Tennis
+	            <tag>Soft Tennis</tag>
+	        </tag>
+	        <tag>
+	            Triathlon
+	            <tag>Triathlon Swimming</tag>
+	            <tag>Triathlon Cycling</tag>
+	            <tag>Triathlon Run</tag>
+	        </tag>
+	        <tag>
+	            Volleyball
+	            <tag>Beach Volleyball</tag>
+	        </tag>
+	        <tag>Water Polo</tag>
+	        <tag>
+	            Water Skiing
+	            <tag>Slalom</tag>
+	            <tag>Trick</tag>
+	            <tag>Jump</tag>
+	            <tag>Combined</tag>
+	        </tag>
+	        <tag>
+	            Weightlifting
+	            <tag>Snatch</tag>
+	            <tag>Clean and Jerk</tag>
+	            <tag>48 Kg</tag>
+	            <tag>53 Kg</tag>
+	            <tag>63 Kg</tag>
+	            <tag>75 Kg</tag>
+	            <tag>Over 75 Kg</tag>
+	            <tag>56 Kg</tag>
+	            <tag>62 Kg</tag>
+	            <tag>69 Kg</tag>
+	            <tag>77 Kg</tag>
+	            <tag>85 Kg</tag>
+	            <tag>94 Kg</tag>
+	            <tag>105 Kg</tag>
+	            <tag>Over 105 Kg</tag>
+	            <tag>Powerlifting</tag>
+	        </tag>
+	        <tag>
+	            Windsurfing
+	            <tag>Ocean</tag>
+	            <tag>Lake</tag>
+	            <tag>River</tag>
+	            <tag>Land</tag>
+	        </tag>
+	        <tag>
+	            Wrestling
+	            <tag>Freestyle</tag>
+	            <tag>Greco-roman</tag>
+	            <tag>Over 130 Kg</tag>
+	            <tag>130 Kg</tag>
+	            <tag>97 Kg</tag>
+	            <tag>85 Kg</tag>
+	            <tag>76 Kg</tag>
+	            <tag>69 Kg</tag>
+	            <tag>63 Kg</tag>
+	            <tag>58 Kg</tag>
+	            <tag>54 Kg</tag>
+	            <tag>Swiss Wrestling</tag>
+	        </tag>
+	        <tag>
+	            Sports Event
+	            <tag>Summer Olympics</tag>
+	            <tag>Winter Olympics</tag>
+	            <tag>Summer Universiade</tag>
+	            <tag>Winter Universiade</tag>
+	            <tag>Commonwealth Games</tag>
+	            <tag>Winter Goodwill Games</tag>
+	            <tag>Summer Asian Games</tag>
+	            <tag>Winter Asian Games</tag>
+	            <tag>Panamerican Games</tag>
+	            <tag>African Games</tag>
+	            <tag>Mediterranean Games</tag>
+	            <tag>SouthEast Asiatic Games</tag>
+	            <tag>PanPacific Games</tag>
+	            <tag>SouthPacific Games</tag>
+	            <tag>PanArabic Games</tag>
+	            <tag>Summer Goodwill Games</tag>
+	            <tag>World Games</tag>
+	            <tag>World Cup</tag>
+	            <tag>Intercontinental Cup</tag>
+	            <tag>Continental Cup</tag>
+	            <tag>International Cup</tag>
+	            <tag>National Cup</tag>
+	            <tag>Interregional Cup</tag>
+	            <tag>Regional Cup</tag>
+	            <tag>League Cup</tag>
+	            <tag>World Championship</tag>
+	            <tag>Intercontinental Championship</tag>
+	            <tag>Continental Championship 1st Level</tag>
+	            <tag>Continental Championship 2nd Level</tag>
+	            <tag>Continental Championship 3rd Level</tag>
+	            <tag>National Championship 1st Level</tag>
+	            <tag>National Championship 2nd Level</tag>
+	            <tag>National Championship3rdlevel</tag>
+	            <tag>National Championship 4th Level</tag>
+	            <tag>Regional Championship</tag>
+	            <tag>Grand Prix</tag>
+	            <tag>Intercontinental Tournament</tag>
+	            <tag>Continental Tournament</tag>
+	            <tag>International Tournament</tag>
+	            <tag>National Tournament</tag>
+	            <tag>Inter-nations Competition</tag>
+	            <tag>Inter-clubs Competition</tag>
+	            <tag>Friendly Competition</tag>
+	            <tag>All-stars Competition</tag>
+	            <tag>Exhibition</tag>
+	            <tag>Super Bowl</tag>
+	            <tag>Paralympic Games</tag>
+	        </tag>
+	        <tag>
+	            Rodeo
+	            <tag>Barrel Racing</tag>
+	            <tag>Calf Roping</tag>
+	            <tag>Bull Riding</tag>
+	            <tag>Bulldogging</tag>
+	            <tag>Saddle Bronc</tag>
+	            <tag>Bareback</tag>
+	            <tag>Goat Roping</tag>
+	        </tag>
+	        <tag>Mini Golf Sport</tag>
+	        <tag>Bandy</tag>
+	        <tag>
+	            Flying Disc
+	            <tag>Ultimate</tag>
+	            <tag>Guts</tag>
+	            <tag>Overall</tag>
+	            <tag>Distance</tag>
+	            <tag>Discathon</tag>
+	            <tag>DDC</tag>
+	            <tag>SCF</tag>
+	            <tag>Freestyle</tag>
+	            <tag>Accuracy</tag>
+	            <tag>Disc Golf</tag>
+	        </tag>
+	        <tag>Floorball</tag>
+	        <tag>Casting</tag>
+	        <tag>Tug-of-war</tag>
+	        <tag>Croquette</tag>
+	        <tag>
+	            Dog Racing
+	            <tag>Sled</tag>
+	            <tag>Oval Track</tag>
+	        </tag>
+	        <tag>Skeleton</tag>
+	        <tag>Australian Rules Football</tag>
+	        <tag>Canadian Football</tag>
+	        <tag>Duathlon</tag>
+	        <tag>Hornuss</tag>
+	        <tag>Fist Ball</tag>
+	        <tag>Inline Skating</tag>
+	        <tag>Grass Ski</tag>
+	        <tag>Snowbiking</tag>
+	        <tag>Twirling</tag>
+	        <tag>Kendo</tag>
+	        <tag>Jukendo</tag>
+	        <tag>Naginata</tag>
+	        <tag>Kyudo</tag>
+	        <tag>Kabaddi</tag>
+	        <tag>Sepak Takraw</tag>
+	        <tag>Wushu</tag>
+	        <tag>Darts</tag>
+	        <tag>Bodybuilding</tag>
+	    </tag>
+	    <tag>
+	        Unrest, Conflicts and War
+	        <tag>Act Of Terror</tag>
+	        <tag>Armed Conflict</tag>
+	        <tag>
+	            Civil Unrest
+	            <tag>Revolutions</tag>
+	            <tag>Rebellions</tag>
+	            <tag>Political Dissent</tag>
+	            <tag>Religious Conflict</tag>
+	            <tag>Social Conflict</tag>
+	        </tag>
+	        <tag>Coup D'etat</tag>
+	        <tag>
+	            Guerrilla Activity
+	            <tag>Bioterrorism</tag>
+	            <tag>Bombings</tag>
+	        </tag>
+	        <tag>
+	            Massacre
+	            <tag>Genocide</tag>
+	        </tag>
+	        <tag>Riots</tag>
+	        <tag>Demonstration</tag>
+	        <tag>
+	            War
+	            <tag>Civil War</tag>
+	            <tag>International Military Intervention</tag>
+	            <tag>Prisoners and Detainees</tag>
+	        </tag>
+	        <tag>
+	            Conflict (general)
+	            <tag>Peacekeeping Force</tag>
+	        </tag>
+	        <tag>Crisis</tag>
+	        <tag>Weaponry</tag>
+	    </tag>
+	    <tag>
+	        Weather
+	        <tag>Forecast</tag>
+	        <tag>Global Change</tag>
+	        <tag>
+	            Report
+	            <tag>Weather News</tag>
+	        </tag>
+	        <tag>Statistic</tag>
+	        <tag>Warning</tag>
+	    </tag>
+	</iptc>
+
+</tags>

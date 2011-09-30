@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<NewsML>
+  <Catalog Href="http://www.afp.com/dtd/AFPCatalog.xml"/>
+  <NewsEnvelope>
+    <DateAndTime>20090304T145704Z</DateAndTime>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>afp.com</ProviderId>
+        <DateId>20090304</DateId>
+        <NewsItemId>090304145530.4bkzwpgw</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:afp.com:20090304:090304145530.4bkzwpgw:1</PublicIdentifier>
+      </NewsIdentifier>
+      <NameLabel>Japan-France-energy-nuclear-environment</NameLabel>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20090304T145530Z</FirstCreated>
+      <ThisRevisionCreated>20090304T145530Z</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+    </NewsManagement>
+    <NewsComponent>
+      <NewsLines>
+        <HeadLine>Recycled Japanese nuclear fuel arrives at French port</HeadLine>
+        
+        <ByLine>by Chloe Coupeau</ByLine>
+        <DateLine>CHERBOURG, France, March 4, 2009 (AFP)</DateLine>
+        <CopyrightLine>© 2009 AFP</CopyrightLine>
+        <SlugLine>Japan-France-energy-nuclear-environment 2ndlead</SlugLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Provider>
+          <Party FormalName="AFP"/>
+        </Provider>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="en"/> 
+        <OfInterestTo FormalName="ext--english--relaxnews--lifestyle"/>
+      </DescriptiveMetadata>
+      <NewsComponent>
+        <ContentItem>
+          <MediaType FormalName="Text"/>
+          <Format FormalName="bcNITF2.5"/>
+          <DataContent>
+            <p> A convoy of recycled nuclear fuel moved under police escort Wednesday to a French port to be shipped half way round the world to Japan, despite fears it could be hijacked and used in bombs.</p>
+            <p>Five trucks bearing the symbol for radioactive material and protected by dozens of police vehicles arrived in Cherbourg in the early hours from a nearby nuclear reprocessing plant.</p>
+            <p>The mixed oxide, or MOX, is a blend of plutonium and reprocessed uranium that Japan, which has virtually no natural energy resources of its own, wants to start using as nuclear fuel for the first time.</p>
+            <p>French nuclear group Areva, which reprocessed the Japanese fuel in La Hague, 20 kilometres (15 miles) from Cherbourg, insists the production of MOX is safe and that it helps reduce nuclear waste.</p>
+            <p>Nuclear industry players say the risk of the civilian-grade plutonium contained in MOX being extracted to make nuclear weapons is negligible.</p>
+            <p>But environmental group Greenpeace has asked the UN nuclear watchdog, the IAEA, to stop the shipment of "an extremely dangerous and proliferating substance," saying it is "unsafe and unnecessary."</p>
+            <p>It says the recycled fuel to be sent to Japan contains 1.8 tonnes of plutonium, theoretically enough to make 225 nuclear bombs, making it the biggest plutonium transportation in history.</p>
+            <p>"The International Atomic Energy Agency (IAEA) believes that MOX can be used to make nuclear bombs," said the group.</p>
+            <p>"To claim, as Areva does, that MOX is not dangerous because it has civilian uses, is like saying dynamite is not dangerous because it can be used to dig tunnels," said Greenpeace France's head of nuclear issues, Yannick Rousselet.</p>
+            <p>Greenpeace, which unsucessfully tried to block the last French MOX convoy to Japan in 2001, expects a second and final convoy to arrive Wednesday night from La Hague, to be loaded Thursday on two ships bound for Japan.</p>
+            <p>Areva has confirmed the shipment is being prepared, but not its exact size, nor when it would leave for Japan.</p>
+            <p>Two ships from Britain's Pacific Nuclear Transport company are currently on their way to Cherbourg to pick up the fuel.</p>
+            <p>Henri-Jacques Neau, deputy head of Areva's transport operations, said there were "very strict international rules" to protect the shipment from hijacking, on land or at sea.</p>
+            <p>Both transport ships are armed and protected by specially trained British nuclear safety police, he said, while every five to eight tonnes of MOX are packed in 100 tonnes of heat- and shock-proof steel casing.</p>
+            <p>But Greenpeace argues there is still a risk the shipments could be seized as they make the journey to Japan by one of three routes, via the Cape of Good Hope, Cape Horn or the Panama Canal.</p>
+            <p>Thierry Dujardin of the OECD Nuclear Energy Agency said the risk of hijacking could not be ruled out entirely.</p>
+            <p>"One cannot exclude the possibility that an organisation would try, and that is why these convoys are protected," he said.</p>
+            <p>The nuclear fuel reprocessed by Areva came from three regional Japanese power companies and is intended for use at light-water reactors in southern and central Japan.</p>
+            <p>MOX has been used as fuel in several countries across the world for more than three decades.</p>
+            <p>According to Greenpeace, Japan is obliged to take back the MOX, as it did in 2001, but has yet to start using it as fuel in the face of local objections. It hopes to start doing so by 2011.</p>
+            <p>Japan, which relies on nuclear power plants for nearly one-third of its power demands, has also built its own reprocessing plant, which is expected to begin operating soon.</p>
+            <p>But the plant's opening has been delayed after a series of minor accidents stirred up objections from the local community.</p>
+            <p>The Japanese government aims to step up the use of nuclear energy as the Asian economic power has virtually no natural energy resources.</p>
+            <p>Public fears rose last year however when an earthquake caused a fire and a small radiation leak at the world's biggest nuclear plant of Kashiwazaki-Kariwa, northwest of Tokyo.</p>
+          </DataContent>
+        </ContentItem>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

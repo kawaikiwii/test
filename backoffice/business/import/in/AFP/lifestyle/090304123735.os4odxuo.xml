@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<NewsML>
+  <Catalog Href="http://www.afp.com/dtd/AFPCatalog.xml"/>
+  <NewsEnvelope>
+    <DateAndTime>20090304T123840Z</DateAndTime>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>afp.com</ProviderId>
+        <DateId>20090304</DateId>
+        <NewsItemId>090304123735.os4odxuo</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:afp.com:20090304:090304123735.os4odxuo:1</PublicIdentifier>
+      </NewsIdentifier>
+      <NameLabel>Germany-Poland-WWII-history-displaced-politics-diplomacy</NameLabel>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20090304T123735Z</FirstCreated>
+      <ThisRevisionCreated>20090304T123735Z</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+    </NewsManagement>
+    <NewsComponent>
+      <NewsLines>
+        <HeadLine>Polish-German war memorial spat soothed</HeadLine>
+        
+        
+        <DateLine>BERLIN, March 4, 2009 (AFP)</DateLine>
+        <CopyrightLine>© 2009 AFP</CopyrightLine>
+        <SlugLine>Germany-Poland-WWII-history-displaced-politics-diplomacy</SlugLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Provider>
+          <Party FormalName="AFP"/>
+        </Provider>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="en"/> 
+        <OfInterestTo FormalName="ext--english--relaxnews--lifestyle"/>
+      </DescriptiveMetadata>
+      <NewsComponent>
+        <ContentItem>
+          <MediaType FormalName="Text"/>
+          <Format FormalName="bcNITF2.5"/>
+          <DataContent>
+            <p> A German-Polish row over a proposed memorial for the millions expelled after 1945 from former parts of Germany was soothed on Wednesday after the controversial head of the expulsees' body quit.</p>
+            <p>The chief of the Federation of the Expelled, Erika Steinbach, seen in Warsaw as something of a hardline German nationalist, said she did not want to be the "pretext" for the memorial's cancellation.</p>
+            <p>"Nothing would give the opponents of the memorial more pleasure," Steinbach, a member of Chancellor Angela Merkel's conservatives, said in a statement.</p>
+            <p>Berlin has been wrestling for decades with how to commemorate how ethnic Germans were forced out of areas overun by the advancing Soviet army which since 1945 have belonged to neighbours like Poland or the Czech Republic.</p>
+            <p>In doing so, Germany runs the risk of being accused of whitewashing the war crimes committed by the Nazis and of putting Germans' suffering on a par with that of the regime's victims all across mainland Europe.</p>
+            <p>Steinbach has ruffled feathers in Poland -- overrun by the Nazis in World War II and the scene of horrific atrocities -- by comments such as refusing to recognise the German-Polish border drawn up after German reunification in 1990.</p>
+            <p>The Polish government, which has grudgingly accepted the idea of a memorial to German refugees in Berlin but which objected strongly to Steinbach's involvement, welcomed her decision.</p>
+            <p>"It is a success. I consider it is a good day, good news," a government spokesman, Pavel Gras, was quoted as saying in the media.</p>
+            <p>Parliamentary speaker Bronislaw Komorowski hailed the news as "very good news for Poland and a good sign for German-Polish relations."</p>
+            <p>The issue overshadowed a recent summit between Merkel and Polish counterpart Donald Tusk, with the latter saying that a role for Steinbach in the project would "offend Polish sensitivity concerning the truth about World War II."</p>
+          </DataContent>
+        </ContentItem>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

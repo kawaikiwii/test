@@ -1,0 +1,41 @@
+/**
+ * Project:     WCM
+ * File:        biz.relaxTask.js
+ *
+ * @copyright   (c)2009 Nstein Technologies
+ * @version     4.x
+ *
+ */
+
+function ajaxRelaxTask(command, divId, taskId, datas, displayFilter, sortField, sortOrder)
+{
+	document.body.style.cursor = 'wait';
+    wcmBizAjaxController.call("export/biz.relaxTask", {
+        command: command,
+        divId: divId,
+        taskId: taskId,
+        datas: datas,
+        displayFilter: displayFilter,
+        sortOrder: sortOrder,
+        sortField: sortField
+    });
+	document.body.style.cursor = 'default';
+}
+
+function divWait() {
+	$("relaxTaskSummary").innerHTML = "<div class='wait' style='display:inline;'>Loading...</div>";
+}
+
+
+function toggleSortOrder(sortedField)
+{
+    var sortOrderBy = $('sortOrder').value;
+
+    if (sortOrderBy == 'ASC')
+    	sortOrderBy = 'DESC';
+    else
+    	sortOrderBy = 'ASC';
+    	
+    $('sortOrder').value = sortOrderBy;	
+    ajaxRelaxTask('refresh', 'results', null, null, $('displayFilter').value, sortedField, sortOrderBy);
+}

@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<widgets><widget>
+    <name>Most popular articles</name>
+    <description>This widget list the N most popular articles from a given channel.</description>
+    <author>Nstein</author>
+    <version>1.0</version>
+    <mail>pierrick.charron@nstein.com</mail>
+    <context>channel</context>
+<path>/var/www/dev.bo.afprelax.net/business/widgets/nstein/channel/mostPopular</path><class>wcmWidgetNsteinChannelMostPopular</class></widget><widget>
+	<name>Last Articles</name>
+	<description>Liste the last articles from a channel</description>
+	<author>Nstein</author>
+	<version>0.1</version>
+	<mail>pierrick.charron@nstein.com</mail>
+	<context>channel</context>
+<path>/var/www/dev.bo.afprelax.net/business/widgets/nstein/channel/articles</path><class>wcmWidgetNsteinChannelArticles</class></widget><widget>
+    <name>Most recent articles</name>
+    <description>This widget list the N most recent articles from a given channel.</description>
+    <author>Nstein</author>
+    <version>1.0</version>
+    <mail>pierrick.charron@nstein.com</mail>
+    <context>channel</context>
+<path>/var/www/dev.bo.afprelax.net/business/widgets/nstein/channel/mostRecent</path><class>wcmWidgetNsteinChannelMostRecent</class></widget><widget>
+    <name>Most discussed articles</name>
+    <description>This widget list the N most discussed articles from a given channel.</description>
+    <author>Nstein</author>
+    <version>1.0</version>
+    <mail>pierrick.charron@nstein.com</mail>
+    <context>channel</context>
+<path>/var/www/dev.bo.afprelax.net/business/widgets/nstein/channel/mostDiscussed</path><class>wcmWidgetNsteinChannelMostDiscussed</class></widget><widget>
+    <name>_BIZ_SIMILAR_ARTICLES</name>
+    <description>_BIZ_SIMILAR_ARTICLES</description>
+    <author>Nstein</author>
+    <version>0.1</version>
+    <mail>pierrick.charron@nstein.com</mail>
+    <context>slideshow,collection,channel,article</context>
+<path>/var/www/dev.bo.afprelax.net/business/widgets/nstein/nserver/similar</path><class>wcmWidgetNsteinNserverSimilar</class></widget><widget>
+    <name>_BIZ_TAGS</name>
+    <description>TME Tags</description>
+    <author>Nstein</author>
+    <version>0.1</version>
+    <mail>pierrick.charron@nstein.com</mail>
+    <context>slideshow,collection,channel,article</context>
+<path>/var/www/dev.bo.afprelax.net/business/widgets/nstein/nserver/tags</path><class>wcmWidgetNsteinNserverTags</class></widget><widget>
+    <name>_BIZ_RELATED_ARTICLES</name>
+    <description>Related Articles</description>
+    <author>Nstein</author>
+    <version>0.1</version>
+    <mail>pierrick.charron@nstein.com</mail>
+    <context>slideshow,collection,channel,article</context>
+<path>/var/www/dev.bo.afprelax.net/business/widgets/nstein/nserver/related</path><class>wcmWidgetNsteinNserverRelated</class></widget><widget>
+    <name>_BIZ_PERSON_NAME</name>
+    <description>Get People Names</description>
+    <author>Nstein</author>
+    <version>0.1</version>
+    <mail>pierrick.charron@nstein.com</mail>
+    <context>slideshow,collection,channel,article</context>
+<path>/var/www/dev.bo.afprelax.net/business/widgets/nstein/nserver/entitiesPn</path><class>wcmWidgetNsteinNserverEntitiesPn</class></widget><widget>
+    <name>_BIZ_ORGANIZATION</name>
+    <description>List of Organization Names from article/chapter</description>
+    <author>Nstein</author>
+    <version>0.1</version>
+    <mail>pierrick.charron@nstein.com</mail>
+    <context>slideshow,collection,channel,article</context>
+<path>/var/www/dev.bo.afprelax.net/business/widgets/nstein/nserver/entitiesOn</path><class>wcmWidgetNsteinNserverEntitiesOn</class></widget><widget>
+    <name>_BIZ_SUBJECT_MAP</name>
+    <description>Subject Maps</description>
+    <author>Nstein</author>
+    <version>0.1</version>
+    <mail>pierrick.charron@nstein.com</mail>
+    <context>slideshow,collection,channel,article</context>
+<path>/var/www/dev.bo.afprelax.net/business/widgets/nstein/nserver/subjectMap</path><class>wcmWidgetNsteinNserverSubjectMap</class></widget><widget>
+    <name>_BIZ_CONCEPTS</name>
+    <description>Fetch concepts on an article/channel</description>
+    <author>Nstein</author>
+    <version>0.1</version>
+    <mail>pierrick.charron@nstein.com</mail>
+    <context>slideshow,collection,channel,article</context>
+<path>/var/www/dev.bo.afprelax.net/business/widgets/nstein/nserver/concepts</path><class>wcmWidgetNsteinNserverConcepts</class></widget><widget>
+    <name>_BIZ_GEOGRAPHICAL_LOCATION</name>
+    <description>Gets info on geographic locations from article/channel</description>
+    <author>Nstein</author>
+    <version>0.1</version>
+    <mail>pierrick.charron@nstein.com</mail>
+    <context>slideshow,collection,channel,article</context>
+<path>/var/www/dev.bo.afprelax.net/business/widgets/nstein/nserver/entitiesGl</path><class>wcmWidgetNsteinNserverEntitiesGl</class></widget></widgets>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<NewsML>
+  <Catalog Href="http://www.afp.com/dtd/AFPCatalog.xml"/>
+  <NewsEnvelope>
+    <DateAndTime>20081210T144747Z</DateAndTime>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>afp.com</ProviderId>
+        <DateId>20081210</DateId>
+        <NewsItemId>081210144546.n2261hdh</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:afp.com:20081210:081210144546.n2261hdh:1</PublicIdentifier>
+      </NewsIdentifier>
+      <NameLabel>Hongrie-transport-aérien-social-tourisme</NameLabel>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20081210T144546Z</FirstCreated>
+      <ThisRevisionCreated>20081210T144546Z</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+    </NewsManagement>
+    <NewsComponent>
+      <NewsLines>
+        <HeadLine>Hongrie: plus de 50 vols annulés à l'aéroport de Budapest par une grève</HeadLine>
+        
+        
+        <DateLine>BUDAPEST, 10 déc 2008 (AFP)</DateLine>
+        <CopyrightLine>© 2008 AFP</CopyrightLine>
+        <SlugLine>Hongrie-transport-aérien-social-tourisme LEAD</SlugLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Provider>
+          <Party FormalName="AFP"/>
+        </Provider>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="fr"/> 
+        <OfInterestTo FormalName="ext--francais--relaxnews--artdevivre"/>
+      </DescriptiveMetadata>
+      <NewsComponent>
+        <ContentItem>
+          <MediaType FormalName="Text"/>
+          <Format FormalName="bcNITF2.5"/>
+          <DataContent>
+            <p> Plus de 50 vols ont été annulés mercredi dans la matinée en raison d'une grève des employés de l'aéroport international de Budapest (Ferihegy), a annoncé un porte-parole de la société Budapest Airport.</p>
+            <p>"Plus de 50 vols, dont 25 arrivées et 26 départs ont été annulés jusqu'à mercredi midi à cause de la grève", a indiqué le porte-parole Domokos Szollar.</p>
+            <p>Au total près de 250 vols devaient être assurés mercredi au départ et à l'arrivée de Ferihegy. Le porte-parole a assuré que l'aéroport était capable d'accueillir les vols à l'arrivée mais "plusieurs compagnies ont annulé les vols à destination de Budapest à cause du trajet retour incertain".</p>
+            <p>M. Szollar a indiqué que Ferihegy n'était pas complètement paralysé, car le terminal 2B (qui gère d'habitude les vols à l'extérieur de l'espace Schengen) fonctionnait avec deux points de contrôle.</p>
+            <p>Ce terminal accueille les vols à bas coûts.</p>
+            <p>Deux syndicats d'employés ont appelé à la grève qui a débuté mercredi matin, incluant le personnel de sécurité.</p>
+            <p>Les contrôles de sécurité des voyageurs étaient complètement arrêtés et les halls de l'aéroport remplis de passagers désemparés dans la matinée, a constaté un photographe de l'AFP.</p>
+            <p>Organisée par le Syndicat des employés de l'aéroport et des prestataires de services (RDSZSZ) et par le Syndicat associé des transports aériens (LESZ), cette grève "générale et illimitée" est destinée à protester contre des modifications apportées à la convention collective des employés de l'aéroport.</p>
+            <p>Budapest Airport a amendé unilatéralement la convention collective, jugeant  que certaines de ses dispositions lui étaient défavorables et étaient source de gaspillage.</p>
+            <p>Les syndicats ont, en outre, demandé la suspension d'un programme de restructuration en cours, que Budapest Airport considère comme essentiel pour la compétitivité de l'entreprise.</p>
+            <p>M. Szollar a encore souligné que l'aéroport était prêt à négocier avec les syndicats, mais pas tant que les employés observeraient la grève.</p>
+          </DataContent>
+        </ContentItem>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

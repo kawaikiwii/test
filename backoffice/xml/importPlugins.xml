@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<plugins>
+  <plugin>
+	<name>Print</name>
+	<description>Print files</description>
+	<category>files</category>
+	<className>wcmImportPrint</className>
+<path>/data/ncm/wcm401/business/import/plugins/print</path></plugin>
+  <plugin>
+	<name>XML</name>
+	<description>_BIZ_IMPORT_NSTEIN</description>
+	<category>files</category>
+	<className>wcmImportXML</className>
+	<module>business/import/nativeXML</module>
+<path>/data/ncm/wcm401/business/import/plugins/nsteinXML</path></plugin>
+  <plugin>
+	<name>Photos</name>
+	<description>_BIZ_IMPORT_JPEG</description>
+	<category>files</category>
+	<className>wcmImportPhotos</className>
+	<module>business/import/photos</module>
+<path>/data/ncm/wcm401/business/import/plugins/photos</path></plugin>
+  <plugin>
+	<name>NewsML</name>
+	<description>_BIZ_IMPORT_NEWSML</description>
+	<category>files</category>
+	<className>wcmImportAFP</className>
+	<module>business/import/NewsML</module>
+<path>/data/ncm/wcm401/business/import/plugins/newsml</path></plugin>
+  <plugin>
+	<name>NITF</name>
+	<description>_BIZ_IMPORT_NITF</description>
+	<category>files</category>
+	<className>wcmImportNITF</className>
+<path>/data/ncm/wcm401/business/import/plugins/nitf</path></plugin>
+  <plugin>
+	<name>Digital Assets Management</name>
+	<description>_BIZ_IMPORT_DAM</description>
+	<category>remote</category>
+	<className>wcmImportDAM</className>
+<path>/data/ncm/wcm401/business/import/plugins/DAM</path></plugin>
+</plugins>

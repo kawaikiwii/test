@@ -1,0 +1,187 @@
+***************
+*** 470,479 ****
+       */
+      public static function generateTimeQuery($aTime)
+      {
+-         return '<time>'.$aTime.'<time>';
+      }
+  
+      /**
+       * Generate the textML query for a date
+       *
+       * @param  date    $aDate Date to search for
+--- 470,519 ----
+       */
+      public static function generateTimeQuery($aTime)
+      {
++         return '<time>'.$aTime.'</time>';
+      }
+  
+      /**
++      * Generate the textML query for an interval time
++      * @param   time    $beginTime  Begining time (or null)
++      * @param   time    $endTime    Ending time (or null)
++      * @param   boolean $beginIncluded  TRUE to include beginTime in interval (TRUE by default)
++      * @param   boolean $endIncluded    TRUE to include endDate in interval (TRUE by default)
++      *
++      * @return string   return the result of the query
++      */
++     public static function generateIntervalTimeQuery($beginTime = null, $endTime = null, $beginIncluded = true, $endIncluded = true)
++     {
++         $result = '<interval>';
++         if($beginTime != null)
++         {
++             $result .= '<start  INCLUSIVE="';
++             if($beginIncluded)
++                     $result .= "True";
++             else
++                     $result .= "False";
++             $result .= '"><time>';
++             $result .= $beginTime;
++             $result .= '</time></start>';
++         }
++         if($endTime != null)
++         {
++             $result .= '<end  INCLUSIVE="';
++             if($endIncluded)
++                     $result .= "True";
++             else
++                     $result .= "False";
++             $result .= '"><time>';
++             $result .= $endTime;
++             $result .= '</time></end>';
++         }
++         $result .= '</interval>';
++         return $result;
++     }
++  
++ 
++ 
++     /**
+       * Generate the textML query for a date
+       *
+       * @param  date    $aDate Date to search for
+***************
+*** 516,521 ****
+      }
+  
+      /**
+       * Generate the textML query for an interval date
+       *
+       * @param  date    $beginDate Begining date (or null)
+--- 556,578 ----
+      }
+  
+      /**
++      * Generate a textml query for a 'relative' date time interval
++      * 
++      * @param int $delta Relative delta (in days) from today (-1 = yesterday, -7 = since 1 week, +1 = until next week, ...)
++      * @return string   Textml query fragment
++      */
++     public static function generateRelativeDateTimeQuery($indexName, $delta = -1)
++     {
++         $beginDateTime = time() + ($delta * 3600 * 24);
++         $endDateTime = time();
++         if($beginDateTime > $endDateTime)
++         {
++             list($beginDateTime, $endDateTime) = array($endDateTime, $beginDateTime);
++         }
++         return self::generateIntervalDateTimeQuery($indexName, $beginDateTime, $endDateTime);
++     }
++ 
++     /**
+       * Generate the textML query for an interval date
+       *
+       * @param  date    $beginDate Begining date (or null)
+***************
+*** 575,580 ****
+          $result .= '</interval>';
+          return $result;
+      }
+  }
+  
+- ?>--- 632,715 ----
+          $result .= '</interval>';
+          return $result;
+      }
++ 
++ 
++     public function generateDateTimeQuery($indexName, $datetime)
++     {
++         $time = date('H:i:s', $datetime);
++         if($time === '00:00:00')
++         {
++             $result = '<key NAME="' . $indexName . '">' . self::generateDateQuery($datetime) . '</key>';
++         } 
++         else
++         {
++             $result  = '<andkey>';
++             $result .= '<key NAME="' . $indexName . '">' . self::generateDateQuery($datetime) . '</key>';
++             $result .= '<key NAME="' . $indexName . '_time">' . self::generateTimeQuery($time) . '</key>';
++             $result .= '</andkey>';
++         }
++         var_dump($result);
++         return $result;
++     }
++ 
++     /**
++      * Generate the textML query for an interval date time
++      *
++      * @param string $indexName Name of the index to query on
++      * @param int $beginDateTime timestamp of the begin date time
++      * @param int $endDateTime timestamp of the end date time
++      * @return string   Textml query fragment
++      */
++     public function generateIntervalDateTimeQuery($indexName, $beginDateTime = null, $endDateTime = null)
++     {
++         $beginDate = $beginTime = $endDate = $endTime = false;
++                 
++         if(null !== $beginDateTime)
++         {
++             $beginDate = date('Ymd', $beginDateTime);
++             $beginTime = date('H:i:s', $beginDateTime);
++         }
++ 
++         if(null !== $endDateTime)
++         {
++             $endDate = date('Ymd', $endDateTime);
++             $endTime = date('H:i:s', $endDateTime);
++             if($endTime === '00:00:00') $endTime = '23:59:59';
++         }
++ 
++         if($beginDate === $endDate)
++         {
++             $result = '<andkey>';
++             $result .= '<key NAME="' . $indexName . '">' . self::generateDateQuery($beginDateTime) . '</key>';
++             $result .= '<key NAME="' . $indexName . '_time">' . self::generateIntervalTimeQuery($beginTime, $endTime) . '</key>';
++             $result .= '</andkey>';
++ 
++         } else {
++ 
++             $result  = '<orkey>';
++             // DEBUT AVEC HEURE
++             if(null !== $beginDateTime)
++             {
++                 $result .= '<andkey>';
++                 $result .= '<key NAME="' . $indexName . '">' . self::generateDateQuery($beginDateTime) . '</key>';
++                 $result .= '<key NAME="' . $indexName . '_time">' . self::generateIntervalTimeQuery($beginTime) . '</key>';
++                 $result .= '</andkey>';
++             }
++ 
++             if(null !== $endDateTime)
++             {
++                 $result .= '<andkey>';
++                 $result .= '<key NAME="' . $indexName . '">' . self::generateDateQuery($endDateTime) . '</key>';
++                 $result .= '<key NAME="' . $indexName . '_time">' . self::generateIntervalTimeQuery(null, $endTime) . '</key>';
++                 $result .= '</andkey>';
++             }
++ 
++             $result .= '<key NAME="' . $indexName . '">' . self::generateIntervalDateQuery($beginDateTime, $endDateTime, false, false) . '</key>';
++             $result .= '</orkey>';
++         }
++         return $result;
++     }
++ 
+  }
+  
++ ?>

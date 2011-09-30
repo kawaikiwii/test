@@ -1,0 +1,217 @@
+
+html, body {
+    font: normal 11px verdana;
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    overflow: hidden;
+    height: 100%;
+    background: #64247c;
+    color: #333;
+}
+
+
+#logo h3 {
+    position: absolute;
+    top: 35px;
+    left: 5px;
+    color: #fff;
+}
+
+#qBar {
+    left: 50%;
+    margin: 1em 0 0 -227px;
+    position: absolute;
+    width: 455px;
+}
+
+
+#user {
+    color: #333;
+    padding: 0.1em 0.1em 0.1em 1em;
+    text-align: right;
+    position: absolute;
+    background: transparent url(/rp/images/default/user-bg.png) no-repeat scroll 0 -22px;
+    right: 0;
+	line-height: 25px;
+}
+#user a {
+    color: #333;
+	font-weight:bold;
+	text-decoration:underline;
+}
+
+#user ul li {
+	display: inline;
+	margin-left: 1em;
+}
+
+#clock {
+    color: #FFFFFF;
+
+    padding: 0.2em;
+    text-align: center;
+    
+	
+	 left: 50%;
+    margin: 0.1em 0 0 -227px;
+    position: absolute;
+    width: 455px;
+	
+}
+
+#clockTime {
+    font-weight: normal;
+}
+
+.x-viewport body {
+    background: #64247C url(/rp/images/default/viewport-bg.png) repeat-x scroll left top;
+}
+
+.qbar {
+    background: transparent url(/rp/images/default/viewport-bg.png) repeat-x scroll 0 -15px;
+    border: 0 none;
+}
+
+#services.x-tab-panel .x-tab-panel-header .x-tab-strip-wrap ul.x-tab-strip-top {
+    background: transparent url(/rp/images/default/viewport-bg.png) repeat-x scroll 0 -50px;
+    border-bottom: 1px solid #AEAEAE;
+}
+
+#services.ari-tab-services .x-tab-strip span.x-tab-strip-text {
+    color: #FFFFFF;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.x-toolbar .ari-btn-menu-active .x-btn-left {
+    background: url(/rp/images/default/toolbar/tb-btn-sprite.gif) no-repeat 0 -63px;
+}
+
+.x-toolbar .ari-btn-menu-active .x-btn-right {
+    background: url(/rp/images/default/toolbar/tb-btn-sprite.gif) no-repeat 0 -84px;
+}
+
+.x-toolbar .ari-btn-menu-active .x-btn-center {
+    background: url(/rp/images/default/toolbar/tb-btn-sprite.gif) repeat-x 0 -105px;
+}
+
+.x-toolbar .ari-btn-over .x-btn-left {
+    background-image: url(/rp/images/default/toolbar/tb-btn-sprite.gif);
+    background-position: 0 -63px;
+}
+
+.x-toolbar .ari-btn-over .x-btn-right {
+    background-image: url(/rp/images/default/toolbar/tb-btn-sprite.gif);
+    background-position: 0 -84px;
+}
+
+.x-toolbar .ari-btn-over .x-btn-center {
+    background-image: url(/rp/images/default/toolbar/tb-btn-sprite.gif);
+    background-position: 0 -105px;
+}
+
+.x-tab-strip span.x-tab-strip-text {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+#services .x-tab-strip span.x-tab-strip-text {
+    font-size: 1.2em;
+    color: #334455;
+}
+
+#services .x-tab-strip-active span.x-tab-strip-text {
+    color: #112233;
+}
+
+/**
+ * SEARCH
+ *
+ */
+.ari-tab-type-search {
+    background: transparent url(/rp/images/default/sprites/sidebar.png) no-repeat 0 -300px !important;
+    font-style: italic !important;
+    height: 1%;
+}
+
+
+/* SELECTION */
+.ari-tab-type-folder {
+    background: transparent url(/rp/images/default/sprites/sidebar.png) no-repeat 0 -24px !important;
+    font-style: italic !important;
+    height: 1%;
+}
+
+/* BIN */
+.ari-tab-type-bin {
+    background: transparent url(/rp/images/default/sprites/sidebar.png) no-repeat 0 -116px !important;
+    font-style: italic !important;
+    height: 1%;
+}
+
+/* ACCOUNT */
+#myAccount h2 {
+    padding-top: 2em;
+}
+
+/* QBAR */
+#qBar .x-toolbar {
+    background: none;
+    border-width: 0px;
+}
+
+.pictureDownloads {
+    text-align: left;
+    padding-top: 0.7em;
+    padding-left: 0.5em;
+}
+
+.pictureDownloads h3 {
+    font-size: 100%;
+    font-weight: bold;
+}
+
+.pictureDownloads td {
+    padding: 3px 10px 3px 0;
+}
+
+.pictureDownloads li {
+    margin-left: 2em;
+    list-style: circle;
+}
+
+.pictureDownloads a:hover {
+    text-decoration: none;
+}
+
+.zipDownload {
+    margin-left: 1em;
+    padding: 0.7em;
+    text-align: left;
+    border: #444 1px solid;
+}
+
+.noticeMessage {
+    font-weight: bold;
+    color: red;
+    text-decoration: underline;
+    padding: 5px 0 0 300px;
+    position: absolute;
+}
+
+.x-form-item.x-hide-label .x-form-check-wrap-inner {
+    overflow: hidden;
+}
+
+.ari-logo {
+    padding: 2px 5px;
+}
+
+.ari-firstsource {
+    font-weight: normal;
+}
+
+.toHome {
+    background: transparent url(/rp/images/default/16x16/home.png) no-repeat 5px 5px !important;
+}

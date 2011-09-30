@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<NewsML>
+  <Catalog Href="http://www.afp.com/dtd/AFPCatalog.xml"/>
+  <NewsEnvelope>
+    <DateAndTime>20090304T152837Z</DateAndTime>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>afp.com</ProviderId>
+        <DateId>20090304</DateId>
+        <NewsItemId>ext--english--relaxnews--lifestyle</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:afp.com:20090304:ext--english--relaxnews--lifestyle:1</PublicIdentifier>
+      </NewsIdentifier>
+      <NameLabel></NameLabel>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20090304T152837Z</FirstCreated>
+      <ThisRevisionCreated>20090304T152837Z</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+    </NewsManagement>
+    <NewsComponent>
+      <AdministrativeMetadata>
+        <Provider>
+          <Party FormalName="AFP"/>
+        </Provider>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="en"/> 
+      </DescriptiveMetadata>
+      <NewsComponent>
+        <NewsLines>
+          <HeadLine>Yeehaw! Out-of-work cowgirl saddles up for Texas</HeadLine>
+        </NewsLines>
+        <NewsItemRef NewsItem="090304152740.s321sts6.xml"/>
+      </NewsComponent>
+      <NewsComponent>
+        <NewsLines>
+          <HeadLine>Carla wants baby with Sarkozy, but may adopt</HeadLine>
+        </NewsLines>
+        <NewsItemRef NewsItem="090304151458.1ldlxr6m.xml"/>
+      </NewsComponent>
+      <NewsComponent>
+        <NewsLines>
+          <HeadLine>Recycled Japanese nuclear fuel arrives at French port</HeadLine>
+        </NewsLines>
+        <NewsItemRef NewsItem="090304145530.4bkzwpgw.xml"/>
+      </NewsComponent>
+      <NewsComponent>
+        <NewsLines>
+          <HeadLine>Finnish parliament allows employers to monitor emails</HeadLine>
+        </NewsLines>
+        <NewsItemRef NewsItem="090304144625.ysoug0a9.xml"/>
+      </NewsComponent>
+      <NewsComponent>
+        <NewsLines>
+          <HeadLine>Spanish police smash ring that stole British public works machines</HeadLine>
+        </NewsLines>
+        <NewsItemRef NewsItem="090304142540.gxb6oek1.xml"/>
+      </NewsComponent>
+      <NewsComponent>
+        <NewsLines>
+          <HeadLine>British court convicts killer of Harry Potter film actor</HeadLine>
+        </NewsLines>
+        <NewsItemRef NewsItem="090304142046.s4j8ygpw.xml"/>
+      </NewsComponent>
+      <NewsComponent>
+        <NewsLines>
+          <HeadLine>Car makers get serious on the environment</HeadLine>
+        </NewsLines>
+        <NewsItemRef NewsItem="090304141444.nj165s3b.xml"/>
+      </NewsComponent>
+      <NewsComponent>
+        <NewsLines>
+          <HeadLine>Washington new center of global warming battle</HeadLine>
+        </NewsLines>
+        <NewsItemRef NewsItem="090304133736.5fia7dyz.xml"/>
+      </NewsComponent>
+      <NewsComponent>
+        <NewsLines>
+          <HeadLine>France Telecom 2008 net profit shrinks</HeadLine>
+        </NewsLines>
+        <NewsItemRef NewsItem="090304131754.wp71gr4m.xml"/>
+      </NewsComponent>
+      <NewsComponent>
+        <NewsLines>
+          <HeadLine>Smart bubbly, corny USB sticks lead fair's gadget parade</HeadLine>
+        </NewsLines>
+        <NewsItemRef NewsItem="090304130027.3pa4o2w8.xml"/>
+      </NewsComponent>
+      <NewsComponent>
+        <NewsLines>
+          <HeadLine>Polish-German war memorial spat soothed</HeadLine>
+        </NewsLines>
+        <NewsItemRef NewsItem="090304123735.os4odxuo.xml"/>
+      </NewsComponent>
+      <NewsComponent>
+        <NewsLines>
+          <HeadLine>Swisscom posts 15-percent slide in profits</HeadLine>
+        </NewsLines>
+        <NewsItemRef NewsItem="090304123653.q94sxt4o.xml"/>
+      </NewsComponent>
+      <NewsComponent>
+        <NewsLines>
+          <HeadLine>Tiger kills ninth man in Indonesia: official</HeadLine>
+        </NewsLines>
+        <NewsItemRef NewsItem="090304121852.g0lyd6aq.xml"/>
+      </NewsComponent>
+      <NewsComponent>
+        <NewsLines>
+          <HeadLine>Nigeria's oil minister fined for ignoring summons: report</HeadLine>
+        </NewsLines>
+        <NewsItemRef NewsItem="090304114414.wwgh6tj7.xml"/>
+      </NewsComponent>
+      <NewsComponent>
+        <NewsLines>
+          <HeadLine>Man crushed to death in Indonesia elephant stampede</HeadLine>
+        </NewsLines>
+        <NewsItemRef NewsItem="090304114348.61jh5nuj.xml"/>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

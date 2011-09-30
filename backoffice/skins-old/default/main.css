@@ -1,0 +1,26 @@
+/*
+ * Project:     NCM
+ * File:        skins/default/main.css
+ *
+ * @copyright   (c)2007 Nstein Technologies
+ * @version     4.x
+ *
+ */
+@import url("css/common.css");
+@import url("css/header.css");
+@import url("css/assetbar.css");
+@import url("css/tabpane.css");
+@import url("css/dashboard.css");
+@import url("css/license.css");
+@import url("css/backup.css");
+@import url("css/modaldialog.css");
+@import url("css/portal.css");
+@import url("css/forms.css");
+@import url("css/calendar.css");
+@import url("css/bizobject.css");
+@import url("css/relations.css");
+@import url("css/cropping.css");
+@import url("css/reference-form.css");
+@import url("css/search.css");
+@import url("css/business.css");
+@import url("css/specific.css");

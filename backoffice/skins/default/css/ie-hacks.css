@@ -1,0 +1,7 @@
+
+#filters p.selection input {
+	float: left;
+	display: block;
+	padding: 0 0 5px 0;
+	margin: -2px 0 0 -4px;
+}

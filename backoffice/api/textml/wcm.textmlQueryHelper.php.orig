@@ -1,0 +1,717 @@
+<?php
+
+/**
+ * Project:     WCM
+ * File:        wcm.textml.php
+ *
+ * @copyright   (c)2008 Nstein Technologies
+ * @version     4.x
+ *
+ */
+
+/**
+ * This class helps building a textml query
+ */
+class wcmTextmlQueryHelper
+{
+    private static $englishPluralExceptions = array(
+                                                'foot' => 'feet',
+                                                'goose' => 'geece',
+                                                'mouse' => 'mice',
+                                                'louse' => 'lice',
+                                                'tooth' => 'teeth',
+                                                'man' => 'men',
+                                                'woman' => 'women'
+                                                    );
+
+    private static $frenchPluralExceptions = array(
+                                                 'maïs' => 'maïs',
+                                                 'pari' => 'pari'
+                                                    );
+
+    /**
+     * Generates plural word query from single word in English (e.g. "horse" becomes "hors[e,es]")
+     *
+     * @param string $word       Word to generate plural for
+     *
+     * @return string Textml query fragment corresponding to searched word
+     */
+    public static function englishPlural($word)
+    {
+        // Check for exception
+        if (isset(self::$englishPluralExceptions[$word]))
+            return self::$englishPluralExceptions[$word];
+
+        // Compute affixes
+        $s1 = substr($word, -1);
+        $p1 = substr($word, 0, strlen($word) - 1);
+        $s2 = substr($word, -2);
+        $p2 = substr($word, 0, strlen($word) - 2);
+        $s3 = substr($word, -3);
+        $p3 = substr($word, 0, strlen($word) - 3);
+
+        // Already a plural?
+        if ($s1 == 's' || $s1 == 'x')
+            return $word;
+
+        return $word;
+    }
+
+    /**
+     * Generates plural word query from single word in French (e.g. "cheval" becomes "chev[al,aux]")
+     *
+     * @param string $word Word to generate plural for
+     *
+     * @return string Textml query fragment corresponding to searched word
+     */
+    private static function frenchPlural($word)
+    {
+        // Check for exception
+        if (isset(self::$englishPluralExceptions[$word]))
+            return self::$englishPluralExceptions[$word];
+
+        // Compute affixes
+        $s1 = substr($word, -1);
+        $p1 = substr($word, 0, strlen($word) - 1);
+        $s2 = substr($word, -2);
+        $p2 = substr($word, 0, strlen($word) - 2);
+        $s3 = substr($word, -3);
+        $p3 = substr($word, 0, strlen($word) - 3);
+
+        // Already a plural?
+        if ($s1 == 's' || $s1 == 'x')
+            return $word;
+
+        if ($s3 == 'ail')
+        {
+            switch($word)
+            {
+                case "bail":
+                case "corail":
+                case "email":
+                case "émail":
+                case "soupiral":
+                case "travail":
+                case "vantail":
+                case "vitral":
+                    return $p2 . "[il,ux]";
+                default:
+                    return $p1 . "[".$s1.",".$s1."s]";
+            }
+        }
+
+        if ($s2 == 'al')
+        {
+            switch($word)
+            {
+                case "aval":
+                case "bal":
+                case "cal":
+                case "carnaval":
+                case "chacal":
+                case "choral":
+                case "fatal":
+                case "final":
+                case "festival":
+                case "glacial":
+                case "jovial":
+                case "mistral":
+                case "natal":
+                case "naval":
+                case "narval":
+                case "pal":
+                case "recital":
+                case "récital":
+                    return $p1 . "[".$s1.",".$s1."s]";
+                default:
+                    return $p2 . "[al,aux]";
+            }
+        }
+
+        if ($s2 == 'ou')
+        {
+            switch($word)
+            {
+                case "bijou":
+                case "caillou":
+                case "chou":
+                case "genou":
+                case "hibou":
+                case "joujou":
+                case "pou":
+                    return $p1 . "[".$s1.",".$s1."x]";
+                default:
+                    return $p1 . "[".$s1.",".$s1."s]";
+            }
+        }
+
+        if ($s2 == 'au' || $s2 == 'eu' || $s3 == 'eau')
+        {
+            switch($word)
+            {
+                case "bleu":
+                case "emeu":
+                case "émeu":
+                case "pneu":
+                case "laudau":
+                case "sarrau":
+                case "bleu":
+                case "bleu":
+                case "bleu":
+                case "bleu":
+                    return $p1 . "[".$s1.",".$s1."s]";
+                default:
+                    return $p1 . "[".$s1.",".$s1."x]";
+            }
+        }
+
+        // Pluriel par d?faut
+        return $p1 . "[".$s1.",".$s1."s]";
+    }
+
+    /**
+     * Analyse a string query that may contains specific operators such as
+     * 'et|and' 'ou|or' 'sauf|but', '..', '[,,]', '*', '?', '""'
+     *
+     * @param string  $stringQuery Query to analyse
+     * @param boolean $addPlurals  TRUE to add plural words (default is FALSE)
+     *
+     * @return string Textml query fragment
+     */
+    private static function analyseQuery($stringQuery, $addPlurals = false)
+    {
+        if (!$stringQuery) return null;
+
+        $stringQuery = trim($stringQuery);
+
+        // Analyse string
+        $tokens = explode(' ', $stringQuery);
+        $left = null;
+        for($i=0; $i<count($tokens); $i++)
+        {
+            $token = $tokens[$i];
+            switch(strtolower($token))
+            {
+                case "(":
+                    // If we have already a left part, space is considered as an "and" operator)
+                    if ($left != null)
+                    {
+                        $right = null;
+                        for ($j=$i+1; $j < count($tokens); $j++)
+                            $right .= $tokens[$j] . " ";
+                        return "<and>" . $left . self::analyseQuery($right) . "</and>";
+                    }
+
+                    // Search closing parenthesis
+                    $nbP = 1;
+                    $j = $i+1;
+                    while($nbP > 0)
+                    {
+                        // Parenthesis is never closed?
+                        if ($j == count($tokens))
+                        {
+                            $j++;
+                            break;
+                        }
+                        $token = $tokens[$j];
+                        if ($token == "(")
+                        {
+                            $nbP++;
+                            if ($left != null) $left .= " ";
+                            $left .= $token;
+                        }
+                        elseif ($token == ")")
+                        {
+                            $nbP--;
+                            if ($nbP > 0)
+                            {
+                                if ($left != null) $left .= " ";
+                                $left .= $token;
+                            }
+                        }
+                        else
+                        {
+                            if ($left != null) $left .= " ";
+                            $left .= $token;
+                        }
+                        $j++;
+                    }
+                    $i = $j-1;
+                    $left = self::analyseQuery($left);
+                    break;
+
+                case "..":
+                    // Phrase unit symbol
+                    $right = null;
+                    for ($j=$i+1; $j < count($tokens); $j++)
+                        $right .= $tokens[$j] . " ";
+                    return "<unit NAME='Phrase'>" . $left . self::analyseQuery($right) . "</unit>";
+
+                case "and":
+                case "et":
+                case "+":
+                    // And operator
+                    $right = null;
+                    for ($j=$i+1; $j < count($tokens); $j++)
+                        $right .= $tokens[$j] . " ";
+                    return "<and>" . $left . self::analyseQuery($right) . "</and>";
+
+                case "or":
+                case "ou":
+                case "|":
+                    // Or operator
+                    $right = null;
+                    for ($j=$i+1; $j < count($tokens); $j++)
+                        $right .= $tokens[$j] . " ";
+                    return "<or>" . $left . self::analyseQuery($right) . "</or>";
+
+                case "andnot":
+                case "but":
+                case "sauf":
+                case "-":
+                    // AndNot operator
+                    $right = null;
+                    for ($j=$i+1; $j < count($tokens); $j++)
+                        $right .= $tokens[$j] . " ";
+                    return "<andnot>" . $left . self::analyseQuery($right) . "</andnot>";
+
+                default:
+                    if (substr($token, 0, 2) == "<>")
+                    {
+                        // Proximity operator (e.g. "boat <>[N] sea")
+                        $distance = substr($token, 2);
+                        if ($distance == null || strlen($distance)==0)
+                            $distance = 10;
+                        else
+                            $distance = intval($distance);
+
+                        $right = null;
+                        for ($j=$i+1; $j < count($tokens); $j++)
+                            $right .= $tokens[$j] . " ";
+                        return "<near VALUE='".$distance."'>" . $left . self::analyseQuery($right) . "</near>";
+                    }
+                    elseif(substr($token, 0, 2) == ">>")
+                    {
+                        // Adjacency operator (e.g. "boat >>[N] sea")
+                        $distance = substr($token, 2);
+                        if ($distance == null || strlen($distance)==0)
+                            $distance = 10;
+                        else
+                            $distance = intval($distance);
+
+                        $right = null;
+                        for ($j=$i+1; $j < count($tokens); $j++)
+                            $right .= $tokens[$j] . " ";
+                        return "<adj VALUE='".$distance."'>" . $left . self::analyseQuery($right) . "</adj>";
+                    }
+                    elseif ($left != null)
+                    {
+                        // If we have already a left part, consider spacing as an "and" operator
+                        $right = null;
+                        for ($j=$i; $j < count($tokens); $j++)
+                        {
+                            $right .= $tokens[$j] . " ";
+                        }
+                        return "<and>" . $left . self::analyseQuery($right) . "</and>";
+                    }
+                    elseif ($token[0] == '"')
+                    {
+                        // Exact string (inner spaces has been replace by special char '¤')
+                        $token = trim(substr($token, 1, strlen($token)-2), '¤');
+                        $elems = explode('¤', $token);
+                        if (count($elems) > 1)
+                        {
+                            $left = null;
+                            for($k=0; $k<count($elems)-1; $k++)
+                                $left .= "<adj VALUE='0'>";
+                            $left .= "<elem>" .  str_replace(array("*","?"), array("<anystr/>","<anychr/>"), $elems[0]) . "</elem>";
+                            $left .= "<elem>" . str_replace(array("*","?"), array("<anystr/>","<anychr/>"), $elems[1]) . "</elem>";
+                            for($k=2; $k<count($elems); $k++)
+                            {
+                                $left .= "</adj>";
+                                $left .= "<elem>" . str_replace(array("*","?"), array("<anystr/>","<anychr/>"), $elems[$k]) . "</elem>";
+                            }
+                            $left .= "</adj>";
+                        }
+                        else
+                        {
+                            $left = "<elem>" . str_replace(array("*","?"), array("<anystr/>","<anychr/>"), $token) . "</elem>";
+                        }
+                    }
+                    else
+                    {
+                        // Add plural?
+                        $firstLetter = $token[0];
+                        if ($addPlurals
+                                && (strtoupper($firstLetter) != $firstLetter)
+                                && strpos($token, '*')===false
+                                && strpos($token, '?')===false)
+                        {
+                            // Compute plural rule
+                            $left = self::frenchPlural(strtolower($token));
+
+                            // Replace "xx[a,b]" with "xx<oneof><choice>a</choice><choice>b</choice></oneof>"
+                            if (strpos($left, '[') > 0)
+                            {
+                                $parts = explode('[', $left);
+                                $left  = "<elem>".$parts[0]."<oneof>";
+                                $choices = explode(',', substr($parts[1], 0, strlen($parts[1])-1));
+                                foreach($choices as $choice)
+                                    $left .= "<choice>".$choice."</choice>";
+                                $left .= "</oneof></elem>";
+                            }
+                            else
+                            {
+                                $left = "<elem>" . str_replace(array("*","?"), array("<anystr/>","<anychr/>"), $left) . "</elem>";
+                            }
+                        }
+                        else
+                        {
+                            $left = "<elem>".str_replace(array("*","?"), array("<anystr/>","<anychr/>"), $token)."</elem>";
+                        }
+                    }
+                    break;
+            }
+        }
+
+        return $left;
+    }
+
+    /**
+     * Analyse a textual query and replace it by a native Textml query fragment
+     * (e.g. "cat or dog" becomes "<or> <elem> cat </elem> <elem> dog </elem> </or>)
+     *
+     * @param string Query string
+     *
+     * @return string Textml query fragment
+     */
+    public static function generateWordQuery($text)
+    {
+        // Ensure we have space betwwen operators (parenthesis, +, -, |, ..,<>,>>)
+        $text = preg_replace('/( )*([\(\)\+\-\|]|\.\.|\<\>[0-9]*|\>\>[0-9]*)( )*/', ' \\2 ', $text);
+
+        // Replace common separators by space
+        $text = preg_replace('/[\.\,\;\:\?\!\'\&\t\$\£\@\%\`\n]+/', ' ', $text);
+
+        // Remove extra white spaces
+        $text = preg_replace('/\s\s+/', ' ', $text);
+
+        // Manage exact string (e.g. "some words") : replace inner space with special char ¤
+        $text = preg_replace('/"([^"]*)"/e', "'\"'.str_replace(' ','¤','\\1').'\"'", $text);
+
+        return self::analyseQuery($text);
+    }
+
+    /**
+     * Generate an exact string query (but replace wildcards such as '?' and '*')
+     *
+     * @param string $text The string to search for
+     *
+     * @return string Textml query fragment
+     */
+    public static function generateStringQuery($text)
+    {
+        return '<elem>' . str_replace(array("*","?"), array("<anystr/>","<anychr/>"), $text) . '</elem>';
+    }
+
+    /**
+     * Generate a number query
+     *
+     * @param string $number The number to search for
+     *
+     * @return string Textml query fragment
+     */
+    public static function generateNumberQuery($number)
+    {
+        $arrnum = explode(',', $number);
+        if (count($arrnum) > 1)
+            return '<or><number>'.implode('</number><number>', $arrnum).'</number></or>';
+        return '<number>' . intval($number) . '</number>';
+    }
+
+    /**
+     * Generate the textML query for a numeric interval
+     *
+     * @param  int     $beginNumber   Begining number (or null)
+     * @param  int     $endNumber     Ending number (or null)
+     * @param  boolean $beginIncluded TRUE to include beginNumber in interval (TRUE by default)
+     * @param  boolean $endIncluded   TRUE to include endNumber in interval (TRUE by default)
+     *
+     * @return string  Textml query fragment
+     */
+    public static function generateIntervalNumberQuery($beginNumber = null, $endNumber = null, $beginIncluded = true, $endIncluded = true)
+    {
+        $result  = '';
+        $result .= '<interval>';
+
+        if ($beginNumber !== null)
+        {
+            $result .= '<start INCLUSIVE="';
+            $result .= ($beginIncluded) ? 'True' : 'False';
+            $result .= '"><number>' . $beginNumber . '</number></start>';
+        }
+        if ($endNumber !== null)
+        {
+            $result .= '<end INCLUSIVE="';
+            $result .= ($endIncluded) ? 'True' : 'False';
+            $result .= '"><number>' . $endNumber . '</number></end>';
+        }
+
+        $result .= '</interval>';
+        return $result;
+    }
+
+    /**
+     * Generate the textML query for a time
+     *
+     * @param  string $aTime Time to search for (expected format: HH:MM)
+     *
+     * @return string   returns the result of the query
+     */
+    public static function generateTimeQuery($aTime)
+    {
+        return '<time>'.$aTime.'<time>';
+    }
+
+   /**
+      * Generate the textML query for an interval time
+      * @param   time    $beginTime  Begining time (or null)
+      * @param   time    $endTime    Ending time (or null)
+      * @param   boolean $beginIncluded  TRUE to include beginTime in interval (TRUE by default)
+      * @param   boolean $endIncluded    TRUE to include endDate in interval (TRUE by default)
+      *
+      * @return string   return the result of the query
+      */
+     public static function generateIntervalTimeQuery($beginTime = null, $endTime = null, $beginIncluded = true, $endIncluded = true)
+     {
+         $result = '<interval>';
+         if($beginTime != null)
+         {
+             $result .= '<start  INCLUSIVE="';
+             if($beginIncluded)
+                     $result .= "True";
+             else
+                     $result .= "False";
+             $result .= '"><time>';
+             $result .= $beginTime;
+             $result .= '</time></start>';
+         }
+         if($endTime != null)
+         {
+             $result .= '<end  INCLUSIVE="';
+             if($endIncluded)
+                     $result .= "True";
+             else
+                     $result .= "False";
+             $result .= '"><time>';
+             $result .= $endTime;
+             $result .= '</time></end>';
+         }
+         $result .= '</interval>';
+         return $result;
+     }
+
+    /**
+     * Generate the textML query for a date
+     *
+     * @param  date    $aDate Date to search for
+     *
+     * @return string   returns the result of the query
+     */
+    public static function generateDateQuery($aDate)
+    {
+        $arr = getdate($aDate);
+        $result  = '<date>';
+        if($arr['year']) $result .= '<year>'.$arr['year'].'</year>';
+        if($arr['mon'])  $result .= '<month>'.$arr['mon'].'</month>';
+        if($arr['mday']) $result .= '<day>'.$arr['mday'].'</day>';
+        $result .= '</date>';
+
+        return $result;
+    }
+
+    /**
+     * Generate a textml query for a 'relative' date interval
+     *
+     * @param int $delta Relative delta (in days) from today (-1 = yesterday, -7 = since 1 week, +1 = until next week, ...)
+     * @return string   Textml query fragment
+     */
+    public static function generateRelativeDateQuery($delta = -1)
+    {
+        $deltaTime  = ($delta * 24 * 60 * 60);
+        if($deltaTime > 0)
+        {
+            $beginDate = mktime(0, 0, 0, date("m"), date("d"), date("Y"));
+            $endDate = time() + $deltaTime;
+        }
+        else
+        {
+            $beginDate = time() + $deltaTime;
+            $endDate = mktime(0, 0, 0, date("m"), date("d"), date("Y"));
+        }
+
+        return self::generateIntervalDateQuery($beginDate, $endDate);
+    }
+
+
+  /**
+      * Generate a textml query for a 'relative' date time interval
+      * 
+      * @param int $delta Relative delta (in days) from today (-1 = yesterday, -7 = since 1 week, +1 = until next week, ...)
+      * @return string   Textml query fragment
+      */
+     public static function generateRelativeDateTimeQuery($indexName, $delta = -1)
+     {
+         $beginDateTime = time() + ($delta * 3600 * 24);
+         $endDateTime = time();
+         if($beginDateTime > $endDateTime)
+         {
+             list($beginDateTime, $endDateTime) = array($endDateTime, $beginDateTime);
+         }
+         return self::generateIntervalDateTimeQuery($indexName, $beginDateTime, $endDateTime);
+     }
+ 
+
+    /**
+     * Generate the textML query for an interval date
+     *
+     * @param  date    $beginDate Begining date (or null)
+     * @param  date    $endDate   Ending date (or null)
+     * @param  boolean $beginIncluded TRUE to include beginDate in interval (TRUE by default)
+     * @param  boolean $endIncluded TRUE to include endDate in interval (TRUE by default)
+     *
+     * @return string   returns the result of the query
+     */
+    public static function generateIntervalDateQuery($beginDate = null, $endDate = null, $beginIncluded = true, $endIncluded = true)
+    {
+        $result  = '';
+        $result .= '<interval>';
+
+        if($beginDate != null)
+        {
+            $arr = getdate($beginDate);
+            $result .= '<start INCLUSIVE="';
+            if($beginIncluded)
+                $result .= "True";
+            else
+                $result .= "False";
+            $result .= '"><date>';
+            if($arr['year'] != '')
+                $result .= '<year>'.$arr['year'].'</year>';
+
+            if($arr['mon'] != '')
+                $result .= '<month>'.$arr['mon'].'</month>';
+
+            if($arr['mday'] != '')
+                $result .= '<day>'.$arr['mday'].'</day>';
+
+            $result .= '</date></start>';
+        }
+
+        if($endDate != null)
+        {
+            $arr = getdate($endDate);
+            $result .= '<end INCLUSIVE="';
+            if($endIncluded)
+                $result .= "True";
+            else
+                $result .= "False";
+            $result .= '"><date>';
+            if($arr['year'] != '')
+                $result .= '<year>'.$arr['year'].'</year>';
+
+            if($arr['mon'] != '')
+                $result .= '<month>'.$arr['mon'].'</month>';
+
+            if($arr['mday'] != '')
+                $result .= '<day>'.$arr['mday'].'</day>';
+
+            $result .= '</date></end>';
+        }
+
+        $result .= '</interval>';
+        return $result;
+    }
+    
+    
+     public function generateDateTimeQuery($indexName, $datetime)
+     {
+         $time = date('H:i:s', $datetime);
+         if($time === '00:00:00')
+         {
+             $result = '<key NAME="' . $indexName . '">' . self::generateDateQuery($datetime) . '</key>';
+         } 
+         else
+         {
+             $result  = '<andkey>';
+             $result .= '<key NAME="' . $indexName . '">' . self::generateDateQuery($datetime) . '</key>';
+             $result .= '<key NAME="' . $indexName . '_time">' . self::generateTimeQuery($time) . '</key>';
+             $result .= '</andkey>';
+         }
+         var_dump($result);
+         return $result;
+     }
+ 
+     /**
+      * Generate the textML query for an interval date time
+      *
+      * @param string $indexName Name of the index to query on
+      * @param int $beginDateTime timestamp of the begin date time
+      * @param int $endDateTime timestamp of the end date time
+      * @return string   Textml query fragment
+      */
+     public function generateIntervalDateTimeQuery($indexName, $beginDateTime = null, $endDateTime = null)
+     {
+         $beginDate = $beginTime = $endDate = $endTime = false;
+                 
+         if(null !== $beginDateTime)
+         {
+             $beginDate = date('Ymd', $beginDateTime);
+             $beginTime = date('H:i:s', $beginDateTime);
+         }
+ 
+         if(null !== $endDateTime)
+         {
+             $endDate = date('Ymd', $endDateTime);
+             $endTime = date('H:i:s', $endDateTime);
+             if($endTime === '00:00:00') $endTime = '23:59:59';
+         }
+ 
+         if($beginDate === $endDate)
+         {
+             $result = '<andkey>';
+             $result .= '<key NAME="' . $indexName . '">' . self::generateDateQuery($beginDateTime) . '</key>';
+             $result .= '<key NAME="' . $indexName . '_time">' . self::generateIntervalTimeQuery($beginTime, $endTime) . '</key>';
+             $result .= '</andkey>';
+ 
+         } else {
+ 
+             $result  = '<orkey>';
+             // DEBUT AVEC HEURE
+             if(null !== $beginDateTime)
+             {
+                 $result .= '<andkey>';
+                 $result .= '<key NAME="' . $indexName . '">' . self::generateDateQuery($beginDateTime) . '</key>';
+                 $result .= '<key NAME="' . $indexName . '_time">' . self::generateIntervalTimeQuery($beginTime) . '</key>';
+                 $result .= '</andkey>';
+             }
+ 
+             if(null !== $endDateTime)
+             {
+                 $result .= '<andkey>';
+                 $result .= '<key NAME="' . $indexName . '">' . self::generateDateQuery($endDateTime) . '</key>';
+                 $result .= '<key NAME="' . $indexName . '_time">' . self::generateIntervalTimeQuery(null, $endTime) . '</key>';
+                 $result .= '</andkey>';
+             }
+ 
+             $result .= '<key NAME="' . $indexName . '">' . self::generateIntervalDateQuery($beginDateTime, $endDateTime, false, false) . '</key>';
+             $result .= '</orkey>';
+         }
+         return $result;
+     }
+ 
+    
+    
+}
+
+?>

@@ -1,0 +1,142 @@
+
+#login-box {
+width: 800px;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+}
+
+#login-box #signon {
+padding: 15px 0 0 0;
+margin: 0 15px 0 25px;
+float: left;
+display: block;
+width: 355px;
+}
+
+#login-box #signon form {
+margin-left: auto;
+margin-right: auto;
+}
+
+#login-box #signon form fieldset {
+float: left;
+display: block;
+padding: 0;
+margin: 0 0 0 0;
+text-align: left;
+border: 0;
+width: 370px;
+}
+
+#login-box #signon form fieldset legend {
+display: none;
+}
+
+#login-box #signon form fieldset ul {
+padding: 0 0 0 0;
+margin: 0 0 0 0;
+}
+
+#login-box #signon form fieldset ul li {
+list-style-type: none;
+padding: 0 0 0 0;
+margin: 5px 0 5px 0;
+}
+
+#login-box #signon form fieldset ul li label {
+width: 100px;
+text-align: left;
+display: block;
+font-size: 12px;
+float: left;
+padding: 6px 10px 4px 0;
+font-weight: bold;
+}
+
+#login-box #signon form fieldset ul li input, 
+#login-box #signon form fieldset ul li select {
+font-size: 14px;
+padding: 4px;
+border: 1px solid gray;
+margin: 0 0 0 0;
+}
+
+#login-box #signon form fieldset ul li input {
+width: 235px;
+}
+
+#login-box #signon form fieldset ul li select {
+width: 245px;
+}
+
+#login-box #signon form fieldset ul li select option {
+}
+
+#login-box #signon form .submit {
+margin: 10px 0 0 110px;
+display: block;
+font-size: 13px;
+font-weight: bold;
+background: url("../images/gui/button-110-black.png") top left no-repeat;
+width: 110px;
+height: 32px;
+color: #FFF;
+border: none;
+padding: 1px 0 7px;
+cursor: pointer;
+}
+
+#login-box #signon ul.message {
+padding: 0 0 0 0;
+margin: 0 0 0 0;
+} 
+
+#login-box #signon ul.message li {
+padding: 4px 8px 0 20px ;
+margin: 0 0 15px 0;
+background-repeat: no-repeat;
+background-position: 0 4px;
+list-style-type: none;
+font-size: 12px;
+font-weight: normal;
+line-height: 16px;
+clear: both;
+text-align: left;
+} 
+
+#login-box #signon ul.message li.info {
+background-image: url("../images/gui/information-frame.png");
+}
+
+#login-box #signon ul.message li.warning {
+background-image: url("../images/gui/exclamation-frame.png");
+}
+
+#login-box #signon ul.message li.error {
+background-image: url("../images/gui/minus-circle-frame.png");
+}
+
+#login-box #credits {
+padding: 0 0 0 25px;
+margin: 0 0 0 13px;
+float: left;
+display: block;
+width: 300px;
+border-left: 1px solid silver;
+text-align: left;
+}
+
+#login-box #credits ul {
+float: left;
+display: block;
+margin: 15px 0 0 0;
+padding: 0 0 0 0;
+}
+
+#login-box #credits ul li {
+list-style-type: none;
+margin: 0 0 15px 0;
+padding: 0 0 0 0;
+font-size: 11px;
+}

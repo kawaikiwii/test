@@ -1,0 +1,208 @@
+<?php
+
+/**
+ * Project:     WCM
+ * File:        biz.alerte.php
+ *
+ * @copyright   (c)2009 Nstein Technologies
+ * @version     4.x
+ *
+ */
+
+// Initialize system
+require_once dirname(__FILE__).'/../../initWebApp.php';
+
+// Get current project
+$project = wcmProject::getInstance();
+
+// Retrieve parameters
+$command	= getArrayParameter($_REQUEST, "command", null);
+$loginAs	= getArrayParameter($_REQUEST, "loginAs", null);
+$alerteId	= getArrayParameter($_REQUEST, "alerteId", null);
+$formDatas	= getArrayParameter($_REQUEST, "formDatas", null);
+
+$account = new account();
+$account->refresh($loginAs);
+
+$relaxTask = new relaxTask();
+if ($alerteId)
+{
+	$relaxTask->refresh($alerteId);
+	$relaxTask->serializedForm = unserialize($relaxTask->serializedForm);
+}
+
+$formsDatasArray = array();
+if ($formDatas)
+{
+	$temp = explode('&',$formDatas);
+	foreach ($temp as $item)
+	{
+		$temp2 = explode('=',$item);
+		$formsDatasArray[urldecode($temp2[0])] = urldecode($temp2[1]);
+	}
+}
+
+switch ($command)
+{
+	case 'refresh':
+		break;
+
+	case 'delete':
+		$relaxTask->delete();
+		$relaxTask = new relaxTask();
+		break;
+
+	case 'add':
+		$relaxTask->bind($formsDatasArray);
+		$relaxTask->serializedForm = $formsDatasArray;
+		$relaxTask->makeQueryFromSerializedForm();
+		$relaxTask->sort = "publicationdate desc, publicationtime desc";
+		$relaxTask->parameters = "siteId=".$formsDatasArray['univers'];
+		$exportRule = new exportRule();
+		$exportRule->refreshByCode('APP-BASICS','ALERTES');
+		if ($exportRule->id)
+			$relaxTask->exportRulesIds = $exportRule->id;
+		$relaxTask->save();
+		$relaxTask->initialize($relaxTask->id);
+		$relaxTask = new relaxTask();
+		break;
+}
+
+// Response
+header("Content-Type: text/xml");
+echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
+echo "<ajax-response>\n";
+echo "<response type=\"item\" id=\"alerte\"><![CDATA[";
+	echo "<div id=\"errorMsg\"></div>";
+	echo '<div id="alerte">';
+	echo "<table style='border: 0px none; ' width='98%'>";
+	echo "<tr>";
+	echo "<td width='30%' valign='top'><div id=\"alerteList\" name=\"alerteList\" style=\"overflow: auto; height: 400px;\">";
+	$alerteList = bizobject::getBizobjects('relaxTask','loginAs = '.$loginAs.' AND type="alerte"');
+	foreach ($alerteList as $anAlerte)
+	{
+		echo '<div id="alerte_'.$anAlerte->id.'" style="cursor:pointer" onClick="manageAlerte(\'load\','.$loginAs.','.$anAlerte->id.',document.forms.alerteForm.serialize());">'.$anAlerte->name.'</div>';
+	}
+	echo "</div></td>";
+	echo "<td valign='top'>";
+		echo '<div id="content">';
+			echo '<div class="zone">';
+				echo '<form name="alerteForm" id="alerteForm">';
+				echo '<fieldset style="margin-left:5px">';
+				echo "<legend>Tache</legend>";
+				echo "<ul>";
+					wcmGUI::renderTextField('name', $relaxTask->name, 'Nom', array('style' => 'float:none;'));
+					wcmGUI::renderDropdownField('planning', relaxTask::getDefinedPlannings(), $relaxTask->planning, 'Planning', array('style' => 'float:none;'));
+					wcmGUI::renderHiddenField('id', $relaxTask->id);
+					wcmGUI::renderHiddenField('type', 'alerte');
+					wcmGUI::renderHiddenField('companyName', ($relaxTask->companyName) ? $relaxTask->companyName : $account->companyName);
+					wcmGUI::renderHiddenField('loginAs', $loginAs);
+					wcmGUI::renderHiddenField('enable', '1');
+				echo "</ul>";
+/*
+echo '<pre>';
+print_r($relaxTask->serializedForm);
+echo '</pre>';
+*/
+				echo "</fieldset>";
+
+				echo '<fieldset style="margin-left:5px">';
+				echo "<legend>Query</legend>";
+				echo "<ul>";
+					wcmGUI::renderTextField('content', (isset($relaxTask->serializedForm['content'])) ? $relaxTask->serializedForm['content'] : '', 'Contenant', array('style' => 'float:none;'));
+					wcmGUI::renderTextField('exclude', (isset($relaxTask->serializedForm['exclude'])) ? $relaxTask->serializedForm['exclude'] : '', 'Excluant', array('style' => 'float:none;'));
+				/********************************************/
+				$managerAccount = new account();
+				$managerAccount->refreshByWcmUser(wcmSession::getInstance()->userId);
+				if ($managerAccount->id)
+				{
+					$siteIds = $managerAccount->getUnivers();
+					$siteIds = array_unique($siteIds);
+					$currentSite = new site();
+					$availableSites = array();
+					foreach ($siteIds as $id)
+					{
+						$availableSites[] = clone $currentSite->refresh($id);
+					}
+				}
+				else
+				{
+					// No defined account for current wcmUser (admin)
+					$availableSites = bizobject::getBizobjects('site');
+				}
+
+				$values = array();
+				foreach ($availableSites as $site)
+					$values[$site->id]=$site->title;
+				wcmGUI::renderDropdownField('univers', $values, (isset($relaxTask->serializedForm['univers'])) ? $relaxTask->serializedForm['univers'] : '', 'Univers', array('style' => 'float:none;', 'onChange' => 'javascript:populeServices();delAllQuery_sr();'));
+
+				echo '<li>';
+				echo '<label>Service/Rubrique</label>';				
+				echo '<div id="selectService" style="display:inline">';
+				echo '<select name="services" id="services" style="width:150px;">';
+					echo '<option value="">&nbsp;</option>';
+				echo '</select>';
+				echo '</div>';
+				echo '<div id="selectRubrique" style="display:inline; margin-left: 5px">';
+				wcmGUI::renderSingleTag('input', array('id' => 'rubrique', 'disabled'=>'disabled', 'style'=>'float: none; width:150px; margin-left: 5px', 'type'=>'text'));
+				echo '</div>';
+				echo '<a href="#" onclick="addQuery_sr(); return false;" class="list-builder"><span>' . _BIZ_ADD . '</span></a>';
+				echo '</li>';
+
+				echo '<li>';
+				wcmGUI::renderHiddenField('query_sr', (isset($relaxTask->serializedForm['query_sr'])) ? $relaxTask->serializedForm['query_sr'] : '');
+				echo '<ul id="query_sr_list" class="tags">';
+				// Init Puces
+				$query_sr = '';
+				if (isset($relaxTask->serializedForm['query_sr']))
+				{
+					$q_s1 = explode('##',$relaxTask->serializedForm['query_sr']);
+					foreach ($q_s1 as $query1)
+					{
+						$query2 = explode('||',$query1);
+						if ($query2[1] !='*')
+						{
+							$channelList = explode('/', $query2[1]);
+							$channel = new channel();
+							$rubriqueLabel = '';
+							foreach($channelList as $rub)
+							{
+								$channel->refresh($rub);
+								$rubriqueLabel .= $channel->title.'/';
+							}
+							$rubriqueLabel=substr($rubriqueLabel,0,-1);
+						}
+						else
+						{
+							$rubriqueLabel='*';
+						}
+						$id = $query1;
+						$value = getConst($query2[0]).' \\ '.$rubriqueLabel;
+						echo '<li style="clear:both" id="'.$id.'"><a href="#" onclick="delQuery_sr($(this).up()); return false;"><span>' . _DELETE . '</span></a> <em>' . $value . '</em></li>';
+					}
+				}
+				echo '</ul>';
+				echo '</li>';
+
+
+
+				/********************************************/
+				echo "</ul>";
+				echo "</fieldset>";
+				echo '<fieldset style="margin-left:5px">';
+				echo "<legend>Commande</legend>";
+				echo "<div style='width:400px'><ul class='toolbar'>";
+				echo '<li><a href="#" onclick="manageAlerte(\'add\','.$loginAs.',$(\'id\').value,document.forms.alerteForm.serialize()); return false;" class="save">'._BIZ_SAVE.'</a>&nbsp;</li>';
+				echo '<li><a href="#" onclick="manageAlerte(\'refresh\','.$loginAs.',0,document.forms.alerteForm.serialize()); return false;" class="cancel">Reset</a>&nbsp;</li>';
+				echo '<li><a href="#" onclick="manageAlerte(\'delete\','.$loginAs.',$(\'id\').value,document.forms.alerteForm.serialize()); return false;" class="delete">'._BIZ_DELETE.'</a>&nbsp;</li>';
+				echo "</ul></div>";
+				echo "</fieldset>";
+				echo "</form>";					
+			echo "</div>";
+		echo "</div>";
+	echo "</td>";
+	echo "</tr>";
+	echo "</table>";
+	echo "</div>";
+echo "]]></response>";
+echo "</ajax-response>";

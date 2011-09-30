@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<NewsML>
+  <Catalog Href="http://www.afp.com/dtd/AFPCatalog.xml"/>
+  <NewsEnvelope>
+    <DateAndTime>20081210T150729Z</DateAndTime>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>afp.com</ProviderId>
+        <DateId>20081210</DateId>
+        <NewsItemId>081210150621.mv0oa058</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:afp.com:20081210:081210150621.mv0oa058:1</PublicIdentifier>
+      </NewsIdentifier>
+      <NameLabel>Restauration-crise-insolite</NameLabel>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20081210T150621Z</FirstCreated>
+      <ThisRevisionCreated>20081210T150621Z</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+    </NewsManagement>
+    <NewsComponent>
+      <NewsLines>
+        <HeadLine>Un menu "crise" à 3,5 euros à Nantes pour sortir de l'impasse</HeadLine>
+        
+        
+        <DateLine>NANTES, 10 déc 2008 (AFP)</DateLine>
+        <CopyrightLine>© 2008 AFP</CopyrightLine>
+        <SlugLine>Restauration-crise-insolite</SlugLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Provider>
+          <Party FormalName="AFP"/>
+        </Provider>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="fr"/> 
+        <OfInterestTo FormalName="ext--francais--relaxnews--artdevivre"/>
+      </DescriptiveMetadata>
+      <NewsComponent>
+        <ContentItem>
+          <MediaType FormalName="Text"/>
+          <Format FormalName="bcNITF2.5"/>
+          <DataContent>
+            <p> Un couple nantais propose une fois par semaine le mardi midi un menu "crise" à 3,5 euros dans son restaurant pour alerter sur la crise que traverse la profession, un menu qui dès le premier jour a fait un tabac, a-t-on appris auprès des restaurateurs.</p>
+            <p>David Bernard, 22 ans, et Marie Geffriaud, 27 ans, proposent ce menu "crise", plat-dessert (mardi c'était curry de poulet thaï et en dessert oeufs au lait ou salade fruit), pour le prix d'un hamburger dans un fast-food.</p>
+            <p>Le prix de 3,5 euros correspond au prix des ingrédients et de la TVA.</p>
+            <p>Ouvert depuis près de deux ans, le restaurant "L'Etage" a bien tourné la première année, avec un menu haut de gamme à la carte, un nombre croissant de clients et une trentaine de couverts chaque soir, mais depuis six mois "on est passé à deux couverts", expliquent-ils.</p>
+            <p>"Le week-end ça va, mais en semaine on a eu des jours à zéro client. On a alors divisé le ticket moyen par deux, on a ouvert le midi, proposé des formules, de la vente à emporter, et ça n'a pas suffit", note David.</p>
+            <p>"On a tout essayé, on ne va pas se laisser mourir", assure-t-il.</p>
+            <p>Le jeune restaurateur et sa compagne ont donc misé sur "un coup de gueule, pour montrer que la restauration souffre, les autres restaurateurs sont trop fiers et ne veulent pas l'admettre".</p>
+            <p>Le menu à 3,5 euros (contre 11,90 euros habituellement) de mardi a fait carton plein avec 80 couverts, parmi lesquels "des clients BCBG mais aussi un SDF", et autant de couverts refusés tellement le restaurant était plein.</p>
+            <p>"C'est bon pour le moral", note Marie car avec ou sans client, le couple paye quand-même ses charges, les aliments, et "tant qu'à être là, autant en faire profiter les gens".</p>
+            <p>Et l'effet s'est ressenti dès le mercredi midi où déjà la clientèle était de retour avec une trentaine de couverts.</p>
+            <p>Le couple a eu l'heureuse surprise aussi mercredi de rencontrer des fournisseurs prêts à les épauler en proposant leurs services "à prix coûtants" pour l'opération du mardi.</p>
+          </DataContent>
+        </ContentItem>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

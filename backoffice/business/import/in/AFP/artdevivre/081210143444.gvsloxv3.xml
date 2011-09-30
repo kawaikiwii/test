@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<NewsML>
+  <Catalog Href="http://www.afp.com/dtd/AFPCatalog.xml"/>
+  <NewsEnvelope>
+    <DateAndTime>20081210T143728Z</DateAndTime>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>afp.com</ProviderId>
+        <DateId>20081210</DateId>
+        <NewsItemId>081210143444.gvsloxv3</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:afp.com:20081210:081210143444.gvsloxv3:1</PublicIdentifier>
+      </NewsIdentifier>
+      <NameLabel>Japon-technologies-jeux-vidéo-internet</NameLabel>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20081210T143444Z</FirstCreated>
+      <ThisRevisionCreated>20081210T143444Z</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+    </NewsManagement>
+    <NewsComponent>
+      <NewsLines>
+        <HeadLine>Sony ouvre les portes de son monde virtuel pour la PlayStation 3</HeadLine>
+        
+        
+        <DateLine>TOKYO, 10 déc 2008 (AFP)</DateLine>
+        <CopyrightLine>© 2008 AFP</CopyrightLine>
+        <SlugLine>Japon-technologies-jeux-vidéo-internet PREV</SlugLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Provider>
+          <Party FormalName="AFP"/>
+        </Provider>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="fr"/> 
+        <OfInterestTo FormalName="ext--francais--relaxnews--artdevivre"/>
+      </DescriptiveMetadata>
+      <NewsComponent>
+        <ContentItem>
+          <MediaType FormalName="Text"/>
+          <Format FormalName="bcNITF2.5"/>
+          <DataContent>
+            <p> Le géant de l'électronique japonais Sony a annoncé mercredi l'ouverture mondiale jeudi de son univers virtuel "Home", un nouvel espace de divertissement et de convivialité immatériel destiné aux possesseurs de sa dernière console de jeux vidéo de salon, la PlayStation 3 (PS3).</p>
+            <p>Sony devait initialement lancer ce service en ligne il y a environ un an, mais le groupe en a plusieurs fois reporté l'accès au grand public, "afin de le peaufiner" avec des "testeurs" dans le monde entier.</p>
+            <p>"Home" est la recréation sous forme d'images en trois dimensions (3D) de lieux divers (rues, cafés, places publiques, discothèques, magasins, cinémas, salles de jeu, intérieurs d'appartement) dans lesquels les joueurs vivent sous la forme d'un "avatar" censé les représenter.</p>
+            <p>Chaque possesseur de PlayStation 3 pourra télécharger gratuitement à partir de jeudi le logiciel donnant accès à ce nouveau monde.</p>
+            <p>"Home" est conçu comme une fusion tridimensionnelle entre l'univers virtuel de "Second Life" (de Linden Lab) et différents types de services communautaires en ligne, blogs ou encore sites de présentation et partage de contenus tels que YouTube (groupe Google) ou MySpace (groupe Murdoch).</p>
+            <p>Ce nouvel espace numérique donne aux joueurs la possibilité de s'aménager un appartement en ligne, d'y inviter des amis ou des inconnus (du moins leurs avatars) pour faire causette, écouter de la musique, jouer, regarder des vidéos ou photos et s'adonner à diverses autres activités sous une forme ludique.</p>
+            <p>Des lieux publics virtuels sont également accessibles pour assister à des événements ludiques, sportifs, culturels ou promotionnels, ou bien pour les organiser. Sony s'est ainsi associé avec différents éditeurs pour proposer, en Europe, des environnements dédiés spécifiquement à un logiciel. Le jeu de tir Far Cry 2 de la société française Ubisoft va être le premier à avoir droit à une telle zone, qui permettra aux joueurs de s'y retrouver pour discuter stratégies et partager leurs secrets sur cette production.</p>
+            <p>Le géant américain Electronic Arts, Midway, Atari et Sega travaillent eux aussi avec Sony afin de proposer de telles fonctionnalités pour leurs futurs produits, a annoncé la firme japonaise dans un communiqué.</p>
+            <p>La force de "Home", par rapport à tous les programmes existant déjà pour PC, tient, selon Sony, à la combinaison avec les jeux pour PS3, de sorte que l'on peut par exemple se rendre sur un terrain de golf pour y trouver des partenaires afin de s'adonner à une partie via le programme de jeu vendu par ailleurs. Même chose avec une simulation de course automobile.</p>
+            <p>En ouvrant les portes de "Home", Sony espère faire venir à lui de nouveau utilisateurs de PS3 et également s'assurer une source supplémentaire de revenus, via des annonceurs. Pour l'ouverture de ce nouveau service au grand public, la marque de mode Diesel, le créateur de mobilier Ligne Roset, l'entreprise de boissons énergisantes Red Bull et le producteur de films Paramount font partie des sociétés ayant signé un partenariat avec l'entreprise japonaise.</p>
+            <p>Ces accords permettront par exemple aux joueurs d'habiller leur avatar avec de nouveaux vêtements et Sony a déjà annoncé qu'une veste ou un pantalon Diesel pourront coûter jusqu'à 1,50 euro l'unité dans "Home", même si certains modèles resteront gratuits. La présence de Paramount se manifestera, elle, par la projection de bandes-annonces de ses prochains films, le premier à en bénéficier devant être "Watchmen" de Zack Snyder.</p>
+          </DataContent>
+        </ContentItem>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

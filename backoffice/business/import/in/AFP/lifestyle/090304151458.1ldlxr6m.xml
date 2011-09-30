@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<NewsML>
+  <Catalog Href="http://www.afp.com/dtd/AFPCatalog.xml"/>
+  <NewsEnvelope>
+    <DateAndTime>20090304T151645Z</DateAndTime>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>afp.com</ProviderId>
+        <DateId>20090304</DateId>
+        <NewsItemId>090304151458.1ldlxr6m</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:afp.com:20090304:090304151458.1ldlxr6m:1</PublicIdentifier>
+      </NewsIdentifier>
+      <NameLabel>Entertainment-France-politics-music-people</NameLabel>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20090304T151458Z</FirstCreated>
+      <ThisRevisionCreated>20090304T151458Z</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+    </NewsManagement>
+    <NewsComponent>
+      <NewsLines>
+        <HeadLine>Carla wants baby with Sarkozy, but may adopt</HeadLine>
+        
+        
+        <DateLine>PARIS, March 4, 2009 (AFP)</DateLine>
+        <CopyrightLine>© 2009 AFP</CopyrightLine>
+        <SlugLine>Entertainment-France-politics-music-people</SlugLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Provider>
+          <Party FormalName="AFP"/>
+        </Provider>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="en"/> 
+        <OfInterestTo FormalName="ext--english--relaxnews--lifestyle"/>
+      </DescriptiveMetadata>
+      <NewsComponent>
+        <ContentItem>
+          <MediaType FormalName="Text"/>
+          <Format FormalName="bcNITF2.5"/>
+          <DataContent>
+            <p> France's first lady Carla Bruni-Sarkozy wants to have a baby with her husband President Nicolas Sarkozy but would be just as happy to adopt one, she said in an interview to be published this week.</p>
+            <p>"I would like that, but I don't know if at my age it would be possible," the 41-year-old singer and former supermodel told Figaro Magazine when asked if she hoped for a second child.</p>
+            <p>"If it's not biologically possible, I'll adopt one," she added.</p>
+            <p>In 2001, Bruni-Sarkozy had a son with her then lover, philosopher Raphael Enthoven. She married the French leader, who has three sons from two previous marriages, in February last year.</p>
+            <p>"I'm not obsessed by blood ties," she told Le Figaro, explaining her attitude to adoption. "I think you can build a powerful bond without that.</p>
+            <p>"So I'd love to have a child, but I'm not going to fight against nature, and at the same time, as I already have one, and my husband has three, you can't really say we have a need of children," she said.</p>
+            <p>The interview, which Le Figaro carried out with Bruni-Sarkozy during her trip last week to West Africa to promote projects to battle AIDS, is to be published on Saturday.</p>
+          </DataContent>
+        </ContentItem>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

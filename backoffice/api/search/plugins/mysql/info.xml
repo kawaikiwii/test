@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+    <name>MySQL</name>
+    <description>Search through a MySQL database</description>
+    <className>wcmBizsearchPluginMySQL</className>
+    <id>mysql</id>
+</plugin>

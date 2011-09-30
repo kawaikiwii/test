@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+    <name>Solr</name>
+    <description>Search using a Solr search engine</description>
+    <className>wcmBizsearchPluginSolr</className>
+    <id>solr</id>
+</plugin>

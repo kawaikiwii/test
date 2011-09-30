@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<NewsML>
+  <Catalog Href="http://www.afp.com/dtd/AFPCatalog.xml"/>
+  <NewsEnvelope>
+    <DateAndTime>20081210T145114Z</DateAndTime>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>afp.com</ProviderId>
+        <DateId>20081210</DateId>
+        <NewsItemId>081210144926.3qog8vcm</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:afp.com:20081210:081210144926.3qog8vcm:1</PublicIdentifier>
+      </NewsIdentifier>
+      <NameLabel>UE-sommet-climat-réchauffement-gouvernement</NameLabel>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20081210T144926Z</FirstCreated>
+      <ThisRevisionCreated>20081210T144926Z</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+    </NewsManagement>
+    <NewsComponent>
+      <NewsLines>
+        <HeadLine>Plan climat européen: Fillon s'attend à une "négociation très difficile"</HeadLine>
+        
+        
+        <DateLine>PARIS, 10 déc 2008 (AFP)</DateLine>
+        <CopyrightLine>© 2008 AFP</CopyrightLine>
+        <SlugLine>UE-sommet-climat-réchauffement-gouvernement LEAD</SlugLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Provider>
+          <Party FormalName="AFP"/>
+        </Provider>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="fr"/> 
+        <OfInterestTo FormalName="ext--francais--relaxnews--artdevivre"/>
+      </DescriptiveMetadata>
+      <NewsComponent>
+        <ContentItem>
+          <MediaType FormalName="Text"/>
+          <Format FormalName="bcNITF2.5"/>
+          <DataContent>
+            <p> François Fillon a déclaré mercredi s'attendre à une "négociation très difficile" au Conseil européen de la fin de semaine sur le plan en faveur du climat, l'une des priorités de la présidence française de l'UE, même si "un succès est possible".</p>
+            <p>"Nous aurons à Bruxelles une négociation très difficile sur ce sujet", a déclaré le Premier ministre français devant les députés, en ouverture d'un débat préalable au sommet où doit être discuté le paquet climat-énergie qui concentre d'importantes réserves des Allemands, des Italiens et des Polonais.</p>
+            <p>"Malgré nos efforts, malgré l'esprit de conciliation dont le Parlement européen a fait preuve, certains états membres continuent à exprimer de fortes réticences sur des éléments centraux du compromis", a affirmé M. Fillon.</p>
+            <p>"Un succès est néanmoins possible, a-t-il ajouté, si tous acceptent les éléments indispensables à un accord final". </p>
+            <p>Il a cité "le strict respect des objectifs de réduction des gaz à effet de serre décidés collectivement en 2007, la protection contre le risque de dumping environnemental des pays tiers, le juste partage des efforts entre Etats membres, la solidarité avec les états membres les moins prospères".</p>
+            <p>Les Européens se sont notamment engagés en mars 2007, "à l'initiative pour une large part de l'Allemagne", a souligné M. Fillon, à réduire de 20% en 2020 leurs émissions de gaz à effet de serre par rapport à leurs niveaux de 1990.</p>
+            <p>La France "a refusé, et refusera toujours, de transiger sur l'essentiel", a affirmé le chef du gouvernement: "Toutes les industries, tous les États membres, sans exception, doivent contribuer de manière équitable à la baisse des émissions de CO2". </p>
+            <p>Selon le Premier ministre, "ce qui se joue à partir de demain, c'est, pour une très large part, le succès ou l'échec programmé (du sommet) de Copenhague" en décembre 2009. A cette date, la communauté internationale devra avoir finalisé le nouvel accord climatique qui prendra la relève du Protocole de Kyoto dont les premiers engagements expirent fin 2012.</p>
+            <p>M. Fillon a prononcé son discours devant une assemblée très clairsemée, en particulier sur les bancs de la droite -et en l'absence du président du groupe UMP Jean-François Copé-, suscitant les critiques de la gauche. Les députés UMP étaient invités à déjeuner mercredi à l'Elysée par le président Nicolas Sarkozy.</p>
+          </DataContent>
+        </ContentItem>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

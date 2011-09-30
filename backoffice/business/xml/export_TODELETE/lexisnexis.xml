@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<exportsConfig>
+	<exportsRule>
+		<langlang>fr-fr</langlang>
+		<code>mytestcode</code>
+		<querys>
+			<query>
+				<objclass>news</objclass>
+				<string>SELECT id FROM `biz_news` WHERE workflowState = 'published' AND channelId != 'NULL' AND publicationDate != 'NULL' AND siteId = '%%siteId%%' ORDER BY createdAt DESC LIMIT 5</string>
+			</query>
+		</querys>
+		<picturesFormats>
+			<picturesFormat>w400</picturesFormat>
+		</picturesFormats>
+		<templates>
+			<unitTemplate>NULL</unitTemplate>
+			<globalTemplate>EXPORTS/CLIENTS/lexisnexis/global.tpl</globalTemplate>
+		</templates>
+		<distributionChannels>
+			<distributionChannel>
+				<type>ftp</type>
+				<host>193.110.140.34</host>
+				<user>afp</user>
+				<pass>AfPreLax</pass>
+				<remotePath>/incoming/exp</remotePath>
+				<zipFilesOrNot>false</zipFilesOrNot>
+			</distributionChannel>
+		</distributionChannels>
+	</exportsRule>
+</exportsConfig>
